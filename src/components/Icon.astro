@@ -1,0 +1,34 @@
+---
+// Lucide icon (lucide-static@0.460.0, the set the design system uses), inlined at build time.
+import { readFileSync } from 'node:fs';
+import { createRequire } from 'node:module';
+
+interface Props { name: string; size?: number; color?: string; label?: string; class?: string; style?: string }
+const { name, size = 20, color, label, class: cls, style = '' } = Astro.props;
+
+const require = createRequire(import.meta.url);
+let svg = '';
+try {
+  svg = readFileSync(require.resolve(`lucide-static/icons/${name}.svg`), 'utf8');
+} catch {
+  throw new Error(`Unknown Lucide icon: ${name}`);
+}
+const inner = svg.replace(/^[\s\S]*?<svg[^>]*>/, '').replace(/<\/svg>\s*$/, '');
+---
+<svg
+  xmlns="http://www.w3.org/2000/svg"
+  width={size}
+  height={size}
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+  class:list={['lx-icon-svg', cls]}
+  style={`flex:none;display:inline-block;${color ? `color:${color};` : ''}${style}`}
+  role={label ? 'img' : undefined}
+  aria-label={label}
+  aria-hidden={label ? undefined : 'true'}
+  set:html={inner}
+/>

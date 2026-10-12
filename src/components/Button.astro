@@ -1,0 +1,35 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  variant?: 'primary' | 'accent' | 'gradient' | 'secondary' | 'ghost' | 'inverse' | 'link';
+  size?: 'sm' | 'md' | 'lg';
+  iconLeft?: string;
+  iconRight?: string;
+  fullWidth?: boolean;
+  href?: string;
+  type?: 'button' | 'submit';
+  class?: string;
+  style?: string;
+  target?: string;
+  rel?: string;
+  [key: string]: any;
+}
+const { variant = 'primary', size = 'md', iconLeft, iconRight, fullWidth = false, href, type = 'button', class: cls, style, ...rest } = Astro.props;
+const isz = size === 'sm' ? 15 : size === 'lg' ? 19 : 17;
+const classes = ['lx-btn', `lx-btn--${variant}`, size !== 'md' && `lx-btn--${size}`, fullWidth && 'lx-btn--full', cls];
+const external = href && /^https?:/.test(href);
+---
+{href ? (
+  <a href={href} class:list={classes} style={style} target={external ? '_blank' : undefined} rel={external ? 'noopener' : undefined} {...rest}>
+    {iconLeft && <span class="lx-btn__l"><Icon name={iconLeft} size={isz} /></span>}
+    <slot />
+    {iconRight && <span class="lx-btn__r"><Icon name={iconRight} size={isz} /></span>}
+  </a>
+) : (
+  <button type={type} class:list={classes} style={style} {...rest}>
+    {iconLeft && <span class="lx-btn__l"><Icon name={iconLeft} size={isz} /></span>}
+    <slot />
+    {iconRight && <span class="lx-btn__r"><Icon name={iconRight} size={isz} /></span>}
+  </button>
+)}

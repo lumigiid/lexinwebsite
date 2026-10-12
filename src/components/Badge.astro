@@ -1,0 +1,7 @@
+---
+interface Props { tone?: 'navy' | 'red' | 'yellow' | 'success' | 'warning' | 'neutral' | 'gradient'; variant?: 'soft' | 'solid'; dot?: boolean; class?: string; style?: string }
+const { tone = 'navy', variant = 'soft', dot = false, class: cls, style } = Astro.props;
+---
+<span class:list={['lx-badge', `lx-badge--${variant}`, `lx-badge--${tone}`, tone === 'gradient' && 'lx-badge--gradient', cls]} style={style}>
+  {dot && <span class="lx-badge__dot" />}<slot />
+</span>

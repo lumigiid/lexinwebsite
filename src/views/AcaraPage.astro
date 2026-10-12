@@ -1,0 +1,127 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import { dict, asset, type Lang } from '../lib/i18n';
+import { img } from '../lib/images';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict('acara', lang);
+
+const TYPE_STYLE: Record<string, string[]> = { training: ['var(--navy-50)', 'var(--navy-700)'], fgd: ['var(--red-50)', 'var(--red-700)'] };
+const typesF = [['all', t.all], ['training', t.types.training], ['fgd', t.types.fgd]].map(([k, label]) => ({
+  k, label, count: t.events.filter((e: any) => k === 'all' || e.type === k).length,
+}));
+// Event dates are intentionally not shown until they are confirmed (`date` in i18n.json is a placeholder).
+const past = await Promise.all(t.events.map(async (e: any) => ({
+  ...e, photoUrl: e.photo ? await img(e.photo, 900) : '', typeLabel: t.types[e.type], typeBg: TYPE_STYLE[e.type][0], typeFg: TYPE_STYLE[e.type][1],
+})));
+---
+<BaseLayout lang={lang} path="acara/" active="acara" title={`Lexin — ${t.nav[4]}`}>
+
+<PageHeader>
+  <div class="eyebrow">{t.eyebrow}</div>
+  <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
+  <div class="ph-rule"></div>
+  <p style="font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty">{t.intro}</p>
+</PageHeader>
+
+<section style="background:var(--surface-page)">
+  <div class="wrap">
+    <div class="filterbar"><div style="display:flex;flex-wrap:wrap;gap:8px">
+      {typesF.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-k={f.k} aria-pressed={f.k === 'all' ? 'true' : 'false'}>{f.label}<span style="font:500 11px/1 var(--font-mono);opacity:.7">{f.count}</span></button>)}
+    </div></div>
+    <div class="timeline">
+      <span class="rail"></span>
+      <div style="position:relative">
+        <span class="dot-forum"></span>
+        <div class="forum">
+          <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;right:-60px;bottom:-80px;height:320px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
+          <div style="position:relative;display:flex;flex-direction:column;gap:16px">
+            <div style="display:flex;gap:8px;flex-wrap:wrap">
+              <span style="height:28px;padding:0 12px;border-radius:999px;background:var(--yellow-400);color:var(--navy-900);font:600 12px/28px var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase">{t.upcoming}</span>
+              <span style="height:28px;padding:0 12px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);font:600 12px/28px var(--font-display);color:var(--fg-on-dark-2)">{t.flagship}</span>
+            </div>
+            <h2 style="font:700 clamp(36px,5vw,56px)/1.05 var(--font-display);letter-spacing:var(--tracking-tight);margin:0;color:#FFFFFF">Lexin <span class="ember-text">Forum</span></h2>
+            <p style="margin:0;font:var(--type-body-lg);color:var(--fg-on-dark-2);max-width:540px;text-wrap:pretty">{t.forumBody}</p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+              <Button variant="gradient" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum">{t.notify}</Button>
+              <Button variant="inverse" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum%20-%20Pembicara">{t.speak}</Button>
+            </div>
+          </div>
+          <div style="position:relative;display:flex;flex-direction:column;border-radius:20px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);padding:8px 20px">
+            {t.forumFacts.map((x: any) => (
+              <div style="display:flex;align-items:center;gap:14px;padding:14px 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.12)">
+                <span style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);color:var(--yellow-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><Icon name={x.icon} size={18} /></span>
+                <span style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2)">{x.label}</span><span style="font:600 15px/1.35 var(--font-display);color:#FFFFFF">{x.val}</span></span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+      {past.map((e: any) => (
+        <div style="position:relative" class="ev" data-type={e.type}>
+          <span class="dot"></span>
+          <article class="ev-card">
+            <div style="position:relative;width:100%;height:100%;min-height:200px;overflow:hidden;background:var(--grad-mist)">
+              {e.photoUrl && <div role="img" aria-label={e.title} style={`position:absolute;inset:0;background:url(${e.photoUrl}) center/cover no-repeat`}></div>}
+            </div>
+            <div style="padding:24px 26px;display:flex;flex-direction:column;gap:12px;min-width:0">
+              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style={`height:26px;padding:0 10px;border-radius:999px;background:${e.typeBg};color:${e.typeFg};font:600 11px/26px var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;white-space:nowrap`}>{e.typeLabel}</span></div>
+              <h3 style="font:var(--type-h3);font-size:clamp(20px,2.2vw,24px);line-height:1.3;color:var(--text-heading);margin:0;text-wrap:pretty">{e.title}</h3>
+              <p style="margin:0;font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{e.body}</p>
+              <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font:600 14px/1.3 var(--font-display);color:var(--navy-800)"><Icon name="landmark" size={16} />{e.org}</span>
+            </div>
+          </article>
+        </div>
+      ))}
+      <div class="empty" hidden style="border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:32px;text-align:center;font:var(--type-body);color:var(--text-muted)">{t.empty}</div>
+    </div>
+  </div>
+</section>
+
+<section style="background:var(--surface-page)">
+  <div class="container" style="padding-bottom:clamp(56px,8vw,96px)">
+    <div style="border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
+      <div style="display:flex;flex-direction:column;gap:6px;max-width:640px">
+        <span style="font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading)">{t.inviteTitle}</span>
+        <span style="font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{t.inviteBody}</span>
+      </div>
+      <Button variant="primary" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id?subject=Undangan%20acara">{t.inviteCta}</Button>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<script>
+  const pills = document.querySelectorAll<HTMLButtonElement>('.pill');
+  const apply = (k: string) => {
+    pills.forEach((b) => { const on = b.dataset.k === k; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
+    let n = 0;
+    document.querySelectorAll<HTMLElement>('.ev').forEach((e) => { const show = k === 'all' || e.dataset.type === k; e.hidden = !show; if (show) n++; });
+    document.querySelector<HTMLElement>('.empty')!.hidden = n > 0;
+  };
+  pills.forEach((b) => b.addEventListener('click', () => apply(b.dataset.k!)));
+</script>
+
+<style>
+  .wrap { --rail-pad: 48px; --rail-x: 16px; max-width: 1048px; margin: 0 auto; padding: clamp(32px,5vw,56px) 20px clamp(48px,7vw,80px); display: flex; flex-direction: column; gap: 28px; }
+  .filterbar { position: sticky; top: 80px; z-index: 10; margin: 0 -20px; padding: 14px 20px; background: rgba(255,255,255,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  @media (max-width: 639.98px) {
+    .wrap { --rail-pad: 28px; --rail-x: 8px; }
+    .filterbar { top: 64px; }
+  }
+  .pill { cursor: pointer; border: 0; height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); white-space: nowrap; background: #FFFFFF; color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+  .pill:hover { box-shadow: inset 0 0 0 1px var(--navy-300); }
+  .pill.on { background: var(--navy-600); color: #FFFFFF; box-shadow: none; }
+  .timeline { position: relative; display: flex; flex-direction: column; gap: 28px; padding-left: var(--rail-pad); }
+  .rail { position: absolute; left: var(--rail-x); top: 12px; bottom: 12px; width: 2px; background: linear-gradient(180deg,var(--yellow-400),var(--navy-200) 18%,var(--navy-100)); }
+  .dot-forum { position: absolute; left: calc(-1 * var(--rail-pad) + var(--rail-x) - 9px); top: 28px; width: 20px; height: 20px; border-radius: 50%; background: var(--yellow-400); box-shadow: 0 0 0 5px var(--yellow-100); }
+  .dot { position: absolute; left: calc(-1 * var(--rail-pad) + var(--rail-x) - 7px); top: 28px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF; box-shadow: inset 0 0 0 3px var(--navy-500); }
+  .forum { border-radius: clamp(24px,3vw,32px); background: var(--grad-night); color: #FFFFFF; padding: clamp(24px,4vw,48px); position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 28px clamp(32px,5vw,64px); align-items: center; }
+  .ev-card { background: var(--surface-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); overflow: hidden; display: grid; grid-template-columns: minmax(0,1fr); }
+  @media (min-width: 820px) { .ev-card { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); } }
+</style>

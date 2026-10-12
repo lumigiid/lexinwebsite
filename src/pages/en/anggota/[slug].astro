@@ -1,0 +1,10 @@
+---
+import ProfilPage from '../../../views/ProfilPage.astro';
+import { members } from '../../../lib/content';
+
+export function getStaticPaths() {
+  return members.map((member) => ({ params: { slug: member.slug }, props: { member } }));
+}
+const { member } = Astro.props;
+---
+<ProfilPage lang="en" member={member} />

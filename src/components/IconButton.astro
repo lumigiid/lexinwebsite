@@ -1,0 +1,10 @@
+---
+import Icon from './Icon.astro';
+
+interface Props { icon: string; label: string; variant?: 'primary' | 'gradient' | 'secondary' | 'ghost'; size?: 'sm' | 'md' | 'lg'; shape?: 'round' | 'square'; class?: string; [key: string]: any }
+const { icon, label, variant = 'ghost', size = 'md', shape = 'round', class: cls, ...rest } = Astro.props;
+const isz = size === 'sm' ? 16 : size === 'lg' ? 22 : 19;
+---
+<button type="button" aria-label={label} title={label} class:list={['lx-iconbtn', `lx-iconbtn--${variant}`, size !== 'md' && `lx-iconbtn--${size}`, shape === 'square' && 'lx-iconbtn--square', cls]} {...rest}>
+  <slot><Icon name={icon} size={isz} /></slot>
+</button>

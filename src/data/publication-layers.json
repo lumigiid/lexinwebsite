@@ -1,0 +1,8 @@
+[
+  { "match": "e-notary", "layers": ["p:not"] },
+  { "match": "tax court", "layers": ["p:put"] },
+  { "match": "coliee 2025", "layers": ["p:put", "f:ret", "f:rea"] },
+  { "match": "lexid: the metadata", "layers": ["i:data", "f:ret"] },
+  { "match": "logic programming to machine ethics", "layers": ["p:gov", "f:rea"] },
+  { "match": "explainable clustering", "layers": ["f:tru"] }
+]

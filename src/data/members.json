@@ -1,0 +1,618 @@
+[
+  {
+    "slug": "panca-hadi-putra",
+    "g": "lead",
+    "name": "Panca Hadi Putra",
+    "ini": "PH",
+    "titles": "Dr. · S.H., B.Sc., M.Bus., M.Kn.",
+    "role": "director",
+    "area": "tru",
+    "tags": [
+      "Legal Tech / RegTech",
+      "User experience",
+      "Digital Strategy",
+      "Notarial Law",
+      "AI Governance",
+      "Evaluasi produk"
+    ],
+    "email": "hadiputra@cs.ui.ac.id",
+    "photo": "assets/people/panca-hadi-putra.png",
+    "position": {
+      "id": "Associate Professor · Ketua Program Magister Teknologi Informasi, Fasilkom UI",
+      "en": "Associate Professor · Head of the Master of Information Technology program, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Dr. Panca Hadi Putra adalah associate professor di Fakultas Ilmu Komputer Universitas Indonesia. Minat risetnya mencakup sistem informasi, user experience, bisnis digital, dan informatika hukum. Untuk riset informatika hukum, ia memimpin Lexin, tempat peneliti multidisiplin mengembangkan platform teknologi hukum.",
+        "Di UI ia mengajar di program Magister Teknologi Informasi Fasilkom dan Magister Manajemen FEB, antara lain Analisis dan Perancangan Sistem, Metodologi Penelitian, Manajemen Strategis Sistem Informasi, Technology Entrepreneurship, dan Business Analytics. Di luar UI ia mengajar mata kuliah hukum terkait TI di program Magister Kenotariatan.",
+        "Sebelum berkarier di dunia akademik, ia aktif berwirausaha dan menjadi konsultan bagi berbagai merek, mulai dari perusahaan Fortune 500 seperti PT Sony Indonesia dan PT Tupperware Indonesia, pemimpin kategori seperti PT Kalbe Nutritionals, PT Darya Varia Tbk., dan Del Monte Indonesia, hingga organisasi nirlaba seperti British Council dan Yayasan Sayap Ibu."
+      ],
+      "en": [
+        "Dr. Panca Hadi Putra is an associate professor at the Faculty of Computer Science, Universitas Indonesia. His research interests are information systems, user experience, digital business and legal informatics. For legal informatics, he leads Lexin, where multidisciplinary researchers develop legal technology platforms.",
+        "At UI he teaches in the Master of Information Technology program at Fasilkom and the Master of Management program at the Faculty of Economics and Business, including Systems Analysis and Design, Research Methodology, Strategic Information Systems Management, Technology Entrepreneurship and Business Analytics. Outside UI, he teaches IT-related law courses in Master of Notarial Law programs.",
+        "Before academia, he was an entrepreneur and consultant for brands ranging from Fortune 500 companies such as PT Sony Indonesia and PT Tupperware Indonesia, category leaders such as PT Kalbe Nutritionals, PT Darya Varia Tbk. and Del Monte Indonesia, to non-profits such as the British Council and the Sayap Ibu Foundation."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Dr.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      },
+      {
+        "deg": "M.Bus., M.Kn.",
+        "where": {
+          "id": "Bisnis, The Australian National University",
+          "en": "Business, The Australian National University"
+        }
+      },
+      {
+        "deg": "B.Sc. (Hons.)",
+        "where": {
+          "id": "Sistem Informasi, Sunway University",
+          "en": "Information Systems, Sunway University"
+        }
+      }
+    ],
+    "interests": [
+      "Information Systems",
+      "User Experience (UX)",
+      "Digital Business",
+      "Legal Tech / RegTech",
+      "Technology Entrepreneurship",
+      "Digital Strategy",
+      "Notarial Law",
+      "AI Governance",
+      "Evaluasi produk"
+    ],
+    "links": [
+      {
+        "label": "ORCID",
+        "href": "https://orcid.org/0000-0003-4281-3731"
+      },
+      {
+        "label": "Scopus",
+        "href": "https://www.scopus.com/authid/detail.uri?authorId=57164716100"
+      },
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.co.id/citations?user=y5GJho0AAAAJ&hl=en&oi=ao"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2025",
+        "title": "A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia",
+        "venue": "JOIV: International Journal on Informatics Visualization, 9(1)",
+        "href": "https://doi.org/10.62527/joiv.9.1.3170"
+      },
+      {
+        "year": "2022",
+        "title": "Turning Pirates into Subscribers: A Status Quo Bias Perspective on Online Movie Service Switching Intention",
+        "venue": "Emerging Science Journal, 6(5)",
+        "href": "https://doi.org/10.28991/ESJ-2022-06-05-06"
+      },
+      {
+        "year": "2022",
+        "title": "Usability factors that drive continued intention to use and loyalty of mobile travel application",
+        "venue": "Heliyon, 8(9)",
+        "href": "https://doi.org/10.1016/j.heliyon.2022.e10620"
+      },
+      {
+        "year": "2022",
+        "title": "Factors Affecting User Retention of Mobile Mutual Fund Investment Applications: Evidence from Indonesia",
+        "venue": "Human Behavior and Emerging Technologies",
+        "href": "https://doi.org/10.1155/2022/7521680"
+      },
+      {
+        "year": "2020",
+        "title": "Contextual factors and performance impact of e-business use in Indonesian small and medium enterprises (SMEs)",
+        "venue": "Heliyon, 6(3)",
+        "href": "https://doi.org/10.1016/j.heliyon.2020.e03568"
+      }
+    ]
+  },
+  {
+    "slug": "adila-alfa-krisnadhi",
+    "g": "fac",
+    "name": "Adila Alfa Krisnadhi",
+    "ini": "AK",
+    "titles": "S.Kom., M.Sc., Ph.D.",
+    "role": "chief",
+    "area": "rea",
+    "tags": [
+      "Ontology",
+      "Knowledge representation"
+    ],
+    "email": "adila@cs.ui.ac.id",
+    "photo": "assets/people/adila-alfa-krisnadhi.png",
+    "position": {
+      "id": "Kepala Program Studi Sarjana Kecerdasan Artifisial, Fasilkom UI",
+      "en": "Head of the Bachelor of Artificial Intelligence program, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Adila Alfa Krisnadhi adalah dosen dan peneliti bidang ontologi di Fakultas Ilmu Komputer Universitas Indonesia. Selain mengajar dan meneliti, ia kini menjabat Kepala Program Studi Sarjana Kecerdasan Artifisial. Di Lexin, ia memimpin arah ilmiah sebagai Chief Scientist."
+      ],
+      "en": [
+        "Adila Alfa Krisnadhi is a lecturer and ontology researcher at the Faculty of Computer Science, Universitas Indonesia. Alongside teaching and research, he heads the Bachelor of Artificial Intelligence program. At Lexin, he leads the scientific direction as Chief Scientist."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Ph.D.",
+        "where": {
+          "id": "Ilmu Komputer, Wright State University",
+          "en": "Computer Science, Wright State University"
+        }
+      },
+      {
+        "deg": "M.Sc.",
+        "where": {
+          "id": "Computational Logic, Technische Universität Dresden",
+          "en": "Computational Logic, Technische Universität Dresden"
+        }
+      },
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      }
+    ],
+    "interests": [
+      "Semantic Technology",
+      "Ontology",
+      "Data Integration",
+      "Knowledge Representation & Reasoning",
+      "Machine Learning"
+    ],
+    "links": [
+      {
+        "label": "Scopus",
+        "href": "https://www.scopus.com/authid/detail.uri?authorId=14632172400"
+      },
+      {
+        "label": "SINTA",
+        "href": "http://sinta.ristekbrin.go.id/authors/detail?id=6201044&view=overview"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2023",
+        "title": "LexID: The Metadata and Semantic Knowledge Graph Construction of Indonesian Legal Document",
+        "venue": "Jurnal Ilmu Komputer dan Informasi, 16(1)",
+        "href": "https://doi.org/10.21609/jiki.v16i1.1096"
+      },
+      {
+        "year": "2021",
+        "title": "Extreme Multilabel Text Classification on Indonesian Tax Court Ruling using Single Channel CNN and IndoBERT Embedding",
+        "venue": "IWBIS 2021",
+        "href": "https://doi.org/10.1109/IWBIS53353.2021.9631855"
+      },
+      {
+        "year": "2020",
+        "title": "Capturing cultural heritage in East Asia and Oceania",
+        "venue": "Communications of the ACM 63(4)",
+        "href": "https://dl.acm.org/doi/fullHtml/10.1145/3378548"
+      },
+      {
+        "year": "2020",
+        "title": "GeoLink Data Set: A Complex Alignment Benchmark from Real-world Ontology",
+        "venue": "Data Intelligence 2(3)",
+        "href": "https://www.mitpressjournals.org/doi/full/10.1162/dint_a_00054"
+      },
+      {
+        "year": "2019",
+        "title": "Wikidata Completeness Profiling Using ProWD",
+        "venue": "K-CAP 2019",
+        "href": "https://dl.acm.org/doi/abs/10.1145/3360901.3364425"
+      }
+    ]
+  },
+  {
+    "slug": "indra-budi",
+    "g": "fac",
+    "name": "Indra Budi",
+    "ini": "IB",
+    "titles": "Prof. Dr. · S.Kom., M.Kom.",
+    "role": "advisor",
+    "area": "ret",
+    "tags": [
+      "Information extraction",
+      "Text mining"
+    ],
+    "email": "indra@cs.ui.ac.id",
+    "photo": "assets/people/indra-budi.png",
+    "position": {
+      "id": "Guru Besar · Kepala Program Studi Magister dan Doktor Ilmu Komputer, Fasilkom UI",
+      "en": "Professor · Head of the Master and Doctoral programs in Computer Science, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Prof. Indra Budi adalah dosen ilmu komputer dan sistem informasi di Fakultas Ilmu Komputer Universitas Indonesia, dan kini menjabat Kepala Program Studi Magister dan Doktor Ilmu Komputer. Risetnya mencakup ekstraksi informasi, text dan data mining, analisis sentimen, serta analisis jejaring sosial. Di Lexin, ia berperan sebagai penasihat dan research scientist."
+      ],
+      "en": [
+        "Prof. Indra Budi is a lecturer in computer science and information systems at the Faculty of Computer Science, Universitas Indonesia, and heads the Master and Doctoral programs in Computer Science. His research covers information extraction, text and data mining, sentiment analysis and social network analysis. At Lexin, he serves as advisor and research scientist."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Dr.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      },
+      {
+        "deg": "M.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      },
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      }
+    ],
+    "interests": [
+      "Information Extraction",
+      "Text / Data Mining",
+      "e-Commerce",
+      "Sentiment Analysis",
+      "Social Network Analysis"
+    ],
+    "links": [
+      {
+        "label": "Scopus",
+        "href": "https://www.scopus.com/authid/detail.uri?authorId=14021131100"
+      },
+      {
+        "label": "SINTA",
+        "href": "https://sinta.ristekbrin.go.id/authors/detail?id=42612&view=overview"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2018",
+        "title": "A dataset and preliminaries study for abusive language detection in Indonesian social media",
+        "venue": "Procedia Computer Science, 135",
+        "href": "https://www.sciencedirect.com/science/article/pii/S1877050918314583"
+      },
+      {
+        "year": "2017",
+        "title": "Acceptance model of a hospital information system",
+        "venue": "International Journal of Medical Informatics, 99",
+        "href": "https://www.sciencedirect.com/science/article/pii/S1386505616302726"
+      },
+      {
+        "year": "2016",
+        "title": "Twitter sentiment analysis of online transportation service providers",
+        "venue": "ICACSIS 2016, IEEE",
+        "href": "https://ieeexplore.ieee.org/abstract/document/7872807/"
+      }
+    ]
+  },
+  {
+    "slug": "alfan-farizki-wicaksono",
+    "g": "fac",
+    "name": "Alfan Farizki Wicaksono",
+    "ini": "AW",
+    "titles": "S.T., M.Sc., Ph.D.",
+    "role": "rs",
+    "area": "ret",
+    "tags": [
+      "Information retrieval",
+      "Representation learning"
+    ],
+    "email": "alfan@cs.ui.ac.id",
+    "photo": "assets/people/alfan-farizki-wicaksono.png",
+    "position": {
+      "id": "Koordinator Program Studi Sarjana Ilmu Komputer dan Kelas Internasional, Fasilkom UI",
+      "en": "Coordinator of the Computer Science Undergraduate and International Class programs, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Alfan Farizki Wicaksono adalah dosen di Fakultas Ilmu Komputer Universitas Indonesia. Ia meraih Ph.D. dari University of Melbourne, M.Sc. dari Korea Advanced Institute of Science and Technology, dan S.T. dari Institut Teknologi Bandung. Risetnya berada di persimpangan information retrieval, representation learning, dan text mining, bidang yang penting untuk alat riset hukum."
+      ],
+      "en": [
+        "Alfan Farizki Wicaksono is a lecturer at the Faculty of Computer Science, Universitas Indonesia. He holds a Ph.D. from the University of Melbourne, an M.Sc. from the Korea Advanced Institute of Science and Technology and an S.T. from Institut Teknologi Bandung. His research sits at the intersection of information retrieval, representation learning and text mining, all central to legal research tools."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Ph.D.",
+        "where": {
+          "id": "University of Melbourne",
+          "en": "University of Melbourne"
+        }
+      },
+      {
+        "deg": "M.Sc.",
+        "where": {
+          "id": "Korea Advanced Institute of Science and Technology",
+          "en": "Korea Advanced Institute of Science and Technology"
+        }
+      },
+      {
+        "deg": "S.T.",
+        "where": {
+          "id": "Institut Teknologi Bandung",
+          "en": "Institut Teknologi Bandung"
+        }
+      }
+    ],
+    "interests": [
+      "Information Retrieval",
+      "Representation Learning",
+      "Text Mining"
+    ],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2025",
+        "title": "IRNLPUI at COLIEE 2025: Utilization of LLMs for Statute Law Retrieval and Legal Entailment Task",
+        "venue": "COLIEE 2025 · ICAIL 2025",
+        "href": "https://doi.org/10.1145/3769126.3785016"
+      },
+      {
+        "year": "2021",
+        "title": "Modeling search and session effectiveness",
+        "venue": "Information Processing & Management, 58(4)",
+        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+      },
+      {
+        "year": "2016",
+        "title": "InaNLP: Indonesia natural language processing toolkit, case study: Complaint tweet classification",
+        "venue": "ICAICTA 2016, IEEE",
+        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+      },
+      {
+        "year": "2014",
+        "title": "Automatically building a corpus for sentiment analysis on Indonesian tweets",
+        "venue": "PACLIC 28",
+        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+      },
+      {
+        "year": "2010",
+        "title": "HMM based part-of-speech tagger for Bahasa Indonesia",
+        "venue": "Fourth International MALINDO Workshop",
+        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+      }
+    ]
+  },
+  {
+    "slug": "rahmad-mahendra",
+    "g": "fac",
+    "name": "Rahmad Mahendra",
+    "ini": "RM",
+    "titles": "S.Kom., M.Sc., Ph.D.",
+    "role": "rs",
+    "area": "rea",
+    "tags": [
+      "NLP",
+      "Information extraction"
+    ],
+    "email": "rahmad.mahendra@cs.ui.ac.id",
+    "photo": "assets/people/rahmad-mahendra.png",
+    "position": {
+      "id": "Dosen · Laboratorium Information Retrieval dan NLP, Fasilkom UI",
+      "en": "Lecturer · Information Retrieval and NLP Lab, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Rahmad Mahendra adalah dosen dan peneliti di Fakultas Ilmu Komputer Universitas Indonesia. Ia menempuh studi doktoral di RMIT University, meraih M.Sc. Informatika dari Free University of Bozen-Bolzano, dan S.Kom. dari Universitas Indonesia. Risetnya mencakup NLP, text mining, ekstraksi informasi, sistem tanya jawab, dan analitik media sosial, serta aktif dalam inisiatif sumber daya NLP Indonesia."
+      ],
+      "en": [
+        "Rahmad Mahendra is a lecturer and researcher at the Faculty of Computer Science, Universitas Indonesia. He pursued doctoral studies at RMIT University, holds an M.Sc. in Informatics from the Free University of Bozen-Bolzano and an S.Kom. from Universitas Indonesia. His research spans NLP, text mining, information extraction, question answering and social media analytics, and he is active in Indonesian NLP resource initiatives."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Ph.D.",
+        "where": {
+          "id": "RMIT University",
+          "en": "RMIT University"
+        }
+      },
+      {
+        "deg": "M.Sc.",
+        "where": {
+          "id": "Informatika, Free University of Bozen-Bolzano",
+          "en": "Informatics, Free University of Bozen-Bolzano"
+        }
+      },
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      }
+    ],
+    "interests": [
+      "Natural Language Processing",
+      "Text Mining",
+      "Information Extraction",
+      "Recommender Systems",
+      "Computational Linguistics",
+      "Question Answering",
+      "Social Media Analytics"
+    ],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?user=flxdJ0IAAAAJ&hl=en"
+      },
+      {
+        "label": "UI Scholar",
+        "href": "https://scholar.ui.ac.id/en/persons/rahmad-mahendra/"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2025",
+        "title": "Evaluating Numeracy of Language Models as a Natural Language Inference Task",
+        "venue": "Findings of NAACL 2025",
+        "href": "https://scholar.ui.ac.id/en/persons/rahmad-mahendra/"
+      },
+      {
+        "year": "2020",
+        "title": "IndoNLU: Benchmark and resources for evaluating Indonesian natural language understanding",
+        "venue": "AACL-IJCNLP 2020",
+        "href": "https://scholar.google.com/citations?user=flxdJ0IAAAAJ&hl=en"
+      },
+      {
+        "year": "2008",
+        "title": "Extending an Indonesian semantic analysis-based question answering system with linguistic and world knowledge axioms",
+        "venue": "PACLIC 22",
+        "href": "https://scholar.google.com/citations?user=flxdJ0IAAAAJ&hl=en"
+      }
+    ]
+  },
+  {
+    "slug": "ari-saptawijaya",
+    "g": "fac",
+    "name": "Ari Saptawijaya",
+    "ini": "AS",
+    "titles": "S.Kom., M.Sc., Ph.D.",
+    "role": "rs",
+    "area": "rea",
+    "tags": [
+      "Knowledge representation",
+      "Machine ethics"
+    ],
+    "email": "saptawijaya@cs.ui.ac.id",
+    "photo": "assets/people/ari-saptawijaya.png",
+    "position": {
+      "id": "Wakil Dekan Bidang Pendidikan, Penelitian, dan Kemahasiswaan, Fasilkom UI",
+      "en": "Vice Dean for Education, Research and Student Affairs, Fasilkom UI"
+    },
+    "bio": {
+      "id": [
+        "Ari Saptawijaya adalah pengajar dan peneliti ilmu komputer di Fakultas Ilmu Komputer Universitas Indonesia, dan kini menjabat Wakil Dekan Bidang Pendidikan, Penelitian, dan Kemahasiswaan. Risetnya berfokus pada representasi pengetahuan dan penalaran, logika komputasional, serta pemodelan moralitas dengan logic programming."
+      ],
+      "en": [
+        "Ari Saptawijaya is a lecturer and computer science researcher at the Faculty of Computer Science, Universitas Indonesia, and serves as Vice Dean for Education, Research and Student Affairs. His research focuses on knowledge representation and reasoning, computational logic and modelling morality with logic programming."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "Ph.D.",
+        "where": {
+          "id": "Ilmu Komputer, Universidade NOVA de Lisboa",
+          "en": "Computer Science, Universidade NOVA de Lisboa"
+        }
+      },
+      {
+        "deg": "M.Sc.",
+        "where": {
+          "id": "Ilmu Komputer, Technische Universität Dresden",
+          "en": "Computer Science, Technische Universität Dresden"
+        }
+      },
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      }
+    ],
+    "interests": [
+      "Artificial Intelligence",
+      "Knowledge Representation & Reasoning",
+      "Computational Logic",
+      "Machine Ethics"
+    ],
+    "links": [
+      {
+        "label": "Google Scholar",
+        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+      }
+    ],
+    "pubs": [
+      {
+        "year": "2025",
+        "title": "Explainable clustering: Methods, challenges, and future opportunities",
+        "venue": "Journal of Intelligent Systems, 34(1)",
+        "href": "https://doi.org/10.1515/jisys-2024-0477"
+      },
+      {
+        "year": "2019",
+        "title": "From logic programming to machine ethics",
+        "venue": "Handbuch Maschinenethik, Springer VS",
+        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+      },
+      {
+        "year": "2016",
+        "title": "Programming machine ethics",
+        "venue": "Springer",
+        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+      },
+      {
+        "year": "2016",
+        "title": "Logic programming for modeling morality",
+        "venue": "Logic Journal of the IGPL, 24(4)",
+        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+      }
+    ]
+  },
+  {
+    "slug": "bryan-jeshua",
+    "g": "staff",
+    "name": "Bryan Jeshua",
+    "ini": "BJ",
+    "titles": "S.Kom.",
+    "role": "ra",
+    "area": "tru",
+    "tags": [
+      "Legal tech ventures",
+      "Evaluasi produk"
+    ],
+    "email": "bryan.jeshua@ui.ac.id",
+    "photo": "assets/people/bryan-jeshua-white.png"
+  },
+  {
+    "slug": "p-s-evans-simanjuntak",
+    "g": "staff",
+    "name": "P. S. Evans Simanjuntak",
+    "ini": "ES",
+    "titles": "S.Kom.",
+    "role": "are",
+    "area": "ret",
+    "tags": [
+      "LLM",
+      "Retrieval-augmented generation"
+    ],
+    "email": "patrick.samuel@ui.ac.id",
+    "photo": "assets/people/p-s-evans-simanjuntak.png"
+  },
+  {
+    "slug": "eryawan-presma",
+    "g": "staff",
+    "name": "Eryawan Presma",
+    "ini": "EP",
+    "titles": "S.Kom.",
+    "role": "appl",
+    "area": "tru",
+    "tags": [
+      "Evaluasi model",
+      "MLOps"
+    ],
+    "email": "eryawan.presma@ui.ac.id",
+    "photo": "assets/people/eryawan-presma.png"
+  }
+]

@@ -1,0 +1,269 @@
+[
+  {
+    "slug": "fiskallink-ai-incubation-public-sector",
+    "type": "release",
+    "date": "2026-09-15",
+    "icon": "trophy",
+    "photo": "assets/wawasan/aips-2026-demo-day.png",
+    "photoPos": "center 60%",
+    "gallery": [
+      {
+        "src": "assets/wawasan/aips-2026-booth.png",
+        "ratio": "1800/798",
+        "cap": {
+          "id": "Booth FiskalLink dan Klaussa di AIPS Demo Day, Jakarta, 15 September 2026.",
+          "en": "The FiskalLink and Klaussa booth at AIPS Demo Day, Jakarta, 15 September 2026."
+        }
+      }
+    ],
+    "title": {
+      "id": "FiskalLink terpilih di AI Incubation for Public Sector 2026",
+      "en": "FiskalLink selected for AI Incubation for Public Sector 2026"
+    },
+    "dek": {
+      "id": "Satu dari lima tim yang terpilih dari lebih dari 170 pendaftar, bekerja langsung bersama Kementerian Keuangan.",
+      "en": "One of five teams chosen from more than 170 applicants, working directly with the Ministry of Finance."
+    },
+    "body": {
+      "id": [
+        "FiskalLink, sistem atribusi fiskal tematik yang dikembangkan Lexin bersama Klaussa, menjadi salah satu dari lima tim inovator yang terpilih dalam AI Incubation for Public Sector (AIPS) 2026. Program yang dibuka secara nasional pada Mei 2026 ini menerima lebih dari 170 pendaftaran untuk lima tantangan pemerintah.",
+        "Kelima tim bekerja langsung dengan mitra pemerintah, yaitu Bappenas, Kementerian Keuangan, BPJS Kesehatan, Kemendikdasmen, dan Kementerian Investasi/BKPM, melalui pengujian dan penyempurnaan solusi dari Mei hingga September 2026. Hasilnya dipresentasikan pada AIPS Demo Day bertema Safely Built for Impact di Jakarta, 15 September 2026.",
+        "Dalam pidato utamanya, Wakil Menteri Komunikasi dan Digital Nezar Patria menekankan bahwa AI di pemerintahan diukur dari dampaknya pada layanan dan kepercayaan publik, bukan dari kecanggihan teknologinya. FiskalLink saat ini sedang diuji coba di Kementerian Keuangan."
+      ],
+      "en": [
+        "FiskalLink, a thematic fiscal attribution system developed by Lexin with Klaussa, was one of five innovator teams selected for AI Incubation for Public Sector (AIPS) 2026. Opened nationally in May 2026, the program received more than 170 applications for five government challenges.",
+        "The five teams worked directly with government partners, namely Bappenas, the Ministry of Finance, BPJS Kesehatan, the Ministry of Primary and Secondary Education and the Ministry of Investment/BKPM, testing and refining their solutions from May to September 2026. Results were presented at the AIPS Demo Day, themed Safely Built for Impact, in Jakarta on 15 September 2026.",
+        "In his keynote, Deputy Minister of Communication and Digital Affairs Nezar Patria stressed that AI in government should be judged by its impact on services and public trust rather than by how advanced it looks. FiskalLink is currently being trialled at the Ministry of Finance."
+      ]
+    },
+    "people": [],
+    "sources": [
+      {
+        "name": "Satu Data Indonesia",
+        "href": "https://data.go.id/news/2026/09/ai-di-pemerintahan-harus-berorientasi-pada-dampak-dan-kepercayaan-publik/1116"
+      },
+      {
+        "name": "Komdigi",
+        "href": "https://portal.komdigi.go.id/kanal-publik/berita-kini/10545"
+      }
+    ],
+    "link": {
+      "label": {
+        "id": "Tentang FiskalLink",
+        "en": "About FiskalLink"
+      },
+      "href": "Lexin Produk.dc.html#fiskallink"
+    }
+  },
+  {
+    "slug": "lexid-knowledge-graph",
+    "type": "explainer",
+    "date": "2020-06-21",
+    "icon": "network",
+    "photo": "assets/wawasan/lexid-knowledge-graph.png",
+    "photoPos": "center",
+    "gallery": [
+      {
+        "src": "assets/wawasan/lexid-sparql-contoh.png",
+        "ratio": "619/410",
+        "fit": "contain",
+        "cap": {
+          "id": "Contoh kueri SPARQL pada knowledge graph LexID beserta jawabannya: dasar hukum Peraturan Daerah Provinsi Maluku Nomor 12 Tahun 2008 (kiri) dan daftar bab di dalamnya (kanan).",
+          "en": "Example SPARQL queries on the LexID knowledge graph and their answers: the legal basis of Maluku Provincial Regulation No. 12 of 2008 (left) and the chapters it contains (right)."
+        }
+      }
+    ],
+    "title": {
+      "id": "LexID: knowledge graph untuk dokumen hukum Indonesia",
+      "en": "LexID: a knowledge graph for Indonesian legal documents"
+    },
+    "dek": {
+      "id": "Mengapa pencarian teks saja tidak cukup, dan bagaimana relasi antardokumen hukum dibuat eksplisit.",
+      "en": "Why text search alone falls short, and how relationships between legal documents are made explicit."
+    },
+    "body": {
+      "id": [
+        "Asas fiksi hukum menuntut semua peraturan dapat diakses publik. Namun layanan pencarian berbasis teks sering gagal ketika pertanyaan bergantung pada hubungan antardokumen, misalnya peraturan mana yang mengubah atau mencabut peraturan lain. Masalahnya, hubungan itu tidak direpresentasikan secara eksplisit.",
+        "LexID menjawabnya dengan knowledge graph yang memuat metadata hukum sekaligus isi semantik pasal-pasalnya, dimodelkan dengan ontologi LexID. Karena tata cara penulisan peraturan di Indonesia sudah baku, graf ini dibangun dengan pendekatan berbasis aturan dari ribuan dokumen hukum.",
+        "Saat diuji untuk menjawab pertanyaan, LexID mencapai skor F1 makro sekitar 0,91. Makalah ini dimuat di Jurnal Ilmu Komputer dan Informasi (JIKI)."
+      ],
+      "en": [
+        "The legal fiction principle requires all regulations to be publicly available. Yet text-based search often fails when a question depends on how documents relate, such as which regulation amends or revokes another, because those relationships are not represented explicitly.",
+        "LexID addresses this with a knowledge graph holding both legal metadata and the semantic content of articles, modelled with the LexID ontology. Because Indonesian regulations follow a fixed drafting procedure, the graph is built with a rule-based approach from thousands of legal documents.",
+        "Evaluated on question answering, LexID reaches a macro-average F1 score of about 0.91. The paper is published in the Jurnal Ilmu Komputer dan Informasi (JIKI)."
+      ]
+    },
+    "people": [],
+    "sources": [
+      {
+        "name": "JIKI (makalah lengkap)",
+        "href": "https://jiki.cs.ui.ac.id/index.php/jiki/article/view/1096"
+      }
+    ],
+    "link": {
+      "label": {
+        "id": "Dataset LexID di GitHub",
+        "en": "LexID dataset on GitHub"
+      },
+      "href": "https://github.com/ninggar17/dataset_lexid_pdf"
+    }
+  },
+  {
+    "slug": "klasifikasi-putusan-pengadilan-pajak",
+    "type": "explainer",
+    "date": "2021-05-07",
+    "icon": "scale",
+    "photo": "assets/wawasan/cnn-indobert-arsitektur.png",
+    "photoSize": "92% auto",
+    "photoPos": "center",
+    "photoFill": "#FFFFFF",
+    "title": {
+      "id": "Menemukan dasar hukum putusan Pengadilan Pajak dengan CNN dan IndoBERT",
+      "en": "Finding the legal basis of Tax Court rulings with CNN and IndoBERT"
+    },
+    "dek": {
+      "id": "Klasifikasi teks multilabel ekstrem untuk memprediksi ayat, pasal, dan undang-undang yang relevan.",
+      "en": "Extreme multilabel text classification to predict the relevant paragraphs, articles and laws."
+    },
+    "body": {
+      "id": [
+        "Mencari dasar hukum secara manual, mulai dari ayat, pasal, hingga undang-undang, saat menyiapkan sidang di Pengadilan Pajak memakan banyak waktu. Riset ini memprediksi dasar hukum yang relevan untuk sebuah banding langsung dari dokumen putusan.",
+        "Pendekatannya adalah klasifikasi teks multilabel ekstrem dengan CNN satu kanal dan embedding IndoBERT, diuji pada tiga tingkat label: ayat, pasal, dan undang-undang.",
+        "Model CNN+IndoBERT mengungguli CNN dengan embedding Word2Vec dan fastText di ketiga tingkat, dan mengungguli CNN multikanal dengan IndoBERT di tingkat ayat dan pasal."
+      ],
+      "en": [
+        "Manually searching for the legal basis, from paragraphs and articles to laws, when preparing a Tax Court hearing takes a lot of time. This research predicts the relevant legal basis for an appeal directly from ruling documents.",
+        "The approach is extreme multilabel text classification using a single-channel CNN with IndoBERT embeddings, tested at three label levels: paragraph, article and law.",
+        "CNN+IndoBERT outperforms CNNs with Word2Vec and fastText embeddings at all three levels, and outperforms a multi-channel CNN with IndoBERT at the paragraph and article levels."
+      ]
+    },
+    "people": [],
+    "sources": [
+      {
+        "name": "IEEE Xplore (makalah lengkap)",
+        "href": "https://ieeexplore.ieee.org/abstract/document/9631855"
+      }
+    ]
+  },
+  {
+    "slug": "peluncuran-lexin",
+    "type": "event",
+    "date": "2025-11-25",
+    "icon": "rocket",
+    "photo": "assets/logo-lexin-white.png",
+    "photoSize": "62% auto",
+    "title": {
+      "id": "Lexin resmi diluncurkan di Dies Natalis ke-39 Fasilkom UI",
+      "en": "Lexin officially launches at Fasilkom UI’s 39th anniversary"
+    },
+    "dek": {
+      "id": "Pusat riset informatika hukum UI diperkenalkan bersama peresmian Gedung Baru Zona III Fasilkom UI.",
+      "en": "UI’s legal informatics research center was introduced alongside the opening of Fasilkom UI’s new Zone III building."
+    },
+    "body": {
+      "id": [
+        "Lexin diluncurkan dalam rangkaian Dies Natalis ke-39 Fasilkom UI pada 18–19 November 2025, setelah peresmian Gedung Baru Zona III. Pusat riset ini digagas oleh Dr. Adila Alfa Krisnadhi dan Dr. Panca Hadi Putra, bersama Dr. Alfan Farizki Wicaksono, Rahmad Mahendra, dan Prof. Dr. Indra Budi.",
+        "Lexin bertumpu pada riset yang sudah berjalan bertahun-tahun, dari machine learning dan knowledge graph hingga dataset dokumen hukum dan model prediksi putusan. Kegiatannya terbagi dua: riset informatika hukum, serta rekayasa dan pengembangan produk.",
+        "Peluncuran ini juga mencatat hubungan Lexin dengan Direktorat Jenderal Pajak dan Direktorat Jenderal Kekayaan Intelektual."
+      ],
+      "en": [
+        "Lexin launched during Fasilkom UI’s 39th anniversary on 18–19 November 2025, following the opening of the new Zone III building. The center was initiated by Dr. Adila Alfa Krisnadhi and Dr. Panca Hadi Putra, with Dr. Alfan Farizki Wicaksono, Rahmad Mahendra and Prof. Dr. Indra Budi.",
+        "Lexin builds on years of research, from machine learning and knowledge graphs to legal document datasets and court-decision prediction models. Its work has two strands: legal informatics research, and engineering and product development.",
+        "The launch also highlighted Lexin’s ties with the Directorate General of Taxes and the Directorate General of Intellectual Property."
+      ]
+    },
+    "people": [
+      "adila-alfa-krisnadhi",
+      "panca-hadi-putra",
+      "alfan-farizki-wicaksono",
+      "rahmad-mahendra",
+      "indra-budi"
+    ],
+    "sources": [
+      {
+        "name": "Fasilkom UI",
+        "href": "https://cs.ui.ac.id/2025/11/26/fasilkom-ui-luncurkan-lexin-perkuat-riset-ai-di-bidang-hukum/"
+      },
+      {
+        "name": "ANTARA News Megapolitan",
+        "href": "https://megapolitan.antaranews.com/berita/466629/fasilkom-ui-luncurkan-lexin-perkuat-riset-ai-di-bidang-hukum"
+      }
+    ]
+  },
+  {
+    "slug": "klaussa-ui-incubate",
+    "type": "release",
+    "date": "2025-11-26",
+    "icon": "sparkles",
+    "photo": "assets/wawasan/klaussa-ui-incubate.png",
+    "photoPos": "left top",
+    "title": {
+      "id": "Klaussa, spin-off Lexin, meraih pendanaan inkubasi UI Incubate",
+      "en": "Klaussa, a Lexin spin-off, receives UI Incubate funding"
+    },
+    "dek": {
+      "id": "Platform AI hukum berbasis LLM dan RAG yang dijalankan mahasiswa Fasilkom UI.",
+      "en": "An LLM- and RAG-based legal AI platform run by Fasilkom UI students."
+    },
+    "body": {
+      "id": [
+        "Klaussa adalah startup spin-off Lexin yang membangun aplikasi AI hukum berbasis large language model dan retrieval-augmented generation. Tim intinya adalah mahasiswa tingkat akhir Fasilkom UI.",
+        "Pada 2025 Klaussa memperoleh pendanaan inkubasi sebesar Rp300 juta dari program UI Incubate, dan dihubungi oleh program Google for Startups AI."
+      ],
+      "en": [
+        "Klaussa is a Lexin spin-off building legal AI applications on large language models and retrieval-augmented generation. Its core team are final-year Fasilkom UI students.",
+        "In 2025 Klaussa received Rp300 million in incubation funding from UI Incubate and was approached by the Google for Startups AI programme."
+      ]
+    },
+    "people": [
+      "adila-alfa-krisnadhi"
+    ],
+    "sources": [
+      {
+        "name": "Fasilkom UI",
+        "href": "https://cs.ui.ac.id/2025/11/26/startup-ai-legal-tech-klaussa-karya-mahasiswa-fasilkom-ui-raih-pendanaan-dan-dukungan-dari-ui-incubate-google-dan-nvidia/"
+      }
+    ],
+    "link": {
+      "label": {
+        "id": "Kunjungi Klaussa",
+        "en": "Visit Klaussa"
+      },
+      "href": "https://klaussa.com"
+    }
+  },
+  {
+    "slug": "yarsi-navigating-ai-era",
+    "type": "event",
+    "date": "2026-05-25",
+    "icon": "mic",
+    "photo": "assets/wawasan/yarsi-navigating-ai-era.png",
+    "title": {
+      "id": "Dr. Panca Hadi Putra membuka seminar “Navigating the AI Era” di Universitas YARSI",
+      "en": "Dr. Panca Hadi Putra opens the “Navigating the AI Era” seminar at Universitas YARSI"
+    },
+    "dek": {
+      "id": "Keynote tentang literasi AI, perspektif industri, dan peluang kolaborasi hukum dan teknologi.",
+      "en": "A keynote on AI literacy, industry perspectives and collaboration between law and technology."
+    },
+    "body": {
+      "id": [
+        "Melalui program Alumni Back to Campus, Dr. Panca Hadi Putra, alumni Magister Kenotariatan Universitas YARSI, menjadi keynote opening speaker seminar “Navigating the AI Era: Literacy, Industry Perspective, and Implementation” di Ruang Seminar Rektorat Universitas YARSI.",
+        "Di hadapan 106 peserta, ia membahas perkembangan AI, transformasi digital, serta tantangan dan peluang kerja di era teknologi, termasuk kolaborasi antara hukum, teknologi, dan industri digital."
+      ],
+      "en": [
+        "Through the Alumni Back to Campus program, Dr. Panca Hadi Putra, an alumnus of Universitas YARSI’s Master of Notarial Law, gave the opening keynote at the seminar “Navigating the AI Era: Literacy, Industry Perspective, and Implementation” at the university’s rectorate seminar hall.",
+        "Speaking to 106 participants, he covered AI developments, digital transformation and the challenges and opportunities of work in a technology era, including collaboration across law, technology and the digital industry."
+      ]
+    },
+    "people": [
+      "panca-hadi-putra"
+    ],
+    "sources": [
+      {
+        "name": "Universitas YARSI",
+        "href": "https://www.yarsi.ac.id/dr-panca-hadi-putra-kembali-ke-universitas-yarsi-berbagi-perspektif-ai-dan-teknologi-hukum"
+      }
+    ]
+  }
+]

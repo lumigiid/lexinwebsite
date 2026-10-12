@@ -1,0 +1,307 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+import Icon from '../components/Icon.astro';
+import { dict, url, asset, type Lang } from '../lib/i18n';
+
+interface Props { lang: Lang }
+const { lang } = Astro.props;
+const t = dict('riset', lang);
+
+const TILES = [['var(--navy-50)', 'var(--navy-500)'], ['var(--red-50)', 'var(--red-500)'], ['var(--yellow-100)', 'var(--yellow-700)'], ['var(--grad-signature)', '#FFFFFF']];
+const draftMail = (kind: string, title: string) => 'mailto:hadiputra@cs.ui.ac.id?subject=' + encodeURIComponent(kind + title);
+const PUBS = [
+  [{ type: t.journalType, title: 'A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia', year: '2025', href: 'https://dx.doi.org/10.62527/joiv.9.1.3170' }],
+  [],
+  [
+    { type: 'WHITE PAPER', title: t.aiGovWp, year: t.draft, href: draftMail('Draft white paper: ', t.aiGovWp) },
+    { type: 'POLICY BRIEF', title: t.aiRoadmap, year: t.draft, href: draftMail('Draft policy brief: ', t.aiRoadmap) },
+    { type: t.chapterType, title: 'From Logic Programming to Machine Ethics', year: '2019', href: 'https://doi.org/10.1007/978-3-658-17483-5_14' },
+  ],
+  [
+    { type: t.confType, title: 'IRNLPUI at COLIEE 2025: Utilization of LLMs for Statute Law Retrieval and Legal Entailment Task', year: '2025', href: 'https://doi.org/10.1145/3769126.3785016' },
+    { type: t.confType, title: 'Extreme Multilabel Text Classification on Indonesian Tax Court Ruling using Single Channel CNN and IndoBERT Embedding', year: '2021', href: 'https://doi.org/10.1109/IWBIS53353.2021.9631855' },
+  ],
+];
+const areas = t.areas.map((a: any, i: number) => ({
+  ...a, id: 'area-' + (i + 1), num: '0' + (i + 1), tileBg: TILES[i][0], tileFg: TILES[i][1],
+  rows: a.rows.map((v: string, k: number) => ({ label: t.rowLabels[k], val: v })),
+  pubs: PUBS[i],
+}));
+const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopener' } : {};
+---
+<BaseLayout lang={lang} path="riset/" active="riset" title={`Lexin — ${t.nav[0]}`}>
+
+<PageHeader tall>
+  <div class="eyebrow">{t.eyebrow}</div>
+  <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
+  <div class="ph-rule"></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;margin-top:24px;align-items:start">
+    <p style="font:var(--type-body-lg);margin:0;color:var(--text-body);text-wrap:pretty">{t.intro}</p>
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+      {areas.map((p: any) => (
+        <a href={'#' + p.id} class="area-pill" data-go={p.id}>
+          <span style={`width:26px;height:26px;border-radius:999px;background:${p.tileBg};color:${p.tileFg};display:flex;align-items:center;justify-content:center;font:500 11px/1 var(--font-mono)`}>{p.num}</span>{p.title}
+        </a>
+      ))}
+    </div>
+  </div>
+</PageHeader>
+
+<div style="position:relative">
+  <div class="rail-layer">
+    <div class="container rail-wrap">
+      <aside class="rail" aria-label={t.onThisPage}>
+        <div style="font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted);margin:0 0 10px 4px">{t.onThisPage}</div>
+        <a href={url(lang, 'produk/')} class="r-roof">
+          <span style="display:flex;align-items:center;justify-content:center;gap:6px;font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">{t.roof}<Icon name="arrow-up-right" size={12} /></span>
+        </a>
+        {areas.map((p: any) => (
+          <a href={'#' + p.id} class="r-area" data-go={p.id} data-spy={p.id}>
+            <span style="font:500 11px/1 var(--font-mono);opacity:.7">{p.num}</span>
+            <span style="font:600 13px/1.25 var(--font-display)">{p.title}</span>
+          </a>
+        ))}
+        <a href="#kolaborasi" class="r-collab" data-go="kolaborasi" data-spy="kolaborasi">
+          <Icon name="plus" size={14} />
+          <span style="font:600 13px/1.25 var(--font-display)">{t.yourArea}</span>
+        </a>
+        <a href="#fondasi" class="r-found" data-go="fondasi" data-spy="fondasi">
+          <span style="font:600 10px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--navy-600)">{t.foundationLabel}</span>
+          <span style="font:700 13px/1.2 var(--font-display)">Legal AI Foundations</span>
+        </a>
+        <a href="#infrastruktur" class="r-infra" data-go="infrastruktur" data-spy="infrastruktur">
+          <span style="font:600 10px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">{t.infraEyebrow}</span>
+          <span style="font:600 13px/1.2 var(--font-display);color:#FFFFFF">{t.infraTitle}</span>
+        </a>
+      </aside>
+    </div>
+  </div>
+
+  <div class="container body-grid">
+    <div class="rail-spacer"></div>
+    <div style="min-width:0">
+      <section style="padding:clamp(56px,8vw,88px) 0 clamp(40px,6vw,64px)">
+        <div>
+          <div class="eyebrow">{t.areasEyebrow}</div>
+          <h2 class="h-sec" style="text-wrap:balance">{t.areasTitle}</h2>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:24px;margin-top:clamp(28px,4vw,48px)">
+          {areas.map((a: any) => (
+            <article id={a.id} class="area">
+              <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
+                <div style="display:flex;align-items:center;gap:14px">
+                  <span style={`width:56px;height:56px;border-radius:17px;background:${a.tileBg};color:${a.tileFg};display:flex;align-items:center;justify-content:center;flex-shrink:0`}><Icon name={a.icon} size={26} /></span>
+                  <span style="font:500 13px/1 var(--font-mono);color:var(--text-muted)">{t.areaWord} {a.num}</span>
+                </div>
+                <h3 style="font:var(--type-h2);font-size:clamp(24px,2.8vw,30px);letter-spacing:var(--tracking-snug);color:var(--text-heading);margin:4px 0 0;text-wrap:balance">{a.title}</h3>
+                <div style="display:flex;align-items:center;gap:8px;flex-wrap:wrap">
+                  <span class="mini-lbl">{t.mitraLabel}</span>
+                  {a.mitra
+                    ? <span style="height:28px;padding:0 12px;border-radius:999px;background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);color:var(--navy-800);font:600 13px/28px var(--font-display);white-space:nowrap">{a.mitra}</span>
+                    : <a href="#kolaborasi" data-go="kolaborasi" class="open-partner">{t.openForPartner}</a>}
+                </div>
+                <p style="margin:8px 0 0;font:500 clamp(18px,1.8vw,21px)/1.45 var(--font-display);color:var(--navy-800);text-wrap:pretty">“{a.q}”</p>
+              </div>
+              <div style="display:flex;flex-direction:column;min-width:0">
+                {a.rows.map((r: any) => (
+                  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,140px),1fr));gap:6px 20px;padding:16px 0;box-shadow:inset 0 -1px 0 var(--border-subtle)">
+                    <span style="font:600 11px/1.6 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted)">{r.label}</span>
+                    <span style="font:var(--type-body-sm);color:var(--text-body);grid-column:span 2;min-width:0;text-wrap:pretty">{r.val}</span>
+                  </div>
+                ))}
+                <div style="padding-top:18px;display:flex;flex-direction:column;gap:10px">
+                  <span class="mini-lbl">{t.relatedPubs}</span>
+                  {a.pubs.length === 0 && <span style="padding:10px 14px;border-radius:12px;border:1.5px dashed var(--border-subtle);font:var(--type-body-sm);color:var(--text-muted)">{t.pubsSoon}</span>}
+                  {a.pubs.map((u: any) => (
+                    <a href={u.href} class="pub-row" {...ext(u.href)}>
+                      <span style="font:500 11px/1 var(--font-mono);color:var(--red-600);white-space:nowrap">{u.type}</span>
+                      <span style="font:600 14px/1.4 var(--font-display);flex:1;min-width:0">{u.title}</span>
+                      <span style="font:500 12px/1 var(--font-mono);color:var(--text-muted)">{u.year}</span>
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <section id="fondasi" class="anchor" style="background:var(--navy-50);box-shadow:inset 0 1px 0 var(--border-subtle),inset 0 -1px 0 var(--border-subtle)">
+    <div class="container body-grid sec-pad">
+      <div class="rail-spacer"></div>
+      <div style="min-width:0">
+        <div class="split-intro">
+          <div>
+            <div class="eyebrow" style="color:var(--navy-600)">{t.foundationLabel}</div>
+            <h2 class="h-sec">Legal AI Foundations</h2>
+          </div>
+          <p style="font:var(--type-body-lg);color:var(--text-muted);margin:0;text-wrap:pretty">{t.foundationBody}</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;margin-top:clamp(28px,4vw,48px)">
+          {t.foundations.map((f: any) => (
+            <div style="background:var(--surface-card);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);padding:26px 24px;display:flex;flex-direction:column;gap:12px">
+              <span style="width:48px;height:48px;border-radius:15px;background:var(--navy-50);color:var(--navy-500);display:flex;align-items:center;justify-content:center"><Icon name={f.icon} size={22} /></span>
+              <h3 style="font:var(--type-h4);color:var(--text-heading);margin:6px 0 0">{f.title}</h3>
+              <p style="margin:0;font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty">{f.body}</p>
+              {!f.hasPub && <>
+                <span class="mini-lbl" style="margin-top:auto;padding-top:6px">{t.relatedPubs}</span>
+                <span style="padding:10px 12px;border-radius:12px;border:1.5px dashed var(--border-subtle);font:var(--type-body-sm);font-size:13px;color:var(--text-muted)">{t.pubsSoonShort}</span>
+              </>}
+              {f.hasPub && <>
+                <span class="mini-lbl" style="margin-top:auto;padding-top:6px">{t.relatedPubs}</span>
+                <a href={f.pubHref} class="pub-card" target="_blank" rel="noopener">
+                  <span style="font:500 11px/1 var(--font-mono);color:var(--red-600)">{f.pubMeta}</span>
+                  <span style="font:600 13px/1.4 var(--font-display)">{f.pubTitle}</span>
+                </a>
+              </>}
+              {f.hasPub2 && (
+                <a href={f.pub2Href} class="pub-card" target="_blank" rel="noopener">
+                  <span style="font:500 11px/1 var(--font-mono);color:var(--red-600)">{f.pub2Meta}</span>
+                  <span style="font:600 13px/1.4 var(--font-display)">{f.pub2Title}</span>
+                </a>
+              )}
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="infrastruktur" class="anchor" style="background:var(--surface-page)">
+    <div class="container body-grid sec-pad">
+      <div class="rail-spacer"></div>
+      <div style="min-width:0">
+        <div class="split-intro">
+          <div>
+            <div class="eyebrow">{t.infraEyebrow} · {t.dataCode}</div>
+            <h2 class="h-sec">{t.infraTitle}</h2>
+          </div>
+          <p style="font:var(--type-body-lg);color:var(--text-muted);margin:0;text-wrap:pretty">{t.infraBody}</p>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:16px;margin-top:clamp(28px,4vw,48px)">
+          {t.infra.map((f: any) => (
+            <div style="border-radius:var(--radius-xl);box-shadow:inset 0 0 0 1px var(--border-subtle);padding:22px;display:flex;flex-direction:column;gap:10px;background:var(--surface-card)">
+              <span style="font:500 12px/1 var(--font-mono);color:var(--navy-600)">{f.code}</span>
+              <h3 style="font:var(--type-h4);font-size:18px;color:var(--text-heading);margin:4px 0 0">{f.title}</h3>
+              <p style="margin:0;font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty">{f.body}</p>
+            </div>
+          ))}
+        </div>
+        <div style="margin-top:20px;border-radius:var(--radius-xl);background:var(--grad-night);color:#FFFFFF;padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:20px 32px">
+          <div style="display:flex;flex-direction:column;gap:6px;max-width:560px">
+            <span style="font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">{t.openData}</span>
+            <span style="font:700 22px/1.25 var(--font-display);color:#FFFFFF">{t.lexidTitle}</span>
+            <span style="font:var(--type-body-sm);color:var(--fg-on-dark-2)">{t.lexidBody}</span>
+            <span style="margin-top:10px;font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2)">{t.relatedPubs}</span>
+            <a href="https://doi.org/10.21609/jiki.v16i1.1096" class="lexid-paper" target="_blank" rel="noopener"><span style="font:500 11px/1 var(--font-mono);white-space:nowrap">{t.paperLabel} · JIKI 2023</span><span>LexID: The Metadata and Semantic Knowledge Graph Construction of Indonesian Legal Document</span></a>
+          </div>
+          <div style="display:flex;gap:10px;flex-wrap:wrap">
+            <Button variant="inverse" iconRight="arrow-right" href="https://github.com/ninggar17/dataset_lexid_pdf">{t.dataset}</Button>
+            <a href="https://github.com/lab-lexin" class="gh-btn" target="_blank" rel="noopener"><Icon name="github" size={16} />lab-lexin</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<section id="kolaborasi" class="anchor" style="background:var(--surface-page)">
+  <div class="container" style="padding-bottom:clamp(56px,9vw,96px)">
+    <div class="collab">
+      <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;right:-40px;bottom:-60px;height:280px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
+      <div style="position:relative">
+        <div class="eyebrow" style="color:var(--yellow-300)">{t.collabEyebrow}</div>
+        <h2 class="h-sec" style="color:#FFFFFF;text-wrap:balance">{t.collabTitle}</h2>
+        <p style="font:var(--type-body-lg);color:var(--fg-on-dark-2);margin:18px 0 0;max-width:520px;text-wrap:pretty">{t.collabBody}</p>
+        <div style="display:flex;gap:12px;margin-top:32px;flex-wrap:wrap">
+          <Button variant="gradient" size="lg" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+          <Button variant="inverse" size="lg" href={url(lang, 'partisipasi/')}>{t.participate}</Button>
+        </div>
+      </div>
+      <div style="position:relative;border-radius:20px;border:1.5px dashed var(--yellow-400);padding:24px;display:flex;flex-direction:column;gap:14px">
+        <span style="display:flex;align-items:center;gap:10px;color:var(--yellow-300)"><Icon name="plus" size={22} /><span style="font:700 20px/1.2 var(--font-display)">{t.yourArea}</span></span>
+        {t.collabWays.map((c: any) => (
+          <div style="display:flex;gap:12px;align-items:flex-start;padding-top:14px;box-shadow:inset 0 1px 0 rgba(255,255,255,.14)">
+            <span style="font:500 12px/1.6 var(--font-mono);color:var(--yellow-300)">{c.n}</span>
+            <span style="display:flex;flex-direction:column;gap:4px"><span style="font:600 15px/1.3 var(--font-display);color:#FFFFFF">{c.title}</span><span style="font:var(--type-body-sm);color:var(--fg-on-dark-2)">{c.body}</span></span>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+</BaseLayout>
+
+<script>
+  const SECTIONS = ['area-1', 'area-2', 'area-3', 'area-4', 'fondasi', 'infrastruktur', 'kolaborasi'];
+  const goto = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    const off = innerWidth < 640 ? 76 : 96;
+    scrollTo({ top: el.getBoundingClientRect().top + scrollY - off, behavior: 'smooth' });
+    history.replaceState(null, '', '#' + id);
+  };
+  document.querySelectorAll<HTMLElement>('[data-go]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); goto(el.dataset.go!); }));
+  if (location.hash) setTimeout(() => goto(location.hash.slice(1)), 150);
+
+  // Scroll-spy for the desktop rail.
+  const spies = document.querySelectorAll<HTMLElement>('[data-spy]');
+  const onScroll = () => {
+    let cur = '';
+    for (const id of SECTIONS) { const el = document.getElementById(id); if (el && el.getBoundingClientRect().top < 160) cur = id; }
+    spies.forEach((s) => s.classList.toggle('on', s.dataset.spy === cur));
+  };
+  addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+</script>
+
+<style>
+  .area-pill { cursor: pointer; height: 36px; white-space: nowrap; padding: 0 14px 0 6px; border-radius: 999px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--border-subtle); display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); color: var(--navy-900); }
+  .area-pill:hover { box-shadow: inset 0 0 0 1px var(--navy-300); color: var(--navy-600); }
+  .h-sec { font: var(--type-h1); font-size: clamp(30px,4.2vw,44px); letter-spacing: var(--tracking-tight); color: var(--text-heading); margin: 14px 0 0; }
+  .mini-lbl { font: 600 11px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-muted); }
+
+  .rail-layer { position: absolute; inset: 0; z-index: 5; pointer-events: none; display: none; }
+  .rail-wrap { height: 100%; padding-top: clamp(56px,8vw,88px); padding-bottom: clamp(56px,8vw,88px); }
+  .rail { position: sticky; top: 104px; width: 232px; pointer-events: auto; display: flex; flex-direction: column; gap: 6px; }
+  .r-roof { display: block; clip-path: polygon(50% 0,100% 70%,100% 100%,0 100%,0 70%); background: linear-gradient(180deg,var(--navy-500),var(--navy-700)); padding: 30px 16px 10px; text-align: center; }
+  .r-roof:hover { background: var(--navy-800); }
+  .r-area { cursor: pointer; min-height: 44px; margin: 0 8px; padding: 8px 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; background: #FFFFFF; color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); transition: background .2s; }
+  .r-area:hover { box-shadow: inset 0 0 0 1px var(--navy-300); color: var(--navy-900); }
+  .r-area.on, .r-area.on:hover { background: var(--navy-600); color: #FFFFFF; }
+  .r-collab { cursor: pointer; min-height: 44px; margin: 0 8px; padding: 8px 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1.5px dashed var(--yellow-500); background: transparent; color: var(--navy-900); }
+  .r-collab:hover, .r-collab.on { background: var(--yellow-100); color: var(--navy-900); }
+  .r-found { cursor: pointer; min-height: 48px; padding: 8px 14px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-100); color: var(--navy-900); }
+  .r-found:hover, .r-found.on { background: var(--navy-200); color: var(--navy-900); }
+  .r-infra { cursor: pointer; margin: -2px -8px 0; min-height: 44px; padding: 8px 14px; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-600); box-shadow: inset 0 4px 0 var(--navy-400); }
+  .r-infra:hover { background: var(--navy-700); }
+  .r-infra.on { background: var(--navy-800); }
+
+  .body-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 48px; align-items: start; }
+  .rail-spacer { display: none; }
+  .sec-pad { padding-top: clamp(56px,8vw,88px); padding-bottom: clamp(56px,8vw,88px); }
+  .anchor { scroll-margin-top: 80px; }
+  .area { scroll-margin-top: 104px; background: var(--surface-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: clamp(24px,3.4vw,40px); display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,400px),1fr)); gap: 28px clamp(28px,4vw,56px); }
+  @media (min-width: 1120px) {
+    .rail-layer { display: block; }
+    .body-grid { grid-template-columns: 232px minmax(0,1fr); }
+    .rail-spacer { display: block; }
+    .area { grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); }
+  }
+  .open-partner { height: 28px; padding: 0 12px; border-radius: 999px; border: 1.5px dashed var(--yellow-500); color: var(--navy-800); font: 600 13px/25px var(--font-display); white-space: nowrap; }
+  .open-partner:hover { background: var(--yellow-100); color: var(--navy-900); }
+  .pub-row { display: flex; align-items: baseline; gap: 10px; padding: 10px 14px; border-radius: 12px; background: var(--surface-subtle); color: var(--text-heading); }
+  .pub-card { padding: 10px 12px; border-radius: 12px; background: var(--surface-subtle); display: flex; flex-direction: column; gap: 4px; color: var(--text-heading); }
+  .pub-row:hover, .pub-card:hover { background: var(--navy-50); color: var(--navy-600); }
+  .split-intro { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,380px),1fr)); gap: 20px clamp(28px,5vw,64px); align-items: end; }
+  .lexid-paper { margin-top: 2px; display: inline-flex; align-items: baseline; gap: 8px; font: 600 14px/1.4 var(--font-display); color: var(--yellow-300); }
+  .lexid-paper:hover { color: #FFFFFF; }
+  .gh-btn { height: 44px; padding: 0 18px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); color: #FFFFFF; }
+  .gh-btn:hover { background: rgba(255,255,255,.1); color: #FFFFFF; }
+  .collab { border-radius: clamp(24px,3vw,32px); background: var(--grad-night); color: #FFFFFF; padding: clamp(24px,5vw,56px); position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,380px),1fr)); gap: 32px clamp(32px,5vw,64px); align-items: center; }
+</style>

@@ -1,0 +1,7 @@
+---
+import ArtikelPage from '../../../views/ArtikelPage.astro';
+import { posts } from '../../../lib/content';
+export function getStaticPaths() { return posts.map((post) => ({ params: { slug: post.slug }, props: { post } })); }
+const { post } = Astro.props;
+---
+<ArtikelPage lang="en" post={post} />

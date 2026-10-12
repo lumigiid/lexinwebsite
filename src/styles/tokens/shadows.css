@@ -1,0 +1,12 @@
+:root{
+/* Shadows are tinted with Lexin Indigo, never pure black */
+--shadow-xs:0 1px 2px rgba(16,17,58,.06);
+--shadow-sm:0 1px 2px rgba(16,17,58,.06),0 2px 6px rgba(16,17,58,.06);
+--shadow-md:0 2px 4px rgba(16,17,58,.05),0 8px 20px -4px rgba(16,17,58,.12);
+--shadow-lg:0 4px 8px rgba(16,17,58,.05),0 20px 44px -10px rgba(16,17,58,.22);
+--shadow-xl:0 30px 70px -16px rgba(16,17,58,.32);
+--glow-navy:0 10px 24px -8px rgba(46,49,146,.55);
+--glow-red:0 10px 24px -8px rgba(237,28,36,.5);
+--glow-yellow:0 10px 24px -8px rgba(232,191,0,.55);
+--inset-hairline:inset 0 0 0 1px rgba(16,17,58,.08);
+}

@@ -1,0 +1,12 @@
+---
+// Mist page header shared by every inner page: watermark knot top-right, then the page's own content.
+import { asset } from '../lib/i18n';
+interface Props { tall?: boolean }
+const { tall = false } = Astro.props;
+---
+<section class="page-header">
+  <img src={asset('assets/lexin-mark.png')} alt="" class="ph-mark" />
+  <div class="container ph-inner" style={`padding-bottom:${tall ? 'clamp(40px,6vw,64px)' : 'clamp(36px,5vw,56px)'}`}>
+    <slot />
+  </div>
+</section>

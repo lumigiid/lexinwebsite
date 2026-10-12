@@ -1,0 +1,16 @@
+:root{
+/* Signature — indigo into red, the two colours of the lockup */
+--grad-signature:linear-gradient(120deg,#2E3192 0%,#7A2A86 52%,#ED1C24 100%);/* @kind color */
+/* Ember — red into Makara yellow; warm, celebratory */
+--grad-ember:linear-gradient(120deg,#ED1C24 0%,#F7731A 55%,#FCD408 100%);/* @kind color */
+/* Tricolor — navy · red · yellow; thin rules and progress only */
+--grad-tricolor:linear-gradient(90deg,#2E3192 0%,#ED1C24 55%,#FCD408 100%);/* @kind color */
+/* Brand stripe — hard-stop navy|red, from the boxed lockup's base bar */
+--stripe-brand:linear-gradient(90deg,#2E3192 0 50%,#ED1C24 50% 100%);/* @kind color */
+/* Night — dark hero surface with red + yellow glows */
+--grad-night:radial-gradient(60% 80% at 100% 0%,rgba(237,28,36,.55) 0%,rgba(237,28,36,0) 60%),radial-gradient(50% 60% at 0% 100%,rgba(252,212,8,.28) 0%,rgba(252,212,8,0) 60%),linear-gradient(160deg,#1F216B 0%,#10113A 100%);/* @kind color */
+/* Mist — light page wash */
+--grad-mist:radial-gradient(50% 60% at 0% 0%,#DCDEF4 0%,rgba(220,222,244,0) 70%),radial-gradient(40% 50% at 100% 10%,#FCD6D8 0%,rgba(252,214,216,0) 70%),radial-gradient(40% 50% at 60% 100%,#FFF4BF 0%,rgba(255,244,191,0) 70%),#FFFFFF;/* @kind color */
+/* Gradient text helper value */
+--grad-text:linear-gradient(100deg,#2E3192 10%,#ED1C24 90%);/* @kind color */
+}

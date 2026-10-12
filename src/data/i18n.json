@@ -1,0 +1,2105 @@
+{
+  "home": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "heroEyebrow": "Pusat Informatika Hukum · Fasilkom UI",
+      "tagline": "Informatika hukum, dibangun di Indonesia.",
+      "subline": "Dari riset hukum menjadi produk nyata.",
+      "heroBody": "Lexin mempertemukan ahli hukum dan ilmuwan komputer untuk membangun data, metode, dan alat AI bagi sistem hukum Indonesia.",
+      "ctaResearch": "Jelajahi riset",
+      "ctaPartner": "Bermitra dengan kami",
+      "diagramLabel": "Cara kami bekerja",
+      "diagramHint": "Klik bagian diagram",
+      "roof": "Produk nyata",
+      "foundationLabel": "Fondasi",
+      "infraEyebrow": "Alas",
+      "pillarsLabel": "Pilar · area riset terapan",
+      "moreDev": "+ dalam pengembangan",
+      "yourArea": "Area Anda",
+      "partnerWithUs": "Bermitra dengan kami",
+      "selectedLabel": "Bagian diagram yang dipilih",
+      "capHint": "Klik untuk selengkapnya",
+      "foundationChips": [
+        "Retrieval & grounding",
+        "Penalaran",
+        "Kepercayaan & evaluasi"
+      ],
+      "infraLabel": "Infrastruktur riset · data berbahasa Indonesia",
+      "learnMore": "Selengkapnya",
+      "methods": "Metode",
+      "mitraLabel": "Mitra",
+      "researchEyebrow": "Riset",
+      "researchCta": "Lihat semua riset",
+      "researchTitle": "Empat area terapan, satu fondasi bersama.",
+      "researchBody": "Setiap area berangkat dari pertanyaan hukum yang nyata, diuji dengan data berbahasa Indonesia, dan diarahkan menjadi keluaran yang dapat dipakai.",
+      "productsEyebrow": "Produk",
+      "productsTitle": "Riset yang sampai ke pengguna.",
+      "allProducts": "Semua produk",
+      "moreDevTitle": "Lainnya dalam pengembangan",
+      "moreDevBody": "Prototipe baru lahir dari keempat area riset kami.",
+      "disclaimer": "Keluaran produk dan riset Lexin bukan nasihat hukum. Gunakan sebagai alat bantu dan konsultasikan dengan profesional hukum.",
+      "trainEyebrow": "Pelatihan & konsultasi",
+      "trainTitle": "Mendampingi lembaga publik memakai AI untuk pekerjaan hukum.",
+      "trainBody": "Kami merancang pelatihan dan pendampingan berbasis riset, dari literasi AI hingga evaluasi sistem di lingkungan kerja instansi.",
+      "trainCta": "Ajukan program pelatihan",
+      "clients": [
+        {
+          "code": "DJP",
+          "photo": "assets/photo-djp-training.png",
+          "name": "Direktorat Jenderal Pajak",
+          "body": "Pelatihan dan konsultasi pemanfaatan AI untuk regulasi perpajakan."
+        },
+        {
+          "code": "DJKI",
+          "photo": "assets/photo-djki-fgd.png",
+          "name": "Direktorat Jenderal Kekayaan Intelektual",
+          "body": "Pendampingan riset dan diskusi kebijakan teknologi di bidang kekayaan intelektual."
+        }
+      ],
+      "partnersLabel": "Mitra & kolaborator",
+      "partners": [
+        {
+          "short": "Kemenkeu",
+          "logo": "assets/partners/kemenkeu-v.png",
+          "logoBg": "url(\"assets/partners/kemenkeu-v.png\") center/contain no-repeat",
+          "long": "Kementerian Keuangan"
+        },
+        {
+          "short": "Kemenkum",
+          "logo": "assets/partners/kemenkum.png",
+          "logoBg": "url(\"assets/partners/kemenkum.png\") center/contain no-repeat",
+          "long": "Kementerian Hukum"
+        },
+        {
+          "short": "Kemnaker",
+          "logo": "assets/partners/kemnaker.png",
+          "logoBg": "url(\"assets/partners/kemnaker.png\") center/contain no-repeat",
+          "long": "Kementerian Ketenagakerjaan"
+        },
+        {
+          "short": "Bappenas",
+          "logo": "assets/partners/bappenas.png",
+          "logoBg": "url(\"assets/partners/bappenas.png\") center/contain no-repeat",
+          "long": "Badan Perencanaan Pembangunan Nasional"
+        },
+        {
+          "short": "PSHTN FH UI",
+          "logo": "assets/partners/pshtn.png",
+          "logoBg": "url(\"assets/partners/pshtn.png\") center/contain no-repeat",
+          "long": "Pusat Studi Hukum Tata Negara, Fakultas Hukum UI"
+        }
+      ],
+      "eventsEyebrow": "Acara & terbitan",
+      "eventsTitle": "Yang akan datang dan yang terbaru.",
+      "flagship": "Acara tahunan",
+      "datesTbc": "Hadir di 2027",
+      "forumBody": "Forum tahunan yang mempertemukan peneliti, praktisi hukum, dan pembuat kebijakan untuk membahas arah informatika hukum di Indonesia.",
+      "forumCta": "Kabari saya",
+      "latestLabel": "Terbaru",
+      "allPubs": "Semua publikasi",
+      "allInsights": "Semua wawasan",
+      "latest": [
+        {
+          "type": "WAWASAN",
+          "meta": "15 Sep 2026",
+          "title": "FiskalLink terpilih di AI Incubation for Public Sector 2026",
+          "href": "Lexin Wawasan Artikel.dc.html#fiskallink-ai-incubation-public-sector"
+        },
+        {
+          "type": "WAWASAN",
+          "meta": "25 Mei 2026",
+          "title": "Dr. Panca Hadi Putra membuka seminar “Navigating the AI Era” di Universitas YARSI",
+          "href": "Lexin Wawasan Artikel.dc.html#yarsi-navigating-ai-era"
+        },
+        {
+          "type": "JURNAL",
+          "meta": "2025 · JOIV",
+          "title": "A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia",
+          "href": "https://doi.org/10.62527/joiv.9.1.3170"
+        },
+        {
+          "type": "KONFERENSI",
+          "meta": "2025 · NAACL",
+          "title": "Evaluating Numeracy of Language Models as a Natural Language Inference Task",
+          "href": "https://scholar.ui.ac.id/en/persons/rahmad-mahendra/"
+        }
+      ],
+      "workEyebrow": "Mari bekerja sama",
+      "workTitle": "Ada tempat untuk Anda di Lexin.",
+      "audiences": [
+        {
+          "icon": "balance",
+          "title": "Praktisi hukum & notaris",
+          "body": "Uji alat kami pada kasus nyata dan bantu kami merumuskan pertanyaan yang tepat.",
+          "cta": "Jadi mitra riset"
+        },
+        {
+          "icon": "terminal",
+          "title": "Ilmuwan komputer",
+          "body": "Bangun model dan evaluasi di atas data hukum berbahasa Indonesia.",
+          "cta": "Lihat data & kode"
+        },
+        {
+          "icon": "account_balance",
+          "title": "Pemerintah & lembaga",
+          "body": "Rancang pelatihan, kajian, atau prototipe bersama untuk kebutuhan instansi Anda.",
+          "cta": "Ajukan kerja sama"
+        },
+        {
+          "icon": "school",
+          "title": "Mahasiswa & calon peneliti",
+          "body": "Ikuti fellowship riset mahasiswa atau tesis bersama tim kami.",
+          "cta": "Program fellowship"
+        }
+      ],
+      "contactUs": "Hubungi kami",
+      "centerName": "Pusat Informatika Hukum Universitas Indonesia",
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "areas": [
+        [
+          "verified",
+          "Notaris Digital (Cyber Notary)",
+          "Bagaimana akta dan layanan kenotariatan dibuat, diverifikasi, dan disimpan secara elektronik dengan kepastian hukum?",
+          "Verifikasi formal · standar tanda tangan elektronik · provenans dokumen"
+        ],
+        [
+          "handshake",
+          "Perselisihan Hubungan Industrial",
+          "Bagaimana data putusan dan regulasi ketenagakerjaan membantu menyelesaikan sengketa secara lebih cepat dan adil?",
+          "Penambangan putusan · NLP hukum · analisis hasil perkara",
+          "Kemenaker RI"
+        ],
+        [
+          "policy",
+          "Tata Kelola & Regulasi AI",
+          "Aturan seperti apa yang dibutuhkan Indonesia agar AI aman, adil, dan akuntabel?",
+          "Pemetaan regulasi · kajian kebijakan komparatif · penilaian risiko",
+          "PSHTN FH UI"
+        ],
+        [
+          "gavel",
+          "Putusan Pengadilan",
+          "Apa yang dapat dipelajari mesin dari putusan pengadilan Indonesia, dan bagaimana kita mengujinya?",
+          "Ekstraksi informasi · legal entailment · jaringan sitasi"
+        ]
+      ],
+      "products": [
+        {
+          "name": "Klaussa",
+          "icon": "description",
+          "status": "Tersedia untuk publik",
+          "desc": "Asisten AI untuk membaca dan menelaah klausul dokumen hukum berbahasa Indonesia.",
+          "recog": [
+            "UI Incubate 2025",
+            "Google for Startups AI",
+            "NVIDIA Inception"
+          ],
+          "cta": "Tentang Klaussa"
+        },
+        {
+          "name": "FiskalLink",
+          "icon": "hub",
+          "status": "Sedang uji coba di Kemenkeu",
+          "desc": "Atribusi fiskal tematik untuk menyelaraskan pelaporan fiskal pusat dan daerah.",
+          "recog": [
+            "AI Incubation for Public Sector 2026 · 5 tim terpilih"
+          ],
+          "cta": "Tentang FiskalLink"
+        }
+      ],
+      "details": {
+        "products": [
+          "Atap",
+          "Produk nyata",
+          "Klaussa sudah tersedia; FiskalLink sedang diuji coba di Kementerian Keuangan. Produk lain sedang dikembangkan dari riset di bawahnya.",
+          "Lihat produk"
+        ],
+        "partner": [
+          "Pilar kelima",
+          "Area Anda",
+          "Punya pertanyaan hukum yang butuh data dan AI? Kami membuka ruang untuk mitra riset, fellowship mahasiswa, dan peneliti tamu.",
+          "Program partisipasi"
+        ],
+        "foundations": [
+          "Fondasi",
+          "Legal AI Foundations",
+          "Riset dasar yang menopang semua area: retrieval dan grounding, penalaran hukum, serta kepercayaan dan evaluasi.",
+          "Lihat fondasi"
+        ],
+        "infra": [
+          "Landasan",
+          "Infrastruktur riset",
+          "Register sumber, panduan anotasi, dataset terkontrol, dan paket reprodusibilitas untuk data hukum berbahasa Indonesia.",
+          "Data & kode"
+        ],
+        "areaEyebrow": "Pilar riset",
+        "areaLink": "Lihat area riset"
+      }
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "heroEyebrow": "Center for Legal Informatics · Fasilkom UI",
+      "tagline": "Legal informatics, built in Indonesia.",
+      "subline": "From legal research to real products.",
+      "heroBody": "Lexin brings legal scholars and computer scientists together to build data, methods and AI tools for the Indonesian legal system.",
+      "ctaResearch": "Explore our research",
+      "ctaPartner": "Partner with us",
+      "diagramLabel": "How we work",
+      "diagramHint": "Click any part of the diagram",
+      "roof": "Real products",
+      "foundationLabel": "Foundation",
+      "infraEyebrow": "Ground",
+      "pillarsLabel": "Pillars · applied research areas",
+      "moreDev": "+ in development",
+      "yourArea": "Your area",
+      "partnerWithUs": "Partner with us",
+      "selectedLabel": "Selected part of the diagram",
+      "capHint": "Click to learn more",
+      "foundationChips": [
+        "Retrieval & grounding",
+        "Reasoning",
+        "Trust & evaluation"
+      ],
+      "infraLabel": "Research infrastructure · Indonesian-language data",
+      "learnMore": "Learn more",
+      "methods": "Methods",
+      "mitraLabel": "Partner",
+      "researchEyebrow": "Research",
+      "researchTitle": "Four applied areas, one shared foundation.",
+      "researchBody": "Each area starts from a real legal question, is tested on Indonesian-language data, and is aimed at outputs people can use.",
+      "productsEyebrow": "Products",
+      "productsTitle": "Research that reaches its users.",
+      "allProducts": "All products",
+      "moreDevTitle": "More in development",
+      "moreDevBody": "New prototypes are emerging from all four research areas.",
+      "disclaimer": "Lexin products and research outputs are not legal advice. Use them as aids and consult a legal professional.",
+      "trainEyebrow": "Training & consulting",
+      "trainTitle": "Helping public institutions use AI in legal work.",
+      "trainBody": "We design research-based training and advisory programs, from AI literacy to evaluating systems in an institution’s own workflows.",
+      "trainCta": "Request a training program",
+      "clients": [
+        {
+          "code": "DJP",
+          "photo": "assets/photo-djp-training.png",
+          "name": "Direktorat Jenderal Pajak",
+          "body": "Training and consulting on applying AI to tax regulation."
+        },
+        {
+          "code": "DJKI",
+          "photo": "assets/photo-djki-fgd.png",
+          "name": "Direktorat Jenderal Kekayaan Intelektual",
+          "body": "Research support and technology-policy discussions on intellectual property."
+        }
+      ],
+      "partnersLabel": "Partners & collaborators",
+      "partners": [
+        {
+          "short": "Kemenkeu",
+          "logo": "assets/partners/kemenkeu-v.png",
+          "logoBg": "url(\"assets/partners/kemenkeu-v.png\") center/contain no-repeat",
+          "long": "Ministry of Finance"
+        },
+        {
+          "short": "Kemenkum",
+          "logo": "assets/partners/kemenkum.png",
+          "logoBg": "url(\"assets/partners/kemenkum.png\") center/contain no-repeat",
+          "long": "Ministry of Law"
+        },
+        {
+          "short": "Kemnaker",
+          "logo": "assets/partners/kemnaker.png",
+          "logoBg": "url(\"assets/partners/kemnaker.png\") center/contain no-repeat",
+          "long": "Ministry of Manpower"
+        },
+        {
+          "short": "Bappenas",
+          "logo": "assets/partners/bappenas.png",
+          "logoBg": "url(\"assets/partners/bappenas.png\") center/contain no-repeat",
+          "long": "Ministry of National Development Planning"
+        },
+        {
+          "short": "PSHTN FH UI",
+          "logo": "assets/partners/pshtn.png",
+          "logoBg": "url(\"assets/partners/pshtn.png\") center/contain no-repeat",
+          "long": "Center for Constitutional Law Studies, Faculty of Law UI"
+        }
+      ],
+      "eventsEyebrow": "Events & publications",
+      "eventsTitle": "Coming up and just out.",
+      "flagship": "Annual event",
+      "datesTbc": "Coming in 2027",
+      "forumBody": "An annual forum bringing researchers, legal practitioners and policymakers together on the direction of legal informatics in Indonesia.",
+      "forumCta": "Notify me",
+      "latestLabel": "Latest",
+      "allPubs": "All publications",
+      "allInsights": "All insights",
+      "latest": [
+        {
+          "type": "INSIGHTS",
+          "meta": "Sep 15, 2026",
+          "title": "FiskalLink selected for AI Incubation for Public Sector 2026",
+          "href": "Lexin Wawasan Artikel.dc.html#fiskallink-ai-incubation-public-sector"
+        },
+        {
+          "type": "INSIGHTS",
+          "meta": "May 25, 2026",
+          "title": "Dr. Panca Hadi Putra opens the “Navigating the AI Era” seminar at Universitas YARSI",
+          "href": "Lexin Wawasan Artikel.dc.html#yarsi-navigating-ai-era"
+        },
+        {
+          "type": "JOURNAL",
+          "meta": "2025 · JOIV",
+          "title": "A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia",
+          "href": "https://doi.org/10.62527/joiv.9.1.3170"
+        },
+        {
+          "type": "CONFERENCE",
+          "meta": "2025 · NAACL",
+          "title": "Evaluating Numeracy of Language Models as a Natural Language Inference Task",
+          "href": "https://scholar.ui.ac.id/en/persons/rahmad-mahendra/"
+        }
+      ],
+      "workEyebrow": "Let’s work together",
+      "workTitle": "There is a place for you at Lexin.",
+      "audiences": [
+        {
+          "icon": "balance",
+          "title": "Lawyers & notaries",
+          "body": "Test our tools on real cases and help us frame the right questions.",
+          "cta": "Become a research partner"
+        },
+        {
+          "icon": "terminal",
+          "title": "Computer scientists",
+          "body": "Build models and evaluations on Indonesian-language legal data.",
+          "cta": "See data & code"
+        },
+        {
+          "icon": "account_balance",
+          "title": "Government & institutions",
+          "body": "Co-design training, studies or prototypes for your institution’s needs.",
+          "cta": "Propose a collaboration"
+        },
+        {
+          "icon": "school",
+          "title": "Students & prospective researchers",
+          "body": "Join the student research fellowship or write your thesis with our team.",
+          "cta": "Fellowship program"
+        }
+      ],
+      "contactUs": "Contact us",
+      "centerName": "Universitas Indonesia Center for Legal Informatics",
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "areas": [
+        [
+          "verified",
+          "Digital Notary (Cyber Notary)",
+          "How can deeds and notarial services be created, verified and stored electronically with legal certainty?",
+          "Formal verification · e-signature standards · document provenance"
+        ],
+        [
+          "handshake",
+          "Industrial Relations Disputes",
+          "How can rulings and labour regulation data help resolve disputes faster and more fairly?",
+          "Judgement mining · legal NLP · case-outcome analysis",
+          "Kemenaker RI"
+        ],
+        [
+          "policy",
+          "AI Governance & Regulation",
+          "What rules does Indonesia need for AI to be safe, fair and accountable?",
+          "Regulatory mapping · comparative policy analysis · risk assessment",
+          "PSHTN FH UI"
+        ],
+        [
+          "gavel",
+          "Court Rulings & Judgement",
+          "What can machines learn from Indonesian court rulings, and how do we test it?",
+          "Information extraction · legal entailment · citation networks"
+        ]
+      ],
+      "products": [
+        {
+          "name": "Klaussa",
+          "icon": "description",
+          "status": "Publicly available",
+          "desc": "An AI assistant for reading and reviewing clauses in Indonesian legal documents.",
+          "recog": [
+            "UI Incubate 2025",
+            "Google for Startups AI",
+            "NVIDIA Inception"
+          ],
+          "cta": "About Klaussa"
+        },
+        {
+          "name": "FiskalLink",
+          "icon": "hub",
+          "status": "Trial at Kemenkeu",
+          "desc": "Thematic fiscal attribution to harmonize central and regional fiscal reporting.",
+          "recog": [
+            "AI Incubation for Public Sector 2026 · top 5 teams"
+          ],
+          "cta": "About FiskalLink"
+        }
+      ],
+      "details": {
+        "products": [
+          "Roof",
+          "Real products",
+          "Klaussa is available; FiskalLink is being trialled at the Ministry of Finance. More products are being built from the research beneath.",
+          "See products"
+        ],
+        "partner": [
+          "Fifth pillar",
+          "Your area",
+          "Have a legal question that needs data and AI? We welcome research partners, student fellows and visiting scholars.",
+          "Participate"
+        ],
+        "foundations": [
+          "Foundation",
+          "Legal AI Foundations",
+          "Core research supporting every area: retrieval and grounding, legal reasoning, and trust and evaluation.",
+          "See foundations"
+        ],
+        "infra": [
+          "Ground",
+          "Research infrastructure",
+          "Source register, annotation guides, controlled datasets and reproducibility packages for Indonesian-language legal data.",
+          "Data & code"
+        ],
+        "areaEyebrow": "Research pillar",
+        "areaLink": "See research area"
+      }
+    }
+  },
+  "riset": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Riset · Pusat Informatika Hukum",
+      "titleA": "Empat area terapan di atas",
+      "titleB": "satu fondasi Legal AI.",
+      "intro": "Riset Lexin bertumpu pada fondasi bersama, yaitu retrieval, penalaran, serta kepercayaan dan evaluasi, dan pada infrastruktur data hukum berbahasa Indonesia. Di atasnya, empat area terapan menjawab pertanyaan hukum yang nyata bersama mitra.",
+      "onThisPage": "Di halaman ini",
+      "navHint": "Klik bagian untuk menuju seksi",
+      "roof": "Produk nyata",
+      "toProducts": "Ke halaman Produk",
+      "yourArea": "Area Anda",
+      "partnerWithUs": "Bermitra dengan kami",
+      "foundationLabel": "Fondasi",
+      "infraEyebrow": "Alas",
+      "infraLabel": "Infrastruktur riset · data berbahasa Indonesia",
+      "infraTitle": "Infrastruktur riset",
+      "dataCode": "Data & kode",
+      "areasEyebrow": "Pilar · area riset terapan",
+      "areasTitle": "Dari pertanyaan hukum menuju keluaran yang dapat dipakai.",
+      "areaWord": "Area",
+      "mitraLabel": "Mitra",
+      "openForPartner": "Terbuka untuk mitra",
+      "rowLabels": [
+        "Metode",
+        "Fokus awal",
+        "Keluaran"
+      ],
+      "relatedPubs": "Publikasi terkait",
+      "foundationBody": "Riset dasar yang menopang keempat area. Setiap metode diuji pada data hukum berbahasa Indonesia sebelum dipakai di area terapan.",
+      "foundations": [
+        {
+          "icon": "search",
+          "title": "Retrieval & grounding",
+          "body": "Menemukan pasal, putusan, dan sumber yang tepat, lalu menautkan setiap jawaban pada sumbernya.",
+          "hasPub": true,
+          "pubMeta": "JURNAL · 2023",
+          "pubTitle": "LexID: The Metadata and Semantic Knowledge Graph Construction of Indonesian Legal Document",
+          "pubHref": "https://doi.org/10.21609/jiki.v16i1.1096",
+          "hasPub2": true,
+          "pub2Meta": "KONFERENSI · 2025",
+          "pub2Title": "IRNLPUI at COLIEE 2025: Utilization of LLMs for Statute Law Retrieval and Legal Entailment Task",
+          "pub2Href": "https://doi.org/10.1145/3769126.3785016"
+        },
+        {
+          "icon": "brain-circuit",
+          "title": "Penalaran hukum",
+          "body": "Memodelkan cara norma, fakta, dan putusan saling berhubungan, termasuk legal entailment dan argumentasi.",
+          "hasPub": true,
+          "pubMeta": "BAB BUKU · 2019",
+          "pubTitle": "From Logic Programming to Machine Ethics",
+          "pubHref": "https://doi.org/10.1007/978-3-658-17483-5_14"
+        },
+        {
+          "icon": "shield-check",
+          "title": "Kepercayaan & evaluasi",
+          "body": "Tolok ukur, uji keandalan, dan protokol evaluasi agar sistem AI hukum dapat dipertanggungjawabkan.",
+          "hasPub": true,
+          "pubMeta": "ARTIKEL JURNAL · 2025",
+          "pubTitle": "Explainable clustering: Methods, challenges, and future opportunities",
+          "pubHref": "https://doi.org/10.1515/jisys-2024-0477"
+        }
+      ],
+      "infraBody": "Data dan perangkat yang dapat dipakai ulang oleh tim kami dan komunitas riset.",
+      "infra": [
+        {
+          "code": "REG",
+          "title": "Register sumber",
+          "body": "Katalog sumber hukum primer dan sekunder beserta status lisensi dan cakupannya."
+        },
+        {
+          "code": "ANN",
+          "title": "Panduan anotasi",
+          "body": "Skema dan pedoman anotasi untuk entitas, relasi, dan struktur dokumen hukum."
+        },
+        {
+          "code": "DAT",
+          "title": "Dataset terkontrol",
+          "body": "Korpus berversi dengan pemisahan data uji yang jelas untuk eksperimen yang adil."
+        },
+        {
+          "code": "REP",
+          "title": "Paket reprodusibilitas",
+          "body": "Kode, konfigurasi, dan hasil yang memungkinkan eksperimen diulang orang lain."
+        }
+      ],
+      "paperLabel": "Artikel jurnal",
+      "openData": "Data terbuka",
+      "lexidTitle": "LexID: dataset hukum berbahasa Indonesia",
+      "lexidBody": "Dataset dan kode kami tersedia untuk riset di repositori lab-lexin.",
+      "dataset": "Dataset LexID",
+      "collabEyebrow": "Pilar kelima",
+      "collabTitle": "Bawa pertanyaan hukum Anda ke Lexin.",
+      "collabBody": "Area riset baru lahir dari mitra. Jika lembaga Anda punya persoalan hukum yang butuh data dan AI, mari rancang bersama.",
+      "participate": "Program partisipasi",
+      "collabWays": [
+        {
+          "n": "01",
+          "title": "Mitra riset",
+          "body": "Lembaga, firma, atau instansi yang membawa pertanyaan dan data."
+        },
+        {
+          "n": "02",
+          "title": "Fellowship mahasiswa",
+          "body": "Riset dan tesis bersama tim di salah satu area."
+        },
+        {
+          "n": "03",
+          "title": "Peneliti tamu",
+          "body": "Kolaborasi akademik jangka pendek dari kampus lain."
+        }
+      ],
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "areas": [
+        {
+          "icon": "badge-check",
+          "title": "Notaris Digital (Cyber Notary)",
+          "q": "Bagaimana akta dan layanan kenotariatan dibuat, diverifikasi, dan disimpan secara elektronik dengan kepastian hukum?",
+          "rows": [
+            "Verifikasi formal · standar tanda tangan elektronik · provenans dokumen",
+            "Alur pembuatan dan verifikasi akta elektronik",
+            "Kerangka verifikasi dan prototipe pemeriksa dokumen"
+          ]
+        },
+        {
+          "icon": "handshake",
+          "title": "Perselisihan Hubungan Industrial",
+          "mitra": "Kemenaker RI",
+          "q": "Bagaimana data putusan dan regulasi ketenagakerjaan membantu menyelesaikan sengketa secara lebih cepat dan adil?",
+          "rows": [
+            "Penambangan putusan · NLP hukum · analisis hasil perkara",
+            "Putusan PHI dan peraturan ketenagakerjaan",
+            "Korpus putusan beranotasi dan alat bantu analisis perkara"
+          ]
+        },
+        {
+          "icon": "shield-check",
+          "title": "Tata Kelola & Regulasi AI",
+          "mitra": "PSHTN FH UI",
+          "q": "Aturan seperti apa yang dibutuhkan Indonesia agar AI aman, adil, dan akuntabel?",
+          "rows": [
+            "Pemetaan regulasi · kajian kebijakan komparatif · penilaian risiko",
+            "Pemetaan regulasi AI Indonesia dan perbandingan internasional",
+            "Kajian kebijakan dan kerangka penilaian risiko"
+          ]
+        },
+        {
+          "icon": "gavel",
+          "title": "Putusan Pengadilan",
+          "q": "Apa yang dapat dipelajari mesin dari putusan pengadilan Indonesia, dan bagaimana kita mengujinya?",
+          "rows": [
+            "Ekstraksi informasi · legal entailment · jaringan sitasi",
+            "Ekstraksi informasi dari putusan Mahkamah Agung",
+            "Dataset putusan terstruktur dan tolok ukur legal entailment"
+          ]
+        }
+      ],
+      "aiGovWp": "Kerangka Tata Kelola AI",
+      "aiRoadmap": "Peta Jalan Regulasi AI Indonesia",
+      "chapterType": "BAB BUKU",
+      "draft": "DRAF",
+      "pubsSoon": "Publikasi untuk area ini sedang disiapkan.",
+      "pubsSoonShort": "Publikasi sedang disiapkan.",
+      "journalType": "JURNAL",
+      "confType": "KONFERENSI",
+      "pubType": "MAKALAH",
+      "pubTitle": "[Judul publikasi terkait]"
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "Research · Center for Legal Informatics",
+      "titleA": "Four applied areas on",
+      "titleB": "one Legal AI foundation.",
+      "intro": "Lexin’s research rests on a shared foundation (retrieval, reasoning, and trust and evaluation) and on infrastructure for Indonesian-language legal data. On top of it, four applied areas tackle real legal questions with partners.",
+      "onThisPage": "On this page",
+      "navHint": "Click a part to jump to it",
+      "roof": "Real products",
+      "toProducts": "Go to Products",
+      "yourArea": "Your area",
+      "partnerWithUs": "Partner with us",
+      "foundationLabel": "Foundation",
+      "infraEyebrow": "Ground",
+      "infraLabel": "Research infrastructure · Indonesian-language data",
+      "infraTitle": "Research infrastructure",
+      "dataCode": "Data & code",
+      "areasEyebrow": "Pillars · applied research areas",
+      "areasTitle": "From legal questions to outputs people can use.",
+      "areaWord": "Area",
+      "mitraLabel": "Partner",
+      "openForPartner": "Open to partners",
+      "rowLabels": [
+        "Methods",
+        "Starting focus",
+        "Output"
+      ],
+      "relatedPubs": "Related publications",
+      "foundationBody": "Core research that supports all four areas. Every method is tested on Indonesian-language legal data before it is used in an applied area.",
+      "foundations": [
+        {
+          "icon": "search",
+          "title": "Retrieval & grounding",
+          "body": "Finding the right articles, rulings and sources, and tying every answer back to its source.",
+          "hasPub": true,
+          "pubMeta": "JOURNAL · 2023",
+          "pubTitle": "LexID: The Metadata and Semantic Knowledge Graph Construction of Indonesian Legal Document",
+          "pubHref": "https://doi.org/10.21609/jiki.v16i1.1096",
+          "hasPub2": true,
+          "pub2Meta": "CONFERENCE · 2025",
+          "pub2Title": "IRNLPUI at COLIEE 2025: Utilization of LLMs for Statute Law Retrieval and Legal Entailment Task",
+          "pub2Href": "https://doi.org/10.1145/3769126.3785016"
+        },
+        {
+          "icon": "brain-circuit",
+          "title": "Legal reasoning",
+          "body": "Modelling how norms, facts and rulings relate, including legal entailment and argumentation.",
+          "hasPub": true,
+          "pubMeta": "BOOK CHAPTER · 2019",
+          "pubTitle": "From Logic Programming to Machine Ethics",
+          "pubHref": "https://doi.org/10.1007/978-3-658-17483-5_14"
+        },
+        {
+          "icon": "shield-check",
+          "title": "Trust & evaluation",
+          "body": "Benchmarks, robustness tests and evaluation protocols so legal AI systems can be held accountable.",
+          "hasPub": true,
+          "pubMeta": "JOURNAL ARTICLE · 2025",
+          "pubTitle": "Explainable clustering: Methods, challenges, and future opportunities",
+          "pubHref": "https://doi.org/10.1515/jisys-2024-0477"
+        }
+      ],
+      "infraBody": "Reusable data and tooling for our team and the research community.",
+      "infra": [
+        {
+          "code": "REG",
+          "title": "Source register",
+          "body": "A catalogue of primary and secondary legal sources with licensing status and coverage."
+        },
+        {
+          "code": "ANN",
+          "title": "Annotation guides",
+          "body": "Schemas and guidelines for annotating entities, relations and legal document structure."
+        },
+        {
+          "code": "DAT",
+          "title": "Controlled datasets",
+          "body": "Versioned corpora with clear test splits for fair experiments."
+        },
+        {
+          "code": "REP",
+          "title": "Reproducibility packages",
+          "body": "Code, configuration and results so others can repeat our experiments."
+        }
+      ],
+      "paperLabel": "Journal article",
+      "openData": "Open data",
+      "lexidTitle": "LexID: an Indonesian-language legal dataset",
+      "lexidBody": "Our datasets and code are available for research in the lab-lexin repository.",
+      "dataset": "LexID dataset",
+      "collabEyebrow": "Fifth pillar",
+      "collabTitle": "Bring your legal question to Lexin.",
+      "collabBody": "New research areas start with partners. If your institution has a legal problem that needs data and AI, let’s design it together.",
+      "participate": "Participation programs",
+      "collabWays": [
+        {
+          "n": "01",
+          "title": "Research partners",
+          "body": "Institutions, firms or agencies that bring questions and data."
+        },
+        {
+          "n": "02",
+          "title": "Student fellowship",
+          "body": "Research and theses with the team in one of the areas."
+        },
+        {
+          "n": "03",
+          "title": "Visiting scholars",
+          "body": "Short-term academic collaboration from other universities."
+        }
+      ],
+      "explore": "Explore",
+      "center": "Center",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "areas": [
+        {
+          "icon": "badge-check",
+          "title": "Digital Notary (Cyber Notary)",
+          "q": "How can deeds and notarial services be created, verified and stored electronically with legal certainty?",
+          "rows": [
+            "Formal verification · e-signature standards · document provenance",
+            "Workflows for creating and verifying electronic deeds",
+            "A verification framework and a document-checking prototype"
+          ]
+        },
+        {
+          "icon": "handshake",
+          "title": "Industrial Relations Disputes",
+          "mitra": "Kemenaker RI",
+          "q": "How can rulings and labour regulation data help resolve disputes faster and more fairly?",
+          "rows": [
+            "Judgement mining · legal NLP · case-outcome analysis",
+            "Industrial relations court rulings and labour regulations",
+            "An annotated ruling corpus and case-analysis tools"
+          ]
+        },
+        {
+          "icon": "shield-check",
+          "title": "AI Governance & Regulation",
+          "mitra": "PSHTN FH UI",
+          "q": "What rules does Indonesia need for AI to be safe, fair and accountable?",
+          "rows": [
+            "Regulatory mapping · comparative policy analysis · risk assessment",
+            "Mapping Indonesian AI regulation against international practice",
+            "Policy studies and a risk-assessment framework"
+          ]
+        },
+        {
+          "icon": "gavel",
+          "title": "Court Rulings & Judgement",
+          "q": "What can machines learn from Indonesian court rulings, and how do we test it?",
+          "rows": [
+            "Information extraction · legal entailment · citation networks",
+            "Information extraction from Supreme Court rulings",
+            "A structured rulings dataset and a legal-entailment benchmark"
+          ]
+        }
+      ],
+      "aiGovWp": "AI Governance Framework",
+      "aiRoadmap": "Indonesian AI Regulation Roadmap",
+      "chapterType": "BOOK CHAPTER",
+      "draft": "DRAFT",
+      "pubsSoon": "Publications for this area are in preparation.",
+      "pubsSoonShort": "Publications in preparation.",
+      "journalType": "JOURNAL",
+      "confType": "CONFERENCE",
+      "pubType": "PAPER",
+      "pubTitle": "[Related publication title]"
+    }
+  },
+  "produk": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Produk",
+      "titleA": "Riset yang",
+      "titleB": "sampai ke pengguna.",
+      "intro": "Saat ini ada dua produk yang lahir dari riset Lexin: Klaussa, yang sudah dapat dipakai, dan FiskalLink, yang sedang diuji coba di Kementerian Keuangan.",
+      "k": {
+        "videoLabel": "Video demo Legal Assistant Klaussa",
+        "status": "Tersedia untuk publik",
+        "line": "Platform AI hukum untuk Indonesia.",
+        "body": "Klaussa membantu menelusuri dan memahami hukum Indonesia, dibangun di atas riset dan data hukum berbahasa Indonesia dari Lexin.",
+        "visit": "Kunjungi Klaussa",
+        "contactTeam": "Hubungi tim Klaussa",
+        "capsLabel": "Kemampuan",
+        "caps": [
+          {
+            "icon": "search",
+            "label": "Riset hukum"
+          },
+          {
+            "icon": "scale",
+            "label": "Analisis regulasi"
+          },
+          {
+            "icon": "file-text",
+            "label": "Telaah dokumen hukum"
+          }
+        ],
+        "recogLabel": "Pengakuan",
+        "recog": [
+          "Pendanaan UI Incubate 2025",
+          "Google for Startups AI",
+          "NVIDIA Inception"
+        ]
+      },
+      "f": {
+        "partnerLabel": "Mitra",
+        "recogLabel": "Pengakuan",
+        "recog": [
+          "AI Incubation for Public Sector 2026 · 5 tim terpilih"
+        ],
+        "badge": "Sedang uji coba di Kemenkeu",
+        "videoLabel": "Video demo FiskalLink",
+        "line": "Atribusi fiskal tematik untuk pelaporan antartingkat pemerintahan.",
+        "body": "FiskalLink menyelaraskan pelaporan fiskal antara pemerintah pusat dan daerah, dan menautkan anggaran pada tema prioritas, agar data dan aturannya dapat ditelusuri bersama.",
+        "statusLabel": "Status",
+        "statusTitle": "Sedang diuji coba di Kementerian Keuangan.",
+        "statusBody": "Instansi pusat atau daerah lain yang tertarik memakai FiskalLink dapat menghubungi tim kami.",
+        "cta": "Hubungi tim FiskalLink"
+      },
+      "moreTitle": "Produk lain sedang dikembangkan",
+      "moreBody": "Prototipe baru lahir dari empat area riset kami.",
+      "keepPosted": "Kabari saya",
+      "respEyebrow": "Penggunaan yang bertanggung jawab",
+      "respTitle": "Tiga prinsip di setiap produk.",
+      "principles": [
+        {
+          "icon": "link",
+          "title": "Terhubung ke sumber",
+          "body": "Setiap keluaran menautkan sumber hukumnya agar dapat diperiksa."
+        },
+        {
+          "icon": "user-check",
+          "title": "Manusia tetap memegang kendali",
+          "body": "Alat kami membantu; keputusan tetap berada pada pengguna dan profesional hukum."
+        },
+        {
+          "icon": "users",
+          "title": "Dievaluasi bersama ahli",
+          "body": "Kualitas diuji bersama praktisi dan akademisi hukum."
+        }
+      ],
+      "disclaimer": "Keluaran produk dan riset Lexin bukan nasihat hukum. Gunakan sebagai alat bantu dan konsultasikan dengan profesional hukum.",
+      "dataEyebrow": "Data & kode",
+      "dataTitle": "Terbuka untuk komunitas riset.",
+      "lexidTitle": "LexID: dataset knowledge graph hukum Indonesia",
+      "lexidBody": "Dataset knowledge graph peraturan perundang-undangan berbahasa Indonesia.",
+      "ghBody": "Repositori kode dan alat dari tim Lexin.",
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "Products",
+      "titleA": "Research that",
+      "titleB": "reaches users.",
+      "intro": "Two products have come out of Lexin’s research so far: Klaussa, which is available today, and FiskalLink, which is being trialled at the Ministry of Finance.",
+      "k": {
+        "videoLabel": "Klaussa Legal Assistant demo video",
+        "status": "Publicly available",
+        "line": "An AI legal platform for Indonesia.",
+        "body": "Klaussa helps people search and understand Indonesian law, built on Lexin’s research and Indonesian-language legal data.",
+        "visit": "Visit Klaussa",
+        "contactTeam": "Contact the Klaussa team",
+        "capsLabel": "Capabilities",
+        "caps": [
+          {
+            "icon": "search",
+            "label": "Legal research"
+          },
+          {
+            "icon": "scale",
+            "label": "Regulation analysis"
+          },
+          {
+            "icon": "file-text",
+            "label": "Legal document review"
+          }
+        ],
+        "recogLabel": "Recognition",
+        "recog": [
+          "UI Incubate 2025 funding",
+          "Google for Startups AI",
+          "NVIDIA Inception"
+        ]
+      },
+      "f": {
+        "partnerLabel": "Partner",
+        "recogLabel": "Recognition",
+        "recog": [
+          "AI Incubation for Public Sector 2026 · top 5 teams"
+        ],
+        "badge": "Trial at Kemenkeu",
+        "videoLabel": "FiskalLink demo video",
+        "line": "Thematic fiscal attribution for reporting across levels of government.",
+        "body": "FiskalLink harmonizes fiscal reporting between central and regional government and attributes budgets to priority themes, so the data and rules can be traced together.",
+        "statusLabel": "Status",
+        "statusTitle": "Being trialled at the Ministry of Finance.",
+        "statusBody": "Other central or regional agencies interested in using FiskalLink can contact our team.",
+        "cta": "Contact the FiskalLink team"
+      },
+      "moreTitle": "More products are in development",
+      "moreBody": "New prototypes are emerging from our four research areas.",
+      "keepPosted": "Keep me posted",
+      "respEyebrow": "Responsible use",
+      "respTitle": "Three principles in every product.",
+      "principles": [
+        {
+          "icon": "link",
+          "title": "Tied to sources",
+          "body": "Every output links back to its legal sources so it can be checked."
+        },
+        {
+          "icon": "user-check",
+          "title": "People stay in charge",
+          "body": "Our tools assist; decisions stay with users and legal professionals."
+        },
+        {
+          "icon": "users",
+          "title": "Evaluated with experts",
+          "body": "Quality is tested with legal practitioners and scholars."
+        }
+      ],
+      "disclaimer": "Lexin products and research outputs are not legal advice. Use them as aids and consult a legal professional.",
+      "dataEyebrow": "Data & code",
+      "dataTitle": "Open to the research community.",
+      "lexidTitle": "LexID: an Indonesian legal knowledge graph dataset",
+      "lexidBody": "A knowledge graph dataset of Indonesian-language legislation.",
+      "ghBody": "Code repositories and tools from the Lexin team.",
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "anggota": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Anggota",
+      "titleA": "Orang-orang",
+      "titleB": "di balik Lexin.",
+      "intro": "Peneliti hukum dan ilmu komputer Universitas Indonesia yang bekerja bersama di atas satu fondasi Legal AI.",
+      "filterLabel": "Fondasi",
+      "all": "Semua",
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Penalaran",
+        "tru": "Kepercayaan & evaluasi"
+      },
+      "groups": {
+        "lead": "Pimpinan",
+        "fac": "Dosen & peneliti",
+        "staff": "Staf riset & rekayasa"
+      },
+      "people": "orang",
+      "viewProfile": "Lihat profil",
+      "empty": "Belum ada anggota untuk fondasi ini.",
+      "roles": {
+        "director": "Direktur",
+        "chief": "Chief Scientist",
+        "advisor": "Penasihat & Research Scientist",
+        "rs": "Research Scientist",
+        "ra": "Research Associate & Ventures",
+        "are": "AI Research Engineer",
+        "appl": "Applied Research Engineer"
+      },
+      "joinTitle": "Bergabung dengan tim",
+      "joinBody": "Kami terbuka untuk mahasiswa, peneliti tamu, dan insinyur yang ingin membangun Legal AI untuk Indonesia.",
+      "joinCta": "Program partisipasi",
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "People",
+      "titleA": "The people",
+      "titleB": "of Lexin.",
+      "intro": "Legal and computer science researchers at Universitas Indonesia, working together on one Legal AI foundation.",
+      "filterLabel": "Foundation",
+      "all": "All",
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Reasoning",
+        "tru": "Trust & evaluation"
+      },
+      "groups": {
+        "lead": "Leadership",
+        "fac": "Faculty",
+        "staff": "Research & engineering staff"
+      },
+      "people": "people",
+      "viewProfile": "View profile",
+      "empty": "No members in this foundation yet.",
+      "roles": {
+        "director": "Director",
+        "chief": "Chief Scientist",
+        "advisor": "Advisor & Research Scientist",
+        "rs": "Research Scientist",
+        "ra": "Research Associate & Ventures",
+        "are": "AI Research Engineer",
+        "appl": "Applied Research Engineer"
+      },
+      "joinTitle": "Join the team",
+      "joinBody": "We welcome students, visiting scholars and engineers who want to build Legal AI for Indonesia.",
+      "joinCta": "Participation programs",
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "profil": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "people": "Anggota",
+      "bio": "Biografi",
+      "pubs": "Publikasi pilihan",
+      "edu": "Pendidikan",
+      "interests": "Minat penelitian",
+      "atLexin": "Di Lexin",
+      "roleLabel": "Peran",
+      "foundationLabel": "Fondasi",
+      "prev": "Sebelumnya",
+      "next": "Berikutnya",
+      "bioPending": "Biografi, pendidikan, dan publikasi akan segera ditambahkan.",
+      "groups": {
+        "lead": "Pimpinan",
+        "fac": "Dosen & peneliti",
+        "staff": "Staf riset & rekayasa"
+      },
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Penalaran",
+        "tru": "Kepercayaan & evaluasi"
+      },
+      "roles": {
+        "director": "Direktur",
+        "chief": "Chief Scientist",
+        "advisor": "Penasihat & Research Scientist",
+        "rs": "Research Scientist",
+        "ra": "Research Associate & Ventures",
+        "are": "AI Research Engineer",
+        "appl": "Applied Research Engineer"
+      },
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "people": "People",
+      "bio": "Biography",
+      "pubs": "Selected publications",
+      "edu": "Education",
+      "interests": "Research interests",
+      "atLexin": "At Lexin",
+      "roleLabel": "Role",
+      "foundationLabel": "Foundation",
+      "prev": "Previous",
+      "next": "Next",
+      "bioPending": "Biography, education and publications are coming soon.",
+      "groups": {
+        "lead": "Leadership",
+        "fac": "Faculty",
+        "staff": "Research & engineering staff"
+      },
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Reasoning",
+        "tru": "Trust & evaluation"
+      },
+      "roles": {
+        "director": "Director",
+        "chief": "Chief Scientist",
+        "advisor": "Advisor & Research Scientist",
+        "rs": "Research Scientist",
+        "ra": "Research Associate & Ventures",
+        "are": "AI Research Engineer",
+        "appl": "Applied Research Engineer"
+      },
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "publikasi": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Publikasi",
+      "titleA": "Publikasi &",
+      "titleB": "keluaran riset.",
+      "intro": "Makalah, buku, dan dataset dari anggota Lexin. Saring menurut jenis, lapisan riset, atau anggota.",
+      "searchPh": "Cari judul atau venue",
+      "typeLabel": "Jenis",
+      "layerLabel": "Lapisan riset",
+      "pillarLabel": "Pilar · area terapan",
+      "infraLabel": "Infrastruktur riset",
+      "foundationLabel": "Fondasi",
+      "memberLabel": "Anggota",
+      "all": "Semua",
+      "types": {
+        "journal": "Jurnal",
+        "conf": "Konferensi",
+        "book": "Buku"
+      },
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Penalaran",
+        "tru": "Kepercayaan & evaluasi"
+      },
+      "pillars": {
+        "not": "Notaris Digital",
+        "phi": "Hubungan Industrial",
+        "gov": "Tata Kelola AI",
+        "put": "Putusan Pengadilan"
+      },
+      "infras": {
+        "data": "Data & dataset"
+      },
+      "results": "publikasi",
+      "empty": "Tidak ada publikasi yang cocok dengan saringan ini.",
+      "reset": "Atur ulang saringan",
+      "open": "Buka publikasi",
+      "featLabel": "Dataset unggulan",
+      "featTitle": "LexID: dataset knowledge graph hukum Indonesia",
+      "featBody": "Dataset knowledge graph peraturan perundang-undangan berbahasa Indonesia, terbuka untuk riset.",
+      "moreTitle": "Daftar lengkap ada di profil anggota",
+      "moreBody": "Halaman ini memuat publikasi pilihan. Tautan Scopus, SINTA, dan Google Scholar tiap anggota tersedia di profilnya.",
+      "moreCta": "Lihat anggota",
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "Publications",
+      "titleA": "Publications &",
+      "titleB": "research outputs.",
+      "intro": "Papers, books and datasets by Lexin members. Filter by type, research layer or member.",
+      "searchPh": "Search title or venue",
+      "typeLabel": "Type",
+      "layerLabel": "Research layer",
+      "pillarLabel": "Pillars · applied areas",
+      "infraLabel": "Research infrastructure",
+      "foundationLabel": "Foundation",
+      "memberLabel": "Member",
+      "all": "All",
+      "types": {
+        "journal": "Journal",
+        "conf": "Conference",
+        "book": "Book"
+      },
+      "areas": {
+        "ret": "Retrieval & grounding",
+        "rea": "Reasoning",
+        "tru": "Trust & evaluation"
+      },
+      "pillars": {
+        "not": "Digital Notary",
+        "phi": "Industrial Relations",
+        "gov": "AI Governance",
+        "put": "Court Decisions"
+      },
+      "infras": {
+        "data": "Data & datasets"
+      },
+      "results": "publications",
+      "empty": "No publications match these filters.",
+      "reset": "Reset filters",
+      "open": "Open publication",
+      "featLabel": "Featured dataset",
+      "featTitle": "LexID: an Indonesian legal knowledge graph dataset",
+      "featBody": "A knowledge graph dataset of Indonesian-language legislation, open for research.",
+      "moreTitle": "Full lists live on member profiles",
+      "moreBody": "This page shows selected publications. Each member’s Scopus, SINTA and Google Scholar links are on their profile.",
+      "moreCta": "See people",
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "acara": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Acara",
+      "titleA": "Tempat riset",
+      "titleB": "bertemu praktik.",
+      "intro": "Forum, pelatihan, dan diskusi kelompok terarah yang mempertemukan peneliti Lexin dengan praktisi hukum dan lembaga publik.",
+      "upcoming": "Akan datang",
+      "flagship": "Acara tahunan",
+      "forumBody": "Forum tahunan yang mempertemukan peneliti, praktisi hukum, dan pembuat kebijakan untuk membahas arah informatika hukum di Indonesia.",
+      "notify": "Kabari saya",
+      "speak": "Ajukan diri sebagai pembicara",
+      "forumFacts": [
+        {
+          "icon": "calendar",
+          "label": "Tanggal",
+          "val": "2027"
+        },
+        {
+          "icon": "map-pin",
+          "label": "Lokasi",
+          "val": "Universitas Indonesia"
+        },
+        {
+          "icon": "users",
+          "label": "Untuk",
+          "val": "Peneliti, praktisi hukum, pembuat kebijakan"
+        }
+      ],
+      "pastEyebrow": "Arsip",
+      "pastTitle": "Acara sebelumnya",
+      "all": "Semua",
+      "types": {
+        "training": "Pelatihan",
+        "fgd": "FGD"
+      },
+      "empty": "Belum ada acara untuk jenis ini.",
+      "inviteTitle": "Undang Lexin ke lembaga Anda",
+      "inviteBody": "Kami menyelenggarakan pelatihan, FGD, dan kuliah tamu tentang AI untuk pekerjaan hukum.",
+      "inviteCta": "Kirim undangan",
+      "events": [
+        {
+          "type": "training",
+          "photo": "assets/photo-djp-training.png",
+          "title": "Pelatihan pemanfaatan AI untuk regulasi perpajakan",
+          "org": "Direktorat Jenderal Pajak",
+          "date": "[Tanggal]",
+          "body": "Pelatihan dan konsultasi bagi pegawai DJP tentang penerapan AI pada penelusuran dan analisis regulasi perpajakan."
+        },
+        {
+          "type": "fgd",
+          "photo": "assets/photo-djki-fgd.png",
+          "title": "FGD: Patentabilitas Teknologi Blockchain & Cryptocurrency",
+          "org": "Direktorat Jenderal Kekayaan Intelektual",
+          "date": "[Tanggal]",
+          "body": "Diskusi kelompok terarah tentang kebijakan teknologi dan kekayaan intelektual bersama DJKI."
+        }
+      ],
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "Events",
+      "titleA": "Where research",
+      "titleB": "meets practice.",
+      "intro": "Forums, training and focus group discussions that bring Lexin researchers together with legal practitioners and public institutions.",
+      "upcoming": "Upcoming",
+      "flagship": "Annual event",
+      "forumBody": "An annual forum bringing researchers, legal practitioners and policymakers together on the direction of legal informatics in Indonesia.",
+      "notify": "Notify me",
+      "speak": "Propose to speak",
+      "forumFacts": [
+        {
+          "icon": "calendar",
+          "label": "Date",
+          "val": "2027"
+        },
+        {
+          "icon": "map-pin",
+          "label": "Location",
+          "val": "Universitas Indonesia"
+        },
+        {
+          "icon": "users",
+          "label": "For",
+          "val": "Researchers, legal practitioners, policymakers"
+        }
+      ],
+      "pastEyebrow": "Archive",
+      "pastTitle": "Past events",
+      "all": "All",
+      "types": {
+        "training": "Training",
+        "fgd": "FGD"
+      },
+      "empty": "No events of this type yet.",
+      "inviteTitle": "Invite Lexin to your institution",
+      "inviteBody": "We run training, focus groups and guest lectures on AI for legal work.",
+      "inviteCta": "Send an invitation",
+      "events": [
+        {
+          "type": "training",
+          "photo": "assets/photo-djp-training.png",
+          "title": "Training on applying AI to tax regulation",
+          "org": "Direktorat Jenderal Pajak",
+          "date": "[Date]",
+          "body": "Training and consulting for DJP staff on applying AI to searching and analysing tax regulation."
+        },
+        {
+          "type": "fgd",
+          "photo": "assets/photo-djki-fgd.png",
+          "title": "FGD: Patentabilitas Teknologi Blockchain & Cryptocurrency",
+          "org": "Direktorat Jenderal Kekayaan Intelektual",
+          "date": "[Date]",
+          "body": "A focus group discussion with DJKI on technology policy and intellectual property."
+        }
+      ],
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "partisipasi": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "eyebrow": "Partisipasi",
+      "titleA": "Bangun Legal AI",
+      "titleB": "bersama kami.",
+      "intro": "Empat jalur untuk terlibat, sesuai peran Anda. Setiap kolaborasi dimulai dari satu percakapan.",
+      "youGet": "Yang Anda dapat",
+      "weAsk": "Yang kami harapkan",
+      "iAm": "Saya adalah",
+      "paths": [
+        {
+          "id": "mitra-riset",
+          "icon": "scale",
+          "who": "Praktisi hukum & notaris",
+          "program": "Mitra riset",
+          "body": "Uji alat kami pada kasus nyata dan bantu kami merumuskan pertanyaan yang tepat.",
+          "get": [
+            "Akses awal ke prototipe Lexin",
+            "Masukan Anda membentuk arah riset",
+            "Pengakuan sebagai mitra di publikasi terkait"
+          ],
+          "ask": [
+            "Waktu untuk sesi uji dan wawancara",
+            "Contoh kasus atau dokumen yang dapat dianonimkan"
+          ],
+          "cta": "Jadi mitra riset"
+        },
+        {
+          "id": "data-kode",
+          "icon": "terminal",
+          "who": "Ilmuwan komputer",
+          "program": "Kolaborasi data & kode",
+          "body": "Bangun model dan evaluasi di atas data hukum berbahasa Indonesia.",
+          "get": [
+            "Akses dataset LexID dan paket reprodusibilitas",
+            "Diskusi rutin dengan tim peneliti",
+            "Peluang publikasi bersama"
+          ],
+          "ask": [
+            "Kode dan hasil yang dapat dibagikan",
+            "Mengikuti pedoman lisensi data"
+          ],
+          "cta": "Ajukan kolaborasi"
+        },
+        {
+          "id": "lembaga",
+          "icon": "landmark",
+          "who": "Pemerintah & lembaga",
+          "program": "Kerja sama lembaga",
+          "body": "Rancang pelatihan, kajian, atau prototipe bersama untuk kebutuhan instansi Anda.",
+          "get": [
+            "Pelatihan dan pendampingan berbasis riset",
+            "Kajian kebijakan dan prototipe yang disesuaikan",
+            "Tim lintas hukum dan ilmu komputer"
+          ],
+          "ask": [
+            "Narahubung dan tujuan yang jelas",
+            "Akses ke konteks dan data instansi bila relevan"
+          ],
+          "cta": "Ajukan kerja sama"
+        },
+        {
+          "id": "fellowship",
+          "icon": "graduation-cap",
+          "who": "Mahasiswa & calon peneliti",
+          "program": "Fellowship riset",
+          "body": "Ikuti fellowship riset mahasiswa atau tulis tesis bersama tim kami.",
+          "get": [
+            "Bimbingan dari peneliti Lexin",
+            "Topik riset nyata di salah satu area",
+            "Pengalaman kerja dengan data hukum"
+          ],
+          "ask": [
+            "Komitmen waktu selama program",
+            "Minat pada hukum, AI, atau keduanya"
+          ],
+          "cta": "Daftar fellowship"
+        }
+      ],
+      "stepsEyebrow": "Cara kerjanya",
+      "stepsTitle": "Dari percakapan pertama hingga kolaborasi.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Kirim minat",
+          "body": "Kirim email kepada kami sesuai jalur yang Anda minati."
+        },
+        {
+          "n": "02",
+          "title": "Diskusi awal",
+          "body": "Kami menjadwalkan percakapan singkat untuk memahami kebutuhan Anda."
+        },
+        {
+          "n": "03",
+          "title": "Rancang bersama",
+          "body": "Kita sepakati lingkup, keluaran, dan jadwal."
+        },
+        {
+          "n": "04",
+          "title": "Mulai bekerja",
+          "body": "Tim Lexin dan Anda mulai bekerja, dengan titik evaluasi berkala."
+        }
+      ],
+      "formEyebrow": "Mulai",
+      "formTitle": "Hubungi kami.",
+      "formBody": "Kirim email kepada kami dan ceritakan singkat apa yang ingin Anda kerjakan. Kami akan membalas untuk menjadwalkan diskusi awal.",
+      "byPath": "Email langsung sesuai jalur",
+      "f": {
+        "path": "Jalur",
+        "name": "Nama",
+        "email": "Email",
+        "org": "Lembaga / kampus",
+        "msg": "Pesan",
+        "msgPh": "Apa yang ingin Anda kerjakan bersama kami?",
+        "submit": "Kirim minat",
+        "err": "Mohon isi nama dan email.",
+        "sent": "Aplikasi email Anda sudah dibuka. Tinggal kirim."
+      },
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "eyebrow": "Participate",
+      "titleA": "Build Legal AI",
+      "titleB": "with us.",
+      "intro": "Four ways to get involved, depending on your role. Every collaboration starts with one conversation.",
+      "youGet": "What you get",
+      "weAsk": "What we ask",
+      "iAm": "I am a",
+      "paths": [
+        {
+          "id": "mitra-riset",
+          "icon": "scale",
+          "who": "Lawyers & notaries",
+          "program": "Research partner",
+          "body": "Test our tools on real cases and help us frame the right questions.",
+          "get": [
+            "Early access to Lexin prototypes",
+            "Your feedback shapes the research",
+            "Credit as a partner in related publications"
+          ],
+          "ask": [
+            "Time for testing sessions and interviews",
+            "Example cases or documents that can be anonymised"
+          ],
+          "cta": "Become a research partner"
+        },
+        {
+          "id": "data-kode",
+          "icon": "terminal",
+          "who": "Computer scientists",
+          "program": "Data & code collaboration",
+          "body": "Build models and evaluations on Indonesian-language legal data.",
+          "get": [
+            "Access to the LexID dataset and reproducibility packages",
+            "Regular discussions with the research team",
+            "Joint publication opportunities"
+          ],
+          "ask": [
+            "Shareable code and results",
+            "Following data licensing guidelines"
+          ],
+          "cta": "Propose a collaboration"
+        },
+        {
+          "id": "lembaga",
+          "icon": "landmark",
+          "who": "Government & institutions",
+          "program": "Institutional partnership",
+          "body": "Co-design training, studies or prototypes for your institution’s needs.",
+          "get": [
+            "Research-based training and advisory",
+            "Tailored policy studies and prototypes",
+            "A team spanning law and computer science"
+          ],
+          "ask": [
+            "A contact person and clear goals",
+            "Access to institutional context and data where relevant"
+          ],
+          "cta": "Propose a partnership"
+        },
+        {
+          "id": "fellowship",
+          "icon": "graduation-cap",
+          "who": "Students & prospective researchers",
+          "program": "Research fellowship",
+          "body": "Join the student research fellowship or write your thesis with our team.",
+          "get": [
+            "Mentoring from Lexin researchers",
+            "A real research topic in one of the areas",
+            "Hands-on experience with legal data"
+          ],
+          "ask": [
+            "Time commitment for the program",
+            "Interest in law, AI, or both"
+          ],
+          "cta": "Apply for the fellowship"
+        }
+      ],
+      "stepsEyebrow": "How it works",
+      "stepsTitle": "From the first conversation to collaboration.",
+      "steps": [
+        {
+          "n": "01",
+          "title": "Express interest",
+          "body": "Email us about the path that interests you."
+        },
+        {
+          "n": "02",
+          "title": "First conversation",
+          "body": "We schedule a short call to understand your needs."
+        },
+        {
+          "n": "03",
+          "title": "Design together",
+          "body": "We agree on scope, outputs and timeline."
+        },
+        {
+          "n": "04",
+          "title": "Start working",
+          "body": "The Lexin team and you get to work, with regular check-ins."
+        }
+      ],
+      "formEyebrow": "Get started",
+      "formTitle": "Get in touch.",
+      "formBody": "Email us with a short note on what you would like to work on. We will reply to schedule a first conversation.",
+      "byPath": "Email by path",
+      "f": {
+        "path": "Path",
+        "name": "Name",
+        "email": "Email",
+        "org": "Institution / university",
+        "msg": "Message",
+        "msgPh": "What would you like to work on with us?",
+        "submit": "Send interest",
+        "err": "Please fill in your name and email.",
+        "sent": "Your email app is open. Just hit send."
+      },
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice."
+    }
+  },
+  "wawasan": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "eyebrow": "Wawasan",
+      "titleA": "Catatan dari",
+      "titleB": "persimpangan hukum dan AI.",
+      "intro": "Opini, policy brief, penjelasan riset, catatan rilis produk, dan liputan acara dari tim Lexin.",
+      "all": "Semua",
+      "typeLabel": "Jenis tulisan",
+      "latest": "Terbaru",
+      "read": "Baca",
+      "emptyTitle": "Belum ada tulisan di kategori ini",
+      "emptyBody": "Tulisan pertama sedang disiapkan.",
+      "pitchTitle": "Punya topik untuk dibahas?",
+      "pitchBody": "Kami menerima usulan topik untuk opini, policy brief, atau penjelasan riset.",
+      "pitchCta": "Usulkan topik"
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "eyebrow": "Insights",
+      "titleA": "Notes from where",
+      "titleB": "law meets AI.",
+      "intro": "Opinion, policy briefs, research explainers, product release notes and event coverage from the Lexin team.",
+      "all": "All",
+      "typeLabel": "Type",
+      "latest": "Latest",
+      "read": "Read",
+      "emptyTitle": "Nothing in this category yet",
+      "emptyBody": "The first piece is in the works.",
+      "pitchTitle": "Have a topic for us?",
+      "pitchBody": "We welcome topic suggestions for opinion pieces, policy briefs or research explainers.",
+      "pitchCta": "Suggest a topic"
+    }
+  },
+  "wawasan-artikel": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "newsletter": "Buletin",
+      "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
+      "emailPh": "Email Anda",
+      "subscribe": "Berlangganan",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "back": "Wawasan",
+      "sources": "Sumber",
+      "readAt": "Baca di",
+      "people": "Orang dalam tulisan ini",
+      "more": "Wawasan lainnya"
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "newsletter": "Newsletter",
+      "newsletterBody": "Research, events and publications, a few times a year.",
+      "emailPh": "Your email",
+      "subscribe": "Subscribe",
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "back": "Insights",
+      "sources": "Sources",
+      "readAt": "Read at",
+      "people": "People in this piece",
+      "more": "More insights"
+    }
+  },
+  "kontak": {
+    "id": {
+      "about": "Tentang",
+      "contact": "Kontak",
+      "contactUs": "Hubungi kami",
+      "nav": [
+        "Riset",
+        "Produk",
+        "Anggota",
+        "Publikasi",
+        "Acara",
+        "Partisipasi",
+        "Wawasan"
+      ],
+      "explore": "Jelajahi",
+      "center": "Pusat",
+      "dataset": "Dataset LexID",
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "eyebrow": "Kontak",
+      "titleA": "Mari",
+      "titleB": "berbicara.",
+      "intro": "Satu alamat email untuk semua keperluan. Pilih keperluan Anda agar pesan langsung sampai ke orang yang tepat.",
+      "contactLabel": "Narahubung",
+      "role": "Direktur Lexin",
+      "emailUs": "Kirim email",
+      "addrLabel": "Alamat",
+      "maps": "Buka di Maps",
+      "byNeed": "Hubungi sesuai keperluan",
+      "byNeedBody": "Setiap tautan membuka email dengan subjek yang sudah terisi.",
+      "reasons": [
+        {
+          "icon": "landmark",
+          "title": "Kerja sama lembaga",
+          "body": "Pelatihan, kajian, atau prototipe untuk instansi.",
+          "subject": "Kerja sama lembaga"
+        },
+        {
+          "icon": "flask-conical",
+          "title": "Riset & data",
+          "body": "Kolaborasi riset, dataset LexID, dan kode.",
+          "subject": "Riset & data"
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Fellowship & tesis",
+          "body": "Mahasiswa dan calon peneliti.",
+          "subject": "Fellowship"
+        },
+        {
+          "icon": "sparkles",
+          "title": "Produk",
+          "body": "Klaussa dan FiskalLink.",
+          "subject": "Produk"
+        },
+        {
+          "icon": "newspaper",
+          "title": "Media & undangan",
+          "body": "Wawancara, narasumber, dan undangan acara.",
+          "subject": "Media & undangan"
+        }
+      ]
+    },
+    "en": {
+      "about": "About",
+      "contact": "Contact",
+      "contactUs": "Contact us",
+      "nav": [
+        "Research",
+        "Products",
+        "People",
+        "Publications",
+        "Events",
+        "Participate",
+        "Insights"
+      ],
+      "explore": "Explore",
+      "center": "Center",
+      "dataset": "LexID dataset",
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "eyebrow": "Contact",
+      "titleA": "Let’s",
+      "titleB": "talk.",
+      "intro": "One email address for everything. Pick what you need so your message reaches the right person.",
+      "contactLabel": "Contact person",
+      "role": "Director, Lexin",
+      "emailUs": "Send an email",
+      "addrLabel": "Address",
+      "maps": "Open in Maps",
+      "byNeed": "Get in touch by topic",
+      "byNeedBody": "Each link opens an email with the subject filled in.",
+      "reasons": [
+        {
+          "icon": "landmark",
+          "title": "Institutional partnership",
+          "body": "Training, studies or prototypes for agencies.",
+          "subject": "Institutional partnership"
+        },
+        {
+          "icon": "flask-conical",
+          "title": "Research & data",
+          "body": "Research collaboration, the LexID dataset and code.",
+          "subject": "Research & data"
+        },
+        {
+          "icon": "graduation-cap",
+          "title": "Fellowship & theses",
+          "body": "Students and prospective researchers.",
+          "subject": "Fellowship"
+        },
+        {
+          "icon": "sparkles",
+          "title": "Products",
+          "body": "Klaussa and FiskalLink.",
+          "subject": "Products"
+        },
+        {
+          "icon": "newspaper",
+          "title": "Media & invitations",
+          "body": "Interviews, speakers and event invitations.",
+          "subject": "Media & invitations"
+        }
+      ]
+    }
+  }
+}
