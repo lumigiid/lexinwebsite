@@ -54,7 +54,7 @@ img { max-width: 100%; }
 /* Motion helpers (see src/scripts/motion.ts). Only active when the script adds .mo. */
 .mo-w { display: inline-block; overflow: clip; vertical-align: top; padding: .1em .04em .2em; margin: -.1em -.04em -.2em; }
 .mo-wi { display: inline-block; will-change: transform; }
-.mo-progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: var(--z-overlay); background: var(--grad-tricolor); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
+.mo-progress { position: fixed; inset: 0 0 auto 0; height: 3px; z-index: var(--z-overlay); background: linear-gradient(90deg, var(--ink-0), var(--yellow-400)); transform: scaleX(0); transform-origin: 0 50%; pointer-events: none; }
 .site-header { transition: transform var(--dur-slow) var(--ease-out); }
 .site-header.is-away { transform: translateY(-100%); }
 

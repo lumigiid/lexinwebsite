@@ -29,7 +29,7 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
   <nav id="mobile-menu" class="nav-mobile" hidden>
     {nav.map((n: any) => <a href={n.href} class:list={['m-link', { on: n.on }]}>{n.label}</a>)}
     <div style="margin-top:12px">
-      <Button variant="gradient" fullWidth iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+      <Button variant="primary" fullWidth iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
     </div>
   </nav>
 </header>

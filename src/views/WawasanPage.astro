@@ -44,12 +44,16 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
             <span style={`position:absolute;inset:0;background:${u.photoBg}`}></span>
           </div></a>
           <div class="u-0b9905">
-            <div class="u-72fafc"><span class="type-tag" style={`background:${u.typeBg};color:${u.typeFg}`}>{u.typeLabel}</span><span class="u-d6e2eb">{u.dateLabel}</span></div>
+            <div class="meta">
+              <span class="u-d6e2eb">{u.dateLabel}</span>
+              {u.authors.length > 0 && (
+                <span class="authors">
+                  {u.authors.map((a) => <a href={a.href} class="person" title={a.name}><span class="person-av" style={`background:${a.avBg}`}>{a.ini}</span><span class="person-name">{a.name}</span></a>)}
+                </span>
+              )}
+            </div>
             <a href={u.href} class="title">{u.title}</a>
             <p class="u-1a14cb">{u.dek}</p>
-            <div class="u-bdad12"><div class="u-2075ff">
-              {u.authors.map((a) => <a href={a.href} class="person"><span style={`width:22px;height:22px;border-radius:50%;background:${a.avBg};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span>{a.name}</a>)}
-            </div><span class="u-e806c4">{u.srcLabel}</span></div>
           </div>
         </article>
       ))}
@@ -106,8 +110,6 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   @media (min-width: 760px) { .row { grid-template-columns: 220px minmax(0,1fr); } }
   .title { font: 700 clamp(19px,2vw,22px)/1.3 var(--font-display); color: var(--text-heading); text-wrap: pretty; }
   .title:hover { color: var(--navy-600); }
-  .person { height: 28px; padding: 0 10px 0 3px; border-radius: 999px; background: var(--navy-50); display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1 var(--font-display); color: var(--navy-800); white-space: nowrap; }
-  .person:hover { background: var(--navy-100); color: var(--navy-600); }
   .empty { border-radius: var(--radius-xl); border: 2px dashed var(--navy-200); padding: 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 8px; margin-top: 24px; }
   .empty[hidden] { display: none; }
   .u-65f54a { font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty; }
@@ -118,7 +120,7 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   .u-b508a5 { display:block;border-radius:20px;overflow:hidden; }
   .u-0b9905 { display:flex;flex-direction:column;gap:10px;min-width:0; }
   .u-72fafc { display:flex;align-items:center;gap:10px;flex-wrap:wrap; }
-  .u-d6e2eb { font:500 13px/1 var(--font-mono);color:var(--text-muted); }
+  .u-d6e2eb { font:500 12px/1 var(--font-mono);color:var(--text-muted); }
   .u-1a14cb { margin:0;font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
   .u-bdad12 { display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:4px; }
   .u-2075ff { display:flex;flex-wrap:wrap;gap:6px; }
@@ -130,5 +132,12 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   .u-77325d { display:flex;flex-direction:column;gap:6px;max-width:640px; }
   .u-8014ef { font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading); }
   .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
-  .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
+  .meta { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+  .authors { display: inline-flex; flex-wrap: wrap; gap: 6px; }
+  .person { height: 28px; padding: 0 3px; border-radius: var(--radius-pill); background: var(--navy-50); display: inline-flex; align-items: center; gap: 0; font: 600 12px/1 var(--font-display); color: var(--navy-800); white-space: nowrap; transition: background-color var(--dur-base) var(--ease-out); }
+  .person:hover { background: var(--navy-100); color: var(--navy-600); }
+  .person-av { width: 22px; height: 22px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font: 700 9px/1 var(--font-display); color: var(--fg-on-dark); flex: none; }
+  .person-name { display: inline-block; max-width: 0; margin: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width var(--dur-slower) var(--ease-out), margin var(--dur-slower) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
+  .person:hover .person-name, .person:focus-visible .person-name { max-width: 260px; margin: 0 7px 0 6px; opacity: 1; }
+  @media (hover: none) { .person-name { max-width: none; margin: 0 7px 0 6px; opacity: 1; } }
 </style>

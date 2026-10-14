@@ -11,7 +11,7 @@ const { lang, member: m } = Astro.props;
 const t = dict('profil', lang);
 const home = dict('home', lang);
 
-const AV: Record<string, string> = { lead: 'var(--grad-signature)', fac: 'linear-gradient(135deg,var(--navy-500),var(--navy-700))', staff: 'linear-gradient(135deg,var(--red-500),var(--red-700))' };
+const AV: Record<string, string> = { lead: 'var(--navy-800)', fac: 'var(--navy-500)', staff: 'var(--red-600)' };
 const i = members.findIndex((x) => x.slug === m.slug);
 const bio: string[] = (m.bio && m.bio[lang]) || [];
 // Personal websites and LinkedIn are intentionally not shown (owner's decision).
@@ -190,4 +190,6 @@ const prev = nb(-1), next = nb(1);
   .u-3cd102 { padding-bottom:clamp(56px,8vw,96px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px; }
   .u-cbcafe { font:700 16px/1.3 var(--font-display); }
   .u-432d1a { justify-content:flex-end;text-align:right; }
+  .u-444621:not(:last-child)::after { content: ","; }
+  .u-dbd782:not(:last-child)::after { content: ","; }
 </style>

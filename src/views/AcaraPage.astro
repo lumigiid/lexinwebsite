@@ -9,6 +9,7 @@ import { img } from '../lib/images';
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('acara', lang);
+const forumPhoto = await img('assets/forum-conf.jpg', 1400);
 
 const TYPE_STYLE: Record<string, string[]> = { training: ['var(--navy-50)', 'var(--navy-700)'], fgd: ['var(--red-50)', 'var(--red-700)'] };
 const typesF = [['all', t.all], ['training', t.types.training], ['fgd', t.types.fgd]].map(([k, label]) => ({
@@ -38,6 +39,8 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
       <div class="u-c451fd">
         <span class="dot-forum"></span>
         <div class="forum">
+          <div class="forum-photo" style={`background-image:url(${forumPhoto})`} aria-hidden="true"></div>
+          <div class="forum-veil" aria-hidden="true"></div>
           <img src={asset('assets/lexin-mark.png')} alt="" class="u-215071" />
           <div class="u-bf1ca3">
             <div class="u-e0e9ec">
@@ -47,7 +50,7 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
             <h2 class="u-9711c7">Lexin <span class="ember-text">Forum</span></h2>
             <p class="u-40ab5d">{t.forumBody}</p>
             <div class="u-cf940b">
-              <Button variant="gradient" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum">{t.notify}</Button>
+              <Button variant="accent" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum">{t.notify}</Button>
               <Button variant="inverse" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum%20-%20Pembicara">{t.speak}</Button>
             </div>
           </div>
@@ -156,4 +159,9 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
   .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
   .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
   .u-24b977 { border-radius: var(--radius-lg); overflow: hidden; }
+  .forum > * { position: relative; z-index: 1; }
+  .forum > .forum-photo, .forum > .forum-veil { position: absolute; inset: 0; z-index: 0; }
+  .forum > .forum-photo { background-size: cover; background-position: center 55%; }
+  .forum > .forum-veil { background: var(--grad-night); opacity: .84; }
+  .forum > .u-215071 { z-index: 0; }
 </style>

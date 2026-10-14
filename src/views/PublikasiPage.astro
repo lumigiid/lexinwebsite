@@ -11,7 +11,7 @@ interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('publikasi', lang);
 
-const AV: Record<string, string> = { lead: 'var(--grad-signature)', fac: 'linear-gradient(135deg,var(--navy-500),var(--navy-700))', staff: 'linear-gradient(135deg,var(--red-500),var(--red-700))' };
+const AV: Record<string, string> = { lead: 'var(--navy-800)', fac: 'var(--navy-500)', staff: 'var(--red-600)' };
 const TYPE_STYLE: Record<string, string[]> = { journal: ['var(--navy-50)', 'var(--navy-700)'], conf: ['var(--red-50)', 'var(--red-700)'], book: ['var(--yellow-100)', 'var(--navy-900)'] };
 const bySlug = Object.fromEntries(members.map((m) => [m.slug, m]));
 
@@ -94,7 +94,7 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
                 <a href={u.href} class="pub-title" target="_blank" rel="noopener"><span class="u-89bd09">{u.title}</span><span class="u-754b9a"><Icon name="arrow-up-right" size={16} /></span></a>
                 <div class="u-2075ff">
                   {u.who.map((a) => (
-                    <a href={url(lang, 'anggota/' + a.slug + '/')} class="person"><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span>{a.name}</a>
+                    <a href={url(lang, 'anggota/' + a.slug + '/')} class="person" title={a.name}><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span><span class="person-name">{a.name}</span></a>
                   ))}
                 </div>
               </article>
@@ -190,7 +190,7 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   .pub { padding: 20px 0; box-shadow: inset 0 -1px 0 var(--border-subtle); display: flex; flex-direction: column; gap: 10px; }
   .pub-title { display: flex; align-items: flex-start; gap: 10px; font: 700 clamp(17px,1.6vw,19px)/1.4 var(--font-display); color: var(--text-heading); text-wrap: pretty; }
   .pub-title:hover { color: var(--navy-600); }
-  .person { height: 28px; padding: 0 10px 0 3px; border-radius: 999px; background: var(--navy-50); display: inline-flex; align-items: center; gap: 6px; font: 600 12px/1 var(--font-display); color: var(--navy-800); white-space: nowrap; }
+  .person { height: 28px; padding: 0 3px; border-radius: 999px; background: var(--navy-50); display: inline-flex; align-items: center; gap: 0; font: 600 12px/1 var(--font-display); color: var(--navy-800); white-space: nowrap; }
   .person:hover { background: var(--navy-100); color: var(--navy-600); }
   .empty { border-radius: var(--radius-xl); border: 2px dashed var(--navy-200); padding: 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .empty[hidden] { display: none; }
@@ -221,4 +221,7 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   .u-8014ef { font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading); }
   .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
   .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
+  .person-name { display: inline-block; max-width: 0; margin: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width var(--dur-slower) var(--ease-out), margin var(--dur-slower) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
+  .person:hover .person-name, .person:focus-visible .person-name { max-width: 260px; margin: 0 7px 0 6px; opacity: 1; }
+  @media (hover: none) { .person-name { max-width: none; margin: 0 7px 0 6px; opacity: 1; } }
 </style>

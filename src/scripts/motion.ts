@@ -106,6 +106,7 @@ interface Variant {
   step?: number;               // stagger between siblings
   centre?: boolean;            // stagger outward from the middle instead of left to right
   clip?: boolean;              // wipe from the left instead of translating
+  reverse?: boolean;           // last sibling first (the stack builds from its base up)
 }
 const VARIANTS: Variant[] = [
   { sel: '.area-row', from: { x: -36 }, step: 0.09 },                         // research rows slide in from the left
@@ -114,6 +115,7 @@ const VARIANTS: Variant[] = [
   { sel: '.partner-cell', from: { scale: 0.82 }, step: 0.08, centre: true },  // logos fan out from the middle
   { sel: '.recog, .f-recog, .fchip', from: { scale: 0.5 }, duration: 0.55, step: 0.06 }, // chips pop in one by one
   { sel: '.eyebrow, .mini-lbl', from: {}, clip: true, duration: 0.7 },        // labels are drawn in left to right
+  { sel: '.house > .tier', from: { y: 28 }, duration: 0.9, step: 0.16, reverse: true }, // the stack is built from the foundation up
   { sel: '.forum', from: { y: 28, scale: 0.96 }, duration: 1 },
   { sel: '.aud, .path', from: { y: 34 }, step: 0.1 },
   { sel: '.mcard', from: { y: 18, scale: 0.9 }, step: 0.06 },
@@ -131,7 +133,7 @@ function applyVariants() {
       list.forEach((el, i) => {
         seen.add(el);
         const mid = (list.length - 1) / 2;
-        const order = v.centre ? Math.abs(i - mid) : i;
+        const order = v.centre ? Math.abs(i - mid) : v.reverse ? list.length - 1 - i : i;
         const delay = Math.min(order, 7) * (v.step ?? 0.07);
         const run = () => {
           const done = clean(el, 'opacity', 'transform', 'clip-path');

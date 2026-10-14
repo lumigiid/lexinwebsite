@@ -15,13 +15,13 @@ const t = dict('anggota', lang);
 // The prototype had this filter row switched off; the handoff README asks for it. Set to false to hide it.
 const SHOW_FILTER = true;
 
-const AV: Record<string, string> = { lead: 'var(--grad-signature)', fac: 'linear-gradient(135deg,var(--navy-500),var(--navy-700))', staff: 'linear-gradient(135deg,var(--red-500),var(--red-700))' };
+const AV: Record<string, string> = { lead: 'var(--navy-800)', fac: 'var(--navy-500)', staff: 'var(--red-600)' };
 const filters = [['all', t.all], ['ret', t.areas.ret], ['rea', t.areas.rea], ['tru', t.areas.tru]].map(([k, label]) => ({
   k, label,
 }));
 // Name-only lists. A section with no names is simply not rendered.
 const rosters = (['rstaff', 'ugrad', 'grad', 'alumni'] as const)
-  .map((k) => ({ k, title: t.groups[k], note: t.rosterNotes[k], names: rosterData[k] as string[] }))
+  .map((k) => ({ k, title: t.groups[k], names: rosterData[k] as string[] }))
   .filter((r) => r.names.length > 0);
 const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   const list = await Promise.all(members.filter((m) => m.g === g).map(async (m) => ({
@@ -86,7 +86,6 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
         <div class="grp roster u-b5a98e">
           <div class="u-a45ba4">
             <h2 class="u-9ecc2d">{r.title}</h2>
-            <span class="u-839954">{r.note}</span>
           </div>
           <ul class="roster-list">
             {r.names.map((n) => <li>{n}</li>)}
@@ -169,4 +168,5 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   .roster-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 0 var(--space-8); border-top: 2px solid var(--navy-900); }
   .roster-list li { padding: 14px 4px; border-bottom: 1px solid var(--border-default); font: 600 16px/1.4 var(--font-display); color: var(--navy-900); }
   .mcard:hover { background: var(--navy-50); }
+  .u-1ac452:not(:last-child)::after { content: ","; }
 </style>

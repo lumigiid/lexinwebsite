@@ -141,8 +141,8 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
           <p class="u-40c710">{t.foundationBody}</p>
         </div>
         <div class="u-4af026">
-          {t.foundations.map((f: any) => (
-            <div class="u-127548">
+          {t.foundations.map((f: any, i: number) => (
+            <div class="u-127548 anchor" id={'fondasi-' + (i + 1)}>
               <h3 class="u-59d76c">{f.title}</h3>
               <p class="u-7efbc9">{f.body}</p>
               {!f.hasPub && <>
@@ -216,7 +216,7 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
         <h2 class="h-sec u-ca959c">{t.collabTitle}</h2>
         <p class="u-a702e9">{t.collabBody}</p>
         <div class="u-89c227">
-          <Button variant="gradient" size="lg" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+          <Button variant="accent" size="lg" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
           <Button variant="inverse" size="lg" href={url(lang, 'partisipasi/')}>{t.participate}</Button>
         </div>
       </div>

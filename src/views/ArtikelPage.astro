@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, type Lang } from '../lib/i18n';
+import { dict, url, asset, type Lang } from '../lib/i18n';
 import { postsByDate, type Post } from '../lib/content';
 import { postView } from '../lib/posts';
 
@@ -38,6 +38,7 @@ const more = await Promise.all(postsByDate().filter((p) => p.slug !== post.slug)
         <Icon name={u.icon} size={64} />
         <span role={u.photoBg !== 'none' ? 'img' : undefined} aria-label={u.photoBg !== 'none' ? u.title : undefined} style={`position:absolute;inset:0;background:${u.photoBg}`}></span>
       </div>
+      {u.photoBg !== 'none' && u.credit && <p class="photo-credit">{u.credit}</p>}
       {u.body.map((para) => <p class="u-8df7e6">{para}</p>)}
       {u.gallery.map((g) => (
         <figure class="u-3dfe65">
@@ -45,7 +46,15 @@ const more = await Promise.all(postsByDate().filter((p) => p.slug !== post.slug)
           <figcaption class="u-16e09c">{g.cap}</figcaption>
         </figure>
       ))}
-      {u.link && <div class="u-f7dbba"><Button variant="gradient" iconRight="arrow-up-right" href={u.link.href}>{u.link.label}</Button></div>}
+      {u.video && (
+        <figure class="vid">
+          <video src={asset(u.video.src)} poster={u.video.poster ? asset(u.video.poster) : undefined} controls playsinline preload="metadata" aria-label={u.embed ? u.embed.title : u.title}></video>
+        </figure>
+      )}
+      {u.embed && (
+        <p class="vid-link"><a href={u.embed.watch} target="_blank" rel="noopener">{u.embed.cta}<Icon name="arrow-up-right" size={14} /></a></p>
+      )}
+      {u.link && <div class="u-f7dbba"><Button variant="primary" iconRight="arrow-up-right" href={u.link.href}>{u.link.label}</Button></div>}
       {u.sources.length > 0 && (
         <div class="u-ea3812">
           <span class="u-edb37f">{t.sources}</span>
@@ -118,4 +127,9 @@ const more = await Promise.all(postsByDate().filter((p) => p.slug !== post.slug)
   .u-93240e { font:500 12px/1 var(--font-mono);color:var(--text-muted); }
   .u-d11f23 { font:700 15px/1.35 var(--font-display);text-wrap:pretty; }
   .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
+  .vid { margin: 8px 0 0; width: 100%; border-radius: var(--radius-lg); overflow: hidden; background: var(--navy-900); }
+  .vid video { display: block; width: 100%; max-height: 560px; object-fit: contain; background: var(--navy-900); }
+  .vid-link { margin: 0; }
+  .vid-link a { display: inline-flex; align-items: center; gap: 6px; font: 600 14px/1 var(--font-display); color: var(--navy-700); }
+  .photo-credit { margin: -12px 0 0; font: 500 12px/1.4 var(--font-mono); color: var(--text-muted); }
 </style>
