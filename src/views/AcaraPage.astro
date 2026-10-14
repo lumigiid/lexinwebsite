@@ -25,69 +25,69 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
   <div class="eyebrow">{t.eyebrow}</div>
   <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
   <div class="ph-rule"></div>
-  <p style="font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty">{t.intro}</p>
+  <p class="u-65f54a">{t.intro}</p>
 </PageHeader>
 
-<section style="background:var(--surface-page)">
+<section class="u-5cf619">
   <div class="wrap">
-    <div class="filterbar"><div style="display:flex;flex-wrap:wrap;gap:8px">
-      {typesF.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-k={f.k} aria-pressed={f.k === 'all' ? 'true' : 'false'}>{f.label}<span style="font:500 11px/1 var(--font-mono);opacity:.7">{f.count}</span></button>)}
+    <div class="filterbar"><div class="u-180d23">
+      {typesF.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-k={f.k} aria-pressed={f.k === 'all' ? 'true' : 'false'}>{f.label}<span class="u-305db9">{f.count}</span></button>)}
     </div></div>
     <div class="timeline">
       <span class="rail"></span>
-      <div style="position:relative">
+      <div class="u-c451fd">
         <span class="dot-forum"></span>
         <div class="forum">
-          <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;right:-60px;bottom:-80px;height:320px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
-          <div style="position:relative;display:flex;flex-direction:column;gap:16px">
-            <div style="display:flex;gap:8px;flex-wrap:wrap">
-              <span style="height:28px;padding:0 12px;border-radius:999px;background:var(--yellow-400);color:var(--navy-900);font:600 12px/28px var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase">{t.upcoming}</span>
-              <span style="height:28px;padding:0 12px;border-radius:999px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.3);font:600 12px/28px var(--font-display);color:var(--fg-on-dark-2)">{t.flagship}</span>
+          <img src={asset('assets/lexin-mark.png')} alt="" class="u-215071" />
+          <div class="u-bf1ca3">
+            <div class="u-e0e9ec">
+              <span class="u-a048f4">{t.upcoming}</span>
+              <span class="u-d62838">{t.flagship}</span>
             </div>
-            <h2 style="font:700 clamp(36px,5vw,56px)/1.05 var(--font-display);letter-spacing:var(--tracking-tight);margin:0;color:#FFFFFF">Lexin <span class="ember-text">Forum</span></h2>
-            <p style="margin:0;font:var(--type-body-lg);color:var(--fg-on-dark-2);max-width:540px;text-wrap:pretty">{t.forumBody}</p>
-            <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px">
+            <h2 class="u-9711c7">Lexin <span class="ember-text">Forum</span></h2>
+            <p class="u-40ab5d">{t.forumBody}</p>
+            <div class="u-cf940b">
               <Button variant="gradient" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum">{t.notify}</Button>
               <Button variant="inverse" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum%20-%20Pembicara">{t.speak}</Button>
             </div>
           </div>
-          <div style="position:relative;display:flex;flex-direction:column;border-radius:20px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);padding:8px 20px">
+          <div class="u-80ea70">
             {t.forumFacts.map((x: any) => (
-              <div style="display:flex;align-items:center;gap:14px;padding:14px 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.12)">
-                <span style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);color:var(--yellow-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><Icon name={x.icon} size={18} /></span>
-                <span style="display:flex;flex-direction:column;gap:4px;min-width:0"><span style="font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2)">{x.label}</span><span style="font:600 15px/1.35 var(--font-display);color:#FFFFFF">{x.val}</span></span>
+              <div class="u-7d11a3">
+                <span class="u-ae5000"><Icon name={x.icon} size={18} /></span>
+                <span class="u-e6c996"><span class="u-2e3714">{x.label}</span><span class="u-2236d0">{x.val}</span></span>
               </div>
             ))}
           </div>
         </div>
       </div>
       {past.map((e: any) => (
-        <div style="position:relative" class="ev" data-type={e.type}>
+        <div class="u-c451fd ev" data-type={e.type}>
           <span class="dot"></span>
           <article class="ev-card">
-            <div style="position:relative;width:100%;height:100%;min-height:200px;overflow:hidden;background:var(--grad-mist)">
+            <div class="u-24b977">
               {e.photoUrl && <div role="img" aria-label={e.title} style={`position:absolute;inset:0;background:url(${e.photoUrl}) center/cover no-repeat`}></div>}
             </div>
-            <div style="padding:24px 26px;display:flex;flex-direction:column;gap:12px;min-width:0">
-              <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span style={`height:26px;padding:0 10px;border-radius:999px;background:${e.typeBg};color:${e.typeFg};font:600 11px/26px var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;white-space:nowrap`}>{e.typeLabel}</span></div>
-              <h3 style="font:var(--type-h3);font-size:clamp(20px,2.2vw,24px);line-height:1.3;color:var(--text-heading);margin:0;text-wrap:pretty">{e.title}</h3>
-              <p style="margin:0;font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{e.body}</p>
-              <span style="margin-top:auto;display:inline-flex;align-items:center;gap:8px;font:600 14px/1.3 var(--font-display);color:var(--navy-800)"><Icon name="landmark" size={16} />{e.org}</span>
+            <div class="u-33d09b">
+              <div class="u-72fafc"><span class="type-tag" style={`background:${e.typeBg};color:${e.typeFg}`}>{e.typeLabel}</span></div>
+              <h3 class="u-8326b7">{e.title}</h3>
+              <p class="u-1a14cb">{e.body}</p>
+              <span class="u-b16165"><Icon name="landmark" size={16} />{e.org}</span>
             </div>
           </article>
         </div>
       ))}
-      <div class="empty" hidden style="border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:32px;text-align:center;font:var(--type-body);color:var(--text-muted)">{t.empty}</div>
+      <div class="empty u-aa2922" hidden>{t.empty}</div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface-page)">
-  <div class="container" style="padding-bottom:clamp(56px,8vw,96px)">
-    <div style="border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
-      <div style="display:flex;flex-direction:column;gap:6px;max-width:640px">
-        <span style="font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading)">{t.inviteTitle}</span>
-        <span style="font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{t.inviteBody}</span>
+<section class="u-5cf619">
+  <div class="container u-3c657e">
+    <div class="u-1a17bf">
+      <div class="u-77325d">
+        <span class="u-8014ef">{t.inviteTitle}</span>
+        <span class="u-827c3f">{t.inviteBody}</span>
       </div>
       <Button variant="primary" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id?subject=Undangan%20acara">{t.inviteCta}</Button>
     </div>
@@ -109,19 +109,51 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
 
 <style>
   .wrap { --rail-pad: 48px; --rail-x: 16px; max-width: 1048px; margin: 0 auto; padding: clamp(32px,5vw,56px) 20px clamp(48px,7vw,80px); display: flex; flex-direction: column; gap: 28px; }
-  .filterbar { position: sticky; top: 80px; z-index: 10; margin: 0 -20px; padding: 14px 20px; background: rgba(255,255,255,.9); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); }
+  .filterbar { margin: 0 0 var(--space-6); padding: 0 }
   @media (max-width: 639.98px) {
     .wrap { --rail-pad: 28px; --rail-x: 8px; }
-    .filterbar { top: 64px; }
   }
-  .pill { cursor: pointer; border: 0; height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); white-space: nowrap; background: #FFFFFF; color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+  .pill { cursor: pointer; border: 0; height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); white-space: nowrap; background: var(--ink-0); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
   .pill:hover { box-shadow: inset 0 0 0 1px var(--navy-300); }
-  .pill.on { background: var(--navy-600); color: #FFFFFF; box-shadow: none; }
+  .pill.on { background: var(--navy-600); color:var(--fg-on-dark); box-shadow: none; }
   .timeline { position: relative; display: flex; flex-direction: column; gap: 28px; padding-left: var(--rail-pad); }
   .rail { position: absolute; left: var(--rail-x); top: 12px; bottom: 12px; width: 2px; background: linear-gradient(180deg,var(--yellow-400),var(--navy-200) 18%,var(--navy-100)); }
   .dot-forum { position: absolute; left: calc(-1 * var(--rail-pad) + var(--rail-x) - 9px); top: 28px; width: 20px; height: 20px; border-radius: 50%; background: var(--yellow-400); box-shadow: 0 0 0 5px var(--yellow-100); }
-  .dot { position: absolute; left: calc(-1 * var(--rail-pad) + var(--rail-x) - 7px); top: 28px; width: 16px; height: 16px; border-radius: 50%; background: #FFFFFF; box-shadow: inset 0 0 0 3px var(--navy-500); }
-  .forum { border-radius: clamp(24px,3vw,32px); background: var(--grad-night); color: #FFFFFF; padding: clamp(24px,4vw,48px); position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 28px clamp(32px,5vw,64px); align-items: center; }
-  .ev-card { background: var(--surface-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); overflow: hidden; display: grid; grid-template-columns: minmax(0,1fr); }
+  .dot { position: absolute; left: calc(-1 * var(--rail-pad) + var(--rail-x) - 7px); top: 28px; width: 16px; height: 16px; border-radius: 50%; background: var(--ink-0); box-shadow: inset 0 0 0 3px var(--navy-500); }
+  .forum { border-radius: clamp(24px,3vw,32px); background: var(--grad-night); color:var(--fg-on-dark); padding: clamp(24px,4vw,48px); position: relative; overflow: hidden; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 28px clamp(32px,5vw,64px); align-items: center; }
+  .ev-card { border-top: 2px solid var(--navy-900); padding-top: 20px; display: grid; grid-template-columns: minmax(0,1fr); gap: 16px }
   @media (min-width: 820px) { .ev-card { grid-template-columns: minmax(0,.9fr) minmax(0,1.1fr); } }
+  .u-65f54a { font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty; }
+  .u-5cf619 { background:var(--surface-page); }
+  .u-180d23 { display:flex;flex-wrap:wrap;gap:8px; }
+  .u-305db9 { font:500 12px/1 var(--font-mono);opacity:.7; }
+  .u-c451fd { position:relative; }
+  .u-215071 { position:absolute;right:-60px;bottom:-80px;height:320px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none; }
+  .u-bf1ca3 { position:relative;display:flex;flex-direction:column;gap:16px; }
+  .u-e0e9ec { display:flex;gap:8px;flex-wrap:wrap; }
+  .u-a048f4 { color:var(--yellow-300);font:600 12px/1.2 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase }
+  .u-d62838 { color:var(--fg-on-dark-2);font:600 12px/1.2 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase }
+  .u-9711c7 { font:700 clamp(36px,5vw,56px)/1.05 var(--font-display);letter-spacing:var(--tracking-tight);margin:0;color:var(--fg-on-dark); }
+  .u-40ab5d { margin:0;font:var(--type-body-lg);color:var(--fg-on-dark-2);max-width:540px;text-wrap:pretty; }
+  .u-cf940b { display:flex;gap:10px;flex-wrap:wrap;margin-top:6px; }
+  .u-80ea70 { position:relative;display:flex;flex-direction:column;border-radius:20px;background:var(--on-dark-fill-2);box-shadow:inset 0 0 0 1px var(--on-dark-line);padding:8px 20px; }
+  .u-7d11a3 { display:flex;align-items:center;gap:14px;padding:14px 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.12); }
+  .u-ae5000 { color:var(--yellow-300);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+  .u-e6c996 { display:flex;flex-direction:column;gap:4px;min-width:0; }
+  .u-2e3714 { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2); }
+  .u-2236d0 { font:600 15px/1.35 var(--font-display);color:var(--fg-on-dark); }
+  .u-24b977 { position:relative;width:100%;height:100%;min-height:200px;overflow:hidden;background:var(--grad-mist); }
+  .u-33d09b { padding:24px 26px;display:flex;flex-direction:column;gap:12px;min-width:0; }
+  .u-72fafc { display:flex;align-items:center;gap:10px;flex-wrap:wrap; }
+  .u-8326b7 { font:var(--type-h3);font-size:clamp(20px,2.2vw,24px);line-height:1.3;color:var(--text-heading);margin:0;text-wrap:pretty; }
+  .u-1a14cb { margin:0;font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
+  .u-b16165 { margin-top:auto;display:inline-flex;align-items:center;gap:8px;font:600 14px/1.3 var(--font-display);color:var(--navy-800); }
+  .u-aa2922 { border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:32px;text-align:center;font:var(--type-body);color:var(--text-muted); }
+  .u-3c657e { padding-bottom:clamp(56px,8vw,96px); }
+  .u-1a17bf { border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px; }
+  .u-77325d { display:flex;flex-direction:column;gap:6px;max-width:640px; }
+  .u-8014ef { font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading); }
+  .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
+  .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
+  .u-24b977 { border-radius: var(--radius-lg); overflow: hidden; }
 </style>

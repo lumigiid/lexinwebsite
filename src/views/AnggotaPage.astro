@@ -6,6 +6,7 @@ import Icon from '../components/Icon.astro';
 import { dict, url, type Lang } from '../lib/i18n';
 import { members } from '../lib/content';
 import { img } from '../lib/images';
+import rosterData from '../data/rosters.json';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -16,8 +17,12 @@ const SHOW_FILTER = true;
 
 const AV: Record<string, string> = { lead: 'var(--grad-signature)', fac: 'linear-gradient(135deg,var(--navy-500),var(--navy-700))', staff: 'linear-gradient(135deg,var(--red-500),var(--red-700))' };
 const filters = [['all', t.all], ['ret', t.areas.ret], ['rea', t.areas.rea], ['tru', t.areas.tru]].map(([k, label]) => ({
-  k, label, count: k === 'all' ? members.length : members.filter((m) => m.area === k).length,
+  k, label,
 }));
+// Name-only lists. A section with no names is simply not rendered.
+const rosters = (['rstaff', 'ugrad', 'grad', 'alumni'] as const)
+  .map((k) => ({ k, title: t.groups[k], note: t.rosterNotes[k], names: rosterData[k] as string[] }))
+  .filter((r) => r.names.length > 0);
 const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   const list = await Promise.all(members.filter((m) => m.g === g).map(async (m) => ({
     ...m, role: t.roles[m.role], avBg: AV[g], photoUrl: m.photo ? await img(m.photo, 160) : '',
@@ -32,45 +37,44 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   <div class="eyebrow">{t.eyebrow}</div>
   <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
   <div class="ph-rule"></div>
-  <p style="font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty">{t.intro}</p>
+  <p class="u-65f54a">{t.intro}</p>
 </PageHeader>
 
-<section style="background:var(--surface-page)">
-  <div class="container" style="padding-top:clamp(32px,5vw,48px);padding-bottom:clamp(48px,7vw,80px)">
+<section class="u-5cf619">
+  <div class="container u-9869f5">
     {SHOW_FILTER && (
       <div class="filterbar">
-        <span style="font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted)">{t.filterLabel}</span>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <span class="u-edb37f">{t.filterLabel}</span>
+        <div class="u-180d23">
           {filters.map((f) => (
-            <button type="button" class:list={['fbtn', { on: f.k === 'all' }]} data-filter={f.k} aria-pressed={f.k === 'all' ? 'true' : 'false'}>{f.label}<span style="font:500 12px/1 var(--font-mono);opacity:.7">{f.count}</span></button>
+            <button type="button" class:list={['fbtn', { on: f.k === 'all' }]} data-filter={f.k} aria-pressed={f.k === 'all' ? 'true' : 'false'}>{f.label}</button>
           ))}
         </div>
       </div>
     )}
-    <div style="display:flex;flex-direction:column;gap:clamp(40px,6vw,64px)">
+    <div class="u-8f9416">
       {groups.map((grp) => (
-        <div class="grp" style="display:flex;flex-direction:column;gap:20px">
-          <div style="display:flex;align-items:baseline;gap:12px;flex-wrap:wrap">
-            <h2 style="font:var(--type-h2);font-size:clamp(24px,2.8vw,30px);letter-spacing:var(--tracking-snug);color:var(--text-heading);margin:0">{grp.title}</h2>
-            <span style="font:500 13px/1 var(--font-mono);color:var(--text-muted)"><span class="grp-count">{grp.members.length}</span> {t.people}</span>
+        <div class="grp u-b5a98e">
+          <div class="u-a45ba4">
+            <h2 class="u-9ecc2d">{grp.title}</h2>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px">
+          <div class="u-8bf80c">
             {grp.members.map((m: any) => (
-              <article class="mcard lift" data-area={m.area}>
-                <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px">
-                  <div style={`position:relative;width:64px;height:64px;border-radius:50%;flex-shrink:0;background:${m.avBg};color:#FFFFFF;display:flex;align-items:center;justify-content:center;font:700 22px/1 var(--font-display);letter-spacing:.02em;overflow:hidden`}>
+              <article class="mcard" data-area={m.area}>
+                <div class="u-be11a8">
+                  <div style={`position:relative;width:64px;height:64px;border-radius:50%;flex-shrink:0;background:${m.avBg};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 22px/1 var(--font-display);letter-spacing:.02em;overflow:hidden`}>
                     <span>{m.ini}</span>
-                    {m.photoUrl && <img src={m.photoUrl} alt={m.name} loading="lazy" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;background:#FFFFFF" />}
+                    {m.photoUrl && <img src={m.photoUrl} alt={m.name} loading="lazy" class="u-17e25e" />}
                   </div>
                   <a href={m.href} aria-label={t.viewProfile} class="go"><Icon name="arrow-up-right" size={18} /></a>
                 </div>
-                <div style="display:flex;flex-direction:column;gap:4px">
+                <div class="u-fb7434">
                   <a href={m.href} class="mname">{m.name}</a>
-                  <span style="font:500 12.5px/1.4 var(--font-mono);color:var(--text-muted)">{m.titles}</span>
+                  <span class="u-aadf51">{m.titles}</span>
                 </div>
-                <span style="font:600 14px/1.3 var(--font-display);color:var(--red-600)">{m.role}</span>
-                <div style="display:flex;flex-wrap:wrap;gap:6px">
-                  {m.tags.map((g: string) => <span style="height:26px;padding:0 10px;border-radius:999px;background:var(--navy-50);color:var(--navy-700);font:600 12px/26px var(--font-display);white-space:nowrap">{g}</span>)}
+                <span class="u-0b70bb">{m.role}</span>
+                <div class="u-2075ff">
+                  {m.tags.map((g: string) => <span class="u-1ac452">{g}</span>)}
                 </div>
                 <a href={'mailto:' + m.email} class="mmail"><Icon name="mail" size={14} />{m.email}</a>
               </article>
@@ -78,17 +82,28 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
           </div>
         </div>
       ))}
-      <div class="empty" hidden style="border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:32px;text-align:center;font:var(--type-body);color:var(--text-muted)">{t.empty}</div>
+      {rosters.map((r) => (
+        <div class="grp roster u-b5a98e">
+          <div class="u-a45ba4">
+            <h2 class="u-9ecc2d">{r.title}</h2>
+            <span class="u-839954">{r.note}</span>
+          </div>
+          <ul class="roster-list">
+            {r.names.map((n) => <li>{n}</li>)}
+          </ul>
+        </div>
+      ))}
+      <div class="empty u-aa2922" hidden>{t.empty}</div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface-page)">
-  <div class="container" style="padding-bottom:clamp(56px,8vw,96px)">
-    <div style="border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(24px,3.4vw,36px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
-      <div style="display:flex;flex-direction:column;gap:6px;max-width:620px">
-        <span style="font:700 clamp(22px,2.4vw,26px)/1.25 var(--font-display);color:var(--text-heading)">{t.joinTitle}</span>
-        <span style="font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{t.joinBody}</span>
+<section class="u-5cf619">
+  <div class="container u-3c657e">
+    <div class="u-ed592c">
+      <div class="u-1426fd">
+        <span class="u-9e6429">{t.joinTitle}</span>
+        <span class="u-827c3f">{t.joinBody}</span>
       </div>
       <Button variant="secondary" iconRight="arrow-right" href={url(lang, 'partisipasi/')}>{t.joinCta}</Button>
     </div>
@@ -103,10 +118,10 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
     btns.forEach((b) => { const on = b.dataset.filter === k; b.classList.toggle('on', on); b.setAttribute('aria-pressed', String(on)); });
     let any = false;
     document.querySelectorAll<HTMLElement>('.grp').forEach((grp) => {
+      if (grp.classList.contains('roster')) { grp.hidden = k !== 'all'; return; }
       let n = 0;
       grp.querySelectorAll<HTMLElement>('.mcard').forEach((c) => { const show = k === 'all' || c.dataset.area === k; c.hidden = !show; if (show) n++; });
       grp.hidden = n === 0;
-      grp.querySelector('.grp-count')!.textContent = String(n);
       if (n) any = true;
     });
     document.querySelector<HTMLElement>('.empty')!.hidden = any;
@@ -115,16 +130,43 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
 </script>
 
 <style>
-  .filterbar { position: sticky; top: 80px; z-index: 10; margin: 0 -20px; padding: 14px 20px; background: rgba(255,255,255,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px; }
-  @media (max-width: 639.98px) { .filterbar { position: static; } }
-  .fbtn { cursor: pointer; border: 0; height: 40px; padding: 0 16px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); white-space: nowrap; background: #FFFFFF; color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+  .filterbar { margin: 0 0 var(--space-6); padding: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 12px 16px }
+  .fbtn { cursor: pointer; border: 0; height: 40px; padding: 0 16px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); white-space: nowrap; background: var(--ink-0); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
   .fbtn:hover { box-shadow: inset 0 0 0 1px var(--navy-300); }
-  .fbtn.on { background: var(--navy-600); color: #FFFFFF; box-shadow: none; }
-  .mcard { background: var(--surface-card); border-radius: var(--radius-xl); box-shadow: var(--shadow-md); padding: 24px; display: flex; flex-direction: column; gap: 14px; }
+  .fbtn.on { background: var(--navy-600); color:var(--fg-on-dark); box-shadow: none; }
+  .mcard { border-top: 2px solid var(--navy-900); padding: 20px; border-radius: 0 0 var(--radius-md) var(--radius-md); display: flex; flex-direction: column; gap: 14px; transition: background-color var(--dur-base) var(--ease-out) }
   .go { width: 40px; height: 40px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: var(--ink-50); color: var(--navy-600); }
-  .go:hover { background: var(--navy-600); color: #FFFFFF; }
+  .go:hover { background: var(--navy-600); color:var(--fg-on-dark); }
   .mname { font: 700 19px/1.3 var(--font-display); color: var(--text-heading); text-wrap: balance; }
   .mname:hover { color: var(--navy-600); }
   .mmail { margin-top: auto; padding-top: 14px; box-shadow: inset 0 1px 0 var(--border-subtle); display: flex; align-items: center; gap: 8px; font: 500 13px/1.3 var(--font-mono); color: var(--navy-600); word-break: normal; overflow-wrap: normal; min-width: 0; }
   .mmail:hover { color: var(--red-600); }
+  .u-65f54a { font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty; }
+  .u-5cf619 { background:var(--surface-page); }
+  .u-9869f5 { padding-top:clamp(32px,5vw,48px);padding-bottom:clamp(48px,7vw,80px); }
+  .u-edb37f { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted); }
+  .u-180d23 { display:flex;flex-wrap:wrap;gap:8px; }
+  .u-305db9 { font:500 12px/1 var(--font-mono);opacity:.7; }
+  .u-8f9416 { display:flex;flex-direction:column;gap:clamp(40px,6vw,64px); }
+  .u-b5a98e { display:flex;flex-direction:column;gap:20px; }
+  .u-a45ba4 { display:flex;align-items:baseline;gap:12px;flex-wrap:wrap; }
+  .u-9ecc2d { font:var(--type-h2);font-size:clamp(24px,2.8vw,30px);letter-spacing:var(--tracking-snug);color:var(--text-heading);margin:0; }
+  .u-839954 { font:500 13px/1 var(--font-mono);color:var(--text-muted); }
+  .u-8bf80c { display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr));gap:20px; }
+  .u-be11a8 { display:flex;justify-content:space-between;align-items:flex-start;gap:12px; }
+  .u-17e25e { position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 0;background:var(--ink-0) }
+  .u-fb7434 { display:flex;flex-direction:column;gap:4px; }
+  .u-aadf51 { font:500 13px/1.4 var(--font-mono);color:var(--text-muted); }
+  .u-0b70bb { font:600 14px/1.3 var(--font-display);color:var(--red-600); }
+  .u-2075ff { display:flex;flex-wrap:wrap;gap:6px; }
+  .u-1ac452 { font:500 12px/1.4 var(--font-mono);color:var(--navy-700);white-space:nowrap }
+  .u-aa2922 { border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:32px;text-align:center;font:var(--type-body);color:var(--text-muted); }
+  .u-3c657e { padding-bottom:clamp(56px,8vw,96px); }
+  .u-ed592c { border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(24px,3.4vw,36px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px; }
+  .u-1426fd { display:flex;flex-direction:column;gap:6px;max-width:620px; }
+  .u-9e6429 { font:700 clamp(22px,2.4vw,26px)/1.25 var(--font-display);color:var(--text-heading); }
+  .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
+  .roster-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 0 var(--space-8); border-top: 2px solid var(--navy-900); }
+  .roster-list li { padding: 14px 4px; border-bottom: 1px solid var(--border-default); font: 600 16px/1.4 var(--font-display); color: var(--navy-900); }
+  .mcard:hover { background: var(--navy-50); }
 </style>

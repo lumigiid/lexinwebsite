@@ -1102,7 +1102,11 @@
       "groups": {
         "lead": "Pimpinan",
         "fac": "Dosen & peneliti",
-        "staff": "Staf riset & rekayasa"
+        "staff": "Tim inti riset & rekayasa",
+        "ugrad": "Mahasiswa sarjana",
+        "grad": "Mahasiswa pascasarjana",
+        "alumni": "Alumni",
+        "rstaff": "Staf riset & rekayasa"
       },
       "people": "orang",
       "viewProfile": "Lihat profil",
@@ -1126,7 +1130,13 @@
       "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
       "emailPh": "Email Anda",
       "subscribe": "Berlangganan",
-      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "rosterNotes": {
+        "ugrad": "Mahasiswa S1 yang terlibat dalam riset Lexin",
+        "grad": "Mahasiswa S2 dan S3 yang terlibat dalam riset Lexin",
+        "alumni": "Daftar alumni Lexin",
+        "rstaff": "Staf yang terlibat aktif dalam riset Lexin"
+      }
     },
     "en": {
       "about": "About",
@@ -1155,7 +1165,11 @@
       "groups": {
         "lead": "Leadership",
         "fac": "Faculty",
-        "staff": "Research & engineering staff"
+        "staff": "Core research & engineering team",
+        "ugrad": "Undergraduate students",
+        "grad": "Graduate students",
+        "alumni": "Alumni",
+        "rstaff": "Research & engineering staff"
       },
       "people": "people",
       "viewProfile": "View profile",
@@ -1179,7 +1193,13 @@
       "newsletterBody": "Research, events and publications, a few times a year.",
       "emailPh": "Your email",
       "subscribe": "Subscribe",
-      "footerNote": "Content and outputs on this site are not legal advice."
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "rosterNotes": {
+        "ugrad": "Undergraduate students involved in Lexin research",
+        "grad": "Master's and doctoral students involved in Lexin research",
+        "alumni": "Lexin alumni",
+        "rstaff": "Staff actively involved in Lexin research"
+      }
     }
   },
   "profil": {
@@ -1210,7 +1230,11 @@
       "groups": {
         "lead": "Pimpinan",
         "fac": "Dosen & peneliti",
-        "staff": "Staf riset & rekayasa"
+        "staff": "Tim inti riset & rekayasa",
+        "ugrad": "Mahasiswa sarjana",
+        "grad": "Mahasiswa pascasarjana",
+        "alumni": "Alumni",
+        "rstaff": "Staf riset & rekayasa"
       },
       "areas": {
         "ret": "Retrieval & grounding",
@@ -1233,7 +1257,12 @@
       "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
       "emailPh": "Email Anda",
       "subscribe": "Berlangganan",
-      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "rosterNotes": {
+        "ugrad": "Mahasiswa S1 yang terlibat dalam riset Lexin",
+        "grad": "Mahasiswa S2 dan S3 yang terlibat dalam riset Lexin",
+        "alumni": "Daftar alumni Lexin"
+      }
     },
     "en": {
       "about": "About",
@@ -1262,7 +1291,11 @@
       "groups": {
         "lead": "Leadership",
         "fac": "Faculty",
-        "staff": "Research & engineering staff"
+        "staff": "Core research & engineering team",
+        "ugrad": "Undergraduate students",
+        "grad": "Graduate students",
+        "alumni": "Alumni",
+        "rstaff": "Research & engineering staff"
       },
       "areas": {
         "ret": "Retrieval & grounding",
@@ -1285,7 +1318,12 @@
       "newsletterBody": "Research, events and publications, a few times a year.",
       "emailPh": "Your email",
       "subscribe": "Subscribe",
-      "footerNote": "Content and outputs on this site are not legal advice."
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "rosterNotes": {
+        "ugrad": "Undergraduate students involved in Lexin research",
+        "grad": "Master's and doctoral students involved in Lexin research",
+        "alumni": "Lexin alumni"
+      }
     }
   },
   "publikasi": {

@@ -19,7 +19,7 @@
 --text-heading:var(--navy-900);--text-body:var(--ink-700);--text-muted:var(--ink-500);--text-link:var(--navy-500);--text-link-hover:var(--red-500);--text-accent:var(--red-500);
 
 /* Semantic — surfaces */
---surface-page:var(--ink-0);--surface-subtle:var(--ink-25);--surface-sunken:var(--ink-50);--surface-card:var(--ink-0);--surface-inverse:var(--navy-900);--surface-tint-navy:var(--navy-50);--surface-tint-red:var(--red-50);--surface-tint-yellow:var(--yellow-50);
+--surface-page:var(--ink-25);--surface-subtle:var(--ink-50);--surface-sunken:var(--ink-50);--surface-card:var(--ink-0);--surface-inverse:var(--navy-900);--surface-tint-navy:var(--navy-50);--surface-tint-red:var(--red-50);--surface-tint-yellow:var(--yellow-50);
 
 /* Semantic — borders */
 --border-subtle:var(--ink-100);--border-default:var(--ink-200);--border-strong:var(--ink-300);--border-focus:var(--navy-500);
@@ -34,4 +34,10 @@
 --status-warning:var(--amber-500);--status-warning-bg:var(--amber-50);
 --status-danger:var(--red-600);--status-danger-bg:var(--red-50);
 --status-info:var(--navy-500);--status-info-bg:var(--navy-50);
+
+/* On-dark layers (hero, forum, footer) */
+--on-dark-fill:rgba(255,255,255,.06);--on-dark-fill-2:rgba(255,255,255,.08);--on-dark-line:rgba(255,255,255,.16);--on-dark-line-2:rgba(255,255,255,.28);--on-dark-rule:rgba(255,255,255,.18);
+--pillar-fill:linear-gradient(180deg,rgba(160,170,240,.22),rgba(160,170,240,.08));--pillar-line:rgba(180,190,255,.22);
+--yellow-wash:rgba(252,212,8,.14);--shadow-pop:0 24px 48px -12px rgba(16,17,58,.55);
+--glass-page:color-mix(in srgb, var(--ink-25) 90%, transparent);
 }

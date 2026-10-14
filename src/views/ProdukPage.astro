@@ -17,144 +17,143 @@ const home = dict('home', lang);
   <div class="eyebrow">{t.eyebrow}</div>
   <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
   <div class="ph-rule"></div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;margin-top:24px;align-items:start">
-    <p style="font:var(--type-body-lg);margin:0;color:var(--text-body);text-wrap:pretty">{t.intro}</p>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px">
+  <div class="u-7c6fc7">
+    <p class="u-207b5b">{t.intro}</p>
+    <div class="u-2e999d">
       <a href="#klaussa" class="jump" data-go="klaussa">
-        <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:700 18px/1 var(--font-display)">Klaussa</span><Icon name="arrow-down" size={16} color="var(--navy-500)" /></span>
-        <div style="display:flex"><Badge tone="success" variant="soft" dot>{t.k.status}</Badge></div>
+        <span class="u-510ea6"><span class="u-d7479a">Klaussa</span><Icon name="arrow-down" size={16} color="var(--navy-500)" /></span>
+        <div class="u-f7dbba"><Badge tone="success" variant="soft" dot>{t.k.status}</Badge></div>
       </a>
       <a href="#fiskallink" class="jump" data-go="fiskallink">
-        <span style="display:flex;justify-content:space-between;align-items:center"><span style="font:700 18px/1 var(--font-display)">FiskalLink</span><Icon name="arrow-down" size={16} color="var(--navy-500)" /></span>
-        <div style="display:flex"><Badge tone="yellow" variant="soft" dot>{t.f.badge}</Badge></div>
+        <span class="u-510ea6"><span class="u-d7479a">FiskalLink</span><Icon name="arrow-down" size={16} color="var(--navy-500)" /></span>
+        <div class="u-f7dbba"><Badge tone="yellow" variant="soft" dot>{t.f.badge}</Badge></div>
       </a>
     </div>
   </div>
 </PageHeader>
 
-<section id="klaussa" class="anchor" style="background:var(--grad-night);color:#FFFFFF;position:relative;overflow:hidden">
-  <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;left:-80px;bottom:-120px;height:420px;opacity:.07;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
-  <div class="container prod-grid" style="position:relative">
-    <div style="display:flex;flex-direction:column;gap:18px;min-width:0">
-      <span style="font:500 13px/1 var(--font-mono);color:var(--yellow-300)">01 / 02</span>
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <h2 style="font:700 clamp(36px,4.4vw,48px)/1 var(--font-display);letter-spacing:var(--tracking-tight);color:#FFFFFF;margin:0">Klaussa</h2>
+<section id="klaussa" class="anchor u-ccb630">
+  <img src={asset('assets/lexin-mark.png')} alt="" class="u-d04c50" />
+  <div class="container prod-grid u-c451fd">
+    <div class="u-6b4b4d">
+      <span class="u-5b0742">01 / 02</span>
+      <div class="u-b830ea">
+        <h2 class="u-60b284">Klaussa</h2>
         <Badge tone="success" variant="solid" dot>{t.k.status}</Badge>
       </div>
-      <p style="margin:0;font:600 clamp(18px,1.8vw,21px)/1.4 var(--font-display);color:#FFFFFF">{t.k.line}</p>
-      <p style="margin:0;font:var(--type-body);color:var(--fg-on-dark-2);text-wrap:pretty">{t.k.body}</p>
-      <div style="display:flex;flex-direction:column;margin-top:4px">
+      <p class="u-ca0e38">{t.k.line}</p>
+      <p class="u-c17082">{t.k.body}</p>
+      <div class="u-0b9f18">
         {t.k.caps.map((c: any) => (
-          <div style="display:flex;align-items:center;gap:14px;padding:14px 0;box-shadow:inset 0 -1px 0 rgba(255,255,255,.14)">
-            <span style="width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.08);color:var(--yellow-300);display:flex;align-items:center;justify-content:center;flex-shrink:0"><Icon name={c.icon} size={20} /></span>
-            <span style="flex:1;min-width:0;font:600 16px/1.3 var(--font-display);color:#FFFFFF">{c.label}</span>
+          <div class="u-2aa8a6">
+            <span class="u-ae5000"><Icon name={c.icon} size={20} /></span>
+            <span class="u-ea3e9a">{c.label}</span>
           </div>
         ))}
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px">
-        <span style="font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2)">{t.k.recogLabel}</span>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-          {t.k.recog.map((r: string) => <span style="height:32px;padding:0 12px;border-radius:999px;display:inline-flex;align-items:center;gap:6px;background:rgba(252,212,8,.12);box-shadow:inset 0 0 0 1px rgba(252,212,8,.35);color:var(--yellow-300);font:600 13px/1 var(--font-display);white-space:nowrap"><Icon name="award" size={14} />{r}</span>)}
+      <div class="u-459fe4">
+        <span class="u-2e3714">{t.k.recogLabel}</span>
+        <div class="u-180d23">
+          {t.k.recog.map((r: string) => <span class="u-ba30c2"><Icon name="award" size={14} />{r}</span>)}
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:4px">
-          <div class="logo-chip"><img src={asset('assets/partners/ui-incubate.png')} alt="UI Incubate" style="height:20px;width:auto;display:block" /></div>
-          <div class="logo-chip"><img src={asset('assets/partners/google-for-startups.png')} alt="Google for Startups" style="height:24px;width:auto;display:block" /></div>
-          <div class="logo-chip"><img src={asset('assets/partners/nvidia-inception.png')} alt="NVIDIA Inception Program" style="height:36px;width:auto;display:block" /></div>
+        <div class="u-2860d4">
+          <div class="logo-chip"><img src={asset('assets/partners/ui-incubate.png')} alt="UI Incubate" class="u-a145f9" /></div>
+          <div class="logo-chip"><img src={asset('assets/partners/google-for-startups.png')} alt="Google for Startups" class="u-ff403e" /></div>
+          <div class="logo-chip"><img src={asset('assets/partners/nvidia-inception.png')} alt="NVIDIA Inception Program" class="u-03500d" /></div>
         </div>
       </div>
-      <div style="margin-top:8px"><div style="display:flex;gap:10px;flex-wrap:wrap">
+      <div class="u-d43169"><div class="u-4ad06f">
         <Button variant="gradient" size="lg" iconRight="arrow-up-right" href="https://klaussa.com">{t.k.visit}</Button>
         <Button variant="inverse" size="lg" href="https://www.klaussa.com/">{t.k.contactTeam}</Button>
       </div></div>
     </div>
-    <div style="min-width:0">
-      <div style="position:relative;width:100%;border-radius:24px;overflow:hidden;background:var(--navy-900);box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)">
-        <video src={asset('assets/video/klaussa-legal-assistant.webm')} autoplay muted loop playsinline controls preload="metadata" aria-label={t.k.videoLabel} style="width:100%;height:auto;object-fit:contain;display:block;background:var(--navy-900)"></video>
+    <div class="u-3f9f96">
+      <div class="u-8c83d3">
+        <video src={asset('assets/video/klaussa-legal-assistant.webm')} autoplay muted loop playsinline controls preload="metadata" aria-label={t.k.videoLabel} class="u-610f64"></video>
       </div>
     </div>
   </div>
 </section>
 
-<section id="fiskallink" class="anchor" style="background:var(--surface-page)">
+<section id="fiskallink" class="anchor u-5cf619">
   <div class="container prod-grid">
-    <div class="f-video" style="min-width:0">
-      <div style="position:relative;width:100%;border-radius:24px;overflow:hidden;background:var(--navy-900);box-shadow:inset 0 0 0 1px var(--border-subtle)">
-        <video src={asset('assets/video/fiskallink-demo.mp4')} autoplay muted loop playsinline controls preload="metadata" aria-label={t.f.videoLabel} style="width:100%;height:auto;object-fit:contain;display:block;background:var(--navy-900)"></video>
+    <div class="f-video u-3f9f96">
+      <div class="u-fd8a27">
+        <video src={asset('assets/video/fiskallink-demo.mp4')} autoplay muted loop playsinline controls preload="metadata" aria-label={t.f.videoLabel} class="u-610f64"></video>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:16px;min-width:0">
-      <span style="font:500 13px/1 var(--font-mono);color:var(--red-600)">02 / 02</span>
-      <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap">
-        <h2 style="font:700 clamp(32px,4vw,44px)/1 var(--font-display);letter-spacing:var(--tracking-tight);color:var(--text-heading);margin:0">FiskalLink</h2>
+    <div class="u-a051c6">
+      <span class="u-d214c4">02 / 02</span>
+      <div class="u-b830ea">
+        <h2 class="u-963e13">FiskalLink</h2>
         <Badge tone="yellow" variant="soft" dot>{t.f.badge}</Badge>
       </div>
-      <p style="margin:0;font:600 clamp(18px,1.8vw,21px)/1.4 var(--font-display);color:var(--navy-800)">{t.f.line}</p>
-      <p style="margin:0;font:var(--type-body);color:var(--text-body);text-wrap:pretty">{t.f.body}</p>
-      <div style="display:flex;flex-direction:column;gap:10px">
+      <p class="u-6b5aff">{t.f.line}</p>
+      <p class="u-455b81">{t.f.body}</p>
+      <div class="u-459fe4">
         <span class="mini-lbl">{t.f.partnerLabel}</span>
-        <div style="align-self:flex-start;padding:12px 16px;border-radius:16px;background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--border-subtle)"><img src={asset('assets/partners/kemenkeu.png')} alt="Kementerian Keuangan Republik Indonesia" style="height:40px;width:auto;display:block" /></div>
+        <div class="u-429726"><img src={asset('assets/partners/kemenkeu.png')} alt="Kementerian Keuangan Republik Indonesia" class="u-2a0890" /></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px">
+      <div class="u-459fe4">
         <span class="mini-lbl">{t.f.recogLabel}</span>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <div class="u-180d23">
           {t.f.recog.map((r: string) => <a href={url(lang, 'wawasan/fiskallink-ai-incubation-public-sector/')} class="f-recog"><Icon name="award" size={14} />{r}</a>)}
         </div>
       </div>
-      <div style="margin-top:8px"><div style="border-radius:20px;background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:24px;display:flex;flex-direction:column;gap:12px">
-        <span style="display:flex;align-items:center;gap:8px;font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--navy-600)"><span style="width:8px;height:8px;border-radius:50%;background:var(--yellow-500)"></span>{t.f.statusLabel}</span>
-        <span style="font:700 20px/1.3 var(--font-display);color:var(--text-heading);text-wrap:balance">{t.f.statusTitle}</span>
-        <span style="font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty">{t.f.statusBody}</span>
-        <div style="display:flex;margin-top:4px"><Button variant="primary" iconRight="arrow-right" href={url(lang, 'kontak/')}>{t.f.cta}</Button></div>
+      <div class="u-d43169"><div class="u-7fa107">
+        <span class="u-a5e76e"><span class="u-e12883"></span>{t.f.statusLabel}</span>
+        <span class="u-1a3fc3">{t.f.statusTitle}</span>
+        <span class="u-63396e">{t.f.statusBody}</span>
+        <div class="u-5480d0"><Button variant="primary" iconRight="arrow-right" href={url(lang, 'kontak/')}>{t.f.cta}</Button></div>
       </div></div>
     </div>
   </div>
-  <div class="container" style="padding-bottom:clamp(48px,7vw,80px)">
-    <div style="border-radius:var(--radius-xl);border:2px dashed var(--navy-200);padding:clamp(24px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
-      <div style="display:flex;align-items:center;gap:16px">
-        <span style="width:52px;height:52px;border-radius:16px;background:var(--navy-50);color:var(--navy-500);display:flex;align-items:center;justify-content:center;flex-shrink:0"><Icon name="flask-conical" size={24} /></span>
-        <span style="display:flex;flex-direction:column;gap:4px"><span style="font:700 20px/1.25 var(--font-display);color:var(--text-heading)">{t.moreTitle}</span><span style="font:var(--type-body-sm);color:var(--text-muted)">{t.moreBody}</span></span>
+  <div class="container u-0fb569">
+    <div class="u-0c72fd">
+      <div class="u-ee36e7">
+        <span class="u-6f8387"><Icon name="flask-conical" size={24} /></span>
+        <span class="u-fb7434"><span class="u-6ded3a">{t.moreTitle}</span><span class="u-16e09c">{t.moreBody}</span></span>
       </div>
       <Button variant="secondary" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Kabar%20produk%20Lexin">{t.keepPosted}</Button>
     </div>
   </div>
 </section>
 
-<section style="background:var(--navy-50);box-shadow:inset 0 1px 0 var(--border-subtle),inset 0 -1px 0 var(--border-subtle)">
+<section class="u-efb5dc">
   <div class="container sec-pad">
-    <div class="eyebrow" style="color:var(--navy-600)">{t.respEyebrow}</div>
-    <h2 class="h-sec" style="text-wrap:balance">{t.respTitle}</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;margin-top:clamp(28px,4vw,48px)">
+    <div class="eyebrow u-83de02">{t.respEyebrow}</div>
+    <h2 class="h-sec u-3345b4">{t.respTitle}</h2>
+    <div class="u-4af026">
       {t.principles.map((p: any) => (
-        <div style="background:var(--surface-card);border-radius:var(--radius-xl);box-shadow:var(--shadow-md);padding:26px 24px;display:flex;flex-direction:column;gap:12px">
-          <span style="width:48px;height:48px;border-radius:15px;background:var(--navy-50);color:var(--navy-500);display:flex;align-items:center;justify-content:center"><Icon name={p.icon} size={22} /></span>
-          <h3 style="font:var(--type-h4);color:var(--text-heading);margin:6px 0 0">{p.title}</h3>
-          <p style="margin:0;font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty">{p.body}</p>
+        <div class="u-127548">
+          <h3 class="u-59d76c">{p.title}</h3>
+          <p class="u-7efbc9">{p.body}</p>
         </div>
       ))}
     </div>
-    <div style="margin-top:20px;border-radius:20px;background:#FFFFFF;box-shadow:inset 0 0 0 1px var(--navy-200);padding:18px 22px;display:flex;align-items:flex-start;gap:12px">
-      <span style="color:var(--red-600);display:flex;margin-top:2px"><Icon name="info" size={18} /></span>
-      <span style="font:600 15px/1.5 var(--font-display);color:var(--navy-900);text-wrap:pretty">{t.disclaimer}</span>
+    <div class="u-88bae0">
+      <span class="u-f19ec6"><Icon name="info" size={18} /></span>
+      <span class="u-ad1ef4">{t.disclaimer}</span>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface-page)">
+<section class="u-5cf619">
   <div class="container sec-pad">
     <div class="eyebrow">{t.dataEyebrow}</div>
-    <h2 class="h-sec" style="text-wrap:balance">{t.dataTitle}</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:20px;margin-top:clamp(28px,4vw,48px)">
+    <h2 class="h-sec u-3345b4">{t.dataTitle}</h2>
+    <div class="u-917645">
       <a href="https://github.com/ninggar17/dataset_lexid_pdf" class="data-card night" target="_blank" rel="noopener">
-        <span style="display:flex;justify-content:space-between;align-items:center"><span style="width:48px;height:48px;border-radius:15px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);color:var(--yellow-300);display:flex;align-items:center;justify-content:center"><Icon name="network" size={22} /></span><span style="font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">Dataset</span></span>
-        <span style="font:700 22px/1.25 var(--font-display);margin-top:auto">{t.lexidTitle}</span>
-        <span style="font:var(--type-body-sm);color:var(--fg-on-dark-2)">{t.lexidBody}</span>
-        <span style="font:500 13px/1.3 var(--font-mono);color:var(--yellow-300);display:flex;align-items:center;gap:6px;overflow-wrap:anywhere">github.com/ninggar17/dataset_lexid_pdf <Icon name="arrow-up-right" size={14} /></span>
+        <span class="u-510ea6"><span class="u-bc308e"><Icon name="network" size={22} /></span><span class="u-bf79a6">Dataset</span></span>
+        <span class="u-46d2de">{t.lexidTitle}</span>
+        <span class="u-134f33">{t.lexidBody}</span>
+        <span class="u-ec4e7a">github.com/ninggar17/dataset_lexid_pdf <Icon name="arrow-up-right" size={14} /></span>
       </a>
       <a href="https://github.com/lab-lexin" class="data-card light" target="_blank" rel="noopener">
-        <span style="display:flex;justify-content:space-between;align-items:center"><span style="width:48px;height:48px;border-radius:15px;background:var(--navy-50);color:var(--navy-500);display:flex;align-items:center;justify-content:center"><Icon name="github" size={22} /></span><span style="font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted)">GitHub</span></span>
-        <span style="font:700 22px/1.25 var(--font-display);margin-top:auto">lab-lexin</span>
-        <span style="font:var(--type-body-sm);color:var(--text-muted)">{t.ghBody}</span>
-        <span style="font:500 13px/1.3 var(--font-mono);color:var(--navy-600);display:flex;align-items:center;gap:6px">github.com/lab-lexin <Icon name="arrow-up-right" size={14} /></span>
+        <span class="u-510ea6"><span class="u-d08ecf"><Icon name="github" size={22} /></span><span class="u-edb37f">GitHub</span></span>
+        <span class="u-46d2de">lab-lexin</span>
+        <span class="u-16e09c">{t.ghBody}</span>
+        <span class="u-8afcfd">github.com/lab-lexin <Icon name="arrow-up-right" size={14} /></span>
       </a>
     </div>
   </div>
@@ -172,22 +171,95 @@ const home = dict('home', lang);
 </script>
 
 <style>
-  .jump { border-radius: 18px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--border-subtle); padding: 16px 18px; display: flex; flex-direction: column; gap: 8px; color: var(--text-heading); }
-  .jump:hover { box-shadow: inset 0 0 0 1px var(--navy-300); color: var(--text-heading); }
+  .jump { border-top: 2px solid var(--navy-900); padding: 14px 4px 0; display: flex; flex-direction: column; gap: 8px; color: var(--text-heading) }
+  .jump:hover { border-top-color: var(--red-500); color: var(--text-heading) }
   .anchor { scroll-margin-top: 80px; }
   .prod-grid { padding-top: clamp(56px,8vw,96px); padding-bottom: clamp(56px,8vw,96px); display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,460px),1fr)); gap: 40px clamp(32px,5vw,72px); align-items: center; }
   .f-video { order: 1; }
   @media (min-width: 1000px) { .f-video { order: 0; } }
-  .logo-chip { height: 52px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; display: flex; align-items: center; }
-  .mini-lbl { font: 600 11px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-muted); }
-  .f-recog { min-height: 32px; padding: 6px 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; background: var(--yellow-100); box-shadow: inset 0 0 0 1px var(--yellow-300); color: var(--navy-900); font: 600 13px/1.3 var(--font-display); }
-  .f-recog:hover { box-shadow: inset 0 0 0 1px var(--yellow-500); color: var(--navy-900); }
+  .logo-chip { height: 52px; padding: 0 16px; border-radius: 14px; background: var(--ink-0); display: flex; align-items: center; }
+  .mini-lbl { font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-muted); }
+  .f-recog { min-height: 32px; display: inline-flex; align-items: center; gap: 6px; color: var(--navy-900); font: 600 13px/1.3 var(--font-display); text-decoration: underline; text-decoration-color: var(--yellow-500); text-decoration-thickness: 2px; text-underline-offset: 4px }
+  .f-recog:hover { color: var(--red-600) }
   .sec-pad { padding-top: clamp(56px,8vw,88px); padding-bottom: clamp(56px,8vw,88px); }
   .h-sec { font: var(--type-h1); font-size: clamp(30px,4.2vw,44px); letter-spacing: var(--tracking-tight); color: var(--text-heading); margin: 14px 0 0; }
-  .data-card { border-radius: var(--radius-xl); padding: 28px; display: flex; flex-direction: column; gap: 12px; min-height: 220px; transition: transform .2s, box-shadow .2s; }
-  .data-card:hover { transform: translateY(-4px); }
-  .data-card.night { background: var(--grad-night); color: #FFFFFF; }
-  .data-card.night:hover { color: #FFFFFF; }
+  .data-card { padding: 28px; display: flex; flex-direction: column; gap: 12px; min-height: 220px; border-radius: var(--radius-xl); transition: box-shadow var(--dur-base) var(--ease-out) }
+  .data-card:hover { box-shadow: var(--shadow-lg) }
+  .data-card.night { background: var(--grad-night); color:var(--fg-on-dark); }
+  .data-card.night:hover { color:var(--fg-on-dark); }
   .data-card.light { background: var(--surface-card); box-shadow: inset 0 0 0 1px var(--border-subtle); color: var(--text-heading); }
   .data-card.light:hover { box-shadow: var(--shadow-lg); color: var(--text-heading); }
+  .u-7c6fc7 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:20px 64px;margin-top:24px;align-items:start; }
+  .u-207b5b { font:var(--type-body-lg);margin:0;color:var(--text-body);text-wrap:pretty; }
+  .u-2e999d { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:10px; }
+  .u-510ea6 { display:flex;justify-content:space-between;align-items:center; }
+  .u-d7479a { font:700 18px/1 var(--font-display); }
+  .u-f7dbba { display:flex; }
+  .u-ccb630 { background:var(--grad-night);color:var(--fg-on-dark);position:relative;overflow:hidden; }
+  .u-d04c50 { position:absolute;left:-80px;bottom:-120px;height:420px;opacity:.07;filter:brightness(0) invert(1);pointer-events:none;max-width:none; }
+  .u-c451fd { position:relative; }
+  .u-6b4b4d { display:flex;flex-direction:column;gap:18px;min-width:0; }
+  .u-5b0742 { font:500 13px/1 var(--font-mono);color:var(--yellow-300); }
+  .u-b830ea { display:flex;align-items:center;gap:12px;flex-wrap:wrap; }
+  .u-60b284 { font:700 clamp(36px,4.4vw,48px)/1 var(--font-display);letter-spacing:var(--tracking-tight);color:var(--fg-on-dark);margin:0; }
+  .u-ca0e38 { margin:0;font:600 clamp(18px,1.8vw,21px)/1.4 var(--font-display);color:var(--fg-on-dark); }
+  .u-c17082 { margin:0;font:var(--type-body);color:var(--fg-on-dark-2);text-wrap:pretty; }
+  .u-0b9f18 { display:flex;flex-direction:column;margin-top:4px; }
+  .u-2aa8a6 { display:flex;align-items:center;gap:14px;padding:14px 0;box-shadow:inset 0 -1px 0 var(--on-dark-line); }
+  .u-ae5000 { color:var(--yellow-300);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+  .u-ea3e9a { flex:1;min-width:0;font:600 16px/1.3 var(--font-display);color:var(--fg-on-dark); }
+  .u-459fe4 { display:flex;flex-direction:column;gap:10px; }
+  .u-2e3714 { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--fg-on-dark-2); }
+  .u-180d23 { display:flex;flex-wrap:wrap;gap:8px 20px }
+  .u-ba30c2 { display:inline-flex;align-items:center;gap:8px;color:var(--yellow-300);font:600 13px/1.3 var(--font-display) }
+  .u-2860d4 { display:flex;flex-wrap:wrap;gap:8px;margin-top:4px; }
+  .u-a145f9 { height:20px;width:auto;display:block; }
+  .u-ff403e { height:24px;width:auto;display:block; }
+  .u-03500d { height:36px;width:auto;display:block; }
+  .u-d43169 { margin-top:8px; }
+  .u-4ad06f { display:flex;gap:10px;flex-wrap:wrap; }
+  .u-3f9f96 { min-width:0; }
+  .u-8c83d3 { position:relative;width:100%;border-radius:24px;overflow:hidden;background:var(--navy-900);box-shadow:inset 0 0 0 1px var(--on-dark-rule); }
+  .u-610f64 { width:100%;height:auto;object-fit:contain;display:block;background:var(--navy-900); }
+  .u-5cf619 { background:var(--surface-page); }
+  .u-fd8a27 { position:relative;width:100%;border-radius:24px;overflow:hidden;background:var(--navy-900);box-shadow:inset 0 0 0 1px var(--border-subtle); }
+  .u-a051c6 { display:flex;flex-direction:column;gap:16px;min-width:0; }
+  .u-d214c4 { font:500 13px/1 var(--font-mono);color:var(--red-600); }
+  .u-963e13 { font:700 clamp(32px,4vw,44px)/1 var(--font-display);letter-spacing:var(--tracking-tight);color:var(--text-heading);margin:0; }
+  .u-6b5aff { margin:0;font:600 clamp(18px,1.8vw,21px)/1.4 var(--font-display);color:var(--navy-800); }
+  .u-455b81 { margin:0;font:var(--type-body);color:var(--text-body);text-wrap:pretty; }
+  .u-429726 { align-self:flex-start;padding:12px 16px;border-radius:16px;background:var(--ink-0);box-shadow:inset 0 0 0 1px var(--border-subtle); }
+  .u-2a0890 { height:40px;width:auto;display:block; }
+  .u-7fa107 { border-top:2px solid var(--navy-900);padding:20px 0 0;display:flex;flex-direction:column;gap:12px }
+  .u-a5e76e { display:flex;align-items:center;gap:8px;font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--navy-600); }
+  .u-e12883 { width:8px;height:8px;border-radius:50%;background:var(--yellow-500); }
+  .u-1a3fc3 { font:700 20px/1.3 var(--font-display);color:var(--text-heading);text-wrap:balance; }
+  .u-63396e { font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty; }
+  .u-5480d0 { display:flex;margin-top:4px; }
+  .u-0fb569 { padding-bottom:clamp(48px,7vw,80px); }
+  .u-0c72fd { border-top:2px solid var(--navy-900);padding:clamp(24px,3vw,32px) 0 0;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px }
+  .u-ee36e7 { display:flex;align-items:center;gap:16px; }
+  .u-6f8387 { color:var(--navy-500);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+  .u-fb7434 { display:flex;flex-direction:column;gap:4px; }
+  .u-6ded3a { font:700 20px/1.25 var(--font-display);color:var(--text-heading); }
+  .u-16e09c { font:var(--type-body-sm);color:var(--text-muted); }
+  .u-efb5dc { background:var(--navy-50);box-shadow:inset 0 1px 0 var(--border-subtle),inset 0 -1px 0 var(--border-subtle); }
+  .u-83de02 { color:var(--navy-600); }
+  .u-3345b4 { text-wrap:balance; }
+  .u-4af026 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:20px;margin-top:clamp(28px,4vw,48px); }
+  .u-127548 { border-top:2px solid var(--navy-900);padding:20px 0 0;display:flex;flex-direction:column;gap:12px }
+  .u-d08ecf { color:var(--navy-500);display:flex;align-items:center }
+  .u-59d76c { font:var(--type-h4);color:var(--text-heading);margin:6px 0 0; }
+  .u-7efbc9 { margin:0;font:var(--type-body-sm);color:var(--text-muted);text-wrap:pretty; }
+  .u-88bae0 { margin-top:28px;border-top:1px solid var(--border-default);padding:18px 0 0;display:flex;align-items:flex-start;gap:12px }
+  .u-f19ec6 { color:var(--red-600);display:flex;margin-top:2px; }
+  .u-ad1ef4 { font:600 15px/1.5 var(--font-display);color:var(--navy-900);text-wrap:pretty; }
+  .u-917645 { display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:20px;margin-top:clamp(28px,4vw,48px); }
+  .u-bc308e { color:var(--yellow-300);display:flex;align-items:center }
+  .u-bf79a6 { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300); }
+  .u-46d2de { font:700 22px/1.25 var(--font-display);margin-top:auto; }
+  .u-134f33 { font:var(--type-body-sm);color:var(--fg-on-dark-2); }
+  .u-ec4e7a { font:500 13px/1.3 var(--font-mono);color:var(--yellow-300);display:flex;align-items:center;gap:6px;overflow-wrap:anywhere; }
+  .u-edb37f { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-muted); }
+  .u-8afcfd { font:500 13px/1.3 var(--font-mono);color:var(--navy-600);display:flex;align-items:center;gap:6px; }
 </style>

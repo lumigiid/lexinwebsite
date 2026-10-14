@@ -20,43 +20,43 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
   <div class="eyebrow">{t.eyebrow}</div>
   <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
   <div class="ph-rule"></div>
-  <p style="font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty">{t.intro}</p>
+  <p class="u-65f54a">{t.intro}</p>
 </PageHeader>
 
-<section style="background:var(--surface-page)">
-  <div class="container" style="padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px)">
-    <div style="border-radius:clamp(24px,3vw,32px);background:var(--grad-night);color:#FFFFFF;padding:clamp(24px,4vw,48px);position:relative;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px clamp(32px,5vw,64px);align-items:center">
-      <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;right:-60px;bottom:-80px;height:300px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
-      <div style="position:relative;display:flex;flex-direction:column;gap:18px;min-width:0">
-        <span style="font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">{t.contactLabel}</span>
+<section class="u-5cf619">
+  <div class="container u-d61fac">
+    <div class="u-177e56">
+      <img src={asset('assets/lexin-mark.png')} alt="" class="u-88d3ce" />
+      <div class="u-df7a10">
+        <span class="u-bf79a6">{t.contactLabel}</span>
         <a href="mailto:hadiputra@cs.ui.ac.id" class="big-mail">hadiputra<wbr />@cs.ui.ac.id</a>
-        <div style="display:flex;align-items:center;gap:16px">
-          <img src={photo} alt="Dr. Panca Hadi Putra" width="72" height="72" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 0 0 3px rgba(255,255,255,.18);background:#FFFFFF" />
-          <span style="display:flex;flex-direction:column;gap:4px;min-width:0">
-            <span style="font:700 20px/1.25 var(--font-display);color:#FFFFFF">Dr. Panca Hadi Putra</span>
-            <span style="font:600 14px/1.3 var(--font-display);color:var(--yellow-300)">{t.role}</span>
+        <div class="u-ee36e7">
+          <img src={photo} alt="Dr. Panca Hadi Putra" width="72" height="72" class="u-5300a7" />
+          <span class="u-e6c996">
+            <span class="u-d3aef6">Dr. Panca Hadi Putra</span>
+            <span class="u-8544d1">{t.role}</span>
           </span>
         </div>
       </div>
-      <div style="position:relative;border-radius:20px;background:rgba(255,255,255,.08);box-shadow:inset 0 0 0 1px rgba(255,255,255,.16);padding:22px;display:flex;flex-direction:column;gap:16px">
-        <div style="display:flex;flex-direction:column;gap:6px">
-          <span style="font:600 11px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)">{t.addrLabel}</span>
-          <span style="font:600 16px/1.5 var(--font-display);color:#FFFFFF">Fakultas Ilmu Komputer, Universitas Indonesia</span>
-          <span style="font:var(--type-body);color:var(--fg-on-dark-2)">Kampus UI Depok, Depok, Jawa Barat 16424</span>
+      <div class="u-ba5e94">
+        <div class="u-3503ba">
+          <span class="u-bf79a6">{t.addrLabel}</span>
+          <span class="u-6fc58f">Fakultas Ilmu Komputer, Universitas Indonesia</span>
+          <span class="u-d299a3">Kampus UI Depok, Depok, Jawa Barat 16424</span>
         </div>
-        <div style="display:flex;flex-wrap:wrap;gap:10px">
+        <div class="u-265308">
           <Button variant="inverse" iconLeft="map-pin" href="https://maps.google.com/?q=Fakultas+Ilmu+Komputer+Universitas+Indonesia">{t.maps}</Button>
           <a href="https://github.com/lab-lexin" class="gh" target="_blank" rel="noopener"><Icon name="github" size={16} />lab-lexin</a>
         </div>
       </div>
     </div>
-    <div style="display:flex;flex-direction:column;gap:16px">
-      <h2 style="font:var(--type-h2);font-size:clamp(24px,2.8vw,30px);letter-spacing:var(--tracking-snug);color:var(--text-heading);margin:0">{t.byNeed}</h2>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px">
+    <div class="u-37d2b6">
+      <h2 class="u-9ecc2d">{t.byNeed}</h2>
+      <div class="u-43c23d">
         {reasons.map((r: any) => (
           <a href={r.mailto} class="reason">
-            <span style="width:44px;height:44px;border-radius:13px;background:var(--navy-50);color:var(--navy-500);display:flex;align-items:center;justify-content:center;flex-shrink:0"><Icon name={r.icon} size={20} /></span>
-            <span style="display:flex;flex-direction:column;gap:3px;flex:1;min-width:0"><span style="font:700 16px/1.3 var(--font-display)">{r.title}</span><span style="font:var(--type-body-sm);color:var(--text-muted)">{r.body}</span></span>
+            <span class="u-e5cb8d"><Icon name={r.icon} size={20} /></span>
+            <span class="u-2fca08"><span class="u-cbcafe">{r.title}</span><span class="u-16e09c">{r.body}</span></span>
             <Icon name="mail" size={18} />
           </a>
         ))}
@@ -68,10 +68,34 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
 </BaseLayout>
 
 <style>
-  .big-mail { font: 700 clamp(24px,3.6vw,40px)/1.15 var(--font-display); letter-spacing: var(--tracking-tight); color: #FFFFFF; overflow-wrap: normal; word-break: normal; }
+  .big-mail { font: 700 clamp(24px,3.6vw,40px)/1.15 var(--font-display); letter-spacing: var(--tracking-tight); color:var(--fg-on-dark); overflow-wrap: normal; word-break: normal; }
   .big-mail:hover { color: var(--yellow-300); }
-  .gh { height: 44px; padding: 0 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px rgba(255,255,255,.4); display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); color: #FFFFFF; }
-  .gh:hover { background: rgba(255,255,255,.1); color: #FFFFFF; }
-  .reason { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-radius: 18px; background: var(--surface-card); box-shadow: inset 0 0 0 1px var(--border-subtle); color: var(--text-heading); transition: box-shadow .2s; }
-  .reason:hover { box-shadow: inset 0 0 0 1px var(--navy-300), var(--shadow-md); color: var(--navy-600); }
+  .gh { height: 44px; padding: 0 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--on-dark-line-2); display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); color:var(--fg-on-dark); }
+  .gh:hover { background: var(--on-dark-fill-2); color:var(--fg-on-dark); }
+  .reason { display: flex; align-items: center; gap: 14px; padding: 16px 12px; border-bottom: 1px solid var(--border-default); color: var(--text-heading); transition: background-color var(--dur-base) var(--ease-out) }
+  .reason:hover { background: var(--navy-50); color: var(--navy-600) }
+  .u-65f54a { font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty; }
+  .u-5cf619 { background:var(--surface-page); }
+  .u-d61fac { padding-top:clamp(40px,6vw,72px);padding-bottom:clamp(56px,8vw,96px);display:flex;flex-direction:column;gap:clamp(28px,4vw,40px); }
+  .u-177e56 { border-radius:clamp(24px,3vw,32px);background:var(--grad-night);color:var(--fg-on-dark);padding:clamp(24px,4vw,48px);position:relative;overflow:hidden;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:28px clamp(32px,5vw,64px);align-items:center; }
+  .u-88d3ce { position:absolute;right:-60px;bottom:-80px;height:300px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none; }
+  .u-df7a10 { position:relative;display:flex;flex-direction:column;gap:18px;min-width:0; }
+  .u-bf79a6 { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300); }
+  .u-ee36e7 { display:flex;align-items:center;gap:16px; }
+  .u-5300a7 { width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;box-shadow:0 0 0 3px var(--on-dark-rule);background:var(--ink-0); }
+  .u-e6c996 { display:flex;flex-direction:column;gap:4px;min-width:0; }
+  .u-d3aef6 { font:700 20px/1.25 var(--font-display);color:var(--fg-on-dark); }
+  .u-8544d1 { font:600 14px/1.3 var(--font-display);color:var(--yellow-300); }
+  .u-ba5e94 { position:relative;border-top:1px solid var(--on-dark-line);padding:22px 0 0;display:flex;flex-direction:column;gap:16px }
+  .u-3503ba { display:flex;flex-direction:column;gap:6px; }
+  .u-6fc58f { font:600 16px/1.5 var(--font-display);color:var(--fg-on-dark); }
+  .u-d299a3 { font:var(--type-body);color:var(--fg-on-dark-2); }
+  .u-265308 { display:flex;flex-wrap:wrap;gap:10px; }
+  .u-37d2b6 { display:flex;flex-direction:column;gap:16px; }
+  .u-9ecc2d { font:var(--type-h2);font-size:clamp(24px,2.8vw,30px);letter-spacing:var(--tracking-snug);color:var(--text-heading);margin:0; }
+  .u-43c23d { display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr));gap:12px; }
+  .u-e5cb8d { color:var(--navy-500);display:flex;align-items:center;justify-content:center;flex-shrink:0 }
+  .u-2fca08 { display:flex;flex-direction:column;gap:3px;flex:1;min-width:0; }
+  .u-cbcafe { font:700 16px/1.3 var(--font-display); }
+  .u-16e09c { font:var(--type-body-sm);color:var(--text-muted); }
 </style>

@@ -40,61 +40,61 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   <div class="eyebrow">{t.eyebrow}</div>
   <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
   <div class="ph-rule"></div>
-  <p style="font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty">{t.intro}</p>
+  <p class="u-65f54a">{t.intro}</p>
 </PageHeader>
 
-<section style="background:var(--surface-page)">
+<section class="u-5cf619">
   <div class="container layout" data-results-word={t.results}>
     <aside class="filters">
       <label class="search">
         <Icon name="search" size={18} />
         <input type="search" placeholder={t.searchPh} aria-label={t.searchPh} />
       </label>
-      <div style="display:flex;flex-direction:column;gap:10px"><span class="f-lbl">{t.typeLabel}</span><div class="pills">
+      <div class="u-459fe4"><span class="f-lbl">{t.typeLabel}</span><div class="pills">
         {types.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
       </div></div>
-      <div style="display:flex;flex-direction:column;gap:12px"><span class="f-lbl">{t.layerLabel}</span>
+      <div class="u-bbc017"><span class="f-lbl">{t.layerLabel}</span>
         <div class="pills"><button type="button" class="pill on" data-key="area" data-k="all">{t.all}<span class="cnt">{PUBS.length}</span></button></div>
-        <div style="display:flex;flex-direction:column;gap:8px"><span class="f-sub">{t.pillarLabel}</span><div class="pills">
+        <div class="u-685cf0"><span class="f-sub">{t.pillarLabel}</span><div class="pills">
           {pillarF.map((f) => <button type="button" class="pill" data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
         </div></div>
-        <div style="display:flex;flex-direction:column;gap:8px"><span class="f-sub">{t.foundationLabel}</span><div class="pills">
+        <div class="u-685cf0"><span class="f-sub">{t.foundationLabel}</span><div class="pills">
           {areasF.map((f) => <button type="button" class="pill" data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
         </div></div>
-        <div style="display:flex;flex-direction:column;gap:8px"><span class="f-sub">{t.infraLabel}</span><div class="pills">
+        <div class="u-685cf0"><span class="f-sub">{t.infraLabel}</span><div class="pills">
           {infraF.map((f) => <button type="button" class="pill" data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
         </div></div>
       </div>
-      <div style="display:flex;flex-direction:column;gap:10px"><span class="f-lbl">{t.memberLabel}</span><div class="pills">
+      <div class="u-459fe4"><span class="f-lbl">{t.memberLabel}</span><div class="pills">
         {membersF.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
       </div></div>
     </aside>
 
-    <div style="display:flex;flex-direction:column;gap:clamp(32px,5vw,48px);min-width:0">
+    <div class="u-dbecc5">
       <a href="https://github.com/ninggar17/dataset_lexid_pdf" class="feat" target="_blank" rel="noopener">
-        <img src={asset('assets/lexin-mark.png')} alt="" style="position:absolute;right:-40px;bottom:-60px;height:220px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none" />
-        <div style="position:relative;display:flex;flex-direction:column;gap:10px">
-          <span style="display:flex;align-items:center;gap:8px;font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300)"><Icon name="database" size={14} />{t.featLabel}</span>
-          <span style="font:700 clamp(22px,2.6vw,28px)/1.2 var(--font-display);text-wrap:balance">{t.featTitle}</span>
-          <span style="font:var(--type-body-sm);color:var(--fg-on-dark-2);text-wrap:pretty">{t.featBody}</span>
+        <img src={asset('assets/lexin-mark.png')} alt="" class="u-439bab" />
+        <div class="u-fdc6f0">
+          <span class="u-7a3b8b"><Icon name="database" size={14} />{t.featLabel}</span>
+          <span class="u-f24032">{t.featTitle}</span>
+          <span class="u-37a08a">{t.featBody}</span>
         </div>
-        <span style="position:relative;justify-self:start;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;background:#FFFFFF;color:var(--navy-900);font:600 14px/1 var(--font-display);max-width:100%;overflow-wrap:anywhere"><Icon name="github" size={16} />github.com/ninggar17/dataset_lexid_pdf</span>
+        <span class="u-32fd19"><Icon name="github" size={16} />github.com/ninggar17/dataset_lexid_pdf</span>
       </a>
-      <span class="result-label" style="font:500 13px/1 var(--font-mono);color:var(--text-muted)">{PUBS.length} {t.results}</span>
+      <span class="result-label u-839954">{PUBS.length} {t.results}</span>
       {years.map((y) => (
         <div class="year" data-year={y.year}>
           <span class="year-num">{y.year}</span>
-          <div style="display:flex;flex-direction:column;box-shadow:inset 0 1px 0 var(--border-subtle);min-width:0">
+          <div class="u-297e45">
             {y.items.map((u) => (
               <article class="pub" data-type={u.type} data-layers={u.layers.join(' ')} data-members={u.who.map((m) => m.slug).join(' ')} data-text={(u.title + ' ' + u.venue).toLowerCase()}>
-                <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap">
-                  <span style={`height:24px;padding:0 10px;border-radius:999px;background:${TYPE_STYLE[u.type][0]};color:${TYPE_STYLE[u.type][1]};font:600 11px/24px var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase`}>{t.types[u.type]}</span>
-                  <span style="font:500 13px/1.3 var(--font-mono);color:var(--text-muted)">{u.venue}</span>
+                <div class="u-72fafc">
+                  <span class="type-tag" style={`background:${TYPE_STYLE[u.type][0]};color:${TYPE_STYLE[u.type][1]}`}>{t.types[u.type]}</span>
+                  <span class="u-061089">{u.venue}</span>
                 </div>
-                <a href={u.href} class="pub-title" target="_blank" rel="noopener"><span style="flex:1;min-width:0">{u.title}</span><span style="color:var(--navy-400);display:flex;margin-top:3px"><Icon name="arrow-up-right" size={16} /></span></a>
-                <div style="display:flex;flex-wrap:wrap;gap:6px">
+                <a href={u.href} class="pub-title" target="_blank" rel="noopener"><span class="u-89bd09">{u.title}</span><span class="u-754b9a"><Icon name="arrow-up-right" size={16} /></span></a>
+                <div class="u-2075ff">
                   {u.who.map((a) => (
-                    <a href={url(lang, 'anggota/' + a.slug + '/')} class="person"><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:#FFFFFF;display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span>{a.name}</a>
+                    <a href={url(lang, 'anggota/' + a.slug + '/')} class="person"><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span>{a.name}</a>
                   ))}
                 </div>
               </article>
@@ -103,19 +103,19 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
         </div>
       ))}
       <div class="empty" hidden>
-        <span style="font:var(--type-body);color:var(--text-muted)">{t.empty}</span>
+        <span class="u-1c3257">{t.empty}</span>
         <button type="button" class="reset">{t.reset}</button>
       </div>
     </div>
   </div>
 </section>
 
-<section style="background:var(--surface-page)">
-  <div class="container" style="padding-bottom:clamp(56px,8vw,96px)">
-    <div style="border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px">
-      <div style="display:flex;flex-direction:column;gap:6px;max-width:640px">
-        <span style="font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading)">{t.moreTitle}</span>
-        <span style="font:var(--type-body);color:var(--text-muted);text-wrap:pretty">{t.moreBody}</span>
+<section class="u-5cf619">
+  <div class="container u-3c657e">
+    <div class="u-1a17bf">
+      <div class="u-77325d">
+        <span class="u-8014ef">{t.moreTitle}</span>
+        <span class="u-827c3f">{t.moreBody}</span>
       </div>
       <Button variant="secondary" iconRight="arrow-right" href={url(lang, 'anggota/')}>{t.moreCta}</Button>
     </div>
@@ -168,19 +168,19 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
     .layout { grid-template-columns: 300px minmax(0,1fr); }
     .filters { position: sticky; }
   }
-  .search { display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border-radius: 14px; background: #FFFFFF; box-shadow: inset 0 0 0 1px var(--border-subtle); color: var(--text-muted); min-width: 0; }
+  .search { display: flex; align-items: center; gap: 10px; height: 48px; padding: 0 16px; border-radius: 14px; background: var(--ink-0); box-shadow: inset 0 0 0 1px var(--border-subtle); color: var(--text-muted); min-width: 0; }
   .search:focus-within { box-shadow: inset 0 0 0 1.5px var(--navy-500), var(--focus-ring); }
   .search input { flex: 1; min-width: 0; border: 0; outline: none; background: transparent; font: var(--type-body); color: var(--text-heading); }
   .search input:focus-visible { box-shadow: none; }
-  .f-lbl { font: 600 11px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-muted); }
-  .f-sub { font: 500 11px/1 var(--font-mono); color: var(--text-muted); }
+  .f-lbl { font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--text-muted); }
+  .f-sub { font: 500 12px/1 var(--font-mono); color: var(--text-muted); }
   .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill { cursor: pointer; border: 0; height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); white-space: nowrap; background: #FFFFFF; color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
+  .pill { cursor: pointer; border: 0; height: 36px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); white-space: nowrap; background: var(--ink-0); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); }
   .pill:hover { box-shadow: inset 0 0 0 1px var(--navy-300); }
-  .pill.on { background: var(--navy-600); color: #FFFFFF; box-shadow: none; }
-  .cnt { font: 500 11px/1 var(--font-mono); opacity: .7; }
-  .feat { border-radius: var(--radius-xl); background: var(--grad-night); color: #FFFFFF; padding: clamp(24px,3vw,32px); display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 20px 40px; align-items: center; position: relative; overflow: hidden; }
-  .feat:hover { color: #FFFFFF; }
+  .pill.on { background: var(--navy-600); color:var(--fg-on-dark); box-shadow: none; }
+  .cnt { font: 500 12px/1 var(--font-mono); opacity: .7; }
+  .feat { border-radius: var(--radius-xl); background: var(--grad-night); color:var(--fg-on-dark); padding: clamp(24px,3vw,32px); display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,320px),1fr)); gap: 20px 40px; align-items: center; position: relative; overflow: hidden; }
+  .feat:hover { color:var(--fg-on-dark); }
   .year { display: grid; grid-template-columns: minmax(0,1fr); gap: 12px 32px; align-items: start; }
   .year-num { position: static; top: 104px; font: 700 clamp(28px,3vw,36px)/1 var(--font-display); letter-spacing: var(--tracking-tight); color: var(--navy-200); }
   @media (min-width: 760px) {
@@ -194,5 +194,31 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   .person:hover { background: var(--navy-100); color: var(--navy-600); }
   .empty { border-radius: var(--radius-xl); border: 2px dashed var(--navy-200); padding: 32px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; }
   .empty[hidden] { display: none; }
-  .reset { cursor: pointer; border: 0; height: 36px; padding: 0 16px; border-radius: 999px; background: var(--navy-600); color: #FFFFFF; font: 600 13px/1 var(--font-display); }
+  .reset { cursor: pointer; border: 0; height: 36px; padding: 0 16px; border-radius: 999px; background: var(--navy-600); color:var(--fg-on-dark); font: 600 13px/1 var(--font-display); }
+  .u-65f54a { font:var(--type-body-lg);margin:24px 0 0;color:var(--text-body);max-width:640px;text-wrap:pretty; }
+  .u-5cf619 { background:var(--surface-page); }
+  .u-459fe4 { display:flex;flex-direction:column;gap:10px; }
+  .u-bbc017 { display:flex;flex-direction:column;gap:12px; }
+  .u-685cf0 { display:flex;flex-direction:column;gap:8px; }
+  .u-dbecc5 { display:flex;flex-direction:column;gap:clamp(32px,5vw,48px);min-width:0; }
+  .u-439bab { position:absolute;right:-40px;bottom:-60px;height:220px;opacity:.1;filter:brightness(0) invert(1);pointer-events:none;max-width:none; }
+  .u-fdc6f0 { position:relative;display:flex;flex-direction:column;gap:10px; }
+  .u-7a3b8b { display:flex;align-items:center;gap:8px;font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300); }
+  .u-f24032 { font:700 clamp(22px,2.6vw,28px)/1.2 var(--font-display);text-wrap:balance; }
+  .u-37a08a { font:var(--type-body-sm);color:var(--fg-on-dark-2);text-wrap:pretty; }
+  .u-32fd19 { position:relative;justify-self:start;display:inline-flex;align-items:center;gap:8px;height:44px;padding:0 18px;border-radius:999px;background:var(--ink-0);color:var(--navy-900);font:600 14px/1 var(--font-display);max-width:100%;overflow-wrap:anywhere; }
+  .u-839954 { font:500 13px/1 var(--font-mono);color:var(--text-muted); }
+  .u-297e45 { display:flex;flex-direction:column;box-shadow:inset 0 1px 0 var(--border-subtle);min-width:0; }
+  .u-72fafc { display:flex;align-items:center;gap:10px;flex-wrap:wrap; }
+  .u-061089 { font:500 13px/1.3 var(--font-mono);color:var(--text-muted); }
+  .u-89bd09 { flex:1;min-width:0; }
+  .u-754b9a { color:var(--navy-400);display:flex;margin-top:3px; }
+  .u-2075ff { display:flex;flex-wrap:wrap;gap:6px; }
+  .u-1c3257 { font:var(--type-body);color:var(--text-muted); }
+  .u-3c657e { padding-bottom:clamp(56px,8vw,96px); }
+  .u-1a17bf { border-radius:var(--radius-xl);background:var(--navy-50);box-shadow:inset 0 0 0 1px var(--navy-200);padding:clamp(22px,3vw,32px);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px 32px; }
+  .u-77325d { display:flex;flex-direction:column;gap:6px;max-width:640px; }
+  .u-8014ef { font:700 clamp(20px,2.2vw,24px)/1.25 var(--font-display);color:var(--text-heading); }
+  .u-827c3f { font:var(--type-body);color:var(--text-muted);text-wrap:pretty; }
+  .type-tag { display: inline-flex; align-items: center; height: 24px; padding: 0 8px; border-radius: var(--radius-xs); font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; white-space: nowrap; }
 </style>
