@@ -2,12 +2,15 @@
 import Button from './Button.astro';
 import IconButton from './IconButton.astro';
 import Icon from './Icon.astro';
-import { dict, url, asset, NAV_ROUTES, type Lang } from '../lib/i18n';
+import { dict, url, asset, gmail, NAV_ROUTES, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number] }
 const { lang, path, active } = Astro.props;
 const t = dict('home', lang);
-const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active }));
+const nav = [
+  { label: t.homeLink as string, href: url(lang), on: path === '' },
+  ...t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active })),
+];
 ---
 <header class="site-header">
   <div class="container bar">
@@ -17,8 +20,8 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
     </nav>
     <div class="tools">
       <div class="lang" role="group" aria-label="Language">
-        <a href={url('id', path)} class:list={{ on: lang === 'id' }} hreflang="id" lang="id">ID</a>
-        <a href={url('en', path)} class:list={{ on: lang === 'en' }} hreflang="en" lang="en">EN</a>
+        <a href={url('id', path)} class:list={{ on: lang === 'id' }} hreflang="id" lang="id" data-switch>ID</a>
+        <a href={url('en', path)} class:list={{ on: lang === 'en' }} hreflang="en" lang="en" data-switch>EN</a>
       </div>
       <Button variant="primary" size="sm" href={url(lang, 'kontak/')} class="contact-btn">{t.contact}</Button>
       <IconButton icon="menu" label="Menu" variant="ghost" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
@@ -29,10 +32,39 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
   <nav id="mobile-menu" class="nav-mobile" hidden>
     {nav.map((n: any) => <a href={n.href} class:list={['m-link', { on: n.on }]}>{n.label}</a>)}
     <div style="margin-top:12px">
-      <Button variant="primary" fullWidth iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+      <Button variant="primary" fullWidth iconRight="mail" href={gmail()}>{t.contactUs}</Button>
     </div>
   </nav>
 </header>
+
+<script>
+  // Switching language keeps your place: remember how far down the page you were,
+  // carry the #anchor over, and restore it on the other language's page.
+  const KEY = 'lx-switch';
+  document.querySelectorAll<HTMLAnchorElement>('[data-switch]').forEach((a) => {
+    a.addEventListener('click', () => {
+      try {
+        const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        sessionStorage.setItem(KEY, JSON.stringify({ r: scrollY / max, t: Date.now(), p: location.pathname.replace(/^\/en\//, '/') }));
+      } catch {}
+      if (location.hash) a.href = a.href.split('#')[0] + location.hash;
+    });
+  });
+  try {
+    const raw = sessionStorage.getItem(KEY);
+    if (raw) {
+      sessionStorage.removeItem(KEY);
+      const { r, t, p } = JSON.parse(raw);
+      const samePage = p === location.pathname.replace(/^\/en\//, '/');
+      if (samePage && Date.now() - t < 8000 && !location.hash) {
+        const go = () => scrollTo(0, r * Math.max(0, document.documentElement.scrollHeight - innerHeight));
+        go();
+        addEventListener('load', go, { once: true });
+        setTimeout(go, 350);
+      }
+    }
+  } catch {}
+</script>
 
 <script>
   import { fadeIn } from '../scripts/motion';

@@ -3,7 +3,8 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, type Lang } from '../lib/i18n';
+import { dict, gmail, url, type Lang } from '../lib/i18n';
+import { img } from '../lib/images';
 import { postsByDate } from '../lib/content';
 import { postView, TYPES } from '../lib/posts';
 
@@ -12,6 +13,20 @@ const { lang } = Astro.props;
 const t = dict('wawasan', lang);
 
 const all = await Promise.all(postsByDate().map((p) => postView(p, lang)));
+// Header slider: photos taken from inside the articles themselves (event + release posts only).
+const slidePosts = postsByDate().filter((p: any) => p.type === 'event' || p.type === 'release');
+const slideSeen = new Set<string>();
+const slides: Array<{ src: string; title: string; href: string }> = [];
+for (const p of slidePosts as any[]) {
+  const srcs = [p.photo, ...((p.gallery || []) as any[]).map((g) => g.src)].filter((x) => x && /\.(jpe?g|png|webp)$/i.test(x) && !/logo/i.test(x));
+  for (const src of srcs) {
+    if (slideSeen.has(src)) continue;
+    slideSeen.add(src);
+    slides.push({ src: await img(src, 900), title: p.title[lang] as string, href: url(lang, 'wawasan/' + p.slug + '/') });
+  }
+}
+const slidesShown = slides.slice(0, 10);
+
 const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k][lang]])).map(([k, label]) => ({
   k, label, count: k === 'all' ? all.length : all.filter((p) => p.type === k).length,
 }));
@@ -19,10 +34,29 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
 <BaseLayout lang={lang} path="wawasan/" active="wawasan" title={`Lexin — ${t.nav[6]}`}>
 
 <PageHeader>
-  <div class="eyebrow">{t.eyebrow}</div>
-  <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
-  <div class="ph-rule"></div>
-  <p class="u-65f54a">{t.intro}</p>
+  <div class="wh-grid">
+    <div class="wh-copy">
+      <div class="eyebrow">{t.eyebrow}</div>
+      <h1 class="ph-h1">{t.titleA} <span class="grad-text">{t.titleB}</span></h1>
+      <div class="ph-rule"></div>
+      <p class="u-65f54a">{t.intro}</p>
+    </div>
+    {slidesShown.length > 0 && (
+      <div class="wh-slider" role="region" aria-roledescription="carousel" aria-label={lang === 'id' ? 'Foto dari tulisan kami' : 'Photos from our stories'} data-slider>
+        <div class="wh-track">
+          {slidesShown.map((sl, i) => (
+            <a class:list={['wh-slide', { on: i === 0 }]} href={sl.href} aria-hidden={i === 0 ? undefined : 'true'} tabindex={i === 0 ? undefined : -1}>
+              <img src={sl.src} alt="" loading={i === 0 ? 'eager' : 'lazy'} />
+              <span class="wh-cap">{sl.title}</span>
+            </a>
+          ))}
+        </div>
+        <div class="wh-dots">
+          {slidesShown.map((_, i) => <button type="button" class:list={['wh-dot', { on: i === 0 }]} data-i={i} aria-label={`${i + 1} / ${slidesShown.length}`}></button>)}
+        </div>
+      </div>
+    )}
+  </div>
 </PageHeader>
 
 <section class="u-5cf619">
@@ -72,7 +106,7 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
         <span class="u-8014ef">{t.pitchTitle}</span>
         <span class="u-827c3f">{t.pitchBody}</span>
       </div>
-      <Button variant="secondary" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id?subject=Wawasan%20Lexin">{t.pitchCta}</Button>
+      <Button variant="secondary" iconRight="mail" href={gmail('Wawasan Lexin')}>{t.pitchCta}</Button>
     </div>
   </div>
 </section>
@@ -140,4 +174,38 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   .person-name { display: inline-block; max-width: 0; margin: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width var(--dur-slower) var(--ease-out), margin var(--dur-slower) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
   .person:hover .person-name, .person:focus-visible .person-name { max-width: 260px; margin: 0 7px 0 6px; opacity: 1; }
   @media (hover: none) { .person-name { max-width: none; margin: 0 7px 0 6px; opacity: 1; } }
+  .wh-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: var(--space-8); align-items: end; }
+  @media (min-width: 1000px) { .wh-grid { grid-template-columns: minmax(0,1fr) minmax(0,440px); } }
+  .wh-slider { position: relative; width: 100%; }
+  .wh-track { position: relative; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); overflow: hidden; background: var(--navy-900); }
+  .wh-slide { position: absolute; inset: 0; display: block; opacity: 0; visibility: hidden; transform: translateX(28px); transition: opacity 700ms var(--ease-out), transform 900ms var(--ease-out), visibility 0s linear 900ms; }
+  .wh-slide.on { opacity: 1; visibility: visible; transform: none; transition-delay: 0s; z-index: 1; }
+  .wh-slide img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .wh-cap { position: absolute; left: 0; right: 0; bottom: 0; padding: 36px var(--space-4) var(--space-3); font: 600 14px/1.35 var(--font-display); color: var(--fg-on-dark); background: linear-gradient(180deg, transparent, rgba(16,17,58,.82)); }
+  .wh-dots { display: flex; gap: 6px; margin-top: var(--space-3); }
+  .wh-dot { width: 22px; height: 22px; padding: 0; border: 0; background: none; cursor: pointer; position: relative; }
+  .wh-dot::after { content: ""; position: absolute; left: 3px; right: 3px; top: 10px; height: 3px; border-radius: 2px; background: var(--navy-200); transition: background-color var(--dur-base) var(--ease-out); }
+  .wh-dot.on::after { background: var(--navy-900); }
 </style>
+<script>
+  // Photos change by themselves every 5s; hover or focus pauses; reduced motion keeps the first photo still.
+  const root = document.querySelector<HTMLElement>('[data-slider]');
+  if (root) {
+    const slides = Array.from(root.querySelectorAll<HTMLElement>('.wh-slide'));
+    const dots = Array.from(root.querySelectorAll<HTMLButtonElement>('.wh-dot'));
+    let cur = 0, timer = 0, paused = false;
+    const show = (n: number) => {
+      cur = (n + slides.length) % slides.length;
+      slides.forEach((s, i) => { s.classList.toggle('on', i === cur); s.toggleAttribute('aria-hidden', i !== cur); s.tabIndex = i === cur ? 0 : -1; });
+      dots.forEach((d, i) => d.classList.toggle('on', i === cur));
+    };
+    const tick = () => { if (!paused) show(cur + 1); };
+    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!reduce && slides.length > 1) timer = window.setInterval(tick, 5000);
+    dots.forEach((d) => d.addEventListener('click', () => show(Number(d.dataset.i))));
+    root.addEventListener('mouseenter', () => (paused = true));
+    root.addEventListener('mouseleave', () => (paused = false));
+    root.addEventListener('focusin', () => (paused = true));
+    root.addEventListener('focusout', () => (paused = false));
+  }
+</script>

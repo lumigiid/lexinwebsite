@@ -91,3 +91,12 @@ img { max-width: 100%; }
 .lx-badge__dot { position: relative; }
 .lx-badge__dot::after { content: ""; position: absolute; inset: 0; border-radius: inherit; background: inherit; animation: mo-ping 2.4s var(--ease-out) 3; }
 @keyframes mo-ping { 0% { transform: scale(1); opacity: .55; } 80%, 100% { transform: scale(3); opacity: 0; } }
+
+/* Lenis smooth scroll (see src/scripts/motion.ts) */
+html.lenis, html.lenis body { height: auto; }
+.lenis.lenis-smooth { scroll-behavior: auto !important; }
+.lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+.lenis.lenis-stopped { overflow: clip; }
+
+/* Technical English terms inside Indonesian running text (see src/scripts/italics.ts) */
+em.tx { font-style: italic; }

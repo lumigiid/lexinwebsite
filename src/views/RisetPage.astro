@@ -3,13 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, type Lang } from '../lib/i18n';
+import { dict, url, asset, gmail, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('riset', lang);
 
-const draftMail = (kind: string, title: string) => 'mailto:hadiputra@cs.ui.ac.id?subject=' + encodeURIComponent(kind + title);
+const draftMail = (kind: string, title: string) => gmail(kind + title);
 const PUBS = [
   [{ type: t.journalType, title: 'A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia', year: '2025', href: 'https://dx.doi.org/10.62527/joiv.9.1.3170' }],
   [],
@@ -140,29 +140,31 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
           </div>
           <p class="u-40c710">{t.foundationBody}</p>
         </div>
-        <div class="u-4af026">
+        <div class="fnd-list">
           {t.foundations.map((f: any, i: number) => (
-            <div class="u-127548 anchor" id={'fondasi-' + (i + 1)}>
-              <h3 class="u-59d76c">{f.title}</h3>
-              <p class="u-7efbc9">{f.body}</p>
-              {!f.hasPub && <>
-                <span class="mini-lbl u-26ab7f">{t.relatedPubs}</span>
-                <span class="u-b6199c">{t.pubsSoonShort}</span>
-              </>}
-              {f.hasPub && <>
-                <span class="mini-lbl u-26ab7f">{t.relatedPubs}</span>
-                <a href={f.pubHref} class="pub-card" target="_blank" rel="noopener">
-                  <span class="u-3a9402">{f.pubMeta}</span>
-                  <span class="u-ff6f63">{f.pubTitle}</span>
-                </a>
-              </>}
-              {f.hasPub2 && (
-                <a href={f.pub2Href} class="pub-card" target="_blank" rel="noopener">
-                  <span class="u-3a9402">{f.pub2Meta}</span>
-                  <span class="u-ff6f63">{f.pub2Title}</span>
-                </a>
-              )}
-            </div>
+            <article class="fnd anchor" id={'fondasi-' + (i + 1)}>
+              <div class="fnd-main">
+                <span class="fnd-no">{t.foundationLabel} 0{i + 1}</span>
+                <h3 class="fnd-title">{f.title}</h3>
+                <p class="fnd-body">{f.body}</p>
+              </div>
+              <div class="fnd-pubs">
+                <span class="mini-lbl">{t.relatedPubs}</span>
+                {!f.hasPub && <span class="u-b6199c">{t.pubsSoonShort}</span>}
+                {f.hasPub && (
+                  <a href={f.pubHref} class="pub-card" target="_blank" rel="noopener">
+                    <span class="u-3a9402">{f.pubMeta}</span>
+                    <span class="u-ff6f63">{f.pubTitle}</span>
+                  </a>
+                )}
+                {f.hasPub2 && (
+                  <a href={f.pub2Href} class="pub-card" target="_blank" rel="noopener">
+                    <span class="u-3a9402">{f.pub2Meta}</span>
+                    <span class="u-ff6f63">{f.pub2Title}</span>
+                  </a>
+                )}
+              </div>
+            </article>
           ))}
         </div>
       </div>
@@ -180,13 +182,13 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
           </div>
           <p class="u-40c710">{t.infraBody}</p>
         </div>
-        <div class="u-07f3ae">
-          {t.infra.map((f: any) => (
-            <div class="u-0586b0">
-              <span class="u-369795">{f.code}</span>
-              <h3 class="u-3b8d4c">{f.title}</h3>
-              <p class="u-7efbc9">{f.body}</p>
-            </div>
+        <div class="infra-list">
+          {t.infra.map((f: any, i: number) => (
+            <article class="infra-row">
+              <span class="infra-code">{f.code}</span>
+              <h3 class="infra-title">{f.title}</h3>
+              <p class="infra-body">{f.body}</p>
+            </article>
           ))}
         </div>
         <div class="u-f5829b">
@@ -216,7 +218,7 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
         <h2 class="h-sec u-ca959c">{t.collabTitle}</h2>
         <p class="u-a702e9">{t.collabBody}</p>
         <div class="u-89c227">
-          <Button variant="accent" size="lg" iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+          <Button variant="accent" size="lg" iconRight="mail" href={gmail()}>{t.contactUs}</Button>
           <Button variant="inverse" size="lg" href={url(lang, 'partisipasi/')}>{t.participate}</Button>
         </div>
       </div>
@@ -241,7 +243,9 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
     const el = document.getElementById(id);
     if (!el) return;
     const off = innerWidth < 640 ? 76 : 96;
-    scrollTo({ top: el.getBoundingClientRect().top + scrollY - off, behavior: 'smooth' });
+    const top = el.getBoundingClientRect().top + scrollY - off;
+    const L = (window as any).__lenis;
+    if (L) L.scrollTo(top, { duration: 1.4 }); else scrollTo({ top, behavior: 'smooth' });
     history.replaceState(null, '', '#' + id);
   };
   document.querySelectorAll<HTMLElement>('[data-go]').forEach((el) => el.addEventListener('click', (e) => { e.preventDefault(); goto(el.dataset.go!); }));
@@ -267,18 +271,18 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
   .rail-layer { position: absolute; inset: 0; z-index: 5; pointer-events: none; display: none; }
   .rail-wrap { height: 100%; padding-top: clamp(56px,8vw,88px); padding-bottom: clamp(56px,8vw,88px); }
   .rail { position: sticky; top: 104px; width: 232px; pointer-events: auto; display: flex; flex-direction: column; gap: 6px; }
-  .r-roof { display: block; clip-path: polygon(50% 0,100% 70%,100% 100%,0 100%,0 70%); background: linear-gradient(180deg,var(--navy-500),var(--navy-700)); padding: 30px 16px 10px; text-align: center; }
-  .r-roof:hover { background: var(--navy-800); }
-  .r-area { cursor: pointer; min-height: 44px; margin: 0 8px; padding: 8px 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; background: var(--ink-0); color: var(--navy-900); box-shadow: inset 0 0 0 1px var(--border-subtle); transition: background .2s; }
-  .r-area:hover { box-shadow: inset 0 0 0 1px var(--navy-300); color: var(--navy-900); }
-  .r-area.on, .r-area.on:hover { background: var(--navy-600); color:var(--fg-on-dark); }
-  .r-collab { cursor: pointer; min-height: 44px; margin: 0 8px; padding: 8px 12px; border-radius: 12px; display: flex; align-items: center; gap: 10px; border: 1.5px dashed var(--yellow-500); background: transparent; color: var(--navy-900); }
+  .r-roof { display: block; position: relative; clip-path: polygon(50% 0,100% 100%,0 100%); background: var(--grad-night); padding: 34px 12px 8px; text-align: center; margin-bottom: 4px }
+  .r-roof:hover { filter: brightness(1.15) }
+  .r-area { cursor: pointer; min-height: 52px; margin: 0 6px; padding: 8px 14px; display: flex; align-items: center; gap: 10px; background: linear-gradient(90deg, var(--navy-100) 0 5px, var(--ink-0) 5px calc(100% - 5px), var(--navy-100) calc(100% - 5px)); color: var(--navy-900); border-top: 4px solid var(--navy-700); border-bottom: 4px solid var(--navy-700); box-shadow: inset 0 0 0 1px var(--navy-200); transition: background-color var(--dur-base) var(--ease-out), border-color var(--dur-base) var(--ease-out) }
+  .r-area:hover { border-top-color: var(--yellow-500); border-bottom-color: var(--yellow-500); color: var(--navy-900) }
+  .r-area.on, .r-area.on:hover { background: linear-gradient(90deg, var(--yellow-300) 0 5px, var(--yellow-50) 5px calc(100% - 5px), var(--yellow-300) calc(100% - 5px)); border-top-color: var(--yellow-500); border-bottom-color: var(--yellow-500); color: var(--navy-900) }
+  .r-collab { cursor: pointer; min-height: 48px; margin: 0 6px; padding: 8px 14px; display: flex; align-items: center; gap: 10px; border: 1.5px dashed var(--yellow-500); background: transparent; color: var(--navy-900) }
   .r-collab:hover, .r-collab.on { background: var(--yellow-100); color: var(--navy-900); }
-  .r-found { cursor: pointer; min-height: 48px; padding: 8px 14px; border-radius: 8px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-100); color: var(--navy-900); }
-  .r-found:hover, .r-found.on { background: var(--navy-200); color: var(--navy-900); }
-  .r-infra { cursor: pointer; margin: -2px -8px 0; min-height: 44px; padding: 8px 14px; border-radius: 6px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-600); box-shadow: inset 0 4px 0 var(--navy-400); }
-  .r-infra:hover { background: var(--navy-700); }
-  .r-infra.on { background: var(--navy-800); }
+  .r-found { cursor: pointer; min-height: 52px; margin-top: 6px; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-600); color: var(--fg-on-dark); border-radius: 3px; box-shadow: 0 -5px 0 var(--navy-300) }
+  .r-found:hover, .r-found.on { background: var(--navy-700); color: var(--fg-on-dark); box-shadow: 0 -5px 0 var(--yellow-400) }
+  .r-infra { cursor: pointer; margin: 0; min-height: 48px; padding: 10px 14px; display: flex; flex-direction: column; justify-content: center; gap: 4px; background: var(--navy-900); border-radius: 3px; box-shadow: inset 0 3px 0 var(--navy-700) }
+  .r-infra:hover { background: var(--navy-800) }
+  .r-infra.on { background: var(--navy-800); box-shadow: inset 0 3px 0 var(--yellow-400) }
 
   .body-grid { display: grid; grid-template-columns: minmax(0,1fr); gap: 48px; align-items: start; }
   .rail-spacer { display: none; }
@@ -310,8 +314,8 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
   .u-e0e296 { display:flex;align-items:center;justify-content:center;gap:6px;font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300); }
   .u-305db9 { font:500 12px/1 var(--font-mono);opacity:.7; }
   .u-691bd6 { font:600 13px/1.25 var(--font-display); }
-  .u-509d8c { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--navy-600) }
-  .u-9e553e { font:700 13px/1.2 var(--font-display); }
+  .u-509d8c { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300) }
+  .u-9e553e { font:700 14px/1.2 var(--font-display);color:var(--fg-on-dark) }
   .u-81cd8b { font:600 12px/1 var(--font-display);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--yellow-300) }
   .u-976103 { font:600 13px/1.2 var(--font-display);color:var(--fg-on-dark); }
   .u-3f9f96 { min-width:0; }
@@ -374,4 +378,16 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
   .u-5c85bd { font:600 15px/1.3 var(--font-display);color:var(--fg-on-dark); }
   .area-pill-n { font: 500 12px/1 var(--font-mono); color: var(--red-600); }
   .area-ico { color: var(--navy-500); display: inline-flex; flex: none; }
+  .fnd-list, .infra-list { margin-top: clamp(28px,4vw,48px); display: flex; flex-direction: column; }
+  .fnd { scroll-margin-top: 104px; border-top: 2px solid var(--navy-900); padding: clamp(24px,3.4vw,40px) 0; display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,360px),1fr)); gap: 24px clamp(28px,4vw,56px); }
+  .fnd-main { display: flex; flex-direction: column; gap: var(--space-3); min-width: 0; }
+  .fnd-no { font: 500 13px/1 var(--font-mono); color: var(--red-600); text-transform: uppercase; }
+  .fnd-title { font: var(--type-h2); font-size: clamp(26px,3.2vw,36px); letter-spacing: var(--tracking-snug); color: var(--text-heading); margin: 0; text-wrap: balance; }
+  .fnd-body { margin: 0; font: var(--type-body-lg); color: var(--text-body); text-wrap: pretty; max-width: 56ch; }
+  .fnd-pubs { display: flex; flex-direction: column; gap: var(--space-2); min-width: 0; align-self: end; }
+  .infra-row { display: grid; grid-template-columns: 64px minmax(0,1fr) minmax(0,1.4fr); gap: var(--space-2) clamp(20px,3vw,40px); align-items: baseline; padding: clamp(16px,2.2vw,22px) 0; border-top: 2px solid var(--navy-900); }
+  .infra-code { font: 500 13px/1 var(--font-mono); color: var(--navy-600); }
+  .infra-title { font: 700 clamp(18px,1.9vw,21px)/1.3 var(--font-display); letter-spacing: var(--tracking-snug); color: var(--text-heading); margin: 0; text-wrap: balance; }
+  .infra-body { margin: 0; font: var(--type-body-sm); color: var(--text-body); text-wrap: pretty; max-width: 60ch; }
+  @media (max-width: 759.98px) { .infra-row { grid-template-columns: 1fr; } }
 </style>

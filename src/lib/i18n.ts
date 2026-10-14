@@ -63,3 +63,9 @@ export function fmtDate(d: string, lang: Lang): string {
   const M = MONTHS[lang];
   return lang === 'id' ? `${dd} ${M[m - 1]} ${y}` : `${M[m - 1]} ${dd}, ${y}`;
 }
+
+/** Where "contact us" goes: the main contact mailbox, opened as a Gmail compose window. */
+export const MAIN_EMAIL = 'hadiputra@cs.ui.ac.id';
+export function gmail(subject = '', to: string = MAIN_EMAIL): string {
+  return 'https://mail.google.com/mail/?view=cm&fs=1&to=' + encodeURIComponent(to) + (subject ? '&su=' + encodeURIComponent(subject) : '');
+}

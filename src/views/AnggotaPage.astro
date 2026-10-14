@@ -25,11 +25,16 @@ const rosters = (['rstaff', 'ugrad', 'grad', 'alumni'] as const)
   .filter((r) => r.names.length > 0);
 const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   const list = await Promise.all(members.filter((m) => m.g === g).map(async (m) => ({
-    ...m, role: t.roles[m.role], avBg: AV[g], photoUrl: m.photo ? await img(m.photo, 160) : '',
+    ...m, role: t.roles[m.role], avBg: AV[g], photoUrl: m.photo ? await img(m.photo, 640) : '',
+    position: m.position ? m.position[lang] : '', lede: (m.bio && m.bio[lang] && m.bio[lang][0]) || '',
     href: url(lang, 'anggota/' + m.slug + '/'),
   })));
   return { g, title: t.groups[g], members: list };
 }));
+const byG = (g: string) => groups.find((x) => x.g === g)!;
+const lead = byG('lead').members[0];
+const fac = byG('fac');
+const staff = byG('staff');
 ---
 <BaseLayout lang={lang} path="anggota/" active="anggota" title={`Lexin — ${t.nav[2]}`}>
 
@@ -53,45 +58,73 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
       </div>
     )}
     <div class="u-8f9416">
-      {groups.map((grp) => (
-        <div class="grp u-b5a98e">
-          <div class="u-a45ba4">
-            <h2 class="u-9ecc2d">{grp.title}</h2>
-          </div>
-          <div class="u-8bf80c">
-            {grp.members.map((m: any) => (
-              <article class="mcard" data-area={m.area}>
-                <div class="u-be11a8">
-                  <div style={`position:relative;width:64px;height:64px;border-radius:50%;flex-shrink:0;background:${m.avBg};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 22px/1 var(--font-display);letter-spacing:.02em;overflow:hidden`}>
-                    <span>{m.ini}</span>
-                    {m.photoUrl && <img src={m.photoUrl} alt={m.name} loading="lazy" class="u-17e25e" />}
-                  </div>
-                  <a href={m.href} aria-label={t.viewProfile} class="go"><Icon name="arrow-up-right" size={18} /></a>
-                </div>
-                <div class="u-fb7434">
-                  <a href={m.href} class="mname">{m.name}</a>
-                  <span class="u-aadf51">{m.titles}</span>
-                </div>
+      {lead && (
+        <div class="grp lead">
+          <h2 class="grp-title">{byG('lead').title}</h2>
+          <article class="mcard lead-card" data-area={lead.area}>
+            <a href={lead.href} class="pphoto" tabindex="-1" aria-hidden="true">
+              <span class="pini" style={`background:${lead.avBg}`}>{lead.ini}</span>
+              {lead.photoUrl && <img src={lead.photoUrl} alt={lead.name} loading="lazy" />}
+            </a>
+            <div class="lead-body">
+              <a href={lead.href} class="lead-name">{lead.name}</a>
+              <span class="lead-role">{lead.role}</span>
+              {lead.position && <span class="lead-pos">{lead.position}</span>}
+              {lead.lede && <p class="lead-lede">{lead.lede}</p>}
+              <div class="ptags">{lead.tags.map((g: string) => <span class="u-1ac452">{g}</span>)}</div>
+              <div class="lead-actions">
+                <Button variant="primary" size="sm" iconRight="arrow-right" href={lead.href}>{t.viewProfile}</Button>
+              </div>
+            </div>
+          </article>
+        </div>
+      )}
+
+      <div class="grp">
+        <h2 class="grp-title">{fac.title}</h2>
+        <div class="pgrid pgrid--5">
+          {fac.members.map((m: any) => (
+            <article class="mcard pcard" data-area={m.area}>
+              <a href={m.href} class="pphoto" tabindex="-1" aria-hidden="true">
+                <span class="pini" style={`background:${m.avBg}`}>{m.ini}</span>
+                {m.photoUrl && <img src={m.photoUrl} alt={m.name} loading="lazy" />}
+              </a>
+              <a href={m.href} class="mname">{m.name}</a>
+              <span class="u-0b70bb">{m.role}</span>
+              <div class="ptags">{m.tags.map((g: string) => <span class="u-1ac452">{g}</span>)}</div>
+            </article>
+          ))}
+        </div>
+      </div>
+
+      <div class="team-row">
+        <div class="grp">
+          <h2 class="grp-title">{staff.title}</h2>
+          <div class="pgrid pgrid--3">
+            {staff.members.map((m: any) => (
+              <article class="mcard pcard" data-area={m.area}>
+                <a href={m.href} class="pphoto" tabindex="-1" aria-hidden="true">
+                  <span class="pini" style={`background:${m.avBg}`}>{m.ini}</span>
+                  {m.photoUrl && <img src={m.photoUrl} alt={m.name} loading="lazy" />}
+                </a>
+                <a href={m.href} class="mname">{m.name}</a>
                 <span class="u-0b70bb">{m.role}</span>
-                <div class="u-2075ff">
-                  {m.tags.map((g: string) => <span class="u-1ac452">{g}</span>)}
-                </div>
-                <a href={'mailto:' + m.email} class="mmail"><Icon name="mail" size={14} />{m.email}</a>
+                <div class="ptags">{m.tags.map((g: string) => <span class="u-1ac452">{g}</span>)}</div>
               </article>
             ))}
           </div>
         </div>
-      ))}
-      {rosters.map((r) => (
-        <div class="grp roster u-b5a98e">
-          <div class="u-a45ba4">
-            <h2 class="u-9ecc2d">{r.title}</h2>
-          </div>
-          <ul class="roster-list">
-            {r.names.map((n) => <li>{n}</li>)}
-          </ul>
-        </div>
-      ))}
+        <aside class="rosters">
+          {rosters.map((r) => (
+            <div class="grp roster">
+              <h2 class="grp-title grp-title--sm">{r.title}</h2>
+              <ul class="roster-list">
+                {r.names.map((n) => <li>{n}</li>)}
+              </ul>
+            </div>
+          ))}
+        </aside>
+      </div>
       <div class="empty u-aa2922" hidden>{t.empty}</div>
     </div>
   </div>
@@ -169,4 +202,46 @@ const groups = await Promise.all(['lead', 'fac', 'staff'].map(async (g) => {
   .roster-list li { padding: 14px 4px; border-bottom: 1px solid var(--border-default); font: 600 16px/1.4 var(--font-display); color: var(--navy-900); }
   .mcard:hover { background: var(--navy-50); }
   .u-1ac452:not(:last-child)::after { content: ","; }
+  .u-8f9416 { gap: clamp(36px,5vw,56px); }
+  .grp { display: flex; flex-direction: column; gap: var(--space-5); min-width: 0; }
+  .grp-title { font: var(--type-h2); font-size: clamp(22px,2.4vw,28px); letter-spacing: var(--tracking-snug); color: var(--text-heading); margin: 0; }
+  .grp-title--sm { font-size: 20px; }
+  .pgrid { display: grid; gap: var(--space-5); }
+  /* Fixed track size: a card keeps the same size no matter how many are left after filtering. */
+  .pgrid--5, .pgrid--3 { grid-template-columns: repeat(auto-fill, minmax(min(100%, 180px), 222px)); justify-content: start; }
+  .pcard { border-top: 0; padding: 0; border-radius: var(--radius-md); gap: 6px; }
+  .pphoto { position: relative; display: block; aspect-ratio: 4 / 5; border-radius: var(--radius-lg); overflow: hidden; margin-bottom: var(--space-2); background: var(--navy-100); }
+  .pphoto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; display: block; transition: transform var(--dur-slower) var(--ease-out); }
+  .pcard:hover .pphoto img, .lead-card:hover .pphoto img { transform: scale(1.04); }
+  .pini { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; color: var(--fg-on-dark); font: 700 44px/1 var(--font-display); }
+  .ptags { display: flex; flex-wrap: wrap; gap: 4px 6px; }
+  .pcard .mname { font-size: 17px; }
+  .pcard .ptags { margin-bottom: 8px; }
+  .pcard .mmail { margin-top: auto; padding-top: 10px; word-break: break-all; font-size: 12px; }
+  .lead-card { border-top: 2px solid var(--navy-900); padding: var(--space-6) 0 0; display: grid; grid-template-columns: minmax(0,240px) minmax(0,1fr); gap: var(--space-6) clamp(24px,4vw,48px); align-items: start; background: transparent; }
+  .lead-body { display: flex; flex-direction: column; gap: var(--space-2); }
+  .lead-name { font: 700 clamp(26px,3vw,34px)/1.15 var(--font-display); color: var(--text-heading); letter-spacing: var(--tracking-snug); }
+  .lead-name:hover { color: var(--navy-600); }
+  .lead-titles { font: 500 13px/1.4 var(--font-mono); color: var(--text-muted); }
+  .lead-role { font: 600 15px/1.3 var(--font-display); color: var(--red-600); }
+  .lead-pos { font: var(--type-body-sm); color: var(--text-body); }
+  .lead-lede { margin: var(--space-2) 0 0; font: var(--type-body); color: var(--text-body); max-width: 62ch; text-wrap: pretty; }
+  .lead-actions { margin-top: var(--space-3); display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); }
+  .mmail--plain { margin: 0; padding: 0; box-shadow: none; }
+  .team-row { display: grid; grid-template-columns: minmax(0,1fr); gap: var(--space-8); align-items: start; }
+  .rosters { display: flex; flex-direction: column; gap: var(--space-6); }
+  .rosters .roster-list { grid-template-columns: 1fr; gap: 0; }
+  .rosters .roster-list li { font-size: 15px; padding: 10px 4px; }
+  @media (min-width: 1000px) { .team-row { grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); gap: clamp(32px,5vw,64px); } }
+  @media (max-width: 639.98px) { .lead-card { grid-template-columns: 1fr; } .lead-card .pphoto { max-width: 220px; } }
+  /* Whole card is one link target: the name's link stretches over the card; the email stays separately clickable. */
+  .pcard, .lead-card { position: relative; cursor: pointer; }
+  .pcard .mname::after, .lead-name::after { content: ""; position: absolute; inset: 0; z-index: 1; border-radius: var(--radius-md); }
+  .pcard .mmail, .lead-actions { position: relative; z-index: 2; }
+  .pcard, .lead-card { transition: background-color var(--dur-base) var(--ease-out), box-shadow var(--dur-base) var(--ease-out); }
+  .pcard:hover { background: var(--navy-50); box-shadow: 0 0 0 10px var(--navy-50); }
+  .lead-card:hover { background: var(--navy-50); box-shadow: 0 0 0 14px var(--navy-50); }
+  .pcard:hover .mname, .lead-card:hover .lead-name { color: var(--red-600); }
+  .pcard:hover .pphoto, .lead-card:hover .pphoto { box-shadow: 0 6px 0 var(--yellow-400); }
+  .pcard:focus-within, .lead-card:focus-within { outline: 2px solid var(--border-focus); outline-offset: 6px; border-radius: var(--radius-md); }
 </style>

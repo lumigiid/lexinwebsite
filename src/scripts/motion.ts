@@ -13,6 +13,15 @@
 // (everything pending is released by scroll, load, or a timer).
 import { animate, scroll, stagger } from 'motion';
 
+// ---- Weight: one place to tune how heavy the page feels ----
+const WEIGHT = {
+  lerp: 0.085,        // smooth-scroll inertia; lower = heavier (0.1 is light, 0.06 is syrupy)
+  wheel: 0.9,         // wheel travel multiplier; <1 makes each notch move a little less
+  lag: 11,            // px that big media trails behind a fast scroll, then settles
+  lagEase: 0.14,      // how quickly that lag follows scroll velocity (damping)
+  enter: 1.05,        // seconds for blocks to settle into place
+  drop: 30,           // px blocks fall from; more distance reads as more mass
+};
 const EASE = [0.16, 1, 0.3, 1] as const; // expo-out: fast start, long soft landing
 const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const fine = matchMedia('(hover: hover) and (pointer: fine)').matches;
@@ -82,9 +91,9 @@ function playWords(words: HTMLElement[], delay = 0) {
 }
 
 // ---------- rise / wipe ----------
-function rise(el: HTMLElement, delay = 0, dist = 18) {
+function rise(el: HTMLElement, delay = 0, dist = WEIGHT.drop) {
   seen.add(el);
-  animate(el, { opacity: [0, 1], y: [dist, 0] }, { duration: 0.8, delay, ease: EASE }).finished.then(clean(el, 'opacity', 'transform'));
+  animate(el, { opacity: [0, 1], y: [dist, 0] }, { duration: WEIGHT.enter, delay, ease: EASE }).finished.then(clean(el, 'opacity', 'transform'));
 }
 function wipe(el: HTMLElement, delay = 0) {
   seen.add(el);
@@ -212,7 +221,7 @@ function setup() {
         seen.add(child);
       } else {
         seen.add(child);
-        later(child, () => rise(child, 0, 18), () => (child.style.opacity = '0'));
+        later(child, () => rise(child, 0, WEIGHT.drop), () => (child.style.opacity = '0'));
       }
     });
   });
@@ -239,6 +248,36 @@ function setup() {
   const phMark = document.querySelector<HTMLElement>('.page-header .ph-mark');
   if (ph && phMark) {
     scroll(animate(phMark, { y: [0, 70] }, { ease: 'linear' }), { target: ph, offset: ['start start', 'end start'] });
+  }
+
+  // 6b. Weight: damped smooth scroll, and big media that trails a fast scroll then settles.
+  if (matchMedia('(pointer: fine)').matches || innerWidth >= 900) {
+    // Loaded on demand and optional: if it ever fails, every other animation still runs.
+    import('lenis').then(({ default: Lenis }) => {
+      const lenis = new Lenis({ lerp: WEIGHT.lerp, wheelMultiplier: WEIGHT.wheel, smoothWheel: true, syncTouch: false });
+      (window as any).__lenis = lenis;
+      const raf = (t: number) => { lenis.raf(t); requestAnimationFrame(raf); };
+      requestAnimationFrame(raf);
+    }).catch(() => {});
+  }
+  const heavy = Array.from(document.querySelectorAll<HTMLElement>('.client-photo, .prod-card, .forum, .house .tier--roof, .house .tier--foundation, .who-facts, .ev-card img, .u-24b977'))
+    .map((el, i) => ({ el, k: 0.7 + (i % 3) * 0.3 }));
+  if (heavy.length) {
+    let last = scrollY, v = 0;
+    const loop = () => {
+      const d = scrollY - last; last = scrollY;
+      v += (d - v) * WEIGHT.lagEase;                       // velocity, damped
+      const lag = Math.max(-WEIGHT.lag, Math.min(WEIGHT.lag, -v * 0.9));
+      const moving = Math.abs(lag) > 0.05;
+      heavy.forEach(({ el, k }) => { el.style.translate = moving ? `0 ${(lag * k).toFixed(2)}px` : ''; });
+      requestAnimationFrame(loop);
+    };
+    requestAnimationFrame(loop);
+  }
+  // The hero photo sits deeper than the copy: it lags behind as you scroll away.
+  const heroPhoto = document.querySelector<HTMLElement>('.hero-photo');
+  if (hero && heroPhoto) {
+    scroll(animate(heroPhoto, { y: [0, 90] }, { ease: 'linear' }), { target: hero, offset: ['start start', 'end start'] });
   }
 
   // 7. Header tucks away on the way down, returns on the way up.

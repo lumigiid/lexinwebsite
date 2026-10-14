@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, asset, type Lang } from '../lib/i18n';
+import { dict, asset, gmail, type Lang } from '../lib/i18n';
 import { img } from '../lib/images';
 
 interface Props { lang: Lang }
@@ -11,7 +11,7 @@ const { lang } = Astro.props;
 const t = dict('kontak', lang);
 
 // No form: each reason opens an email with the subject prefilled.
-const reasons = t.reasons.map((r: any) => ({ ...r, mailto: 'mailto:hadiputra@cs.ui.ac.id?subject=' + encodeURIComponent('Lexin · ' + r.subject) }));
+const reasons = t.reasons.map((r: any) => ({ ...r, mailto: gmail('Lexin · ' + r.subject) }));
 const photo = await img('assets/people/panca-hadi-putra.png', 160);
 ---
 <BaseLayout lang={lang} path="kontak/" title={`Lexin — ${t.contact}`}>
@@ -29,7 +29,7 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
       <img src={asset('assets/lexin-mark.png')} alt="" class="u-88d3ce" />
       <div class="u-df7a10">
         <span class="u-bf79a6">{t.contactLabel}</span>
-        <a href="mailto:hadiputra@cs.ui.ac.id" class="big-mail">hadiputra<wbr />@cs.ui.ac.id</a>
+        <a href={gmail()} class="big-mail" target="_blank" rel="noopener">{t.contactUs}</a>
         <div class="u-ee36e7">
           <img src={photo} alt="Dr. Panca Hadi Putra" width="72" height="72" class="u-5300a7" />
           <span class="u-e6c996">
@@ -54,7 +54,7 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
       <h2 class="u-9ecc2d">{t.byNeed}</h2>
       <div class="u-43c23d">
         {reasons.map((r: any) => (
-          <a href={r.mailto} class="reason">
+          <a href={r.mailto} class="reason" target="_blank" rel="noopener">
             <span class="u-e5cb8d"><Icon name={r.icon} size={20} /></span>
             <span class="u-2fca08"><span class="u-cbcafe">{r.title}</span><span class="u-16e09c">{r.body}</span></span>
             <Icon name="mail" size={18} />

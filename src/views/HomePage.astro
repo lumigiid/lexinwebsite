@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Badge from '../components/Badge.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, fmtDate, type Lang } from '../lib/i18n';
+import { dict, url, asset, fmtDate, gmail, type Lang } from '../lib/i18n';
 import { allPubs, postsByDate, pubKind } from '../lib/content';
 import { img } from '../lib/images';
 
@@ -252,7 +252,7 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
       <h2 class="h-sec h-sec--sm">{t.trainTitle}</h2>
       <p class="lede lede--spaced">{t.trainBody}</p>
       <div class="train-cta">
-        <Button variant="primary" size="lg" iconRight="arrow-right" href="mailto:hadiputra@cs.ui.ac.id">{t.trainCta}</Button>
+        <Button variant="primary" size="lg" iconRight="arrow-right" href={gmail('Program pelatihan Lexin')}>{t.trainCta}</Button>
       </div>
     </div>
     <div class="client-grid">
@@ -290,20 +290,6 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
     <div class="eyebrow">{t.eventsEyebrow}</div>
     <h2 class="h-sec">{t.eventsTitle}</h2>
     <div class="events-grid">
-      <div class="forum on-dark">
-        <div class="forum-photo" style={`background-image:url(${forumPhoto})`} aria-hidden="true"></div>
-        <div class="forum-veil" aria-hidden="true"></div>
-        <img src={asset('assets/lexin-mark.png')} alt="" class="forum-mark" />
-        <div class="forum-top">
-          <Badge tone="yellow" variant="solid">{t.flagship}</Badge>
-          <span class="forum-dates">{t.datesTbc}</span>
-        </div>
-        <h3 class="forum-h">Lexin <span class="ember-text">Forum</span></h3>
-        <p class="forum-body">{t.forumBody}</p>
-        <div class="forum-cta">
-          <Button variant="inverse" iconRight="bell" href="mailto:hadiputra@cs.ui.ac.id?subject=Lexin%20Forum">{t.forumCta}</Button>
-        </div>
-      </div>
       <div class="latest-col">
         <div class="latest-head">
           <span class="eyebrow eyebrow--muted">{t.latestLabel}</span>
@@ -315,13 +301,27 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
         <ul class="latest-list">
           {latest.map((n) => (
             <li>
-              <a href={n.href} class="latest" target={/^https?:/.test(n.href) ? '_blank' : undefined} rel={/^https?:/.test(n.href) ? 'noopener' : undefined}>
+              <a href={n.href} class="latest" data-no-italic={n.type === 'WAWASAN' || n.type === 'INSIGHTS' ? undefined : ''} target={/^https?:/.test(n.href) ? '_blank' : undefined} rel={/^https?:/.test(n.href) ? 'noopener' : undefined}>
                 <span class="latest-meta"><span class="latest-type">{n.type}</span><span aria-hidden="true">·</span><span class="latest-date">{n.meta}</span></span>
                 <span class="latest-title">{n.title}</span>
               </a>
             </li>
           ))}
         </ul>
+      </div>
+      <div class="forum on-dark">
+        <div class="forum-photo" style={`background-image:url(${forumPhoto})`} aria-hidden="true"></div>
+        <div class="forum-veil" aria-hidden="true"></div>
+        <img src={asset('assets/lexin-mark.png')} alt="" class="forum-mark" />
+        <div class="forum-top">
+          <Badge tone="yellow" variant="solid">{t.flagship}</Badge>
+          <span class="forum-dates">{t.datesTbc}</span>
+        </div>
+        <h3 class="forum-h">Lexin <span class="ember-text">Forum</span></h3>
+        <p class="forum-body">{t.forumBody}</p>
+        <div class="forum-cta">
+          <Button variant="inverse" iconRight="bell" href={gmail('Lexin Forum')}>{t.forumCta}</Button>
+        </div>
       </div>
     </div>
   </div>
@@ -335,8 +335,8 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
         <h2 class="h-sec">{t.workTitle}</h2>
       </div>
       <div class="work-contact">
-        <span class="work-person"><span class="work-name">Dr. Panca Hadi Putra</span><span class="work-mail">hadiputra@cs.ui.ac.id</span></span>
-        <Button variant="primary" size="lg" iconRight="arrow-right" href={url(lang, 'kontak/')}>{t.contactUs}</Button>
+        <span class="work-person"><span class="work-name">Dr. Panca Hadi Putra</span></span>
+        <Button variant="primary" size="lg" iconRight="arrow-right" href={gmail()}>{t.contactUs}</Button>
       </div>
     </div>
     <ul class="aud-grid">
@@ -372,9 +372,9 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
   /* Hero: dark night surface, left-aligned copy, diagram right. */
   .hero { background: var(--grad-night); color: var(--fg-on-dark); position: relative; overflow: hidden; width: 100%; min-height: calc(100vh - 80px); min-height: calc(100svh - 80px); display: flex; flex-direction: column; justify-content: center; }
   @media (max-width: 639.98px) { .hero { min-height: calc(100vh - 64px); min-height: calc(100svh - 64px); } }
-  .hero-photo { position: absolute; inset: 0; width: 100%; height: 100%; background-size: cover; background-position: center 30%; background-repeat: no-repeat; }
+  .hero-photo { position: absolute; inset: -90px 0 0 0; width: 100%; background-size: cover; background-position: center 30%; background-repeat: no-repeat; }
   .hero-veil { position: absolute; inset: 0; background: var(--grad-night); opacity: .8; }
-  .hero-mark { position: absolute; right: clamp(-160px,-8vw,-60px); bottom: clamp(-200px,-12vw,-80px); height: clamp(320px,42vw,620px); opacity: .12; filter: brightness(0) invert(1); pointer-events: none; max-width: none; }
+  .hero-mark { position: absolute; right: clamp(-160px,-8vw,-60px); bottom: clamp(-200px,-12vw,-80px); height: clamp(320px,42vw,620px); opacity: .06; filter: brightness(0) invert(1); pointer-events: none; max-width: none; }
   .hero-grid { position: relative; width: 100%; padding-top: clamp(72px,10vw,128px); padding-bottom: clamp(72px,10vw,128px); display: grid; grid-template-columns: minmax(0,640px); }
   .hero-h1 { font: 700 clamp(38px,6.4vw,64px)/1.06 var(--font-display); letter-spacing: var(--tracking-tight); margin: 0; color: var(--fg-on-dark); text-wrap: balance; overflow-wrap: anywhere; min-width: 0; }
   .hero-body { font: var(--type-body-lg); margin: var(--space-6) 0 0; color: var(--fg-on-dark-2); max-width: 520px; text-wrap: pretty; }

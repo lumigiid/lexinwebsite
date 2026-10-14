@@ -100,7 +100,7 @@
         }
       ],
       "eventsEyebrow": "Acara & terbitan",
-      "eventsTitle": "Yang akan datang dan yang terbaru.",
+      "eventsTitle": "Yang terbaru dan yang akan datang.",
       "flagship": "Acara tahunan",
       "datesTbc": "Digelar 2027",
       "forumBody": "Forum tahunan tempat peneliti, praktisi hukum, dan pembuat kebijakan membahas arah informatika hukum di Indonesia.",
@@ -162,7 +162,7 @@
           "cta": "Program fellowship"
         }
       ],
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "centerName": "Pusat Informatika Hukum Universitas Indonesia",
       "explore": "Jelajahi",
       "center": "Pusat",
@@ -317,7 +317,8 @@
           ]
         ],
         "cta": "Kenali tim kami"
-      }
+      },
+      "homeLink": "Beranda"
     },
     "en": {
       "about": "About",
@@ -418,7 +419,7 @@
         }
       ],
       "eventsEyebrow": "Events & publications",
-      "eventsTitle": "Coming up and just out.",
+      "eventsTitle": "The latest, and what is coming.",
       "flagship": "Annual event",
       "datesTbc": "Coming in 2027",
       "forumBody": "An annual forum bringing researchers, legal practitioners and policymakers together on the direction of legal informatics in Indonesia.",
@@ -635,14 +636,15 @@
           ]
         ],
         "cta": "Meet our team"
-      }
+      },
+      "homeLink": "Home"
     }
   },
   "riset": {
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -652,7 +654,7 @@
         "Partisipasi",
         "Wawasan"
       ],
-      "eyebrow": "Riset · Pusat Informatika Hukum",
+      "eyebrow": "Riset",
       "titleA": "Empat area terapan di atas",
       "titleB": "satu fondasi Legal AI.",
       "intro": "Riset Lexin berdiri di atas tiga fondasi bersama (retrieval, penalaran, serta kepercayaan dan evaluasi) dan infrastruktur data hukum berbahasa Indonesia. Di atasnya, empat area terapan menjawab pertanyaan hukum nyata bersama mitra.",
@@ -836,7 +838,7 @@
         "Participate",
         "Insights"
       ],
-      "eyebrow": "Research · Center for Legal Informatics",
+      "eyebrow": "Research",
       "titleA": "Four applied areas on",
       "titleB": "one Legal AI foundation.",
       "intro": "Lexin’s research rests on a shared foundation (retrieval, reasoning, and trust and evaluation) and on infrastructure for Indonesian-language legal data. On top of it, four applied areas tackle real legal questions with partners.",
@@ -1012,7 +1014,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1024,8 +1026,8 @@
       ],
       "eyebrow": "Produk",
       "titleA": "Riset yang",
-      "titleB": "sampai ke pengguna.",
-      "intro": "Dua produk lahir dari riset Lexin. Klaussa sudah bisa dipakai, dan FiskalLink sedang diuji coba di Kementerian Keuangan.",
+      "titleB": "sampai ke tangan pengguna.",
+      "intro": "Penelitian unggulan dapat memberikan dampak dan memecahkan masalah sehari-hari, bahkan sampai di lingkungan produksi.",
       "k": {
         "videoLabel": "Video demo Legal Assistant Klaussa",
         "status": "Tersedia untuk publik",
@@ -1053,7 +1055,8 @@
           "Pendanaan UI Incubate 2025",
           "Google for Startups AI",
           "NVIDIA Inception"
-        ]
+        ],
+        "playLabel": "Putar video Klaussa di YouTube"
       },
       "f": {
         "partnerLabel": "Mitra",
@@ -1106,7 +1109,32 @@
       "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
       "emailPh": "Email Anda",
       "subscribe": "Berlangganan",
-      "footerNote": "Isi situs ini bukan nasihat hukum."
+      "footerNote": "Isi situs ini bukan nasihat hukum.",
+      "partner": {
+        "eyebrow": "Kemitraan produk",
+        "title": "Ingin membawa riset ini ke lebih banyak orang?",
+        "body": "Kami sudah berbicara dengan investor dan korporasi tentang cara membawa riset hukum dan AI ini menjadi produk. Jika Anda ingin menguji, melisensikan, berinvestasi di spin-off, atau mengembangkan bersama, mari mulai dari percakapan.",
+        "ways": [
+          [
+            "Uji coba",
+            "Mencoba produk di lingkungan kerja Anda."
+          ],
+          [
+            "Lisensi",
+            "Memakai teknologi Lexin dalam produk atau layanan Anda."
+          ],
+          [
+            "Investasi di spin-off",
+            "Mendukung spin-off seperti Klaussa untuk tumbuh."
+          ],
+          [
+            "Kerja sama pengembangan",
+            "Membangun produk berikutnya bersama tim kami."
+          ]
+        ],
+        "cta": "Hubungi Kami",
+        "subject": "Kemitraan produk Lexin"
+      }
     },
     "en": {
       "about": "About",
@@ -1152,7 +1180,8 @@
           "UI Incubate 2025 funding",
           "Google for Startups AI",
           "NVIDIA Inception"
-        ]
+        ],
+        "playLabel": "Play the Klaussa video on YouTube"
       },
       "f": {
         "partnerLabel": "Partner",
@@ -1205,14 +1234,39 @@
       "newsletterBody": "Research, events and publications, a few times a year.",
       "emailPh": "Your email",
       "subscribe": "Subscribe",
-      "footerNote": "Content and outputs on this site are not legal advice."
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "partner": {
+        "eyebrow": "Product partnerships",
+        "title": "Want to bring this research to more people?",
+        "body": "We have already spoken with investors and corporates about turning this legal AI research into products. If you want to pilot, license, invest in a spin-off or co-develop, let’s start with a conversation.",
+        "ways": [
+          [
+            "Pilot",
+            "Try a product in your own working environment."
+          ],
+          [
+            "License",
+            "Use Lexin’s technology in your product or service."
+          ],
+          [
+            "Invest in a spin-off",
+            "Back a spin-off such as Klaussa as it grows."
+          ],
+          [
+            "Co-development",
+            "Build the next product together with our team."
+          ]
+        ],
+        "cta": "Contact us",
+        "subject": "Lexin product partnership"
+      }
     }
   },
   "anggota": {
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1223,8 +1277,8 @@
         "Wawasan"
       ],
       "eyebrow": "Anggota",
-      "titleA": "Orang-orang",
-      "titleB": "di balik Lexin.",
+      "titleA": "Mereka yang bekerja",
+      "titleB": "di balik layar.",
       "intro": "Peneliti hukum dan ilmu komputer Universitas Indonesia, bekerja bersama di atas satu fondasi Legal AI.",
       "filterLabel": "Fondasi",
       "all": "Semua",
@@ -1328,7 +1382,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1384,7 +1438,10 @@
         "ugrad": "Mahasiswa S1 yang terlibat dalam riset Lexin",
         "grad": "Mahasiswa S2 dan S3 yang terlibat dalam riset Lexin",
         "alumni": "Daftar alumni Lexin"
-      }
+      },
+      "achievements": "Pencapaian",
+      "projects": "Proyek dan pengalaman",
+      "skills": "Keahlian"
     },
     "en": {
       "about": "About",
@@ -1445,14 +1502,17 @@
         "ugrad": "Undergraduate students involved in Lexin research",
         "grad": "Master's and doctoral students involved in Lexin research",
         "alumni": "Lexin alumni"
-      }
+      },
+      "achievements": "Achievements",
+      "projects": "Projects and experience",
+      "skills": "Skills"
     }
   },
   "publikasi": {
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1463,9 +1523,9 @@
         "Wawasan"
       ],
       "eyebrow": "Publikasi",
-      "titleA": "Publikasi &",
-      "titleB": "keluaran riset.",
-      "intro": "Makalah, buku, dan dataset dari anggota Lexin. Saring berdasarkan jenis, lapisan riset, atau anggota.",
+      "titleA": "Luaran",
+      "titleB": "Eksperimentasi.",
+      "intro": "Luaran penelitian dan eksperimentasi: makalah, buku, dan dataset dari anggota Lexin. Saring berdasarkan jenis, lapisan riset, atau anggota.",
       "searchPh": "Cari judul atau venue",
       "typeLabel": "Jenis",
       "layerLabel": "Lapisan riset",
@@ -1580,7 +1640,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1591,8 +1651,8 @@
         "Wawasan"
       ],
       "eyebrow": "Acara",
-      "titleA": "Tempat riset",
-      "titleB": "bertemu praktik.",
+      "titleA": "Sarana penelitian dan eksperimentasi",
+      "titleB": "bertemu dunia nyata.",
       "intro": "Forum, pelatihan, dan diskusi kelompok terarah (FGD) tempat peneliti Lexin bertemu praktisi hukum dan lembaga publik.",
       "upcoming": "Akan datang",
       "flagship": "Acara tahunan",
@@ -1736,7 +1796,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -1747,9 +1807,9 @@
         "Wawasan"
       ],
       "eyebrow": "Partisipasi",
-      "titleA": "Bangun Legal AI",
-      "titleB": "bersama kami.",
-      "intro": "Empat jalur untuk terlibat, sesuai peran Anda. Setiap kolaborasi dimulai dari satu percakapan.",
+      "titleA": "Bangun kecerdasan buatan hukum",
+      "titleB": "bersama kami di Lexin!",
+      "intro": "Empat jalur untuk terlibat yang dapat disesuaikan dengan peran Anda. Setiap kolaborasi dimulai dari langkah kecil untuk memulai percakapan.",
       "youGet": "Yang Anda dapat",
       "weAsk": "Yang kami harapkan",
       "iAm": "Saya adalah",
@@ -1869,7 +1929,50 @@
       "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
       "emailPh": "Email Anda",
       "subscribe": "Berlangganan",
-      "footerNote": "Isi situs ini bukan nasihat hukum."
+      "footerNote": "Isi situs ini bukan nasihat hukum.",
+      "open": {
+        "eyebrow": "Terbuka untuk",
+        "title": "Siapa saja yang kami ajak bekerja sama.",
+        "intro": "Selain mahasiswa, peneliti, dan praktisi hukum, Lexin terbuka bekerja sama dengan:",
+        "items": [
+          [
+            "Investor",
+            "Venture capital dan investor yang mendukung produk dan spin-off."
+          ],
+          [
+            "Pemberi hibah",
+            "Lembaga pendanaan hibah (grants) untuk riset dan inovasi."
+          ],
+          [
+            "Lembaga negara",
+            "Lembaga negara yang menjadi mitra riset."
+          ],
+          [
+            "Direktorat kementerian",
+            "Direktorat di kementerian sebagai mitra riset dan uji coba."
+          ],
+          [
+            "Badan usaha milik negara",
+            "BUMN yang ingin menguji atau memakai hasil riset."
+          ],
+          [
+            "Korporasi",
+            "Perusahaan yang ingin menguji, melisensikan, atau mengembangkan bersama."
+          ],
+          [
+            "Industri",
+            "Pelaku industri yang memproduktisasi riset hukum dan AI."
+          ],
+          [
+            "Kedutaan besar",
+            "Kedutaan besar dan perwakilan negara sahabat."
+          ],
+          [
+            "Laboratorium lain",
+            "Laboratorium dan pusat riset lain untuk kolaborasi riset."
+          ]
+        ]
+      }
     },
     "en": {
       "about": "About",
@@ -2007,14 +2110,57 @@
       "newsletterBody": "Research, events and publications, a few times a year.",
       "emailPh": "Your email",
       "subscribe": "Subscribe",
-      "footerNote": "Content and outputs on this site are not legal advice."
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "open": {
+        "eyebrow": "Open to",
+        "title": "Who we invite to work with us.",
+        "intro": "Beyond students, researchers and legal practitioners, Lexin is open to working with:",
+        "items": [
+          [
+            "Investors",
+            "Venture capital and investors who back products and spin-offs."
+          ],
+          [
+            "Grant makers",
+            "Funding bodies offering grants for research and innovation."
+          ],
+          [
+            "State institutions",
+            "State institutions that become research partners."
+          ],
+          [
+            "Ministry directorates",
+            "Directorates within ministries, as research and pilot partners."
+          ],
+          [
+            "State-owned enterprises",
+            "State-owned enterprises that want to pilot or use research results."
+          ],
+          [
+            "Corporations",
+            "Companies that want to pilot, license or co-develop."
+          ],
+          [
+            "Industry",
+            "Industry players who turn legal AI research into products."
+          ],
+          [
+            "Embassies",
+            "Embassies and diplomatic missions."
+          ],
+          [
+            "Other laboratories",
+            "Other laboratories and research centers for research collaboration."
+          ]
+        ]
+      }
     }
   },
   "wawasan": {
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -2034,7 +2180,7 @@
       "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
       "eyebrow": "Wawasan",
       "titleA": "Catatan dari",
-      "titleB": "persimpangan hukum dan AI.",
+      "titleB": "pertemuan AI dan hukum.",
       "intro": "Opini, policy brief, penjelasan riset, catatan rilis produk, dan liputan acara dari tim Lexin.",
       "all": "Semua",
       "typeLabel": "Jenis tulisan",
@@ -2086,7 +2232,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -2142,7 +2288,7 @@
     "id": {
       "about": "Tentang",
       "contact": "Kontak",
-      "contactUs": "Hubungi kami",
+      "contactUs": "Hubungi Kami",
       "nav": [
         "Riset",
         "Produk",
@@ -2197,6 +2343,12 @@
           "title": "Media & undangan",
           "body": "Wawancara, narasumber, dan undangan acara.",
           "subject": "Media & undangan"
+        },
+        {
+          "icon": "handshake",
+          "title": "Kemitraan industri & investasi",
+          "body": "Uji coba, lisensi, investasi di spin-off, dan kerja sama pengembangan.",
+          "subject": "Kemitraan industri & investasi"
         }
       ]
     },
@@ -2258,6 +2410,12 @@
           "title": "Media & invitations",
           "body": "Interviews, speakers and event invitations.",
           "subject": "Media & invitations"
+        },
+        {
+          "icon": "handshake",
+          "title": "Industry partnerships & investment",
+          "body": "Pilots, licensing, spin-off investment and co-development.",
+          "subject": "Industry partnerships & investment"
         }
       ]
     }

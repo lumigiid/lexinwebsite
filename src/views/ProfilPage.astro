@@ -2,8 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, type Lang } from '../lib/i18n';
-import { members, type Member } from '../lib/content';
+import { dict, url, asset, gmail, MAIN_EMAIL, type Lang } from '../lib/i18n';
+import { members, type Member, fullName } from '../lib/content';
 import { img } from '../lib/images';
 
 interface Props { lang: Lang; member: Member }
@@ -23,6 +23,9 @@ const p = {
   edu: ((m.edu || []) as any[]).map((e) => ({ deg: e.deg, where: e.where[lang] })),
   interests: (m.interests || []) as string[],
   pubs: (m.pubs || []) as any[],
+  achievements: ((m.achievements && m.achievements[lang]) || []) as string[],
+  projects: ((m.projects || []) as any[]).map((x) => ({ name: x.name, role: x.role?.[lang] || '', text: x.text?.[lang] || '' })),
+  skills: ((m.skills || []) as any[]).map((x) => ({ label: x.label?.[lang] || '', items: (x.items || []) as string[] })),
 };
 const nb = (k: number) => { const x = members[(i + k + members.length) % members.length]; return { name: x.name, href: url(lang, 'anggota/' + x.slug + '/') }; };
 const prev = nb(-1), next = nb(1);
@@ -44,14 +47,13 @@ const prev = nb(-1), next = nb(1);
       </div>
       <div class="u-999047">
         <span class="eyebrow">{p.role}</span>
-        <h1 class="u-8a62ec">{m.name}</h1>
-        <span class="u-1451fe">{m.titles}</span>
+        <h1 class="u-8a62ec">{fullName(m)}</h1>
         {p.position && <span class="u-1ea4ad">{p.position}</span>}
         <div class="u-cd6c2a">
           {m.tags.map((g: string) => <span class="u-444621">{g}</span>)}
         </div>
         <div class="u-e48f82">
-          <Button variant="primary" iconLeft="mail" href={'mailto:' + m.email}>{m.email}</Button>
+          <Button variant="primary" iconLeft="mail" href={gmail('', m.email)}>{m.email === MAIN_EMAIL ? t.contactUs : m.email}</Button>
           {links.map((l) => <a href={l.href} class="ext-link" target="_blank" rel="noopener">{l.label}<Icon name="arrow-up-right" size={14} /></a>)}
         </div>
       </div>
@@ -67,6 +69,28 @@ const prev = nb(-1), next = nb(1);
         {bio.map((para) => <p class="u-b41c80">{para}</p>)}
         {bio.length === 0 && <div class="u-af3fba">{t.bioPending}</div>}
       </div>
+      {p.achievements.length > 0 && (
+        <div class="u-f21b93">
+          <h2 class="h-sub">{t.achievements}</h2>
+          <ul class="ach-list">
+            {p.achievements.map((a) => <li>{a}</li>)}
+          </ul>
+        </div>
+      )}
+      {p.projects.length > 0 && (
+        <div class="u-f21b93">
+          <h2 class="h-sub">{t.projects}</h2>
+          <div class="proj-list">
+            {p.projects.map((x) => (
+              <article class="proj">
+                <h3 class="proj-name">{x.name}</h3>
+                {x.role && <span class="proj-role">{x.role}</span>}
+                <p class="proj-text">{x.text}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      )}
       {p.pubs.length > 0 && (
         <div class="u-f21b93">
           <h2 class="h-sub">{t.pubs}</h2>
@@ -100,6 +124,19 @@ const prev = nb(-1), next = nb(1);
               <span class="u-1ec025"><span class="u-40e735">{e.deg}</span><span class="u-16e09c">{e.where}</span></span>
             </div>
           ))}
+        </div>
+      )}
+      {p.skills.length > 0 && (
+        <div class="u-bdbbd2">
+          <span class="u-edb37f">{t.skills}</span>
+          <div class="skill-list">
+            {p.skills.map((g) => (
+              <div class="skill">
+                <span class="skill-label">{g.label}</span>
+                <span class="skill-items">{g.items.join(' · ')}</span>
+              </div>
+            ))}
+          </div>
         </div>
       )}
       {p.interests.length > 0 && (
@@ -192,4 +229,15 @@ const prev = nb(-1), next = nb(1);
   .u-432d1a { justify-content:flex-end;text-align:right; }
   .u-444621:not(:last-child)::after { content: ","; }
   .u-dbd782:not(:last-child)::after { content: ","; }
+  .ach-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy-900); }
+  .ach-list li { padding: 12px 4px; border-bottom: 1px solid var(--border-default); font: var(--type-body); color: var(--text-body); text-wrap: pretty; }
+  .proj-list { display: flex; flex-direction: column; }
+  .proj { padding: 20px 0; border-top: 2px solid var(--navy-900); display: flex; flex-direction: column; gap: 6px; }
+  .proj-name { font: var(--type-h3); font-size: 20px; color: var(--text-heading); margin: 0; }
+  .proj-role { font: 600 12px/1.4 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; color: var(--red-600); }
+  .proj-text { margin: 4px 0 0; font: var(--type-body); color: var(--text-body); text-wrap: pretty; }
+  .skill-list { display: flex; flex-direction: column; gap: 14px; }
+  .skill { display: flex; flex-direction: column; gap: 4px; }
+  .skill-label { font: 600 13px/1.3 var(--font-display); color: var(--navy-900); }
+  .skill-items { font: 400 12.5px/1.5 var(--font-mono); color: var(--navy-700); }
 </style>

@@ -87,16 +87,18 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
           <div class="u-297e45">
             {y.items.map((u) => (
               <article class="pub" data-type={u.type} data-layers={u.layers.join(' ')} data-members={u.who.map((m) => m.slug).join(' ')} data-text={(u.title + ' ' + u.venue).toLowerCase()}>
+                <a href={u.href} class="pub-title" target="_blank" rel="noopener"><span class="u-89bd09">{u.title}</span><span class="u-754b9a"><Icon name="arrow-up-right" size={16} /></span></a>
                 <div class="u-72fafc">
                   <span class="type-tag" style={`background:${TYPE_STYLE[u.type][0]};color:${TYPE_STYLE[u.type][1]}`}>{t.types[u.type]}</span>
                   <span class="u-061089">{u.venue}</span>
+                
+                  <div class="pub-authors">
+                    {u.who.map((a) => (
+                      <a href={url(lang, 'anggota/' + a.slug + '/')} class="person" title={a.name}><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span><span class="person-name">{a.name}</span></a>
+                    ))}
+                  </div>
                 </div>
-                <a href={u.href} class="pub-title" target="_blank" rel="noopener"><span class="u-89bd09">{u.title}</span><span class="u-754b9a"><Icon name="arrow-up-right" size={16} /></span></a>
-                <div class="u-2075ff">
-                  {u.who.map((a) => (
-                    <a href={url(lang, 'anggota/' + a.slug + '/')} class="person" title={a.name}><span style={`width:22px;height:22px;border-radius:50%;background:${AV[a.g]};color:var(--fg-on-dark);display:flex;align-items:center;justify-content:center;font:700 9px/1 var(--font-display)`}>{a.ini}</span><span class="person-name">{a.name}</span></a>
-                  ))}
-                </div>
+                {u.summary && <p class="pub-sum">{u.summary[lang]}</p>}
               </article>
             ))}
           </div>
@@ -188,6 +190,8 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
     .year-num { position: sticky; }
   }
   .pub { padding: 20px 0; box-shadow: inset 0 -1px 0 var(--border-subtle); display: flex; flex-direction: column; gap: 10px; }
+  .pub-authors { display: inline-flex; flex-wrap: wrap; gap: 6px; margin-left: 4px; }
+  .pub .u-72fafc { row-gap: 8px; }
   .pub-title { display: flex; align-items: flex-start; gap: 10px; font: 700 clamp(17px,1.6vw,19px)/1.4 var(--font-display); color: var(--text-heading); text-wrap: pretty; }
   .pub-title:hover { color: var(--navy-600); }
   .person { height: 28px; padding: 0 3px; border-radius: 999px; background: var(--navy-50); display: inline-flex; align-items: center; gap: 0; font: 600 12px/1 var(--font-display); color: var(--navy-800); white-space: nowrap; }
@@ -224,4 +228,5 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   .person-name { display: inline-block; max-width: 0; margin: 0; opacity: 0; overflow: hidden; white-space: nowrap; transition: max-width var(--dur-slower) var(--ease-out), margin var(--dur-slower) var(--ease-out), opacity var(--dur-base) var(--ease-out); }
   .person:hover .person-name, .person:focus-visible .person-name { max-width: 260px; margin: 0 7px 0 6px; opacity: 1; }
   @media (hover: none) { .person-name { max-width: none; margin: 0 7px 0 6px; opacity: 1; } }
+  .pub-sum { margin: 0; font: var(--type-body-sm); color: var(--text-muted); max-width: 70ch; text-wrap: pretty; }
 </style>
