@@ -1523,8 +1523,8 @@
         "Wawasan"
       ],
       "eyebrow": "Publikasi",
-      "titleA": "Luaran",
-      "titleB": "Eksperimentasi.",
+      "titleA": "Manifestasi",
+      "titleB": "penelitian.",
       "intro": "Luaran penelitian dan eksperimentasi: makalah, buku, dan dataset dari anggota Lexin. Saring berdasarkan jenis, lapisan riset, atau anggota.",
       "searchPh": "Cari judul atau venue",
       "typeLabel": "Jenis",
@@ -1570,7 +1570,12 @@
       "newsletterBody": "Kabar riset, acara, dan publikasi, beberapa kali setahun.",
       "emailPh": "Email Anda",
       "subscribe": "Berlangganan",
-      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum."
+      "footerNote": "Konten dan keluaran di situs ini bukan nasihat hukum.",
+      "highlights": "Sorotan",
+      "byYear": "Terbitan per tahun",
+      "openPaper": "Buka makalah",
+      "scrollPrev": "Sebelumnya",
+      "scrollNext": "Berikutnya"
     },
     "en": {
       "about": "About",
@@ -1633,7 +1638,12 @@
       "newsletterBody": "Research, events and publications, a few times a year.",
       "emailPh": "Your email",
       "subscribe": "Subscribe",
-      "footerNote": "Content and outputs on this site are not legal advice."
+      "footerNote": "Content and outputs on this site are not legal advice.",
+      "highlights": "Highlights",
+      "byYear": "Publications per year",
+      "openPaper": "Open paper",
+      "scrollPrev": "Previous",
+      "scrollNext": "Next"
     }
   },
   "acara": {

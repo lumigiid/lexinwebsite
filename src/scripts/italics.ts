@@ -17,7 +17,7 @@ const TERMS = [
 ];
 const RE = new RegExp(`(?<![\\w-])(${TERMS.join('|')})(?![\\w-])`, 'gi');
 
-const SKIP = 'script,style,svg,em,i,time,code,pre,.pub,.pub-row,.pub-card,.person,.inst,.type-tag,[data-no-italic]';
+const SKIP = 'script,style,svg,em,i,time,code,pre,.pub,.pub-row,.pub-card,.hl-card,.person,.inst,.type-tag,[data-no-italic]';
 
 function run() {
   if (document.documentElement.lang !== 'id') return;

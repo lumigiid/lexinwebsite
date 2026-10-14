@@ -25,6 +25,13 @@ const PUBS = allPubs().map((p) => {
 
 const years = [...new Set(PUBS.map((p) => p.year))].map((year) => ({ year, items: PUBS.filter((p) => p.year === year) }));
 
+// Highlights: a short reel of the papers that tell Lexin's story best.
+const FEATURED = ['lexid', 'irnlpui', 'e-notary', 'extreme multilabel', 'numeracy', 'explainable clustering', 'indonlu'];
+const highlights = FEATURED.map((k) => PUBS.find((p) => p.title.toLowerCase().includes(k))).filter(Boolean) as typeof PUBS;
+const perYear = years.slice().reverse().map((y) => ({ year: y.year, n: y.items.length }));
+const maxYear = Math.max(...perYear.map((y) => y.n));
+const typeCount = ['journal', 'conf', 'book'].map((k) => ({ k, n: PUBS.filter((p) => p.type === k).length }));
+
 const fits = (p: (typeof PUBS)[number], key: string, k: string) =>
   k === 'all' || (key === 'type' ? p.type === k : key === 'area' ? p.layers.includes(k) : p.who.some((m) => m.slug === k));
 const pill = (key: string, k: string, label: string) => ({ key, k, label, count: PUBS.filter((p) => fits(p, key, k)).length });
@@ -46,10 +53,6 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
 <section class="u-5cf619">
   <div class="container layout" data-results-word={t.results}>
     <aside class="filters">
-      <label class="search">
-        <Icon name="search" size={18} />
-        <input type="search" placeholder={t.searchPh} aria-label={t.searchPh} />
-      </label>
       <div class="u-459fe4"><span class="f-lbl">{t.typeLabel}</span><div class="pills">
         {types.map((f) => <button type="button" class:list={['pill', { on: f.k === 'all' }]} data-key={f.key} data-k={f.k}>{f.label}<span class="cnt">{f.count}</span></button>)}
       </div></div>
@@ -80,7 +83,55 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
         </div>
         <span class="u-32fd19"><Icon name="github" size={16} />github.com/ninggar17/dataset_lexid_pdf</span>
       </a>
-      <span class="result-label u-839954">{PUBS.length} {t.results}</span>
+      <section class="hl" aria-label={t.highlights}>
+        <div class="hl-head">
+          <h2 class="hl-title-h">{t.highlights}</h2>
+          <div class="hl-nav">
+            <button type="button" class="hl-btn" data-dir="-1" aria-label={t.scrollPrev}><Icon name="arrow-left" size={18} /></button>
+            <button type="button" class="hl-btn" data-dir="1" aria-label={t.scrollNext}><Icon name="arrow-right" size={18} /></button>
+          </div>
+        </div>
+        <div class="hl-track" tabindex="0">
+          {highlights.map((u) => (
+            <a href={u.href} class="hl-card" target="_blank" rel="noopener">
+              <span class="hl-band" style={`background:${TYPE_STYLE[u.type][0]};color:${TYPE_STYLE[u.type][1]}`}>
+                <span class="hl-kind">{t.types[u.type]}</span>
+                <span class="hl-year">{u.year}</span>
+              </span>
+              <span class="hl-title">{u.title}</span>
+              <span class="hl-venue">{u.venue}</span>
+              {u.summary && <span class="hl-sum">{u.summary[lang]}</span>}
+              <span class="hl-go">{t.openPaper}<Icon name="arrow-up-right" size={14} /></span>
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section class="stats" aria-label={t.byYear}>
+        <div class="stats-head">
+          <span class="f-lbl">{t.byYear}</span>
+          <span class="stats-legend">
+            {typeCount.map((c) => <span class="lg"><i style={`background:${TYPE_STYLE[c.k][1]}`}></i>{t.types[c.k]} {c.n}</span>)}
+          </span>
+        </div>
+        <div class="bars">
+          {perYear.map((y) => (
+            <button type="button" class="bar" data-year={y.year} aria-label={`${y.year}: ${y.n}`}>
+              <span class="bar-n">{y.n}</span>
+              <span class="bar-col" style={`height:${Math.round((y.n / maxYear) * 100)}%`}></span>
+              <span class="bar-y">{String(y.year).slice(2)}</span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      <div class="find-row">
+        <label class="search">
+          <Icon name="search" size={18} />
+          <input type="search" placeholder={t.searchPh} aria-label={t.searchPh} />
+        </label>
+        <span class="result-label u-839954">{PUBS.length} {t.results}</span>
+      </div>
       {years.map((y) => (
         <div class="year" data-year={y.year}>
           <span class="year-num">{y.year}</span>
@@ -125,6 +176,18 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
 </section>
 
 </BaseLayout>
+
+<script>
+  // Highlights reel: arrows scroll one card; the year bars jump to that year's list.
+  document.querySelectorAll<HTMLButtonElement>('.hl-btn').forEach((b) => b.addEventListener('click', () => {
+    const tr = document.querySelector<HTMLElement>('.hl-track');
+    if (tr) tr.scrollBy({ left: Number(b.dataset.dir) * 320, behavior: 'smooth' });
+  }));
+  document.querySelectorAll<HTMLButtonElement>('.bar').forEach((b) => b.addEventListener('click', () => {
+    const el = document.querySelector<HTMLElement>(`.year[data-year="${b.dataset.year}"]`);
+    if (el && !el.hidden) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }));
+</script>
 
 <script>
   type Key = 'type' | 'area' | 'member';
@@ -229,4 +292,35 @@ const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.p
   .person:hover .person-name, .person:focus-visible .person-name { max-width: 260px; margin: 0 7px 0 6px; opacity: 1; }
   @media (hover: none) { .person-name { max-width: none; margin: 0 7px 0 6px; opacity: 1; } }
   .pub-sum { margin: 0; font: var(--type-body-sm); color: var(--text-muted); max-width: 70ch; text-wrap: pretty; }
+  .hl { display: flex; flex-direction: column; gap: var(--space-3); }
+  .hl-head { display: flex; align-items: center; justify-content: space-between; }
+  .hl-title-h { font: var(--type-h3); font-size: 20px; color: var(--text-heading); margin: 0; }
+  .hl-nav { display: flex; gap: 6px; }
+  .hl-btn { width: 40px; height: 40px; border-radius: 999px; border: 0; background: var(--ink-0); box-shadow: inset 0 0 0 1px var(--border-default); color: var(--navy-700); display: flex; align-items: center; justify-content: center; cursor: pointer; transition: background-color var(--dur-base) var(--ease-out); }
+  .hl-btn:hover { background: var(--navy-50); }
+  .hl-track { display: flex; gap: var(--space-4); overflow-x: auto; scroll-snap-type: x mandatory; padding: 4px 2px var(--space-3); scrollbar-width: thin; }
+  .hl-card { flex: 0 0 min(292px, 82%); scroll-snap-align: start; display: flex; flex-direction: column; gap: var(--space-2); border-radius: var(--radius-lg); background: var(--ink-0); box-shadow: inset 0 0 0 1px var(--border-default); padding: 0 0 var(--space-4); overflow: hidden; color: var(--text-heading); transition: box-shadow var(--dur-base) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+  .hl-card:hover { box-shadow: inset 0 0 0 2px var(--yellow-400); color: var(--text-heading); }
+  .hl-band { display: flex; align-items: flex-end; justify-content: space-between; height: 84px; padding: var(--space-3) var(--space-4); }
+  .hl-kind { font: 700 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); text-transform: uppercase; }
+  .hl-year { font: 700 44px/0.9 var(--font-display); letter-spacing: var(--tracking-tight); opacity: .55; }
+  .hl-title { padding: 0 var(--space-4); font: 700 16px/1.35 var(--font-display); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .hl-venue { padding: 0 var(--space-4); font: 500 12px/1.4 var(--font-mono); color: var(--text-muted); }
+  .hl-sum { padding: 0 var(--space-4); font: var(--type-body-sm); color: var(--text-body); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+  .hl-go { margin-top: auto; padding: var(--space-2) var(--space-4) 0; display: inline-flex; align-items: center; gap: 6px; font: 600 13px/1 var(--font-display); color: var(--navy-600); }
+  .stats { display: flex; flex-direction: column; gap: var(--space-3); padding: var(--space-4) 0; border-top: 1px solid var(--border-default); border-bottom: 1px solid var(--border-default); }
+  .stats-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--space-2) var(--space-4); }
+  .stats-legend { display: flex; flex-wrap: wrap; gap: 4px 14px; font: 500 12px/1.4 var(--font-mono); color: var(--text-muted); }
+  .lg { display: inline-flex; align-items: center; gap: 6px; }
+  .lg i { width: 10px; height: 10px; border-radius: 2px; display: inline-block; }
+  .bars { display: flex; align-items: flex-end; gap: 6px; height: 96px; }
+  .bar { flex: 1 1 0; min-width: 0; height: 100%; display: flex; flex-direction: column; justify-content: flex-end; align-items: stretch; gap: 4px; border: 0; background: none; padding: 0; cursor: pointer; }
+  .bar-col { display: block; background: var(--navy-200); border-radius: 3px 3px 0 0; min-height: 4px; transition: background-color var(--dur-base) var(--ease-out); }
+  .bar:hover .bar-col, .bar:focus-visible .bar-col { background: var(--yellow-400); }
+  .bar-n { font: 600 11px/1 var(--font-mono); color: var(--navy-700); text-align: center; }
+  .bar-y { font: 500 11px/1 var(--font-mono); color: var(--text-muted); text-align: center; }
+  .year { scroll-margin-top: 100px; }
+  .find-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--space-3) var(--space-5); margin-top: var(--space-2); }
+  .find-row .search { flex: 1 1 320px; max-width: 560px; }
+  .find-row .result-label { white-space: nowrap; }
 </style>
