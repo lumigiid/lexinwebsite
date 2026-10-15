@@ -11,7 +11,7 @@ export const TYPES: Record<string, { id: string; en: string; bg: string; fg: str
   event: { id: 'Liputan acara', en: 'Event coverage', bg: 'var(--navy-50)', fg: 'var(--navy-700)', panel: 'var(--grad-night)', ink: 'var(--yellow-300)' },
 };
 
-const AV: Record<string, string> = { lead: 'var(--grad-signature)', fac: 'linear-gradient(135deg,var(--navy-500),var(--navy-700))', staff: 'linear-gradient(135deg,var(--red-500),var(--red-700))' };
+const AV: Record<string, string> = { lead: 'var(--navy-800)', fac: 'var(--navy-500)', staff: 'var(--red-600)' };
 
 const MONTHS = {
   id: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'],
@@ -37,9 +37,16 @@ export async function postView(p: Post, lang: Lang) {
     }),
     sources: p.sources as { name: string; href: string }[],
     srcLabel: (p.sources as any[]).map((s) => s.name).join(' · '),
+    embed: (p as any).embed ? {
+      watch: (p as any).embed.url as string,
+      title: (p as any).embed.title[lang] as string,
+      cta: (p as any).embed.cta[lang] as string,
+    } : null,
+    video: (p as any).video ? { src: (p as any).video.src as string, poster: ((p as any).video.poster as string) || '' } : null,
+    credit: (p as any).credit ? `(${(p as any).credit[lang]})` : '',
     link: p.link ? { label: p.link.label[lang] as string, href: link(lang, p.link.href) } : null,
     gallery: await Promise.all(((p.gallery || []) as any[]).map(async (x) => ({
-      cap: x.cap[lang] as string, ratio: x.ratio || '16/9',
+      cap: (x.cap[lang] as string) + ((p as any).credit ? ` (${(p as any).credit[lang]})` : ''), ratio: x.ratio || '16/9',
       bg: `url("${await imgOrPublic(x.src, 1400)}") center/${x.fit || 'cover'} no-repeat${x.fit ? ', #FFFFFF' : ''}`,
     }))),
   };

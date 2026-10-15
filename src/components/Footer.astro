@@ -1,20 +1,22 @@
 ---
 import Button from './Button.astro';
-import { dict, url, asset, NAV_ROUTES, type Lang } from '../lib/i18n';
+import { dict, url, asset, gmail, NAV_ROUTES, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('home', lang);
 const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/') }));
 ---
-<footer class="site-footer">
+<footer class="site-footer on-dark">
   <div class="stripe"></div>
   <div class="container inner">
     <div class="top">
-      <img src={asset('assets/logo-lexin-white.png')} alt="Lexin — Universitas Indonesia Center for Legal Informatics" width="962" height="370" class="logo" />
+      <div class="brand-block">
+        <img src={asset('assets/logo-lexin-white.png')} alt="Lexin — Universitas Indonesia Center for Legal Informatics" width="962" height="370" class="logo" />
+        <p class="inst">Center for Legal Informatics<br />Faculty of Computer Science<br />University of Indonesia</p>
+      </div>
       <div class="contact">
-        <a href="mailto:hadiputra@cs.ui.ac.id" class="mail">hadiputra@cs.ui.ac.id</a>
-        <Button variant="inverse" size="sm" iconRight="arrow-right" href={url(lang, 'kontak/')}>{t.contactUs}</Button>
+        <Button variant="inverse" size="sm" iconRight="mail" href={gmail()}>{t.contactUs}</Button>
       </div>
     </div>
     <div class="bottom">
@@ -23,23 +25,26 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
         <a href="https://github.com/lab-lexin" class="ext">GitHub</a>
         <a href="https://github.com/ninggar17/dataset_lexid_pdf" class="ext">{t.dataset}</a>
       </nav>
-      <span>© 2026 Lexin · Universitas Indonesia · {t.footerNote}</span>
+      <span class="legal">© 2026 Lexin UI. {t.footerNote}</span>
     </div>
   </div>
 </footer>
 
 <style>
-  .site-footer { background: var(--grad-night); color: #FFFFFF; }
+  .site-footer { background: var(--grad-night); color: var(--fg-on-dark); }
   .inner { padding-top: clamp(32px,5vw,44px); padding-bottom: 24px; display: flex; flex-direction: column; gap: 24px; }
   .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 20px 32px; }
-  .logo { height: 48px; width: auto; }
+  .brand-block { display: flex; align-items: center; gap: var(--space-5); min-width: 0; }
+  .logo { height: 48px; width: auto; flex: none; }
+  .inst { margin: 0; padding-left: var(--space-5); border-left: 1px solid var(--on-dark-line-2); font: 500 13px/1.5 var(--font-display); color: var(--fg-on-dark-2); }
+  .legal { margin-left: auto; text-align: right; }
   .contact { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
   .mail { color: var(--yellow-300); font: var(--type-mono); }
-  .mail:hover { color: #FFFFFF; }
+  .mail:hover { color: var(--fg-on-dark); }
   .bottom { padding-top: 20px; box-shadow: inset 0 1px 0 rgba(255,255,255,.12); display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 14px 28px; font: var(--type-body-sm); font-size: 13px; color: var(--fg-on-dark-2); }
   nav { display: flex; flex-wrap: wrap; gap: 8px 20px; }
-  .nl { color: #FFFFFF; font: 600 13px/1.4 var(--font-display); }
+  .nl { color: var(--fg-on-dark); font: 600 13px/1.4 var(--font-display); }
   .nl:hover { color: var(--yellow-300); }
   .ext { color: var(--fg-on-dark-2); }
-  .ext:hover { color: #FFFFFF; }
+  .ext:hover { color: var(--fg-on-dark); }
 </style>

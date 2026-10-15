@@ -42,3 +42,14 @@ export function initials(m: Member): string {
 export function pick<T>(v: { id: T; en: T } | T, lang: Lang): T {
   return v && typeof v === 'object' && 'id' in (v as any) ? (v as any)[lang] ?? (v as any).id : (v as T);
 }
+
+/** Name with academic titles attached: "Dr. · S.H., M.Kn." → "Dr. Panca Hadi Putra, S.H., M.Kn.". */
+export function fullName(m: Member): string {
+  const titles: string = (m.titles || '').trim();
+  if (!titles) return m.name;
+  if (titles.includes('·')) {
+    const [pre, post] = titles.split('·').map((x) => x.trim());
+    return `${pre ? pre + ' ' : ''}${m.name}${post ? ', ' + post : ''}`;
+  }
+  return `${m.name}, ${titles}`;
+}

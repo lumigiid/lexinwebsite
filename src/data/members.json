@@ -23,9 +23,9 @@
     },
     "bio": {
       "id": [
-        "Dr. Panca Hadi Putra adalah associate professor di Fakultas Ilmu Komputer Universitas Indonesia. Minat risetnya mencakup sistem informasi, user experience, bisnis digital, dan informatika hukum. Untuk riset informatika hukum, ia memimpin Lexin, tempat peneliti multidisiplin mengembangkan platform teknologi hukum.",
-        "Di UI ia mengajar di program Magister Teknologi Informasi Fasilkom dan Magister Manajemen FEB, antara lain Analisis dan Perancangan Sistem, Metodologi Penelitian, Manajemen Strategis Sistem Informasi, Technology Entrepreneurship, dan Business Analytics. Di luar UI ia mengajar mata kuliah hukum terkait TI di program Magister Kenotariatan.",
-        "Sebelum berkarier di dunia akademik, ia aktif berwirausaha dan menjadi konsultan bagi berbagai merek, mulai dari perusahaan Fortune 500 seperti PT Sony Indonesia dan PT Tupperware Indonesia, pemimpin kategori seperti PT Kalbe Nutritionals, PT Darya Varia Tbk., dan Del Monte Indonesia, hingga organisasi nirlaba seperti British Council dan Yayasan Sayap Ibu."
+        "Dr. Panca Hadi Putra adalah associate professor di Fakultas Ilmu Komputer Universitas Indonesia. Ia meneliti sistem informasi, user experience, bisnis digital, dan informatika hukum. Di bidang informatika hukum, ia memimpin Lexin, tempat peneliti lintas disiplin mengembangkan platform teknologi hukum.",
+        "Di UI ia mengajar di program Magister Teknologi Informasi Fasilkom dan Magister Manajemen FEB, antara lain mata kuliah Analisis dan Perancangan Sistem, Metodologi Penelitian, Manajemen Strategis Sistem Informasi, Technology Entrepreneurship, dan Business Analytics. Di luar UI ia mengajar mata kuliah hukum terkait TI di program Magister Kenotariatan.",
+        "Sebelum menjadi akademisi, ia berwirausaha dan menjadi konsultan bagi berbagai merek: perusahaan Fortune 500 seperti PT Sony Indonesia dan PT Tupperware Indonesia, pemimpin kategori seperti PT Kalbe Nutritionals, PT Darya Varia Tbk., dan Del Monte Indonesia, hingga organisasi nirlaba seperti British Council dan Yayasan Sayap Ibu."
       ],
       "en": [
         "Dr. Panca Hadi Putra is an associate professor at the Faculty of Computer Science, Universitas Indonesia. His research interests are information systems, user experience, digital business and legal informatics. For legal informatics, he leads Lexin, where multidisciplinary researchers develop legal technology platforms.",
@@ -86,31 +86,51 @@
         "year": "2025",
         "title": "A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia",
         "venue": "JOIV: International Journal on Informatics Visualization, 9(1)",
-        "href": "https://doi.org/10.62527/joiv.9.1.3170"
+        "href": "https://doi.org/10.62527/joiv.9.1.3170",
+        "summary": {
+          "id": "Usulan kerangka layanan e-notaris berbasis blockchain agar notaris bisa membuat dan menyimpan akta secara elektronik dengan aman di Indonesia.",
+          "en": "A proposed framework for blockchain-based e-notary services, so civil law notaries in Indonesia can create and store deeds electronically and securely."
+        }
       },
       {
         "year": "2022",
         "title": "Turning Pirates into Subscribers: A Status Quo Bias Perspective on Online Movie Service Switching Intention",
         "venue": "Emerging Science Journal, 6(5)",
-        "href": "https://doi.org/10.28991/ESJ-2022-06-05-06"
+        "href": "https://doi.org/10.28991/ESJ-2022-06-05-06",
+        "summary": {
+          "id": "Meneliti mengapa orang tetap memakai layanan film bajakan dan apa yang membuat mereka mau beralih ke layanan berlangganan resmi.",
+          "en": "Studies why people keep using pirated movie services and what would make them switch to a legitimate paid subscription."
+        }
       },
       {
         "year": "2022",
         "title": "Usability factors that drive continued intention to use and loyalty of mobile travel application",
         "venue": "Heliyon, 8(9)",
-        "href": "https://doi.org/10.1016/j.heliyon.2022.e10620"
+        "href": "https://doi.org/10.1016/j.heliyon.2022.e10620",
+        "summary": {
+          "id": "Meneliti hal apa pada aplikasi perjalanan di ponsel yang membuat pengguna terus memakainya dan setia.",
+          "en": "Studies which qualities of a mobile travel app make people keep using it and stay loyal."
+        }
       },
       {
         "year": "2022",
         "title": "Factors Affecting User Retention of Mobile Mutual Fund Investment Applications: Evidence from Indonesia",
         "venue": "Human Behavior and Emerging Technologies",
-        "href": "https://doi.org/10.1155/2022/7521680"
+        "href": "https://doi.org/10.1155/2022/7521680",
+        "summary": {
+          "id": "Meneliti apa yang membuat pengguna aplikasi reksa dana di ponsel tetap memakainya, berdasarkan data dari Indonesia.",
+          "en": "Studies what keeps users of mobile mutual-fund apps using them, based on evidence from Indonesia."
+        }
       },
       {
         "year": "2020",
         "title": "Contextual factors and performance impact of e-business use in Indonesian small and medium enterprises (SMEs)",
         "venue": "Heliyon, 6(3)",
-        "href": "https://doi.org/10.1016/j.heliyon.2020.e03568"
+        "href": "https://doi.org/10.1016/j.heliyon.2020.e03568",
+        "summary": {
+          "id": "Meneliti bagaimana usaha kecil dan menengah di Indonesia memakai e-bisnis dan apa dampaknya pada kinerja mereka.",
+          "en": "Studies how small and medium businesses in Indonesia use e-business and what it does for their performance."
+        }
       }
     ]
   },
@@ -134,7 +154,7 @@
     },
     "bio": {
       "id": [
-        "Adila Alfa Krisnadhi adalah dosen dan peneliti bidang ontologi di Fakultas Ilmu Komputer Universitas Indonesia. Selain mengajar dan meneliti, ia kini menjabat Kepala Program Studi Sarjana Kecerdasan Artifisial. Di Lexin, ia memimpin arah ilmiah sebagai Chief Scientist."
+        "Adila Alfa Krisnadhi adalah dosen dan peneliti ontologi di Fakultas Ilmu Komputer Universitas Indonesia. Selain mengajar dan meneliti, ia menjabat Kepala Program Studi Sarjana Kecerdasan Artifisial. Di Lexin, ia memimpin arah ilmiah sebagai Chief Scientist."
       ],
       "en": [
         "Adila Alfa Krisnadhi is a lecturer and ontology researcher at the Faculty of Computer Science, Universitas Indonesia. Alongside teaching and research, he heads the Bachelor of Artificial Intelligence program. At Lexin, he leads the scientific direction as Chief Scientist."
@@ -185,31 +205,51 @@
         "year": "2023",
         "title": "LexID: The Metadata and Semantic Knowledge Graph Construction of Indonesian Legal Document",
         "venue": "Jurnal Ilmu Komputer dan Informasi, 16(1)",
-        "href": "https://doi.org/10.21609/jiki.v16i1.1096"
+        "href": "https://doi.org/10.21609/jiki.v16i1.1096",
+        "summary": {
+          "id": "Membangun knowledge graph yang memetakan metadata dan isi peraturan Indonesia, sehingga hubungan antardokumen hukum bisa dicari dan dijawab.",
+          "en": "Builds a knowledge graph of Indonesian regulations’ metadata and content, so relationships between legal documents can be searched and answered."
+        }
       },
       {
         "year": "2021",
         "title": "Extreme Multilabel Text Classification on Indonesian Tax Court Ruling using Single Channel CNN and IndoBERT Embedding",
         "venue": "IWBIS 2021",
-        "href": "https://doi.org/10.1109/IWBIS53353.2021.9631855"
+        "href": "https://doi.org/10.1109/IWBIS53353.2021.9631855",
+        "summary": {
+          "id": "Memprediksi ayat, pasal, dan undang-undang yang relevan untuk perkara Pengadilan Pajak langsung dari dokumen putusannya.",
+          "en": "Predicts which paragraphs, articles and laws apply to a Tax Court case directly from the ruling text."
+        }
       },
       {
         "year": "2020",
         "title": "Capturing cultural heritage in East Asia and Oceania",
         "venue": "Communications of the ACM 63(4)",
-        "href": "https://dl.acm.org/doi/fullHtml/10.1145/3378548"
+        "href": "https://doi.org/10.1145/3378548",
+        "summary": {
+          "id": "Artikel yang membahas upaya merekam dan menjaga warisan budaya di kawasan Asia Timur dan Oseania.",
+          "en": "An article on efforts to record and preserve cultural heritage in East Asia and Oceania."
+        }
       },
       {
         "year": "2020",
         "title": "GeoLink Data Set: A Complex Alignment Benchmark from Real-world Ontology",
         "venue": "Data Intelligence 2(3)",
-        "href": "https://www.mitpressjournals.org/doi/full/10.1162/dint_a_00054"
+        "href": "https://doi.org/10.1162/dint_a_00054",
+        "summary": {
+          "id": "Dataset tolok ukur untuk mencocokkan ontologi, dibuat dari ontologi nyata di bidang geosains.",
+          "en": "A benchmark dataset for aligning ontologies, built from real-world geoscience ontologies."
+        }
       },
       {
         "year": "2019",
         "title": "Wikidata Completeness Profiling Using ProWD",
         "venue": "K-CAP 2019",
-        "href": "https://dl.acm.org/doi/abs/10.1145/3360901.3364425"
+        "href": "https://doi.org/10.1145/3360901.3364425",
+        "summary": {
+          "id": "Alat bernama ProWD yang menilai seberapa lengkap data suatu topik di Wikidata.",
+          "en": "A tool called ProWD that measures how complete the data on a topic is in Wikidata."
+        }
       }
     ]
   },
@@ -233,7 +273,7 @@
     },
     "bio": {
       "id": [
-        "Prof. Indra Budi adalah dosen ilmu komputer dan sistem informasi di Fakultas Ilmu Komputer Universitas Indonesia, dan kini menjabat Kepala Program Studi Magister dan Doktor Ilmu Komputer. Risetnya mencakup ekstraksi informasi, text dan data mining, analisis sentimen, serta analisis jejaring sosial. Di Lexin, ia berperan sebagai penasihat dan research scientist."
+        "Prof. Indra Budi adalah dosen ilmu komputer dan sistem informasi di Fakultas Ilmu Komputer Universitas Indonesia, dan menjabat Kepala Program Studi Magister dan Doktor Ilmu Komputer. Ia meneliti ekstraksi informasi, text dan data mining, analisis sentimen, serta analisis jejaring sosial. Di Lexin, ia menjadi penasihat sekaligus research scientist."
       ],
       "en": [
         "Prof. Indra Budi is a lecturer in computer science and information systems at the Faculty of Computer Science, Universitas Indonesia, and heads the Master and Doctoral programs in Computer Science. His research covers information extraction, text and data mining, sentiment analysis and social network analysis. At Lexin, he serves as advisor and research scientist."
@@ -284,19 +324,31 @@
         "year": "2018",
         "title": "A dataset and preliminaries study for abusive language detection in Indonesian social media",
         "venue": "Procedia Computer Science, 135",
-        "href": "https://www.sciencedirect.com/science/article/pii/S1877050918314583"
+        "href": "https://doi.org/10.1016/j.procs.2018.08.169",
+        "summary": {
+          "id": "Dataset dan studi awal untuk mendeteksi kata-kata kasar dan menyerang di media sosial berbahasa Indonesia.",
+          "en": "A dataset and early study for detecting abusive and offensive language on Indonesian social media."
+        }
       },
       {
         "year": "2017",
         "title": "Acceptance model of a hospital information system",
         "venue": "International Journal of Medical Informatics, 99",
-        "href": "https://www.sciencedirect.com/science/article/pii/S1386505616302726"
+        "href": "https://doi.org/10.1016/j.ijmedinf.2016.12.004",
+        "summary": {
+          "id": "Model yang menjelaskan faktor-faktor yang membuat tenaga kesehatan mau menerima dan memakai sistem informasi rumah sakit.",
+          "en": "A model of the factors that make hospital staff accept and use a hospital information system."
+        }
       },
       {
         "year": "2016",
         "title": "Twitter sentiment analysis of online transportation service providers",
         "venue": "ICACSIS 2016, IEEE",
-        "href": "https://ieeexplore.ieee.org/abstract/document/7872807/"
+        "href": "https://doi.org/10.1109/ICACSIS.2016.7872807",
+        "summary": {
+          "id": "Menganalisis opini pengguna di Twitter terhadap penyedia layanan transportasi daring.",
+          "en": "Analyzes Twitter users’ opinions of online transportation service providers."
+        }
       }
     ]
   },
@@ -320,7 +372,7 @@
     },
     "bio": {
       "id": [
-        "Alfan Farizki Wicaksono adalah dosen di Fakultas Ilmu Komputer Universitas Indonesia. Ia meraih Ph.D. dari University of Melbourne, M.Sc. dari Korea Advanced Institute of Science and Technology, dan S.T. dari Institut Teknologi Bandung. Risetnya berada di persimpangan information retrieval, representation learning, dan text mining, bidang yang penting untuk alat riset hukum."
+        "Alfan Farizki Wicaksono adalah dosen di Fakultas Ilmu Komputer Universitas Indonesia. Ia meraih Ph.D. dari University of Melbourne, M.Sc. dari Korea Advanced Institute of Science and Technology, dan S.T. dari Institut Teknologi Bandung. Risetnya berada di persimpangan information retrieval, representation learning, dan text mining, bidang yang penting bagi alat riset hukum."
       ],
       "en": [
         "Alfan Farizki Wicaksono is a lecturer at the Faculty of Computer Science, Universitas Indonesia. He holds a Ph.D. from the University of Melbourne, an M.Sc. from the Korea Advanced Institute of Science and Technology and an S.T. from Institut Teknologi Bandung. His research sits at the intersection of information retrieval, representation learning and text mining, all central to legal research tools."
@@ -365,31 +417,51 @@
         "year": "2025",
         "title": "IRNLPUI at COLIEE 2025: Utilization of LLMs for Statute Law Retrieval and Legal Entailment Task",
         "venue": "COLIEE 2025 · ICAIL 2025",
-        "href": "https://doi.org/10.1145/3769126.3785016"
+        "href": "https://doi.org/10.1145/3769126.3785016",
+        "summary": {
+          "id": "Keikutsertaan tim Lexin dalam kompetisi COLIEE 2025: memakai LLM untuk menemukan pasal yang relevan dan menentukan apakah suatu pernyataan hukum benar.",
+          "en": "Lexin’s entry in the COLIEE 2025 competition: using LLMs to find relevant statutes and decide whether a legal statement holds."
+        }
       },
       {
         "year": "2021",
         "title": "Modeling search and session effectiveness",
         "venue": "Information Processing & Management, 58(4)",
-        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+        "href": "https://doi.org/10.1016/j.ipm.2021.102601",
+        "summary": {
+          "id": "Mengusulkan cara mengukur seberapa baik sebuah sesi pencarian, bukan hanya satu kueri, memenuhi kebutuhan pengguna.",
+          "en": "Proposes ways to measure how well a whole search session, not just a single query, serves the user."
+        }
       },
       {
         "year": "2016",
         "title": "InaNLP: Indonesia natural language processing toolkit, case study: Complaint tweet classification",
         "venue": "ICAICTA 2016, IEEE",
-        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+        "href": "https://doi.org/10.1109/ICAICTA.2016.7803103",
+        "summary": {
+          "id": "Perangkat pengolah bahasa alami untuk bahasa Indonesia, dengan contoh penerapan mengklasifikasi tweet keluhan.",
+          "en": "A natural language processing toolkit for Indonesian, with a use case of classifying complaint tweets."
+        }
       },
       {
         "year": "2014",
         "title": "Automatically building a corpus for sentiment analysis on Indonesian tweets",
         "venue": "PACLIC 28",
-        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+        "href": "https://aclanthology.org/Y14-1024/",
+        "summary": {
+          "id": "Cara membangun korpus tweet berbahasa Indonesia secara otomatis untuk melatih analisis sentimen.",
+          "en": "A way to build a corpus of Indonesian tweets automatically for training sentiment analysis."
+        }
       },
       {
         "year": "2010",
         "title": "HMM based part-of-speech tagger for Bahasa Indonesia",
         "venue": "Fourth International MALINDO Workshop",
-        "href": "https://scholar.google.com/citations?user=MaaLUm0AAAAJ"
+        "href": "https://scholar.google.com/scholar?q=%22HMM%20based%20part-of-speech%20tagger%20for%20Bahasa%20Indonesia%22",
+        "summary": {
+          "id": "Pelabel jenis kata (part-of-speech) untuk bahasa Indonesia yang memakai Hidden Markov Model.",
+          "en": "A part-of-speech tagger for Indonesian built on a Hidden Markov Model."
+        }
       }
     ]
   },
@@ -413,7 +485,7 @@
     },
     "bio": {
       "id": [
-        "Rahmad Mahendra adalah dosen dan peneliti di Fakultas Ilmu Komputer Universitas Indonesia. Ia menempuh studi doktoral di RMIT University, meraih M.Sc. Informatika dari Free University of Bozen-Bolzano, dan S.Kom. dari Universitas Indonesia. Risetnya mencakup NLP, text mining, ekstraksi informasi, sistem tanya jawab, dan analitik media sosial, serta aktif dalam inisiatif sumber daya NLP Indonesia."
+        "Rahmad Mahendra adalah dosen dan peneliti di Fakultas Ilmu Komputer Universitas Indonesia. Ia menempuh studi doktoral di RMIT University, meraih M.Sc. Informatika dari Free University of Bozen-Bolzano, dan S.Kom. dari Universitas Indonesia. Risetnya mencakup NLP, text mining, ekstraksi informasi, sistem tanya jawab, dan analitik media sosial. Ia juga aktif dalam inisiatif sumber daya NLP Indonesia."
       ],
       "en": [
         "Rahmad Mahendra is a lecturer and researcher at the Faculty of Computer Science, Universitas Indonesia. He pursued doctoral studies at RMIT University, holds an M.Sc. in Informatics from the Free University of Bozen-Bolzano and an S.Kom. from Universitas Indonesia. His research spans NLP, text mining, information extraction, question answering and social media analytics, and he is active in Indonesian NLP resource initiatives."
@@ -466,19 +538,31 @@
         "year": "2025",
         "title": "Evaluating Numeracy of Language Models as a Natural Language Inference Task",
         "venue": "Findings of NAACL 2025",
-        "href": "https://scholar.ui.ac.id/en/persons/rahmad-mahendra/"
+        "href": "https://doi.org/10.18653/v1/2025.findings-naacl.467",
+        "summary": {
+          "id": "Menguji apakah model bahasa memahami angka dengan mengubah soal bilangan menjadi tugas inferensi bahasa alami.",
+          "en": "Tests whether language models understand numbers by turning numeracy problems into a natural language inference task."
+        }
       },
       {
         "year": "2020",
         "title": "IndoNLU: Benchmark and resources for evaluating Indonesian natural language understanding",
         "venue": "AACL-IJCNLP 2020",
-        "href": "https://scholar.google.com/citations?user=flxdJ0IAAAAJ&hl=en"
+        "href": "https://doi.org/10.18653/v1/2020.aacl-main.85",
+        "summary": {
+          "id": "Tolok ukur dan sumber daya untuk menilai seberapa baik model memahami bahasa Indonesia.",
+          "en": "A benchmark and resources for evaluating how well models understand Indonesian."
+        }
       },
       {
         "year": "2008",
         "title": "Extending an Indonesian semantic analysis-based question answering system with linguistic and world knowledge axioms",
         "venue": "PACLIC 22",
-        "href": "https://scholar.google.com/citations?user=flxdJ0IAAAAJ&hl=en"
+        "href": "https://aclanthology.org/Y08-1026/",
+        "summary": {
+          "id": "Menambahkan pengetahuan linguistik dan pengetahuan dunia ke sistem tanya jawab bahasa Indonesia agar jawabannya lebih tepat.",
+          "en": "Adds linguistic and world knowledge to an Indonesian question answering system so it answers more accurately."
+        }
       }
     ]
   },
@@ -502,7 +586,7 @@
     },
     "bio": {
       "id": [
-        "Ari Saptawijaya adalah pengajar dan peneliti ilmu komputer di Fakultas Ilmu Komputer Universitas Indonesia, dan kini menjabat Wakil Dekan Bidang Pendidikan, Penelitian, dan Kemahasiswaan. Risetnya berfokus pada representasi pengetahuan dan penalaran, logika komputasional, serta pemodelan moralitas dengan logic programming."
+        "Ari Saptawijaya adalah pengajar dan peneliti ilmu komputer di Fakultas Ilmu Komputer Universitas Indonesia, dan menjabat Wakil Dekan Bidang Pendidikan, Penelitian, dan Kemahasiswaan. Risetnya berfokus pada representasi pengetahuan dan penalaran, logika komputasional, serta pemodelan moralitas dengan logic programming."
       ],
       "en": [
         "Ari Saptawijaya is a lecturer and computer science researcher at the Faculty of Computer Science, Universitas Indonesia, and serves as Vice Dean for Education, Research and Student Affairs. His research focuses on knowledge representation and reasoning, computational logic and modelling morality with logic programming."
@@ -548,25 +632,41 @@
         "year": "2025",
         "title": "Explainable clustering: Methods, challenges, and future opportunities",
         "venue": "Journal of Intelligent Systems, 34(1)",
-        "href": "https://doi.org/10.1515/jisys-2024-0477"
+        "href": "https://doi.org/10.1515/jisys-2024-0477",
+        "summary": {
+          "id": "Tinjauan tentang metode pengelompokan data yang bisa dijelaskan, tantangannya, dan peluang ke depan.",
+          "en": "A survey of explainable clustering methods, their challenges, and future opportunities."
+        }
       },
       {
         "year": "2019",
         "title": "From logic programming to machine ethics",
         "venue": "Handbuch Maschinenethik, Springer VS",
-        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+        "href": "https://doi.org/10.1007/978-3-658-17483-5_14",
+        "summary": {
+          "id": "Bab buku tentang memakai pemrograman logika untuk memodelkan penalaran moral pada mesin.",
+          "en": "A book chapter on using logic programming to model moral reasoning in machines."
+        }
       },
       {
         "year": "2016",
         "title": "Programming machine ethics",
         "venue": "Springer",
-        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+        "href": "https://doi.org/10.1007/978-3-319-29354-7",
+        "summary": {
+          "id": "Buku tentang teknik pemrograman logika untuk membuat mesin yang dapat bernalar secara moral.",
+          "en": "A book on logic-programming techniques for building machines that can reason morally."
+        }
       },
       {
         "year": "2016",
         "title": "Logic programming for modeling morality",
         "venue": "Logic Journal of the IGPL, 24(4)",
-        "href": "https://scholar.google.com/citations?user=3Y7a8aoAAAAJ&hl=en"
+        "href": "https://doi.org/10.1093/jigpal/jzw025",
+        "summary": {
+          "id": "Makalah jurnal tentang memodelkan moralitas dan keputusan etis dengan pemrograman logika.",
+          "en": "A journal paper on modelling morality and ethical decisions with logic programming."
+        }
       }
     ]
   },
@@ -583,7 +683,152 @@
       "Evaluasi produk"
     ],
     "email": "bryan.jeshua@ui.ac.id",
-    "photo": "assets/people/bryan-jeshua-white.png"
+    "photo": "assets/people/bryan-jeshua-white.png",
+    "bio": {
+      "id": [
+        "Product leader yang membangun produk AI dari nol sampai ke pengguna dan pendanaan. Di Klaussa, ia mengubah hasil user discovery bersama pengacara dan mahasiswa hukum menjadi 200+ pengguna dan klien korporat dalam 2 bulan, membangun tim engineering dari 0 ke 7 orang, dan mengamankan Rp 300 juta pendanaan preseed.",
+        "Sebelumnya ia mengerjakan ML-based pricing di tiket.com yang menghasilkan kenaikan revenue Rp 250 juta per bulan. Fokusnya ada pada produk legal tech dan AI untuk sektor publik."
+      ],
+      "en": [
+        "A product leader who builds AI products from zero to users and funding. At Klaussa he turned user discovery with lawyers and law students into 200+ users and corporate clients within 2 months, grew the engineering team from 0 to 7, and secured Rp 300 million in pre-seed funding.",
+        "Before that he worked on ML-based pricing at tiket.com, which added Rp 250 million in monthly revenue. His focus is legal tech and AI for the public sector."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Fakultas Ilmu Komputer Universitas Indonesia",
+          "en": "Computer Science, Faculty of Computer Science, Universitas Indonesia"
+        }
+      },
+      {
+        "deg": "Summer Program",
+        "where": {
+          "id": "Nanyang Technological University, INSPIRASI (Sustainability, Smart City, Circular Economy), LPDP Scholar",
+          "en": "Nanyang Technological University, INSPIRASI (Sustainability, Smart City, Circular Economy), LPDP Scholar"
+        }
+      }
+    ],
+    "skills": [
+      {
+        "label": {
+          "id": "Strategi dan eksekusi produk",
+          "en": "Product strategy and execution"
+        },
+        "items": [
+          "PRD",
+          "EDD",
+          "OKR",
+          "roadmap",
+          "sprint",
+          "user story",
+          "user research",
+          "A/B testing",
+          "API design",
+          "system design"
+        ]
+      },
+      {
+        "label": {
+          "id": "Produk agentic AI",
+          "en": "Agentic AI product"
+        },
+        "items": [
+          "LangChain",
+          "LangFuse",
+          "Gemini",
+          "prompt engineering",
+          "LLM on-premise",
+          "evaluasi LLM",
+          "RAG",
+          "sistem multi-agent"
+        ]
+      },
+      {
+        "label": {
+          "id": "Pricing dan behavioral economics",
+          "en": "Pricing and behavioral economics"
+        },
+        "items": [
+          "ML-based pricing",
+          "user segmentation",
+          "nudge strategy"
+        ]
+      },
+      {
+        "label": {
+          "id": "Kemitraan bisnis dan pemerintah",
+          "en": "Business and government partnership"
+        },
+        "items": [
+          "penyusunan penawaran",
+          "perencanaan anggaran proyek",
+          "strategic operations",
+          "kemitraan dengan instansi pemerintah"
+        ]
+      },
+      {
+        "label": {
+          "id": "Domain",
+          "en": "Domain"
+        },
+        "items": [
+          "legal tech",
+          "game industry",
+          "B2B SaaS",
+          "consumer products"
+        ]
+      }
+    ],
+    "achievements": {
+      "id": [
+        "Gold Medal GEMASTIK bidang Pengembangan Perangkat Lunak, mengalahkan 300+ tim pendaftar dan 20 finalis",
+        "Top 5 AI Incubation for Public Sector (British Embassy Jakarta dan UK-Indonesia Tech Hub)",
+        "Rp 300.000.000 pendanaan preseed Klaussa, plus diterima di Google for Startups dan NVIDIA Inception",
+        "Top 20 Microsoft Elevate AI Impact Challenge",
+        "Young Leaders for Indonesia (YLI) by McKinsey and Company dan YLI Foundation, Wave 17",
+        "Top 5% worldwide, Startup Wheel",
+        "Juara 1 Management Exposed FEB UI, dari 100+ tim",
+        "Juara 2 ShARE UI Business Plan Competition dan Juara 2 Tanoto Future Leader Startup and Pitching (sebagai COO), dari 300+ pendaftar",
+        "Finalis Top 6 International Ganesha Business Case Competition dan Top 10 StudentxCEOs International Business Case"
+      ],
+      "en": [
+        "Gold Medal, GEMASTIK Software Development, beating 300+ registered teams and 20 finalists",
+        "Top 5, AI Incubation for Public Sector (British Embassy Jakarta and UK-Indonesia Tech Hub)",
+        "Rp 300,000,000 pre-seed funding for Klaussa, plus acceptance into Google for Startups and NVIDIA Inception",
+        "Top 20, Microsoft Elevate AI Impact Challenge",
+        "Young Leaders for Indonesia (YLI) by McKinsey and Company and the YLI Foundation, Wave 17",
+        "Top 5% worldwide, Startup Wheel",
+        "1st place, Management Exposed FEB UI, from 100+ teams",
+        "2nd place, ShARE UI Business Plan Competition, and 2nd place, Tanoto Future Leader Startup and Pitching (as COO), from 300+ registrants",
+        "Top 6 finalist, International Ganesha Business Case Competition, and Top 10, StudentxCEOs International Business Case"
+      ]
+    },
+    "projects": [
+      {
+        "name": "Klaussa",
+        "role": {
+          "id": "Founder dan Principal of Product",
+          "en": "Founder and Principal of Product"
+        },
+        "text": {
+          "id": "Menjalankan user discovery bersama pengacara, mahasiswa hukum, dan LSM hukum hingga 200+ pengguna dan klien korporat dalam 2 bulan. Merancang sistem agentic AI untuk review kontrak dan riset hukum (LangChain, Gemini) dengan observabilitas biaya lewat LangFuse, dan membangun pipeline untuk 300 ribu+ putusan, kontrak, dan regulasi di atas infrastruktur multi-tenant berbatas laju. Membangun tim engineering dari 0 ke 7 orang dan mengamankan Rp 300 juta preseed melalui UI Incubate.",
+          "en": "Ran user discovery with lawyers, law students and legal NGOs to reach 200+ users and corporate clients in 2 months. Designed an agentic AI system for contract review and legal research (LangChain, Gemini) with cost observability through LangFuse, and built a pipeline for 300k+ rulings, contracts and regulations on rate-limited multi-tenant infrastructure. Grew the engineering team from 0 to 7 and secured Rp 300 million pre-seed through UI Incubate."
+        }
+      },
+      {
+        "name": "AI for Public Sector: FiskalLink",
+        "role": {
+          "id": "Pemimpin kemitraan",
+          "en": "Partnership lead"
+        },
+        "text": {
+          "id": "Memimpin kemitraan dengan Amana Solutions, British Embassy Jakarta, dan Direktorat Jenderal Perimbangan Keuangan Kementerian Keuangan untuk FiskalLink, platform analisis anggaran pemerintah. Nilai proyek Rp 20.000.000 selama 2 bulan, dengan hasil Top 5 dari 197 pendaftar.",
+          "en": "Led partnerships with Amana Solutions, the British Embassy Jakarta and the Directorate General of Fiscal Balance at the Ministry of Finance for FiskalLink, a government budget analysis platform. Project value Rp 20,000,000 over 2 months, ending in the Top 5 of 197 applicants."
+        }
+      }
+    ]
   },
   {
     "slug": "p-s-evans-simanjuntak",
@@ -598,7 +843,89 @@
       "Retrieval-augmented generation"
     ],
     "email": "patrick.samuel@ui.ac.id",
-    "photo": "assets/people/p-s-evans-simanjuntak.png"
+    "photo": "assets/people/p-s-evans-simanjuntak.png",
+    "bio": {
+      "id": [
+        "AI engineer yang membawa sistem LLM dari prototype ke produksi. Ia membangun platform AI hukum Indonesia yang dipakai ribuan pengguna, dengan retrieval hibrida yang mengungguli baseline di 27 dari 40 evaluasi buta.",
+        "Ia juga meneliti LLM fine-tuning untuk NER bahasa Indonesia yang mengalahkan baseline sebesar 7,17 poin F1, dan pernah memimpin BEM Fasilkom UI sebagai Presiden."
+      ],
+      "en": [
+        "An AI engineer who takes LLM systems from prototype to production. He built an Indonesian legal AI platform used by thousands of people, with hybrid retrieval that beats the baseline in 27 of 40 blind evaluations.",
+        "He also researches LLM fine-tuning for Indonesian NER that beats the baseline by 7.17 F1 points, and served as President of BEM Fasilkom UI."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      }
+    ],
+    "skills": [
+      {
+        "label": {
+          "id": "LLM dan AI",
+          "en": "LLM and AI"
+        },
+        "items": [
+          "Google Gemini",
+          "LoRA fine-tuning",
+          "RAG",
+          "multi-agent orchestration (ReAct)",
+          "PyTorch",
+          "Hugging Face"
+        ]
+      },
+      {
+        "label": {
+          "id": "Information retrieval",
+          "en": "Information retrieval"
+        },
+        "items": [
+          "BM25",
+          "dense vector",
+          "hybrid fusion dengan RRF",
+          "cross-encoder reranking",
+          "Cloudflare Vectorize dan D1"
+        ]
+      },
+      {
+        "label": {
+          "id": "Kepemimpinan dan komunikasi",
+          "en": "Leadership and communication"
+        },
+        "items": [
+          "pengelolaan organisasi",
+          "advokasi mahasiswa",
+          "pengajaran"
+        ]
+      }
+    ],
+    "achievements": {
+      "id": [
+        "Presiden BEM Fakultas Ilmu Komputer Universitas Indonesia, setelah sebelumnya menjabat Kepala Departemen Advokasi dan Kesejahteraan Mahasiswa",
+        "Asisten dosen Sistem Operasi dan Matematika Diskrit 1, Universitas Indonesia"
+      ],
+      "en": [
+        "President of BEM, Faculty of Computer Science, Universitas Indonesia, after serving as Head of the Student Advocacy and Welfare Department",
+        "Teaching assistant for Operating Systems and Discrete Mathematics 1, Universitas Indonesia"
+      ]
+    },
+    "projects": [
+      {
+        "name": "Klaussa",
+        "role": {
+          "id": "AI Engineer",
+          "en": "AI Engineer"
+        },
+        "text": {
+          "id": "Hukum Indonesia tersebar di puluhan situs pemerintah dan sulit ditelusuri. Klaussa menyatukannya dalam satu platform riset hukum berbasis AI dengan sitasi langsung ke pasal dan dokumen sumber, sehingga setiap jawaban bisa diverifikasi. Evans membangun platform ini (FastAPI dan React) pada sisi AI, retrieval, dan reliability produksi: multi-agent research assistant dengan loop planner-supervisor-executor, 15 tool, dan pipeline 7 fase; hybrid legal retrieval di atas 300 ribu+ regulasi (BM25, dense vector, HyDE, fusi RRF, cross-encoder reranking) yang unggul di 27 dari 40 evaluasi buta; production hardening (validasi JWT, login lockout, rotasi multi-key Gemini dengan failover); dan release safety dengan 2.200+ tes otomatis, contract-drift check OpenAPI, vulnerability scan Trivy, dan auto-rollback. Platform ini mengindeks 3,1 juta+ pasal dan 319 ribu+ dokumen hukum, menjawab 6.900+ pertanyaan hukum, menganalisis 1.250+ dokumen, dan menghemat 8.000+ jam kerja pengguna, serta dipakai tim hukum, advokat, mahasiswa, dan klien B2B.",
+          "en": "Indonesian law is spread across dozens of government sites and hard to trace. Klaussa brings it together in one AI legal research platform with citations straight to the article and source document, so every answer can be verified. Evans built this platform (FastAPI and React) on the AI, retrieval and production reliability side: a multi-agent research assistant with a planner-supervisor-executor loop, 15 tools and a 7-phase pipeline; hybrid legal retrieval over 300k+ regulations (BM25, dense vector, HyDE, RRF fusion, cross-encoder reranking) that wins 27 of 40 blind evaluations; production hardening (JWT validation, login lockout, multi-key Gemini rotation with failover); and release safety with 2,200+ automated tests, OpenAPI contract-drift checks, Trivy vulnerability scans and auto-rollback. The platform indexes 3.1 million+ articles and 319 thousand+ legal documents, has answered 6,900+ legal questions, analyzed 1,250+ documents and saved 8,000+ hours of user work, and is used by legal teams, advocates, students and B2B clients."
+        }
+      }
+    ]
   },
   {
     "slug": "eryawan-presma",
@@ -613,6 +940,118 @@
       "MLOps"
     ],
     "email": "eryawan.presma@ui.ac.id",
-    "photo": "assets/people/eryawan-presma.png"
+    "photo": "assets/people/eryawan-presma.png",
+    "bio": {
+      "id": [
+        "Engineer yang mengubah masalah data pemerintah yang berantakan menjadi sistem AI yang berjalan di produksi. Ia memangkas analisis anggaran Kementerian Keuangan dari 5 hari menjadi 20 menit, dan membangun platform riset hukum yang mengindeks 297 ribu regulasi dari 37 sumber pemerintah.",
+        "Fokusnya pada arsitektur sistem, data skala besar, dan model bahasa untuk dokumen hukum."
+      ],
+      "en": [
+        "An engineer who turns messy government data problems into AI systems that run in production. He cut Ministry of Finance budget analysis from 5 days to 20 minutes, and built a legal research platform that indexes 297 thousand regulations from 37 government sources.",
+        "His focus is system architecture, large-scale data, and language models for legal documents."
+      ]
+    },
+    "edu": [
+      {
+        "deg": "S.Kom.",
+        "where": {
+          "id": "Ilmu Komputer, Universitas Indonesia",
+          "en": "Computer Science, Universitas Indonesia"
+        }
+      },
+      {
+        "deg": "Pelatihan riset",
+        "where": {
+          "id": "Pelatihan riset Ilmu Komputer Indonesia-UChicago",
+          "en": "Indonesia-UChicago Computer Science research training"
+        }
+      }
+    ],
+    "skills": [
+      {
+        "label": {
+          "id": "Arsitektur dan perancangan ulang sistem",
+          "en": "System architecture and redesign"
+        },
+        "items": [
+          "assessment sistem existing",
+          "pola ports-and-adapters"
+        ]
+      },
+      {
+        "label": {
+          "id": "Integrasi data pemerintah",
+          "en": "Government data integration"
+        },
+        "items": [
+          "rekonsiliasi skema APBN dan APBD",
+          "residensi data"
+        ]
+      },
+      {
+        "label": {
+          "id": "Pipeline data skala besar",
+          "en": "Large-scale data pipelines"
+        },
+        "items": [
+          "akuisisi",
+          "normalisasi",
+          "ETL",
+          "idempoten dan bisa dilanjutkan"
+        ]
+      },
+      {
+        "label": {
+          "id": "LLM, RAG, NLP, dan OCR",
+          "en": "LLM, RAG, NLP and OCR"
+        },
+        "items": [
+          "continued pretraining",
+          "SFT",
+          "reinforcement learning",
+          "teks hukum Indonesia"
+        ]
+      }
+    ],
+    "achievements": {
+      "id": [
+        "Top 5 dari 197 pendaftar, AI Incubation for Public Sector",
+        "Top 20, Microsoft Elevate AI Impact Challenge",
+        "Pemenang 10+ kompetisi data nasional",
+        "8 makalah ilmiah, sekitar 40 sitasi, terbit di SemEval, ACL, IWSLT, dan Daengku",
+        "Anggota komunitas riset SEACrowd"
+      ],
+      "en": [
+        "Top 5 of 197 applicants, AI Incubation for Public Sector",
+        "Top 20, Microsoft Elevate AI Impact Challenge",
+        "Winner of 10+ national data competitions",
+        "8 scientific papers, about 40 citations, published at SemEval, ACL, IWSLT and Daengku",
+        "Member of the SEACrowd research community"
+      ]
+    },
+    "projects": [
+      {
+        "name": "FiskalLink AI",
+        "role": {
+          "id": "Direktorat Jenderal Perimbangan Keuangan, Kementerian Keuangan",
+          "en": "Directorate General of Fiscal Balance, Ministry of Finance"
+        },
+        "text": {
+          "id": "Masalah: skema akun APBN dan APBD tidak kompatibel, sehingga analisis belanja publik lintas sistem lambat dan mahal. Hasil: merekonsiliasi 1,83 juta record anggaran (setara sekitar USD 224,4 miliar belanja publik), waktu analisis turun dari 5 hari menjadi 20 menit, biaya per analisis turun dari sekitar USD 28 ribu menjadi sekitar USD 50, dan di-deploy di AWS Region Jakarta untuk memenuhi ketentuan residensi data.",
+          "en": "Problem: APBN and APBD account schemes are incompatible, so cross-system public spending analysis is slow and expensive. Result: reconciled 1.83 million budget records (about USD 224.4 billion of public spending), cut analysis time from 5 days to 20 minutes, cut cost per analysis from about USD 28 thousand to about USD 50, and deployed on AWS Region Jakarta to meet data residency rules."
+        }
+      },
+      {
+        "name": "Klaussa Legal Platform",
+        "role": {
+          "id": "Platform riset hukum",
+          "en": "Legal research platform"
+        },
+        "text": {
+          "id": "Masalah: hukum Indonesia tersebar di 37 situs pemerintah dan sulit ditelusuri. Hasil: 297 ribu regulasi diakuisisi dan diindeks menjadi sekitar 3,48 juta vektor, 2,57 juta relasi sitasi dipetakan dengan presisi sekitar 99%, OCR mandiri di klaster 16 GPU RTX 5090 menghemat sekitar 92% biaya OCR, dan melayani sekitar 100 pengguna aktif harian di produksi.",
+          "en": "Problem: Indonesian law is spread across 37 government sites and hard to trace. Result: 297 thousand regulations acquired and indexed into about 3.48 million vectors, 2.57 million citation relations mapped at about 99% precision, self-hosted OCR on a 16-GPU RTX 5090 cluster saving about 92% of OCR cost, and serving about 100 daily active users in production."
+        }
+      }
+    ]
   }
 ]

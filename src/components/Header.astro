@@ -2,12 +2,15 @@
 import Button from './Button.astro';
 import IconButton from './IconButton.astro';
 import Icon from './Icon.astro';
-import { dict, url, asset, NAV_ROUTES, type Lang } from '../lib/i18n';
+import { dict, url, asset, gmail, NAV_ROUTES, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number] }
 const { lang, path, active } = Astro.props;
 const t = dict('home', lang);
-const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active }));
+const nav = [
+  { label: t.homeLink as string, href: url(lang), on: path === '' },
+  ...t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active })),
+];
 ---
 <header class="site-header">
   <div class="container bar">
@@ -17,8 +20,8 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
     </nav>
     <div class="tools">
       <div class="lang" role="group" aria-label="Language">
-        <a href={url('id', path)} class:list={{ on: lang === 'id' }} hreflang="id" lang="id">ID</a>
-        <a href={url('en', path)} class:list={{ on: lang === 'en' }} hreflang="en" lang="en">EN</a>
+        <a href={url('id', path)} class:list={{ on: lang === 'id' }} hreflang="id" lang="id" data-switch>ID</a>
+        <a href={url('en', path)} class:list={{ on: lang === 'en' }} hreflang="en" lang="en" data-switch>EN</a>
       </div>
       <Button variant="primary" size="sm" href={url(lang, 'kontak/')} class="contact-btn">{t.contact}</Button>
       <IconButton icon="menu" label="Menu" variant="ghost" class="menu-btn" aria-expanded="false" aria-controls="mobile-menu">
@@ -29,17 +32,48 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
   <nav id="mobile-menu" class="nav-mobile" hidden>
     {nav.map((n: any) => <a href={n.href} class:list={['m-link', { on: n.on }]}>{n.label}</a>)}
     <div style="margin-top:12px">
-      <Button variant="gradient" fullWidth iconRight="mail" href="mailto:hadiputra@cs.ui.ac.id">{t.contactUs}</Button>
+      <Button variant="primary" fullWidth iconRight="mail" href={gmail()}>{t.contactUs}</Button>
     </div>
   </nav>
 </header>
 
 <script>
+  // Switching language keeps your place: remember how far down the page you were,
+  // carry the #anchor over, and restore it on the other language's page.
+  const KEY = 'lx-switch';
+  document.querySelectorAll<HTMLAnchorElement>('[data-switch]').forEach((a) => {
+    a.addEventListener('click', () => {
+      try {
+        const max = Math.max(1, document.documentElement.scrollHeight - innerHeight);
+        sessionStorage.setItem(KEY, JSON.stringify({ r: scrollY / max, t: Date.now(), p: location.pathname.replace(/^\/en\//, '/') }));
+      } catch {}
+      if (location.hash) a.href = a.href.split('#')[0] + location.hash;
+    });
+  });
+  try {
+    const raw = sessionStorage.getItem(KEY);
+    if (raw) {
+      sessionStorage.removeItem(KEY);
+      const { r, t, p } = JSON.parse(raw);
+      const samePage = p === location.pathname.replace(/^\/en\//, '/');
+      if (samePage && Date.now() - t < 8000 && !location.hash) {
+        const go = () => scrollTo(0, r * Math.max(0, document.documentElement.scrollHeight - innerHeight));
+        go();
+        addEventListener('load', go, { once: true });
+        setTimeout(go, 350);
+      }
+    }
+  } catch {}
+</script>
+
+<script>
+  import { fadeIn } from '../scripts/motion';
   const btn = document.querySelector<HTMLButtonElement>('.site-header .menu-btn');
   const panel = document.getElementById('mobile-menu');
   if (btn && panel) {
     const set = (open: boolean) => {
       panel.hidden = !open;
+      if (open) fadeIn(panel, 0.2);
       btn.setAttribute('aria-expanded', String(open));
       btn.classList.toggle('open', open);
     };
@@ -50,24 +84,24 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
 </script>
 
 <style is:global>
-  .site-header { position: sticky; top: 0; z-index: 20; background: rgba(255,255,255,.82); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); box-shadow: inset 0 -1px 0 var(--border-subtle); }
+  .site-header { position: sticky; top: 0; z-index: 20; background: var(--ink-0); box-shadow: inset 0 -1px 0 var(--border-default) }
   .site-header .bar { height: 80px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
   .site-header .brand { display: flex; align-items: center; flex-shrink: 1; min-width: 0; }
   .site-header .brand img { height: 44px; max-width: 100%; width: auto; display: block; }
-  .site-header .nav-wide { display: flex; gap: 2px; flex: 1; justify-content: center; }
-  .site-header .nav-link { padding: 8px 12px; border-radius: 999px; font: 600 15px/1 var(--font-display); color: var(--navy-900); background: transparent; }
-  .site-header .nav-link.on { color: var(--navy-600); background: var(--navy-50); }
-  .site-header .nav-link:hover, .site-header .m-link:hover { background: var(--navy-50); color: var(--navy-600); }
+  .site-header .nav-wide { display: flex; gap: clamp(16px,1.9vw,28px); flex: 1; justify-content: flex-start; margin-left: clamp(24px,3.2vw,48px); align-self: stretch }
+  .site-header .nav-link { position: relative; display: inline-flex; align-items: center; padding: 0; white-space: nowrap; font: 600 15px/1 var(--font-display); color: var(--navy-900); box-shadow: inset 0 -3px 0 transparent; transition: box-shadow var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out) }
+  .site-header .nav-link.on { color: var(--navy-900); box-shadow: inset 0 -3px 0 var(--red-500) }
+  .site-header .nav-link:hover, .site-header .m-link:hover { color: var(--navy-600); box-shadow: inset 0 -3px 0 var(--navy-300) }
   .site-header .tools { display: flex; align-items: center; gap: 10px; flex-shrink: 0; }
-  .site-header .lang { display: flex; background: var(--ink-50); border-radius: 999px; padding: 3px; gap: 2px; }
-  .site-header .lang a { display: inline-flex; align-items: center; height: 30px; padding: 0 12px; border-radius: 999px; font: 600 12px/1 var(--font-display); background: transparent; color: var(--ink-600); }
-  .site-header .lang a.on { background: var(--grad-signature); color: #FFFFFF; }
-  .site-header .lang a:not(.on):hover { color: var(--navy-700); }
+  .site-header .lang { display: flex; align-items: center }
+  .site-header .lang a { display: inline-flex; align-items: center; height: 32px; padding: 0 10px; font: 600 12px/1 var(--font-display); letter-spacing: var(--tracking-wide); background: transparent; color: var(--ink-500) }
+  .site-header .lang a.on { color: var(--navy-900); background: transparent; text-decoration: underline; text-decoration-color: var(--red-500); text-decoration-thickness: 2px; text-underline-offset: 6px }
+  .site-header .lang a:not(.on):hover { color: var(--navy-700) }
   .site-header .menu-btn { display: none; }
   .site-header .menu-btn .i-close, .site-header .menu-btn.open .i-open { display: none; }
   .site-header .menu-btn.open .i-close { display: inline-flex; }
   .site-header .menu-btn .i-open { display: inline-flex; }
-  .site-header .nav-mobile { border-top: 1px solid var(--border-subtle); background: #FFFFFF; padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 2px; max-height: calc(100vh - 64px); overflow: auto; }
+  .site-header .nav-mobile { border-top: 1px solid var(--border-subtle); background: var(--ink-0); padding: 12px 20px 20px; display: flex; flex-direction: column; gap: 2px; max-height: calc(100vh - 64px); overflow: auto; }
   .site-header .m-link { min-height: 48px; display: flex; align-items: center; padding: 0 12px; border-radius: 14px; font: 600 17px/1 var(--font-display); color: var(--navy-900); }
   .site-header .m-link.on { color: var(--navy-600); background: var(--navy-50); }
   @media (max-width: 1119.98px) {
@@ -80,4 +114,8 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
     .site-header .brand img { height: 34px; }
     .site-header .contact-btn { display: none !important; }
   }
+  .site-header .lang a + a { box-shadow: inset 1px 0 0 var(--border-default); }
+  .site-header .m-link { box-shadow: inset 0 -1px 0 var(--border-subtle); border-radius: 0; }
+  .site-header .m-link.on { color: var(--red-600); background: transparent; box-shadow: inset 0 -1px 0 var(--border-subtle); }
+  .site-header .m-link:hover { background: var(--navy-50); box-shadow: inset 0 -1px 0 var(--border-subtle); }
 </style>

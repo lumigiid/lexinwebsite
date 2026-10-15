@@ -8,7 +8,8 @@ a{color:var(--text-link);text-decoration:none;transition:color var(--dur-fast) v
 a:hover{color:var(--text-link-hover)}
 code,kbd,pre{font-family:var(--font-mono)}
 ::selection{background:var(--yellow-300);color:var(--ink-900)}
-:focus-visible{outline:none;box-shadow:var(--focus-ring)}
+:focus-visible{outline:2px solid var(--border-focus);outline-offset:2px}
+.on-dark :focus-visible{outline-color:var(--yellow-300)}
 .lx-display{font:var(--type-display);letter-spacing:var(--tracking-tight);color:var(--text-heading)}
 .lx-eyebrow{font:var(--type-eyebrow);letter-spacing:var(--tracking-wide);text-transform:uppercase;color:var(--text-accent)}
 .lx-gradient-text{background:var(--grad-text);-webkit-background-clip:text;background-clip:text;color:transparent}
