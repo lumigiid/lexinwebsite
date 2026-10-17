@@ -5,6 +5,8 @@ import Footer from '../components/Footer.astro';
 import { url, asset, MAIN_EMAIL, type Lang, NAV_ROUTES } from '../lib/i18n';
 import seo from '../data/seo.json';
 
+const GA_ID = 'G-HL8R92BXMD';
+
 interface Props {
   lang: Lang;
   /** Indonesian route path without language prefix, e.g. `riset/` or `anggota/panca-hadi-putra/`. */
@@ -96,6 +98,19 @@ const ld = JSON.stringify({ '@context': 'https://schema.org', '@graph': graph })
     <meta name="twitter:image" content={ogImage} />
     <meta name="twitter:image:alt" content={imageAlt} />
     <script type="application/ld+json" set:html={ld} />
+    {/* Google Analytics 4. Loads only on the live domain, so local previews don't count as visits. */}
+    <script is:inline define:vars={{ GA_ID }}>
+      if (location.hostname === 'lexin.cs.ui.ac.id') {
+        window.dataLayer = window.dataLayer || [];
+        window.gtag = function () { dataLayer.push(arguments); };
+        gtag('js', new Date());
+        gtag('config', GA_ID);
+        const s = document.createElement('script');
+        s.async = true;
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+        document.head.appendChild(s);
+      }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;1,500;1,600;1,700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=JetBrains+Mono:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap" />
