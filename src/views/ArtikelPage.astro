@@ -5,15 +5,31 @@ import Icon from '../components/Icon.astro';
 import { dict, url, asset, type Lang } from '../lib/i18n';
 import { postsByDate, type Post } from '../lib/content';
 import { postView } from '../lib/posts';
+import { imgOrPublic } from '../lib/images';
 
 interface Props { lang: Lang; post: Post }
 const { lang, post } = Astro.props;
 const t = dict('wawasan-artikel', lang);
 
 const u = await postView(post, lang);
+const shareImage = post.photo ? await imgOrPublic(post.photo, 1200) : undefined;
+const abs = (p: string) => new URL(p, Astro.site).href;
+const article = {
+  '@type': 'Article',
+  '@id': abs(u.href) + '#article',
+  headline: u.title,
+  description: u.dek,
+  datePublished: u.date,
+  inLanguage: lang,
+  url: abs(u.href),
+  mainEntityOfPage: abs(u.href),
+  image: shareImage ? abs(shareImage) : undefined,
+  author: u.authors.map((a) => ({ '@type': 'Person', name: a.name, url: abs(a.href) })),
+  publisher: { '@id': abs('/#organization') },
+};
 const more = await Promise.all(postsByDate().filter((p) => p.slug !== post.slug).slice(0, 3).map((p) => postView(p, lang)));
 ---
-<BaseLayout lang={lang} path={`wawasan/${u.slug}/`} active="wawasan" title={`${u.title} — Lexin`} description={u.dek}>
+<BaseLayout lang={lang} path={`wawasan/${u.slug}/`} active="wawasan" title={`${u.title} — Lexin UI`} description={u.dek} type="article" published={u.date} image={shareImage} imageAlt={u.title} jsonLd={[article]}>
 
 <section class="page-header">
   <div class="u-472bd9">

@@ -29,8 +29,30 @@ const p = {
 };
 const nb = (k: number) => { const x = members[(i + k + members.length) % members.length]; return { name: x.name, href: url(lang, 'anggota/' + x.slug + '/') }; };
 const prev = nb(-1), next = nb(1);
+
+// Search and share metadata for this person.
+const at = lang === 'id' ? 'di' : 'at';
+const fullDesc = [`${fullName(m)}, ${p.role} ${at} Lexin, Universitas Indonesia.`, p.position && p.position + '.', !p.position && m.tags?.length && (m.tags as string[]).slice(0, 4).join(', ') + '.']
+  .filter(Boolean).join(' ');
+const metaDesc = fullDesc.length <= 160 ? fullDesc : fullDesc.slice(0, 157).replace(/[\s,·.]+\S*$/, '') + '…';
+const pageUrl = new URL(url(lang, 'anggota/' + m.slug + '/'), Astro.site).href;
+const person = {
+  '@type': 'Person',
+  '@id': pageUrl + '#person',
+  name: m.name,
+  ...(m.titles ? { honorificPrefix: (m.titles as string).split('·')[0].trim() || undefined } : {}),
+  jobTitle: p.role,
+  description: p.position || undefined,
+  url: pageUrl,
+  image: p.photoUrl ? new URL(p.photoUrl, Astro.site).href : undefined,
+  email: m.email ? 'mailto:' + m.email : undefined,
+  worksFor: { '@id': new URL('/#organization', Astro.site).href },
+  affiliation: { '@type': 'CollegeOrUniversity', name: 'Universitas Indonesia', url: 'https://www.ui.ac.id/' },
+  knowsAbout: [...((m.tags || []) as string[]), ...p.interests].filter((x, k, a) => a.indexOf(x) === k),
+  sameAs: ((m.links || []) as { href: string }[]).map((l) => l.href),
+};
 ---
-<BaseLayout lang={lang} path={`anggota/${m.slug}/`} active="anggota" title={`${m.name} — Lexin`} description={p.position || `${m.name}, ${p.role} — Lexin`}>
+<BaseLayout lang={lang} path={`anggota/${m.slug}/`} active="anggota" title={`${m.name}, ${p.role} ${at} Lexin UI`} description={metaDesc} type="profile" image={p.photoUrl || undefined} imageAlt={m.name} jsonLd={[person]}>
 
 <section class="page-header">
   <img src={asset('assets/lexin-mark.png')} alt="" class="ph-mark" />

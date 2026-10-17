@@ -14,7 +14,7 @@ const t = dict('kontak', lang);
 const reasons = t.reasons.map((r: any) => ({ ...r, mailto: mailto('Lexin · ' + r.subject) }));
 const photo = await img('assets/people/panca-hadi-putra.png', 160);
 ---
-<BaseLayout lang={lang} path="kontak/" title={`Lexin — ${t.contact}`}>
+<BaseLayout lang={lang} path="kontak/">
 
 <PageHeader>
   <div class="eyebrow">{t.eyebrow}</div>

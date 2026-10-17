@@ -11,7 +11,7 @@ const { lang } = Astro.props;
 const t = dict('produk', lang);
 const home = dict('home', lang);
 ---
-<BaseLayout lang={lang} path="produk/" active="produk" title={`Lexin — ${home.nav[1]}`}>
+<BaseLayout lang={lang} path="produk/" active="produk">
 
 <PageHeader tall>
   <div class="eyebrow">{t.eyebrow}</div>

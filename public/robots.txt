@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lexin.cs.ui.ac.id/sitemap-index.xml

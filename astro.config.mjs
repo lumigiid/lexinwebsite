@@ -1,5 +1,6 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
+import sitemap from '@astrojs/sitemap';
 
 // Pages from the previous (WordPress) site, which was in English, mapped to their nearest
 // page on this site. Each key also covers `<key>/` and `<key>/index.html` on a static host.
@@ -31,4 +32,11 @@ export default defineConfig({
     routing: { prefixDefaultLocale: false },
   },
   redirects: OLD_SITE,
+  integrations: [
+    sitemap({
+      // Link each Indonesian page to its English twin (hreflang) in the sitemap too.
+      i18n: { defaultLocale: 'id', locales: { id: 'id-ID', en: 'en-US' } },
+      filter: (page) => !Object.keys(OLD_SITE).some((from) => new URL(page).pathname.replace(/\/$/, '') === from),
+    }),
+  ],
 });

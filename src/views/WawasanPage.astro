@@ -31,7 +31,7 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   k, label, count: k === 'all' ? all.length : all.filter((p) => p.type === k).length,
 }));
 ---
-<BaseLayout lang={lang} path="wawasan/" active="wawasan" title={`Lexin — ${t.nav[6]}`}>
+<BaseLayout lang={lang} path="wawasan/" active="wawasan">
 
 <PageHeader>
   <div class="wh-grid">

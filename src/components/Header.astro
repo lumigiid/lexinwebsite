@@ -4,11 +4,11 @@ import IconButton from './IconButton.astro';
 import Icon from './Icon.astro';
 import { dict, url, asset, mailto, NAV_ROUTES, type Lang } from '../lib/i18n';
 
-interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number] }
-const { lang, path, active } = Astro.props;
+interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number]; noindex?: boolean }
+const { lang, path, active, noindex = false } = Astro.props;
 const t = dict('home', lang);
 const nav = [
-  { label: t.homeLink as string, href: url(lang), on: path === '' },
+  { label: t.homeLink as string, href: url(lang), on: path === '' && !noindex },
   ...t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active })),
 ];
 ---

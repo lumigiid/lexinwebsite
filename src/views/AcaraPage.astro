@@ -20,7 +20,7 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
   ...e, photoUrl: e.photo ? await img(e.photo, 900) : '', typeLabel: t.types[e.type], typeBg: TYPE_STYLE[e.type][0], typeFg: TYPE_STYLE[e.type][1],
 })));
 ---
-<BaseLayout lang={lang} path="acara/" active="acara" title={`Lexin — ${t.nav[4]}`}>
+<BaseLayout lang={lang} path="acara/" active="acara">
 
 <PageHeader>
   <div class="eyebrow">{t.eyebrow}</div>

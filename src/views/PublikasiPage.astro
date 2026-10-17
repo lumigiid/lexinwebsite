@@ -41,7 +41,7 @@ const areasF = Object.keys(t.areas).map((k) => pill('area', 'f:' + k, t.areas[k]
 const infraF = Object.keys(t.infras).map((k) => pill('area', 'i:' + k, t.infras[k]));
 const membersF = [pill('member', 'all', t.all)].concat(members.filter((m) => m.pubs && m.pubs.length).map((m) => pill('member', m.slug, m.name)));
 ---
-<BaseLayout lang={lang} path="publikasi/" active="publikasi" title={`Lexin — ${t.nav[3]}`}>
+<BaseLayout lang={lang} path="publikasi/" active="publikasi">
 
 <PageHeader>
   <div class="eyebrow">{t.eyebrow}</div>
