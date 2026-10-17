@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, gmail, MAIN_EMAIL, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, MAIN_EMAIL, type Lang } from '../lib/i18n';
 import { members, type Member, fullName } from '../lib/content';
 import { img } from '../lib/images';
 
@@ -53,7 +53,7 @@ const prev = nb(-1), next = nb(1);
           {m.tags.map((g: string) => <span class="u-444621">{g}</span>)}
         </div>
         <div class="u-e48f82">
-          <Button variant="primary" iconLeft="mail" href={gmail('', m.email)}>{m.email === MAIN_EMAIL ? t.contactUs : m.email}</Button>
+          <Button variant="primary" iconLeft="mail" href={mailto('', m.email)}>{m.email === MAIN_EMAIL ? t.contactUs : m.email}</Button>
           {links.map((l) => <a href={l.href} class="ext-link" target="_blank" rel="noopener">{l.label}<Icon name="arrow-up-right" size={14} /></a>)}
         </div>
       </div>

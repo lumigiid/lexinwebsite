@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, gmail, type Lang } from '../lib/i18n';
+import { dict, mailto, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -12,7 +12,7 @@ const t = dict('partisipasi', lang);
 // No forms on the site: each path opens an email to Dr. Panca Hadi Putra with the subject prefilled.
 const paths = t.paths.map((p: any, i: number) => ({
   ...p,
-  mailto: gmail('Lexin · ' + p.program),
+  mailto: mailto('Lexin · ' + p.program),
 }));
 ---
 <BaseLayout lang={lang} path="partisipasi/" active="partisipasi" title={`Lexin — ${t.nav[5]}`}>
@@ -89,12 +89,12 @@ const paths = t.paths.map((p: any, i: number) => ({
       <h2 class="h-sec u-1386d5">{t.formTitle}</h2>
       <p class="u-2fede3">{t.formBody}</p>
       <span class="u-0b5a77">Dr. Panca Hadi Putra</span>
-      <div class="mail-link"><Button variant="primary" iconRight="mail" href={gmail()}>{t.contactUs}</Button></div>
+      <div class="mail-link"><Button variant="primary" iconRight="mail" href={mailto()}>{t.contactUs}</Button></div>
     </div>
     <div class="u-d2c60f">
       <span class="mini-lbl u-2937bf">{t.byPath}</span>
       {paths.map((p: any) => (
-        <a href={p.mailto} class="path-mail" target="_blank" rel="noopener">
+        <a href={p.mailto} class="path-mail">
           <span class="ico"><Icon name={p.icon} size={20} /></span>
           <span class="u-2fca08"><span class="u-cbcafe">{p.program}</span><span class="u-16e09c">{p.who}</span></span>
           <Icon name="mail" size={18} />

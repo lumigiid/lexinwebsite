@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, asset, gmail, type Lang } from '../lib/i18n';
+import { dict, asset, mailto, type Lang } from '../lib/i18n';
 import { img } from '../lib/images';
 
 interface Props { lang: Lang }
@@ -50,8 +50,8 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
             <h2 class="u-9711c7">Lexin <span class="ember-text">Forum</span></h2>
             <p class="u-40ab5d">{t.forumBody}</p>
             <div class="u-cf940b">
-              <Button variant="accent" iconRight="bell" href={gmail('Lexin Forum')}>{t.notify}</Button>
-              <Button variant="inverse" href={gmail('Lexin Forum - Pembicara')}>{t.speak}</Button>
+              <Button variant="accent" iconRight="bell" href={mailto('Lexin Forum')}>{t.notify}</Button>
+              <Button variant="inverse" href={mailto('Lexin Forum - Pembicara')}>{t.speak}</Button>
             </div>
           </div>
           <div class="u-80ea70">
@@ -92,7 +92,7 @@ const past = await Promise.all(t.events.map(async (e: any) => ({
         <span class="u-8014ef">{t.inviteTitle}</span>
         <span class="u-827c3f">{t.inviteBody}</span>
       </div>
-      <Button variant="primary" iconRight="mail" href={gmail('Undangan acara')}>{t.inviteCta}</Button>
+      <Button variant="primary" iconRight="mail" href={mailto('Undangan acara')}>{t.inviteCta}</Button>
     </div>
   </div>
 </section>

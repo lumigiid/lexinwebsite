@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Badge from '../components/Badge.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, fmtDate, gmail, type Lang } from '../lib/i18n';
+import { dict, url, asset, fmtDate, mailto, type Lang } from '../lib/i18n';
 import { allPubs, postsByDate, pubKind } from '../lib/content';
 import { img } from '../lib/images';
 
@@ -252,7 +252,7 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
       <h2 class="h-sec h-sec--sm">{t.trainTitle}</h2>
       <p class="lede lede--spaced">{t.trainBody}</p>
       <div class="train-cta">
-        <Button variant="primary" size="lg" iconRight="arrow-right" href={gmail('Program pelatihan Lexin')}>{t.trainCta}</Button>
+        <Button variant="primary" size="lg" iconRight="arrow-right" href={mailto('Program pelatihan Lexin')}>{t.trainCta}</Button>
       </div>
     </div>
     <div class="client-grid">
@@ -320,7 +320,7 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
         <h3 class="forum-h">Lexin <span class="ember-text">Forum</span></h3>
         <p class="forum-body">{t.forumBody}</p>
         <div class="forum-cta">
-          <Button variant="inverse" iconRight="bell" href={gmail('Lexin Forum')}>{t.forumCta}</Button>
+          <Button variant="inverse" iconRight="bell" href={mailto('Lexin Forum')}>{t.forumCta}</Button>
         </div>
       </div>
     </div>
@@ -336,7 +336,7 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
       </div>
       <div class="work-contact">
         <span class="work-person"><span class="work-name">Dr. Panca Hadi Putra</span></span>
-        <Button variant="primary" size="lg" iconRight="arrow-right" href={gmail()}>{t.contactUs}</Button>
+        <Button variant="primary" size="lg" iconRight="arrow-right" href={mailto()}>{t.contactUs}</Button>
       </div>
     </div>
     <ul class="aud-grid">
