@@ -11,8 +11,10 @@ interface Props {
   title: string;
   description?: string;
   active?: (typeof NAV_ROUTES)[number];
+  /** Keep this page out of search results (the 404 page). */
+  noindex?: boolean;
 }
-const { lang, path, title, description, active } = Astro.props;
+const { lang, path, title, description, active, noindex = false } = Astro.props;
 const desc = description ?? (lang === 'id'
   ? 'Lexin, Pusat Informatika Hukum Universitas Indonesia: riset, data, dan produk AI untuk sistem hukum Indonesia.'
   : 'Lexin, the Universitas Indonesia Center for Legal Informatics: research, data and AI products for the Indonesian legal system.');
@@ -25,6 +27,7 @@ const canonical = new URL(url(lang, path), Astro.site).href;
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
     <meta name="description" content={desc} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="canonical" href={canonical} />
     <link rel="alternate" hreflang="id" href={new URL(url('id', path), Astro.site).href} />
     <link rel="alternate" hreflang="en" href={new URL(url('en', path), Astro.site).href} />
