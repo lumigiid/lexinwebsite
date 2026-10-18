@@ -1306,7 +1306,8 @@
         "rs": "Research Scientist",
         "ra": "Research Associate & Ventures",
         "are": "AI Research Engineer",
-        "appl": "Applied Research Engineer"
+        "appl": "Applied Research Engineer",
+        "bd": "Commercial & Partnerships"
       },
       "joinTitle": "Bergabung dengan tim",
       "joinBody": "Kami terbuka untuk mahasiswa, peneliti tamu, dan insinyur yang ingin membangun Legal AI untuk Indonesia.",
@@ -1363,7 +1364,8 @@
         "rs": "Research Scientist",
         "ra": "Research Associate & Ventures",
         "are": "AI Research Engineer",
-        "appl": "Applied Research Engineer"
+        "appl": "Applied Research Engineer",
+        "bd": "Commercial & Partnerships"
       },
       "joinTitle": "Join the team",
       "joinBody": "We welcome students, visiting scholars and engineers who want to build Legal AI for Indonesia.",
@@ -1424,7 +1426,8 @@
         "rs": "Research Scientist",
         "ra": "Research Associate & Ventures",
         "are": "AI Research Engineer",
-        "appl": "Applied Research Engineer"
+        "appl": "Applied Research Engineer",
+        "bd": "Commercial & Partnerships"
       },
       "explore": "Jelajahi",
       "center": "Pusat",
@@ -1488,7 +1491,8 @@
         "rs": "Research Scientist",
         "ra": "Research Associate & Ventures",
         "are": "AI Research Engineer",
-        "appl": "Applied Research Engineer"
+        "appl": "Applied Research Engineer",
+        "bd": "Commercial & Partnerships"
       },
       "explore": "Explore",
       "center": "Center",
