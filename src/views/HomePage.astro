@@ -270,6 +270,22 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
   </div>
 </section>
 
+<section class="band-mist policy">
+  <div class="container sec policy-grid">
+    <div>
+      <div class="eyebrow">{t.policyEyebrow}</div>
+      <h2 class="h-sec h-sec--sm">{t.policyTitle}</h2>
+      <p class="lede lede--spaced">{t.policyBody}</p>
+      <div class="train-cta">
+        <Button variant="primary" size="lg" iconRight="arrow-right" href={mailto('Kebijakan dan regulasi teknologi')}>{t.policyCta}</Button>
+      </div>
+    </div>
+    <ul class="policy-list">
+      {t.policyItems.map((i: string[]) => <li><h3>{i[0]}</h3><p>{i[1]}</p></li>)}
+    </ul>
+  </div>
+</section>
+
 <section class="partners">
   <div class="container partners-grid">
     <div class="eyebrow eyebrow--muted">{t.partnersLabel}</div>
@@ -507,6 +523,11 @@ const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
   /* Training: photos with captions, no card chrome */
   .train-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,440px),1fr)); gap: clamp(32px,6vw,64px); align-items: center; }
   .train-cta { margin-top: var(--space-8); }
+  .policy-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,440px),1fr)); gap: clamp(32px,6vw,64px); align-items: start; }
+  .policy-list { list-style: none; margin: 0; padding: 0; border-top: 2px solid var(--navy-900); }
+  .policy-list li { padding: var(--space-5) 4px; border-bottom: 1px solid var(--border-default); }
+  .policy-list h3 { font: 700 18px/1.3 var(--font-display); color: var(--navy-900); margin: 0 0 var(--space-2); }
+  .policy-list p { margin: 0; font: var(--type-body); color: var(--text-muted); text-wrap: pretty; }
   .client-grid { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,240px),1fr)); gap: var(--space-6); }
   .client { margin: 0; display: flex; flex-direction: column; gap: var(--space-4); }
   .client-photo { width: 100%; aspect-ratio: 16/9; border-radius: var(--radius-lg); background-color: var(--ink-50); background-size: cover; background-position: center; background-repeat: no-repeat; }
