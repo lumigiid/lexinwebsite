@@ -52,6 +52,15 @@
       "trainTitle": "Kami mendampingi lembaga publik memakai AI untuk pekerjaan hukum.",
       "trainBody": "Pelatihan dan pendampingan kami berbasis riset. Materinya mulai dari literasi AI sampai evaluasi sistem langsung di tempat kerja instansi.",
       "trainCta": "Ajukan program pelatihan",
+      "policyEyebrow": "Kebijakan & regulasi",
+      "policyTitle": "Kami juga membantu merumuskan aturannya.",
+      "policyBody": "Selain menerjemahkan regulasi menjadi sistem, kami mendampingi pembuat kebijakan yang perlu mengatur teknologi. Masukan kami berbasis bukti teknis: apa yang bisa dan tidak bisa dilakukan sistem, apa risikonya, dan bagaimana aturannya bisa ditegakkan.",
+      "policyItems": [
+        ["Kajian kebijakan teknologi", "Telaah teknis atas AI, data, dan platform digital, supaya draf aturan sejalan dengan cara kerja teknologinya."],
+        ["Masukan untuk draf regulasi", "Reviu draf peraturan dari sisi keterlaksanaan, risiko, dan kemungkinan diaudit."],
+        ["Tata kelola dan evaluasi AI", "Kerangka penilaian dan pengujian sistem AI di instansi, dari uji coba sampai pengawasan."]
+      ],
+      "policyCta": "Diskusikan kebutuhan kebijakan",
       "clients": [
         {
           "code": "DJP",
@@ -372,6 +381,15 @@
       "trainTitle": "Helping public institutions use AI in legal work.",
       "trainBody": "We design research-based training and advisory programs, from AI literacy to evaluating systems in an institution’s own workflows.",
       "trainCta": "Request a training program",
+      "policyEyebrow": "Policy & regulation",
+      "policyTitle": "We also help shape the rules.",
+      "policyBody": "Besides turning regulation into systems, we advise policymakers who need to regulate technology. Our input rests on technical evidence: what systems can and cannot do, what the risks are, and how a rule can be enforced.",
+      "policyItems": [
+        ["Technology policy analysis", "Technical review of AI, data and digital platforms, so draft rules fit how the technology actually works."],
+        ["Input on draft regulation", "Review of draft rules for feasibility, risk and auditability."],
+        ["AI governance and evaluation", "Assessment and testing frameworks for AI systems in institutions, from pilot to oversight."]
+      ],
+      "policyCta": "Discuss a policy need",
       "clients": [
         {
           "code": "DJP",
