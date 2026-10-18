@@ -57,7 +57,7 @@ const latest = [
 
 const heroPhoto = await img('assets/hero-justice.jpg', 2000);
 const forumPhoto = await img('assets/forum-conf.jpg', 1400);
-const ci = t.tagline.indexOf(', ');
+const ci = t.tagline.indexOf('. ');
 const tagA = t.tagline.slice(0, ci + 1), tagB = t.tagline.slice(ci + 2);
 ---
 <BaseLayout lang={lang} path="" title={lang === 'id' ? 'Lexin — Pusat Informatika Hukum Universitas Indonesia' : 'Lexin — Universitas Indonesia Center for Legal Informatics'}>
