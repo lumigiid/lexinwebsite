@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, gmail, url, type Lang } from '../lib/i18n';
+import { dict, mailto, url, type Lang } from '../lib/i18n';
 import { img } from '../lib/images';
 import { postsByDate } from '../lib/content';
 import { postView, TYPES } from '../lib/posts';
@@ -31,7 +31,7 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
   k, label, count: k === 'all' ? all.length : all.filter((p) => p.type === k).length,
 }));
 ---
-<BaseLayout lang={lang} path="wawasan/" active="wawasan" title={`Lexin — ${t.nav[6]}`}>
+<BaseLayout lang={lang} path="wawasan/" active="wawasan">
 
 <PageHeader>
   <div class="wh-grid">
@@ -106,7 +106,7 @@ const typesF = [['all', t.all]].concat(Object.keys(TYPES).map((k) => [k, TYPES[k
         <span class="u-8014ef">{t.pitchTitle}</span>
         <span class="u-827c3f">{t.pitchBody}</span>
       </div>
-      <Button variant="secondary" iconRight="mail" href={gmail('Wawasan Lexin')}>{t.pitchCta}</Button>
+      <Button variant="secondary" iconRight="mail" href={mailto('Wawasan Lexin')}>{t.pitchCta}</Button>
     </div>
   </div>
 </section>

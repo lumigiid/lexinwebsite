@@ -1,0 +1,92 @@
+{
+  "home": {
+    "id": {
+      "title": "Lexin — Pusat Informatika Hukum Universitas Indonesia",
+      "description": "Lexin, Pusat Informatika Hukum Fakultas Ilmu Komputer Universitas Indonesia, membangun data, metode, dan alat AI untuk sistem hukum Indonesia."
+    },
+    "en": {
+      "title": "Lexin — Universitas Indonesia Center for Legal Informatics",
+      "description": "Lexin, the Center for Legal Informatics at the Universitas Indonesia Faculty of Computer Science, builds data, methods and AI tools for Indonesian law."
+    }
+  },
+  "riset": {
+    "id": {
+      "title": "Riset Legal AI — Lexin UI",
+      "description": "Empat area riset terapan Lexin: notaris digital, perselisihan hubungan industrial, tata kelola dan regulasi AI, serta putusan pengadilan Indonesia."
+    },
+    "en": {
+      "title": "Legal AI Research — Lexin UI",
+      "description": "Lexin's four applied research areas: digital notary, industrial relations disputes, AI governance and regulation, and Indonesian court rulings."
+    }
+  },
+  "produk": {
+    "id": {
+      "title": "Produk: Klaussa dan FiskalLink — Lexin UI",
+      "description": "Produk hasil riset Lexin: Klaussa, platform AI hukum untuk Indonesia, dan FiskalLink, atribusi fiskal tematik yang diujicobakan di Kementerian Keuangan."
+    },
+    "en": {
+      "title": "Products: Klaussa and FiskalLink — Lexin UI",
+      "description": "Products from Lexin's research: Klaussa, an AI legal platform for Indonesia, and FiskalLink, thematic fiscal attribution trialled at the Ministry of Finance."
+    }
+  },
+  "anggota": {
+    "id": {
+      "title": "Anggota dan Peneliti — Lexin UI",
+      "description": "Peneliti hukum dan ilmu komputer Universitas Indonesia di Lexin, bekerja bersama membangun Legal AI untuk sistem hukum Indonesia."
+    },
+    "en": {
+      "title": "People and Researchers — Lexin UI",
+      "description": "The legal and computer science researchers at Universitas Indonesia who make up Lexin, building Legal AI for the Indonesian legal system."
+    }
+  },
+  "publikasi": {
+    "id": {
+      "title": "Publikasi, Makalah, dan Dataset — Lexin UI",
+      "description": "Makalah, buku, dan dataset hukum berbahasa Indonesia dari anggota Lexin, termasuk LexID. Saring berdasarkan jenis, lapisan riset, atau anggota."
+    },
+    "en": {
+      "title": "Publications, Papers and Datasets — Lexin UI",
+      "description": "Papers, books and Indonesian-language legal datasets by Lexin members, including LexID. Filter by type, research layer or member."
+    }
+  },
+  "acara": {
+    "id": {
+      "title": "Acara: Forum, Pelatihan, dan FGD — Lexin UI",
+      "description": "Forum, pelatihan, dan diskusi kelompok terarah tempat peneliti Lexin bertemu praktisi hukum dan lembaga publik, termasuk Lexin Forum."
+    },
+    "en": {
+      "title": "Events: Forums, Training and FGDs — Lexin UI",
+      "description": "Forums, training and focus group discussions where Lexin researchers meet legal practitioners and public institutions, including Lexin Forum."
+    }
+  },
+  "partisipasi": {
+    "id": {
+      "title": "Partisipasi dan Kolaborasi — Lexin UI",
+      "description": "Empat jalur untuk terlibat dengan Lexin: mitra riset, data dan kode terbuka, kerja sama lembaga, dan program fellowship Legal AI."
+    },
+    "en": {
+      "title": "Participate and Collaborate — Lexin UI",
+      "description": "Four ways to work with Lexin: research partnerships, open data and code, institutional collaboration, and the Legal AI fellowship program."
+    }
+  },
+  "wawasan": {
+    "id": {
+      "title": "Wawasan: AI dan Hukum — Lexin UI",
+      "description": "Opini, policy brief, penjelasan riset, catatan rilis produk, dan liputan acara dari tim Lexin tentang kecerdasan artifisial dan hukum."
+    },
+    "en": {
+      "title": "Insights on AI and Law — Lexin UI",
+      "description": "Opinion, policy briefs, research explainers, product release notes and event coverage from the Lexin team on artificial intelligence and law."
+    }
+  },
+  "kontak": {
+    "id": {
+      "title": "Kontak — Lexin UI",
+      "description": "Hubungi Lexin di hadiputra@cs.ui.ac.id untuk riset, kemitraan, pelatihan, atau produk. Fakultas Ilmu Komputer, Kampus UI Depok."
+    },
+    "en": {
+      "title": "Contact — Lexin UI",
+      "description": "Contact Lexin at hadiputra@cs.ui.ac.id about research, partnerships, training or products. Faculty of Computer Science, Universitas Indonesia, Depok."
+    }
+  }
+}

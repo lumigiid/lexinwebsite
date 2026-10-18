@@ -1,6 +1,6 @@
 ---
 import Button from './Button.astro';
-import { dict, url, asset, gmail, NAV_ROUTES, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, MAIN_EMAIL, NAV_ROUTES, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
@@ -16,7 +16,8 @@ const nav = t.nav.map((label: string, i: number) => ({ label, href: url(lang, NA
         <p class="inst">Center for Legal Informatics<br />Faculty of Computer Science<br />University of Indonesia</p>
       </div>
       <div class="contact">
-        <Button variant="inverse" size="sm" iconRight="mail" href={gmail()}>{t.contactUs}</Button>
+        <a href={mailto()} class="mail">{MAIN_EMAIL}</a>
+        <Button variant="inverse" size="sm" iconRight="mail" href={mailto()}>{t.contactUs}</Button>
       </div>
     </div>
     <div class="bottom">

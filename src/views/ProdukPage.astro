@@ -4,14 +4,14 @@ import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Badge from '../components/Badge.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, gmail, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('produk', lang);
 const home = dict('home', lang);
 ---
-<BaseLayout lang={lang} path="produk/" active="produk" title={`Lexin — ${home.nav[1]}`}>
+<BaseLayout lang={lang} path="produk/" active="produk">
 
 <PageHeader tall>
   <div class="eyebrow">{t.eyebrow}</div>
@@ -62,7 +62,7 @@ const home = dict('home', lang);
       </div>
       <div class="u-d43169"><div class="u-4ad06f">
         <Button variant="accent" size="lg" iconRight="arrow-up-right" href="https://klaussa.com">{t.k.visit}</Button>
-        <Button variant="inverse" size="lg" href={gmail('Klaussa', 'bryan@klaussa.com')}>{t.k.contactTeam}</Button>
+        <Button variant="inverse" size="lg" href={mailto('Klaussa', 'bryan@klaussa.com')}>{t.k.contactTeam}</Button>
       </div></div>
     </div>
     <div class="u-3f9f96">
@@ -116,7 +116,7 @@ const home = dict('home', lang);
         <span class="u-a5e76e"><span class="u-e12883"></span>{t.f.statusLabel}</span>
         <span class="u-1a3fc3">{t.f.statusTitle}</span>
         <span class="u-63396e">{t.f.statusBody}</span>
-        <div class="u-5480d0"><Button variant="primary" iconRight="arrow-right" href={gmail('FiskalLink')}>{t.f.cta}</Button></div>
+        <div class="u-5480d0"><Button variant="primary" iconRight="arrow-right" href={mailto('FiskalLink')}>{t.f.cta}</Button></div>
       </div></div>
     </div>
   </div>
@@ -126,7 +126,7 @@ const home = dict('home', lang);
         <span class="u-6f8387"><Icon name="flask-conical" size={24} /></span>
         <span class="u-fb7434"><span class="u-6ded3a">{t.moreTitle}</span><span class="u-16e09c">{t.moreBody}</span></span>
       </div>
-      <Button variant="secondary" iconRight="bell" href={gmail('Kabar produk Lexin')}>{t.keepPosted}</Button>
+      <Button variant="secondary" iconRight="bell" href={mailto('Kabar produk Lexin')}>{t.keepPosted}</Button>
     </div>
   </div>
 </section>
@@ -178,7 +178,7 @@ const home = dict('home', lang);
       <h2 class="venture-title">{t.partner.title}</h2>
       <p class="venture-body">{t.partner.body}</p>
       <div class="venture-cta">
-        <Button variant="accent" size="lg" iconRight="mail" href={gmail(t.partner.subject)}>{t.partner.cta}</Button>
+        <Button variant="accent" size="lg" iconRight="mail" href={mailto(t.partner.subject)}>{t.partner.cta}</Button>
       </div>
     </div>
     <ul class="venture-ways">

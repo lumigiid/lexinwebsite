@@ -1,0 +1,30 @@
+---
+// Served by the host for any URL that doesn't exist. Bilingual, because we can't tell which language the visitor wanted.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import Button from '../components/Button.astro';
+import { url } from '../lib/i18n';
+---
+<BaseLayout lang="id" path="" title="Halaman tidak ditemukan · Page not found — Lexin" description="Halaman yang Anda cari tidak ada. The page you are looking for does not exist." noindex>
+
+<PageHeader tall>
+  <div class="eyebrow">404</div>
+  <h1 class="ph-h1">Halaman tidak ditemukan.</h1>
+  <div class="ph-rule"></div>
+  <p class="lead">Halaman ini mungkin sudah dipindahkan atau tidak pernah ada.</p>
+  <p class="lead en" lang="en">Page not found. It may have moved, or it never existed.</p>
+  <div class="actions">
+    <Button variant="primary" iconRight="arrow-right" href={url('id')}>Ke beranda</Button>
+    <Button variant="secondary" iconRight="arrow-right" href={url('en')} hreflang="en" lang="en">English home</Button>
+    <Button variant="ghost" href={url('id', 'anggota/')}>Anggota · People</Button>
+    <Button variant="ghost" href={url('id', 'kontak/')}>Kontak · Contact</Button>
+  </div>
+</PageHeader>
+
+</BaseLayout>
+
+<style>
+  .lead { font: var(--type-body-lg); margin: 24px 0 0; color: var(--text-body); max-width: 640px; }
+  .lead.en { margin-top: 8px; color: var(--text-muted); }
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 32px; }
+</style>

@@ -3,13 +3,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, gmail, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, type Lang } from '../lib/i18n';
 
 interface Props { lang: Lang }
 const { lang } = Astro.props;
 const t = dict('riset', lang);
 
-const draftMail = (kind: string, title: string) => gmail(kind + title);
+const draftMail = (kind: string, title: string) => mailto(kind + title);
 const PUBS = [
   [{ type: t.journalType, title: 'A Framework for Integrated E-notary Services Based on Blockchain for Civil Law Notaries: The Case of Indonesia', year: '2025', href: 'https://dx.doi.org/10.62527/joiv.9.1.3170' }],
   [],
@@ -30,7 +30,7 @@ const areas = t.areas.map((a: any, i: number) => ({
 }));
 const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopener' } : {};
 ---
-<BaseLayout lang={lang} path="riset/" active="riset" title={`Lexin — ${t.nav[0]}`}>
+<BaseLayout lang={lang} path="riset/" active="riset">
 
 <PageHeader tall>
   <div class="eyebrow">{t.eyebrow}</div>
@@ -218,7 +218,7 @@ const ext = (h: string) => /^https?:/.test(h) ? { target: '_blank', rel: 'noopen
         <h2 class="h-sec u-ca959c">{t.collabTitle}</h2>
         <p class="u-a702e9">{t.collabBody}</p>
         <div class="u-89c227">
-          <Button variant="accent" size="lg" iconRight="mail" href={gmail()}>{t.contactUs}</Button>
+          <Button variant="accent" size="lg" iconRight="mail" href={mailto()}>{t.contactUs}</Button>
           <Button variant="inverse" size="lg" href={url(lang, 'partisipasi/')}>{t.participate}</Button>
         </div>
       </div>

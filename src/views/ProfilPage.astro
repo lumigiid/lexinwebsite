@@ -2,7 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, url, asset, gmail, MAIN_EMAIL, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, MAIN_EMAIL, type Lang } from '../lib/i18n';
 import { members, type Member, fullName } from '../lib/content';
 import { img } from '../lib/images';
 
@@ -29,8 +29,30 @@ const p = {
 };
 const nb = (k: number) => { const x = members[(i + k + members.length) % members.length]; return { name: x.name, href: url(lang, 'anggota/' + x.slug + '/') }; };
 const prev = nb(-1), next = nb(1);
+
+// Search and share metadata for this person.
+const at = lang === 'id' ? 'di' : 'at';
+const fullDesc = [`${fullName(m)}, ${p.role} ${at} Lexin, Universitas Indonesia.`, p.position && p.position + '.', !p.position && m.tags?.length && (m.tags as string[]).slice(0, 4).join(', ') + '.']
+  .filter(Boolean).join(' ');
+const metaDesc = fullDesc.length <= 160 ? fullDesc : fullDesc.slice(0, 157).replace(/[\s,·.]+\S*$/, '') + '…';
+const pageUrl = new URL(url(lang, 'anggota/' + m.slug + '/'), Astro.site).href;
+const person = {
+  '@type': 'Person',
+  '@id': pageUrl + '#person',
+  name: m.name,
+  ...(m.titles ? { honorificPrefix: (m.titles as string).split('·')[0].trim() || undefined } : {}),
+  jobTitle: p.role,
+  description: p.position || undefined,
+  url: pageUrl,
+  image: p.photoUrl ? new URL(p.photoUrl, Astro.site).href : undefined,
+  email: m.email ? 'mailto:' + m.email : undefined,
+  worksFor: { '@id': new URL('/#organization', Astro.site).href },
+  affiliation: { '@type': 'CollegeOrUniversity', name: 'Universitas Indonesia', url: 'https://www.ui.ac.id/' },
+  knowsAbout: [...((m.tags || []) as string[]), ...p.interests].filter((x, k, a) => a.indexOf(x) === k),
+  sameAs: ((m.links || []) as { href: string }[]).map((l) => l.href),
+};
 ---
-<BaseLayout lang={lang} path={`anggota/${m.slug}/`} active="anggota" title={`${m.name} — Lexin`} description={p.position || `${m.name}, ${p.role} — Lexin`}>
+<BaseLayout lang={lang} path={`anggota/${m.slug}/`} active="anggota" title={`${m.name}, ${p.role} ${at} Lexin UI`} description={metaDesc} type="profile" image={p.photoUrl || undefined} imageAlt={m.name} jsonLd={[person]}>
 
 <section class="page-header">
   <img src={asset('assets/lexin-mark.png')} alt="" class="ph-mark" />
@@ -53,7 +75,7 @@ const prev = nb(-1), next = nb(1);
           {m.tags.map((g: string) => <span class="u-444621">{g}</span>)}
         </div>
         <div class="u-e48f82">
-          <Button variant="primary" iconLeft="mail" href={gmail('', m.email)}>{m.email === MAIN_EMAIL ? t.contactUs : m.email}</Button>
+          <Button variant="primary" iconLeft="mail" href={mailto('', m.email)}>{m.email === MAIN_EMAIL ? t.contactUs : m.email}</Button>
           {links.map((l) => <a href={l.href} class="ext-link" target="_blank" rel="noopener">{l.label}<Icon name="arrow-up-right" size={14} /></a>)}
         </div>
       </div>

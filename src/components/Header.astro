@@ -2,13 +2,13 @@
 import Button from './Button.astro';
 import IconButton from './IconButton.astro';
 import Icon from './Icon.astro';
-import { dict, url, asset, gmail, NAV_ROUTES, type Lang } from '../lib/i18n';
+import { dict, url, asset, mailto, NAV_ROUTES, type Lang } from '../lib/i18n';
 
-interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number] }
-const { lang, path, active } = Astro.props;
+interface Props { lang: Lang; path: string; active?: (typeof NAV_ROUTES)[number]; noindex?: boolean }
+const { lang, path, active, noindex = false } = Astro.props;
 const t = dict('home', lang);
 const nav = [
-  { label: t.homeLink as string, href: url(lang), on: path === '' },
+  { label: t.homeLink as string, href: url(lang), on: path === '' && !noindex },
   ...t.nav.map((label: string, i: number) => ({ label, href: url(lang, NAV_ROUTES[i] + '/'), on: NAV_ROUTES[i] === active })),
 ];
 ---
@@ -32,7 +32,7 @@ const nav = [
   <nav id="mobile-menu" class="nav-mobile" hidden>
     {nav.map((n: any) => <a href={n.href} class:list={['m-link', { on: n.on }]}>{n.label}</a>)}
     <div style="margin-top:12px">
-      <Button variant="primary" fullWidth iconRight="mail" href={gmail()}>{t.contactUs}</Button>
+      <Button variant="primary" fullWidth iconRight="mail" href={mailto()}>{t.contactUs}</Button>
     </div>
   </nav>
 </header>

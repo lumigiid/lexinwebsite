@@ -3,7 +3,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import Button from '../components/Button.astro';
 import Icon from '../components/Icon.astro';
-import { dict, asset, gmail, type Lang } from '../lib/i18n';
+import { dict, asset, mailto, MAIN_EMAIL, type Lang } from '../lib/i18n';
 import { img } from '../lib/images';
 
 interface Props { lang: Lang }
@@ -11,10 +11,10 @@ const { lang } = Astro.props;
 const t = dict('kontak', lang);
 
 // No form: each reason opens an email with the subject prefilled.
-const reasons = t.reasons.map((r: any) => ({ ...r, mailto: gmail('Lexin · ' + r.subject) }));
+const reasons = t.reasons.map((r: any) => ({ ...r, mailto: mailto('Lexin · ' + r.subject) }));
 const photo = await img('assets/people/panca-hadi-putra.png', 160);
 ---
-<BaseLayout lang={lang} path="kontak/" title={`Lexin — ${t.contact}`}>
+<BaseLayout lang={lang} path="kontak/">
 
 <PageHeader>
   <div class="eyebrow">{t.eyebrow}</div>
@@ -29,7 +29,11 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
       <img src={asset('assets/lexin-mark.png')} alt="" class="u-88d3ce" />
       <div class="u-df7a10">
         <span class="u-bf79a6">{t.contactLabel}</span>
-        <a href={gmail()} class="big-mail" target="_blank" rel="noopener">{t.contactUs}</a>
+        <a href={mailto()} class="big-mail">{MAIN_EMAIL}</a>
+        <div class="mail-actions">
+          <Button variant="accent" size="sm" iconRight="mail" href={mailto()}>{t.contactUs}</Button>
+          <button type="button" class="copy-mail" data-copy={MAIN_EMAIL} data-done={t.copied}><Icon name="copy" size={15} /><span>{t.copy}</span></button>
+        </div>
         <div class="u-ee36e7">
           <img src={photo} alt="Dr. Panca Hadi Putra" width="72" height="72" class="u-5300a7" />
           <span class="u-e6c996">
@@ -54,7 +58,7 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
       <h2 class="u-9ecc2d">{t.byNeed}</h2>
       <div class="u-43c23d">
         {reasons.map((r: any) => (
-          <a href={r.mailto} class="reason" target="_blank" rel="noopener">
+          <a href={r.mailto} class="reason">
             <span class="u-e5cb8d"><Icon name={r.icon} size={20} /></span>
             <span class="u-2fca08"><span class="u-cbcafe">{r.title}</span><span class="u-16e09c">{r.body}</span></span>
             <Icon name="mail" size={18} />
@@ -67,9 +71,25 @@ const photo = await img('assets/people/panca-hadi-putra.png', 160);
 
 </BaseLayout>
 
+<script>
+  document.querySelectorAll<HTMLButtonElement>('[data-copy]').forEach((b) => {
+    const label = b.querySelector('span')!;
+    const idle = label.textContent;
+    b.addEventListener('click', async () => {
+      try { await navigator.clipboard.writeText(b.dataset.copy!); } catch { return; }
+      label.textContent = b.dataset.done!;
+      setTimeout(() => { label.textContent = idle; }, 2000);
+    });
+  });
+</script>
+
 <style>
   .big-mail { font: 700 clamp(24px,3.6vw,40px)/1.15 var(--font-display); letter-spacing: var(--tracking-tight); color:var(--fg-on-dark); overflow-wrap: normal; word-break: normal; }
   .big-mail:hover { color: var(--yellow-300); }
+  .big-mail { font-size: clamp(20px,2.6vw,30px); overflow-wrap: anywhere; user-select: all; }
+  .mail-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+  .copy-mail { height: 36px; padding: 0 14px; border: 0; border-radius: 999px; background: none; box-shadow: inset 0 0 0 1px var(--on-dark-line-2); display: inline-flex; align-items: center; gap: 8px; font: 600 13px/1 var(--font-display); color: var(--fg-on-dark); cursor: pointer; }
+  .copy-mail:hover { background: var(--on-dark-fill-2); }
   .gh { height: 44px; padding: 0 16px; border-radius: 999px; box-shadow: inset 0 0 0 1px var(--on-dark-line-2); display: inline-flex; align-items: center; gap: 8px; font: 600 14px/1 var(--font-display); color:var(--fg-on-dark); }
   .gh:hover { background: var(--on-dark-fill-2); color:var(--fg-on-dark); }
   .reason { display: flex; align-items: center; gap: 14px; padding: 16px 12px; border-bottom: 1px solid var(--border-default); color: var(--text-heading); transition: background-color var(--dur-base) var(--ease-out) }
