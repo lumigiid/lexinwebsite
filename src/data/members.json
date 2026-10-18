@@ -1053,5 +1053,74 @@
         }
       }
     ]
+  },
+  {
+    "slug": "salma-kurnia-dewi",
+    "g": "staff",
+    "name": "Salma Kurnia Dewi",
+    "ini": "SK",
+    "titles": "",
+    "role": "bd",
+    "area": "tru",
+    "tags": [
+      "Business development",
+      "Go-to-market",
+      "Kemitraan"
+    ],
+    "email": "hadiputra@cs.ui.ac.id",
+    "photo": "assets/people/salma-kurnia-dewi.png",
+    "position": {
+      "id": "Commercial & Partnerships",
+      "en": "Commercial & Partnerships"
+    },
+    "bio": {
+      "id": [
+        "Salma Kurnia Dewi membangun pertumbuhan dan kemitraan untuk produk teknologi hukum. Sebagai Marketing Lead di Klaussa sejak Agustus 2025, Salma memimpin strategi pemasaran, iklan berbayar, dan pengembangan bisnis, serta merumuskan pesan produk agar nilai AI Klaussa jelas bagi pengguna hukum.",
+        "Sejak Januari 2026 Salma juga memegang fungsi komersial dan operasional di Kalana Consulting: penjualan, branding, dan strategi go-to-market. Sebelumnya, Salma magang di bidang alternative venture building di REAPRA PTE. LTD. dan memimpin strategi konten Indonesia."
+      ],
+      "en": [
+        "Salma Kurnia Dewi builds growth and partnerships for legal technology products. As Marketing Lead at Klaussa since August 2025, Salma leads marketing strategy, paid advertising and business development, and shapes product messaging so the value of Klaussa's AI is clear to legal users.",
+        "Since January 2026 Salma has also run commercial and operations at Kalana Consulting, covering sales, branding and go-to-market strategy. Earlier, Salma interned in alternative venture building at REAPRA PTE. LTD. and led the Indonesian content strategy."
+      ]
+    },
+    "skills": [
+      {
+        "label": {
+          "id": "Pemasaran dan pertumbuhan",
+          "en": "Marketing and growth"
+        },
+        "items": [
+          "strategi konten",
+          "Meta Ads",
+          "pertumbuhan media sosial",
+          "branding"
+        ]
+      },
+      {
+        "label": {
+          "id": "Kemitraan dan penjualan",
+          "en": "Partnerships and sales"
+        },
+        "items": [
+          "pengembangan bisnis",
+          "pipeline penjualan",
+          "outreach",
+          "go-to-market"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "Klaussa",
+        "role": {
+          "id": "Marketing Lead",
+          "en": "Marketing Lead"
+        },
+        "text": {
+          "id": "Memimpin strategi pemasaran dari awal sampai akhir: pertumbuhan media sosial, iklan berbayar, dan pengembangan bisnis. Menjalankan konten berbasis pendiri dan edukasi untuk audiens hukum, mengelola kampanye Meta Ads untuk akuisisi pengguna, dan menjangkau segmen pengguna awal untuk mendorong adopsi.",
+          "en": "Leads marketing strategy end to end: social media growth, paid advertising and business development. Runs founder-led and educational content for legal audiences, manages Meta Ads campaigns for user acquisition, and reaches out to early user segments to drive adoption."
+        }
+      }
+    ]
   }
 ]
