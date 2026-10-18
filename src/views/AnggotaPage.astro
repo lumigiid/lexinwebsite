@@ -232,7 +232,8 @@ const staff = byG('staff');
   .rosters { display: flex; flex-direction: column; gap: var(--space-6); }
   .rosters .roster-list { grid-template-columns: 1fr; gap: 0; }
   .rosters .roster-list li { font-size: 15px; padding: 10px 4px; }
-  @media (min-width: 1000px) { .team-row { grid-template-columns: minmax(0,1.7fr) minmax(0,1fr); gap: clamp(32px,5vw,64px); } }
+  /* Core team gets the full width like the faculty row; rosters sit below as one aligned row. */
+  @media (min-width: 900px) { .rosters { display: grid; grid-template-columns: repeat(auto-fit, minmax(0, 1fr)); align-items: start; gap: var(--space-6) clamp(32px,5vw,64px); } }
   @media (max-width: 639.98px) { .lead-card { grid-template-columns: 1fr; } .lead-card .pphoto { max-width: 220px; } }
   /* Whole card is one link target: the name's link stretches over the card; the email stays separately clickable. */
   .pcard, .lead-card { position: relative; cursor: pointer; }
